@@ -363,7 +363,7 @@ $$
 
 
 ## {auto-animate=true}
-Morphing test
+Morphing test 1
 
 ::: {.r-stack}
 ::: {data-id="1" }
@@ -372,7 +372,7 @@ Morphing test
 :::
 
 ## {auto-animate=true}
-Morphing test
+Morphing test 2
 
 ::: {.r-stack}
 ::: {data-id="1" }
