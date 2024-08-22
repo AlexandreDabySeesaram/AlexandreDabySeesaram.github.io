@@ -3,8 +3,9 @@ title: "Hybridising standard reduced-order modelling methods with interpretable 
 subtitle: "VPH 2024 - Stuttgart"
 format: 
   revealjs:
+    includes:
+      in-header: MyNotations.sty
     smaller: true
-
     html-math-method: mathjax
     author: 
         - name: Alexandre Daby-Seesaram
@@ -40,107 +41,358 @@ bibliography: biblio.bib
 
 ---
 
+{{< include MyNotations.qmd >}}
+
+# I) Motivations & objectives
+  * Real-time simulation of the lungs
+  * Mechanical problem
+
+## Transfering tools to the clinic
+
+* Talk about IPF and link with mechanics
+
+## Mechanical problem
+
+* **Parametrised** (patient-specific) mechanical problem
 
 
-# I) Part 1
- * Motivations
-    * shape function
-    * trainable mesh
+<!-- $$
+         \begin{cases}
+            \div \cdot \sigm  + \vect{f}\left(\para\right) = 0 \qquad & \mathrm{in} \ \Omega \\
+            \sigm \cdot \vect{n} = \vect{F}\left(\para\right)  & \text{on } \partial \Omega_{N} \\
+            \vect{u} = \vect{u}_d \qquad \qquad & \text{on } \partial \Omega_{d} \\
+            \sigm = \ftensor{C}\left(\para\right):\eps(\vect{u}) & \mathrm{in} \ \Omega
+         \end{cases}
+         \label{eq:MechPb}
+$$ -->
 
-## The finite element method
+<!-- ![Reference problem](Figures/Omega.svg){width=200} -->
 
-The finite element method relies on interpolating the field of interest
-$$u\left(x\right) = \sum\limits_{i=0}^{N} N_i\left(x\right) \overline{u}_i$$ 
+::: columns
+::: {.column  width="60%"}
+$$
+         \begin{cases}
+            \div \cdot \sigm  + \vect{f}\left(\para\right) = 0 \qquad & \mathrm{in} \ \Omega \\
+            \sigm \cdot \vect{n} = \vect{F}\left(\para\right)  & \text{on } \partial \Omega_{N} \\
+            \vect{u} = \vect{u}_d \qquad \qquad & \text{on } \partial \Omega_{d} \\
+            \sigm = \ftensor{C}\left(\para\right):\eps(\vect{u}) & \mathrm{in} \ \Omega
+         \end{cases}
+         \label{eq:MechPb}
+$$
+:::
 
-## Some lit. review
-### About ROM
-The PGD [@chinesta_short_2011] is an a priori Reduced-order model techniques that consists in build the reduced-order basis on the fly.
-
-* No off-line computations
-* On the fly mode generation adapted to the specifics of the problem [@DabyHybrid]
-
- $$u\left(x, \mu\right) = \sum\limits_{i=0}^{m}\overline{u}_i\left(x\right)\lambda_i\left(\mu\right)$$
+::: {.column  width="40%"}
+![Reference problem](Figures/Omega.svg){width=200}
+:::
+:::
 
 
-## Mesh adaptation
+:::{.mybox}
 
-* Item
-    * Sub-item
-* Item
+::::{.mybox-header}
+Behaviour
+::::
 
-# II) Part 2
+::::{.mybox-body}
 
-## NeuROM
+  * $\ftensor{C}\left(\para\right)$ the parametrised **Hooke's** tensor
+  * $\eps(\vect{u})$ the linearised **Green-Lagrange** strain tensor
+  * $\sigm$ the **Cauchy** stress tensor
 
-The convergence is investigated in @fig-neurom
+:::
+
+:::
+
+# II) Methods
+
+## The finite element method interpolation
+
+  * From the continous problem of finding the displacement $\vect{u}$ in 
+
+$$
+    \mathcal{U} \left(\text{resp.} \mathcal{U}^0 \right) = \left\{\vect{u} \; | \; \vect{u}\left(\vect{x}\right) \in \mathcal{H}^1\left(\Omega, \mathbb{R}^{\text{d}}\right) \text{, }
+    \vect{u} = \vect{u}_d \left(\text{resp.} =\vect{0} \right) \text{ on }\partial \Omega_d  \right\}  
+$$
+
+* an approximation thought after in the finite admissible (resp. admissible to zero) space
+
+$$
+    \mathcal{U}_h \left(\text{resp.} \mathcal{U}_h^0 \right) = \left\{\vect{u}_h  \; | \; \vect{u}_h \in \text{Span}\left( \left\{ N_i^{\Omega}\left(\vect{x} \right)\right\}_{i \in \llbracket 1,n_p\rrbracket} \right)^d \text{, }
+    \vect{u}_h = \vect{u}_d \left(\text{resp.} =\vect{0} \right) \text{ on }\partial \Omega_d  \right\} 
+$$
+
+
+::: {.fragment .fade-up}
 
 ::: columns
 
 ::: {.column  width="50%"}
-```{python}
-#| label: fig-neurom
-#| fig-cap: "Convergence plot NeuROM"
 
-import numpy as np
-import pandas as pd
-import matplotlib.pyplot as plt
-import matplotlib
-from matplotlib.ticker import MaxNLocator
-from IPython.display import set_matplotlib_formats
+:::{.mybox}
+
+::::{.mybox-header}
+Finite element neural network interpolation
+::::
+
+::::{.mybox-body}
+
+* This interpolation can be done using sparse neural networks [@zhang_hierarchical_2021] 
+  * By constraining **weights** and **biases**
+  * Continuous interpolated field that can be **automatically differentiated**
+  * Gives the additional benefit of running on **GPUs**
+  * Fully **interpretable** parameters
+
+:::
+
+:::
 
 
-plt.rcParams['axes.spines.top'] = True
-plt.rcParams['axes.spines.bottom'] = True
-plt.rcParams['axes.spines.left'] = True
-plt.rcParams['axes.spines.right'] = True
-plt.rcParams.update({
-    "text.usetex": True,
-    "font.family": "serif",
-    "text.usetex": True,
-    "font.family": "Helvetica",
-    "lines.linewidth": 1,
-    "font.size": "14"
 
-})
+:::
 
-set_matplotlib_formats('svg')
+::: {.column  width="50%"}
+![Illustration of Finite Element Neural Network Interpolation (FENNI)](Figures/HiDeNN_Space.svg){width=250}
 
-# Load CSV
-df = pd.read_csv('Figures/Test_CSV.csv')
-Modes_flag = df['N_modes']
-error = df['Loss']
-sign = 'Negative'
+:::
 
-# Creat figure
-fig = plt.figure(figsize=(4, 3))
-#Left curve
-ax = fig.add_subplot(111)
-g1 = ax.plot(Modes_flag, color='#01426aff')
-ax.tick_params(axis='y', colors='#01426aff')
-plt.ylabel(r'Number of modes',color='#01426aff')
-ax.xaxis.set_major_locator(MaxNLocator(integer=True))
-plt.xlabel(r'Epochs')
-#Right curve
-ax2 = ax.twinx()
-y_values = [2e-3, 2.3e-3]
-x_values = [0, 1200, 2400]
-ax2.set_xticks(x_values)
-labels = ['-2e-3', '-2.3e-3']
+:::
+:::
 
-ax2.invert_yaxis()
-g2 = ax2.semilogy(error, color='#A68B4E')
-ax2.set_ylabel(r'Loss',color='#A68B4E')
 
-ax2.tick_params(axis='y', colors='#A68B4E')
-ax2.set_yticks(y_values)
-ax2.set_yticklabels(labels)
 
-plt.minorticks_off()
-for spine in ax2.spines.values():
-    spine.set_linewidth(0.5)  # Change the border width
 
-plt.show()
-```
+## Solving the mechanical problem
+
+Once the interpolation is achieved, solving the mechanical problems amounts to finding the continous displacement field **minimising the potential energy**
+$$E_p\left(\vect{u}\right) = \frac{1}{2} \intV \eps : \ftensor{C} : \eps \dV - \intSn \vect{F}\cdot \vect{u} \dS - \intV\vect{f}\cdot\vect{u}\dV. $$
+
+:::{.mybox}
+
+::::{.mybox-header}
+In practice
+::::
+
+::::{.mybox-body}
+
+* Compute the loss $\mathcal{L} := E_p$ 
+* Find the parameters (node **coordinates** and nodal **values**) minimising the loss
+  * Rely on state of the art optimizers (SGD, ADAM, **LBFGS**, etc.)
+
+:::
+
+:::
+
+::: {.fragment .fade-in}
+
+![FEM computation & mesh adaptation](Figures/Movies/out.mp4){.absolute left="70" height="300" loop="true" autoplay=true}
+![Von mises stress](Figures/VM_converged.svg){.absolute right="70" height="300" }
+
+:::
+
+
+## Reduced-order modelling (ROM)
+Avoid the curse of dimensionality
+
+::: columns
+
+::: {.column  width="50%"}
+:::{.mybox}
+
+::::{.mybox-header}
+Full-order discretised model
+::::
+
+::::{.mybox-body}
+
+* $N$ spatial shape functions
+  * Span a finite spatial space of dimension $N$
+* Requires computing $N\times \beta$ associated parametric functions
+
+:::
+
+:::
+:::
+::: {.column  width="50%"}
+:::{.mybox}
+
+::::{.mybox-header}
+Reduced-order model  
+::::
+
+::::{.mybox-body}
+
+* $m \ll N$ spatial modes
+  * Similar to global shape functions
+  * Span a smaller space
+* Galerking projection
+:::
+
+:::
+
+:::
+:::
+
+:::{.mybox}
+
+::::{.mybox-header-teal}
+Finding the reduced-order basis
+::::
+
+::::{.mybox-body}
+
+* Linear Normal Modes (eigenmodes of the structure) [@hansteen_accuracy_1979]
+  * Do not account for the loading and behaviour specifics
+* Proper Orthogonal Decomposition [@chatterjee_introduction_2000],[@radermacher_comparison_2013]
+  * Require wise selection of the snapshots and \emph{a priori} costly computations 
+* Reduced basis method [@maday_reduced-basis_2002] with EIM [@barrault_empirical_2004]
+  * Rely on prior expensive computations
+:::
+
+:::
+
+
+## Proper Generalised Decomposition (PGD){auto-animate=true}
+[@chinesta_short_2011]
+
+::: columns
+
+::: {.column  width="50%"}
+
+:::{.mybox}
+
+::::{.mybox-header}
+The PGD is 
+::::
+
+::::{.mybox-body}
+
+* An *a priori* ROM techniques
+  * building the reduced-order basis on the fly.
+* No off-line computations
+* **On the fly** mode generation adapted to the specifics of the problem [@DabyHybrid]
+
+::: {.r-stack}
+::: {data-id="1" }
+ $$u\left(x, \mu\right) = \sum\limits_{i=0}^{m}\overline{u}_i\left(x\right)\lambda_i\left(\mu\right)$$
+:::
+:::
+
+:::
+
+:::
+
+:::
+
+::: {.column  width="50%"}
+
+::: {.r-stack}
+::: {data-id="2" }
+![2D PGD](Figures/PGD_2D.svg){height=200}
+:::
+:::
+:::
+
+:::
+
+
+## Proper Generalised Decomposition (PGD){auto-animate=true}
+[@chinesta_short_2011]
+
+::: columns
+
+::: {.column  width="50%"}
+
+:::{.mybox}
+
+::::{.mybox-header}
+The PGD is 
+::::
+
+::::{.mybox-body}
+
+* An *a priori* ROM techniques
+  * building the reduced-order basis on the fly.
+* No off-line computations
+* **On the fly** mode generation adapted to the specifics of the problem [@DabyHybrid]
+
+::: {.r-stack}
+::: {data-id="1" }
+$$            \vect{u}\left(\textcolor{BleuLMS!70}{\vect{x}}, \textcolor{LGreenLMS}{\para}\right) = \sum\limits_{i=1}^m \textcolor{BleuLMS!70}{\overline{\vect{u}}_i(\vect{x})} ~\textcolor{LGreenLMS}{\prod_{j=1}^{\beta}\lambda_i^j(\mu^j)} \in \mathcal{U}_{\text{ROM}}$$
+:::
+:::
+
+:::
+
+:::
+
+:::
+
+::: {.column  width="50%"}
+::: {.r-stack}
+::: {data-id="2" }
+![3D PGD](Figures/PGD_3D.svg){height=200}
+:::
+:::
+:::
+
+:::
+
+
+
+::: {.fragment .fade-up}
+$$
+        \left(\left\{\overline{\vect{u}}_i \right\}_{i\in \llbracket 1,m\rrbracket},\left\{\lambda_i^j \right\}_{
+          \begin{cases}
+              i\in \llbracket 1,m\rrbracket \\
+              j\in \llbracket 1,\beta \rrbracket
+          \end{cases}
+        } \right) = \argmin_{
+            \begin{cases}
+                \left(\overline{\vect{u}}_1, \left\{\overline{\vect{u}}_i \right\} \right) & \in \mathcal{U}\times \mathcal{U}_0 \\ 
+                \left\{\left\{\lambda_i^j \right\}\right\} & \in \left( \bigtimes_{j=1}^{~\beta} \mathcal{L}_2\left(\mathcal{B}_j\right) \right)^{m-1}
+            \end{cases}} \int_{\mathcal{B}}\mathcal{J}\left(\vect{u}\right) \d \beta
+            \label{eq:min_problem}
+$$
+
+$$ 
+        	\mathcal{U}_{\text{ROM}} \left(\text{resp.} \mathcal{U}_{\text{ROM}}^{0} \right) = \left\{\vect{u} \; | \; \vect{u}\left(\vect{x},\para\right) \in \mathcal{U}_h \bigotimes_{i=1}^{\beta} \mathcal{L}^2\left(\mathcal{B}_i, \mathbb{R}\right) \text{, }
+        	\vect{u} = \vect{u}_d \left(\text{resp.} =\vect{0} \right) \text{ on }\partial \Omega_d  \right\}  
+$$
+:::
+
+
+
+## {auto-animate=true}
+Morphing test
+
+::: {.r-stack}
+::: {data-id="1" }
+ $$u\left(x, \mu\right) = \sum\limits_{i=0}^{m}\overline{u}_i\left(x\right)\lambda_i\left(\mu\right)$$
+:::
+:::
+
+## {auto-animate=true}
+Morphing test
+
+::: {.r-stack}
+::: {data-id="1" }
+$$            \vect{u}\left(\textcolor{BleuLMS!70}{\vect{x}}, \textcolor{LGreenLMS}{\para}\right) = \sum\limits_{i=1}^m \textcolor{BleuLMS!70}{\overline{\vect{u}}_i(\vect{x})} ~\textcolor{LGreenLMS}{\prod_{j=1}^{\beta}\lambda_i^j(\mu^j)} \in \mathcal{U}_{\text{ROM}},$$
+:::
+:::
+
+
+
+# III) Preliminary results
+
+## NeuROM
+
+The convergence is investigated in @fig-neurom-bistiffness
+
+::: columns
+
+::: {.column  width="50%"}
+{{< include Figures/neurom_convergence_bistiffness.qmd >}}
+
 :::
 
 ::: {.column  width="50%"}
@@ -149,5 +401,8 @@ plt.show()
 :::
 
 :::
+
+
+
 
 ## References

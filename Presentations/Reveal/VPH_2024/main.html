@@ -379,43 +379,319 @@ Martin Genet <a href="https://orcid.org/0000-0003-2204-201X" class="quarto-title
   <p class="date">September 4, 2024</p>
 </section>
 <section>
-<section id="i-part-1" class="title-slide slide level1 center">
-<h1>I) Part 1</h1>
+<section id="i-motivations-objectives" class="title-slide slide level1 center">
+<h1>I) Motivations &amp; objectives</h1>
 <ul>
-<li>Motivations
-<ul>
-<li>shape function</li>
-<li>trainable mesh</li>
-</ul></li>
+<li>Real-time simulation of the lungs</li>
+<li>Mechanical problem</li>
 </ul>
 </section>
-<section id="the-finite-element-method" class="slide level2">
-<h2>The finite element method</h2>
-<p>The finite element method relies on interpolating the field of interest <span class="math display">\[u\left(x\right) = \sum\limits_{i=0}^{N} N_i\left(x\right) \overline{u}_i\]</span></p>
-</section>
-<section id="some-lit.-review" class="slide level2">
-<h2>Some lit. review</h2>
-<h3 id="about-rom">About ROM</h3>
-<p>The PGD <span class="citation" data-cites="chinesta_short_2011">(<a href="#/references" role="doc-biblioref" onclick="">Chinesta, Ladeveze, and Cueto 2011</a>)</span> is an a priori Reduced-order model techniques that consists in build the reduced-order basis on the fly.</p>
+<section id="transfering-tools-to-the-clinic" class="slide level2">
+<h2>Transfering tools to the clinic</h2>
 <ul>
-<li>No off-line computations</li>
-<li>On the fly mode generation adapted to the specifics of the problem <span class="citation" data-cites="DabyHybrid">(<a href="#/references" role="doc-biblioref" onclick="">Daby-Seesaram et al. 2023</a>)</span></li>
+<li>Talk about IPF and link with mechanics</li>
 </ul>
-<p><span class="math display">\[u\left(x, \mu\right) = \sum\limits_{i=0}^{m}\overline{u}_i\left(x\right)\lambda_i\left(\mu\right)\]</span></p>
 </section>
-<section id="mesh-adaptation" class="slide level2">
-<h2>Mesh adaptation</h2>
+<section id="mechanical-problem" class="slide level2">
+<h2>Mechanical problem</h2>
 <ul>
-<li>Item
-<ul>
-<li>Sub-item</li>
-</ul></li>
-<li>Item</li>
+<li><strong>Parametrised</strong> (patient-specific) mechanical problem</li>
 </ul>
+<!-- $$
+         \begin{cases}
+            \div \cdot \sigm  + \vect{f}\left(\para\right) = 0 \qquad & \mathrm{in} \ \Omega \\
+            \sigm \cdot \vect{n} = \vect{F}\left(\para\right)  & \text{on } \partial \Omega_{N} \\
+            \vect{u} = \vect{u}_d \qquad \qquad & \text{on } \partial \Omega_{d} \\
+            \sigm = \ftensor{C}\left(\para\right):\eps(\vect{u}) & \mathrm{in} \ \Omega
+         \end{cases}
+         \label{eq:MechPb}
+$$ -->
+<!-- ![Reference problem](Figures/Omega.svg){width=200} -->
+<div class="columns">
+<div class="column" style="width:60%;">
+<p><span class="math display">\[
+         \begin{cases}
+            \boldsymbol{\nabla}\cdot \mathcal{\boldsymbol{\sigma}}+ \boldsymbol{f}\left(\left\{\mu_i\right\}_{i \in \mathopen{~[\!\![~}1, \beta  \mathclose{~]\!\!]}}\right) = 0 \qquad &amp; \mathrm{in} \ \Omega \\
+            \mathcal{\boldsymbol{\sigma}}\cdot \boldsymbol{n} = \boldsymbol{F}\left(\left\{\mu_i\right\}_{i \in \mathopen{~[\!\![~}1, \beta  \mathclose{~]\!\!]}}\right)  &amp; \text{on } \partial \Omega_{N} \\
+            \boldsymbol{u} = \boldsymbol{u}_d \qquad \qquad &amp; \text{on } \partial \Omega_{d} \\
+            \mathcal{\boldsymbol{\sigma}}= \mathbb{C}\left(\left\{\mu_i\right\}_{i \in \mathopen{~[\!\![~}1, \beta  \mathclose{~]\!\!]}}\right):\mathcal{\boldsymbol{\varepsilon}}(\boldsymbol{u}) &amp; \mathrm{in} \ \Omega
+         \end{cases}
+         \label{eq:MechPb}
+\]</span></p>
+</div><div class="column" style="width:40%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="Figures/Omega.svg" width="200"></p>
+<figcaption>Reference problem</figcaption>
+</figure>
+</div>
+</div></div>
+<div class="mybox">
+<div class="mybox-header">
+<p>Behaviour</p>
+</div>
+<div class="mybox-body">
+<ul>
+<li><span class="math inline">\(\mathbb{C}\left(\left\{\mu_i\right\}_{i \in \mathopen{~[\!\![~}1, \beta  \mathclose{~]\!\!]}}\right)\)</span> the parametrised <strong>Hooke’s</strong> tensor</li>
+<li><span class="math inline">\(\mathcal{\boldsymbol{\varepsilon}}(\boldsymbol{u})\)</span> the linearised <strong>Green-Lagrange</strong> strain tensor</li>
+<li><span class="math inline">\(\mathcal{\boldsymbol{\sigma}}\)</span> the <strong>Cauchy</strong> stress tensor</li>
+</ul>
+</div>
+</div>
 </section></section>
 <section>
-<section id="ii-part-2" class="title-slide slide level1 center">
-<h1>II) Part 2</h1>
+<section id="ii-methods" class="title-slide slide level1 center">
+<h1>II) Methods</h1>
+
+</section>
+<section id="the-finite-element-method-interpolation" class="slide level2">
+<h2>The finite element method interpolation</h2>
+<ul>
+<li>From the continous problem of finding the displacement <span class="math inline">\(\boldsymbol{u}\)</span> in</li>
+</ul>
+<p><span class="math display">\[
+    \mathcal{U} \left(\text{resp.} \mathcal{U}^0 \right) = \left\{\boldsymbol{u} \; | \; \boldsymbol{u}\left(\boldsymbol{x}\right) \in \mathcal{H}^1\left(\Omega, \mathbb{R}^{\text{d}}\right) \text{, }
+    \boldsymbol{u} = \boldsymbol{u}_d \left(\text{resp.} =\boldsymbol{0} \right) \text{ on }\partial \Omega_d  \right\}  
+\]</span></p>
+<ul>
+<li>an approximation thought after in the finite admissible (resp. admissible to zero) space</li>
+</ul>
+<p><span class="math display">\[
+    \mathcal{U}_h \left(\text{resp.} \mathcal{U}_h^0 \right) = \left\{\boldsymbol{u}_h  \; | \; \boldsymbol{u}_h \in \text{Span}\left( \left\{ N_i^{\Omega}\left(\boldsymbol{x} \right)\right\}_{i \in \mathopen{~[\!\![~}1,n_p\mathclose{~]\!\!]}} \right)^d \text{, }
+    \boldsymbol{u}_h = \boldsymbol{u}_d \left(\text{resp.} =\boldsymbol{0} \right) \text{ on }\partial \Omega_d  \right\}
+\]</span></p>
+<div class="fragment fade-up">
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="mybox">
+<div class="mybox-header">
+<p>Finite element neural network interpolation</p>
+</div>
+<div class="mybox-body">
+<ul>
+<li>This interpolation can be done using sparse neural networks <span class="citation" data-cites="zhang_hierarchical_2021">(<a href="#/references" role="doc-biblioref" onclick="">Zhang et al. 2021</a>)</span>
+<ul>
+<li>By constraining <strong>weights</strong> and <strong>biases</strong></li>
+<li>Continuous interpolated field that can be <strong>automatically differentiated</strong></li>
+<li>Gives the additional benefit of running on <strong>GPUs</strong></li>
+<li>Fully <strong>interpretable</strong> parameters</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="Figures/HiDeNN_Space.svg" width="250"></p>
+<figcaption>Illustration of Finite Element Neural Network Interpolation (FENNI)</figcaption>
+</figure>
+</div>
+</div></div>
+</div>
+</section>
+<section id="solving-the-mechanical-problem" class="slide level2">
+<h2>Solving the mechanical problem</h2>
+<p>Once the interpolation is achieved, solving the mechanical problems amounts to finding the continous displacement field <strong>minimising the potential energy</strong> <span class="math display">\[E_p\left(\boldsymbol{u}\right) = \frac{1}{2} \int_{\Omega}\mathcal{\boldsymbol{\varepsilon}}: \mathbb{C} : \mathcal{\boldsymbol{\varepsilon}}~\mathrm{d}\Omega- \int_{\partial \Omega_N}\boldsymbol{F}\cdot \boldsymbol{u} ~\mathrm{d}A- \int_{\Omega}\boldsymbol{f}\cdot\boldsymbol{u}~\mathrm{d}\Omega. \]</span></p>
+<div class="mybox">
+<div class="mybox-header">
+<p>In practice</p>
+</div>
+<div class="mybox-body">
+<ul>
+<li>Compute the loss <span class="math inline">\(\mathcal{L} := E_p\)</span></li>
+<li>Find the parameters (node <strong>coordinates</strong> and nodal <strong>values</strong>) minimising the loss
+<ul>
+<li>Rely on state of the art optimizers (SGD, ADAM, <strong>LBFGS</strong>, etc.)</li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div class="fragment fade-in">
+<p><video data-src="Figures/Movies/out.mp4" class="absolute" style="left: 70px; height: 300px; " loop="true" autoplay="true" controls=""><a href="Figures/Movies/out.mp4">FEM computation &amp; mesh adaptation</a></video> <img data-src="Figures/VM_converged.svg" class="absolute" style="right: 70px; height: 300px; " alt="Von mises stress"></p>
+</div>
+</section>
+<section id="reduced-order-modelling-rom" class="slide level2">
+<h2>Reduced-order modelling (ROM)</h2>
+<p>Avoid the curse of dimensionality</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="mybox">
+<div class="mybox-header">
+<p>Full-order discretised model</p>
+</div>
+<div class="mybox-body">
+<ul>
+<li><span class="math inline">\(N\)</span> spatial shape functions
+<ul>
+<li>Span a finite spatial space of dimension <span class="math inline">\(N\)</span></li>
+</ul></li>
+<li>Requires computing <span class="math inline">\(N\times \beta\)</span> associated parametric functions</li>
+</ul>
+</div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="mybox">
+<div class="mybox-header">
+<p>Reduced-order model</p>
+</div>
+<div class="mybox-body">
+<ul>
+<li><span class="math inline">\(m \ll N\)</span> spatial modes
+<ul>
+<li>Similar to global shape functions</li>
+<li>Span a smaller space</li>
+</ul></li>
+<li>Galerking projection</li>
+</ul>
+</div>
+</div>
+</div></div>
+<div class="mybox">
+<div class="mybox-header-teal">
+<p>Finding the reduced-order basis</p>
+</div>
+<div class="mybox-body">
+<ul>
+<li>Linear Normal Modes (eigenmodes of the structure) <span class="citation" data-cites="hansteen_accuracy_1979">(<a href="#/references" role="doc-biblioref" onclick="">Hansteen and Bell 1979</a>)</span>
+<ul>
+<li>Do not account for the loading and behaviour specifics</li>
+</ul></li>
+<li>Proper Orthogonal Decomposition <span class="citation" data-cites="chatterjee_introduction_2000">(<a href="#/references" role="doc-biblioref" onclick="">Chatterjee 2000</a>)</span>,<span class="citation" data-cites="radermacher_comparison_2013">(<a href="#/references" role="doc-biblioref" onclick="">Radermacher and Reese 2013</a>)</span>
+<ul>
+<li>Require wise selection of the snapshots and costly computations</li>
+</ul></li>
+<li>Reduced basis method <span class="citation" data-cites="maday_reduced-basis_2002">(<a href="#/references" role="doc-biblioref" onclick="">Maday and Rønquist 2002</a>)</span> with EIM <span class="citation" data-cites="barrault_empirical_2004">(<a href="#/references" role="doc-biblioref" onclick="">Barrault et al. 2004</a>)</span>
+<ul>
+<li>Rely on prior expensive computations</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</section>
+<section id="proper-generalised-decomposition-pgd" class="slide level2" data-auto-animate="true">
+<h2 data-id="quarto-animate-title">Proper Generalised Decomposition (PGD)</h2>
+<p><span class="citation" data-cites="chinesta_short_2011">(<a href="#/references" role="doc-biblioref" onclick="">Chinesta, Ladeveze, and Cueto 2011</a>)</span></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="mybox">
+<div class="mybox-header">
+<p>The PGD is</p>
+</div>
+<div class="mybox-body">
+<ul>
+<li>An <em>a priori</em> ROM techniques
+<ul>
+<li>building the reduced-order basis on the fly.</li>
+</ul></li>
+<li>No off-line computations</li>
+<li><strong>On the fly</strong> mode generation adapted to the specifics of the problem <span class="citation" data-cites="DabyHybrid">(<a href="#/references" role="doc-biblioref" onclick="">Daby-Seesaram et al. 2023</a>)</span></li>
+</ul>
+<div class="r-stack">
+<div data-id="1">
+<p><span class="math display">\[u\left(x, \mu\right) = \sum\limits_{i=0}^{m}\overline{u}_i\left(x\right)\lambda_i\left(\mu\right)\]</span></p>
+</div>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="r-stack">
+<div data-id="2">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="Figures/PGD_2D.svg" height="200"></p>
+<figcaption>2D PGD</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div></div>
+</section>
+<section id="proper-generalised-decomposition-pgd-1" class="slide level2" data-auto-animate="true">
+<h2 data-id="quarto-animate-title">Proper Generalised Decomposition (PGD)</h2>
+<p><span class="citation" data-cites="chinesta_short_2011">(<a href="#/references" role="doc-biblioref" onclick="">Chinesta, Ladeveze, and Cueto 2011</a>)</span></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="mybox">
+<div class="mybox-header">
+<p>The PGD is</p>
+</div>
+<div class="mybox-body">
+<ul>
+<li>An <em>a priori</em> ROM techniques
+<ul>
+<li>building the reduced-order basis on the fly.</li>
+</ul></li>
+<li>No off-line computations</li>
+<li><strong>On the fly</strong> mode generation adapted to the specifics of the problem <span class="citation" data-cites="DabyHybrid">(<a href="#/references" role="doc-biblioref" onclick="">Daby-Seesaram et al. 2023</a>)</span></li>
+</ul>
+<div class="r-stack">
+<div data-id="1">
+<p><span class="math display">\[            \boldsymbol{u}\left(\textcolor{BleuLMS!70}{\boldsymbol{x}}, \textcolor{LGreenLMS}{\left\{\mu_i\right\}_{i \in \mathopen{~[\!\![~}1, \beta  \mathclose{~]\!\!]}}}\right) = \sum\limits_{i=1}^m \textcolor{BleuLMS!70}{\overline{\boldsymbol{u}}_i(\boldsymbol{x})} ~\textcolor{LGreenLMS}{\prod_{j=1}^{\beta}\lambda_i^j(\mu^j)} \in \mathcal{U}_{\text{ROM}}\]</span></p>
+</div>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="r-stack">
+<div data-id="2">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="Figures/PGD_3D.svg" height="200"></p>
+<figcaption>3D PGD</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div></div>
+<div class="fragment fade-up">
+<p><span class="math display">\[
+        \left(\left\{\overline{\boldsymbol{u}}_i \right\}_{i\in \mathopen{~[\!\![~}1,m\mathclose{~]\!\!]}},\left\{\lambda_i^j \right\}_{
+          \begin{cases}
+              i\in \mathopen{~[\!\![~}1,m\mathclose{~]\!\!]}\\
+              j\in \mathopen{~[\!\![~}1,\beta \mathclose{~]\!\!]}
+          \end{cases}
+        } \right) = \mathop{\mathrm{arg\,min}}_{
+            \begin{cases}
+                \left(\overline{\boldsymbol{u}}_1, \left\{\overline{\boldsymbol{u}}_i \right\} \right) &amp; \in \mathcal{U}\times \mathcal{U}_0 \\
+                \left\{\left\{\lambda_i^j \right\}\right\} &amp; \in \left( \bigtimes_{j=1}^{~\beta} \mathcal{L}_2\left(\mathcal{B}_j\right) \right)^{m-1}
+            \end{cases}} \int_{\mathcal{B}}\mathcal{J}\left(\boldsymbol{u}\right) \mathrm{d}\beta
+            \label{eq:min_problem}
+\]</span></p>
+<p><span class="math display">\[
+            \mathcal{U}_{\text{ROM}} \left(\text{resp.} \mathcal{U}_{\text{ROM}}^{0} \right) = \left\{\boldsymbol{u} \; | \; \boldsymbol{u}\left(\boldsymbol{x},\left\{\mu_i\right\}_{i \in \mathopen{~[\!\![~}1, \beta  \mathclose{~]\!\!]}}\right) \in \mathcal{U}_h \bigotimes_{i=1}^{\beta} \mathcal{L}^2\left(\mathcal{B}_i, \mathbb{R}\right) \text{, }
+            \boldsymbol{u} = \boldsymbol{u}_d \left(\text{resp.} =\boldsymbol{0} \right) \text{ on }\partial \Omega_d  \right\}  
+\]</span></p>
+</div>
+</section>
+<section id="section" class="slide level2" data-auto-animate="true">
+<h2 data-id="quarto-animate-title"></h2>
+<p>qwdeqwef</p>
+<div class="r-stack">
+<div data-id="1">
+<p><span class="math display">\[u\left(x, \mu\right) = \sum\limits_{i=0}^{m}\overline{u}_i\left(x\right)\lambda_i\left(\mu\right)\]</span></p>
+</div>
+</div>
+</section>
+<section id="section-1" class="slide level2" data-auto-animate="true">
+<h2 data-id="quarto-animate-title"></h2>
+<p>qwdeqwef</p>
+<div class="r-stack">
+<div data-id="1">
+<p><span class="math display">\[            \boldsymbol{u}\left(\textcolor{BleuLMS!70}{\boldsymbol{x}}, \textcolor{LGreenLMS}{\left\{\mu_i\right\}_{i \in \mathopen{~[\!\![~}1, \beta  \mathclose{~]\!\!]}}}\right) = \sum\limits_{i=1}^m \textcolor{BleuLMS!70}{\overline{\boldsymbol{u}}_i(\boldsymbol{x})} ~\textcolor{LGreenLMS}{\prod_{j=1}^{\beta}\lambda_i^j(\mu^j)} \in \mathcal{U}_{\text{ROM}},\]</span></p>
+</div>
+</div>
+</section>
+<section id="section-2" class="slide level2" data-auto-animate="true">
+<h2 data-id="quarto-animate-title"></h2>
+<div class="r-stack">
+<div data-id="1">
+<p>DRIVE</p>
+</div>
+</div>
+</section></section>
+<section>
+<section id="iii-preliminary-results" class="title-slide slide level1 center">
+<h1>III) Preliminary results</h1>
 
 </section>
 <section id="neurom" class="slide level2">
@@ -423,14 +699,14 @@ Martin Genet <a href="https://orcid.org/0000-0003-2204-201X" class="quarto-title
 <p>The convergence is investigated in <a href="#/neurom" class="quarto-xref">Figure&nbsp;1</a></p>
 <div class="columns">
 <div class="column" style="width:50%;">
-<div id="cell-fig-neurom" class="cell" data-execution_count="1">
+<div id="cell-fig-neurom-bistiffness" class="cell" data-execution_count="2">
 <div class="cell-output cell-output-display">
-<div id="fig-neurom" class="quarto-float quarto-figure quarto-figure-center">
+<div id="fig-neurom-bistiffness" class="quarto-float quarto-figure quarto-figure-center">
 <figure class="quarto-float quarto-float-fig">
-<div aria-describedby="fig-neurom-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img data-src="main_files/figure-revealjs/fig-neurom-output-1.svg">
+<div aria-describedby="fig-neurom-bistiffness-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img data-src="main_files/figure-revealjs/fig-neurom-bistiffness-output-1.svg">
 </div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-neurom-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-neurom-bistiffness-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;1: Convergence plot NeuROM
 </figcaption>
 </figure>
@@ -453,11 +729,29 @@ Figure&nbsp;1: Convergence plot NeuROM
 </div>
 </div>
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-barrault_empirical_2004" class="csl-entry" role="listitem">
+Barrault, Maxime, Yvon Maday, Ngoc Cuong Nguyen, and Anthony T. Patera. 2004. <span>“An <span>‘Empirical Interpolation’</span> Method: Application to Efficient Reduced-Basis Discretization of Partial Differential Equations.”</span> <em>Comptes Rendus Mathematique</em> 339 (9): 667–72. <a href="https://doi.org/10.1016/j.crma.2004.08.006">https://doi.org/10.1016/j.crma.2004.08.006</a>.
+</div>
+<div id="ref-chatterjee_introduction_2000" class="csl-entry" role="listitem">
+Chatterjee, Anindya. 2000. <span>“An Introduction to the Proper Orthogonal Decomposition.”</span> <em>Current Science</em> 78 (7): 808–17. <a href="https://www.jstor.org/stable/24103957">https://www.jstor.org/stable/24103957</a>.
+</div>
 <div id="ref-chinesta_short_2011" class="csl-entry" role="listitem">
 Chinesta, Francisco, Pierre Ladeveze, and Elías Cueto. 2011. <span>“A <span>Short</span> <span>Review</span> on <span>Model</span> <span>Order</span> <span>Reduction</span> <span>Based</span> on <span>Proper</span> <span>Generalized</span> <span>Decomposition</span>.”</span> <em>Archives of Computational Methods in Engineering</em> 18 (4): 395–404. <a href="https://doi.org/10.1007/s11831-011-9064-7">https://doi.org/10.1007/s11831-011-9064-7</a>.
 </div>
 <div id="ref-DabyHybrid" class="csl-entry" role="listitem">
 Daby-Seesaram, A., A. Fau, P.-É. Charbonnel, and D. Néron. 2023. <span>“A Hybrid Frequency-Temporal Reduced-Order Method for Nonlinear Dynamics.”</span> <em>Nonlinear Dynamics</em> 111 (15): 13669–89. <a href="https://doi.org/10.1007/s11071-023-08513-8">https://doi.org/10.1007/s11071-023-08513-8</a>.
+</div>
+<div id="ref-hansteen_accuracy_1979" class="csl-entry" role="listitem">
+Hansteen, Ole Edvard, and Kolbein Bell. 1979. <span>“On the Accuracy of Mode Superposition Analysis in Structural Dynamics.”</span> <em>Earthquake Engineering &amp; Structural Dynamics</em> 7 (5): 405–11. <a href="https://doi.org/10.1002/eqe.4290070502">https://doi.org/10.1002/eqe.4290070502</a>.
+</div>
+<div id="ref-maday_reduced-basis_2002" class="csl-entry" role="listitem">
+Maday, Yvon, and Einar M. Rønquist. 2002. <span>“A <span>Reduced</span>-<span>Basis</span> <span>Element</span> <span>Method</span>.”</span> <em>Journal of Scientific Computing</em> 17 (1): 447–59. <a href="https://doi.org/10.1023/A:1015197908587">https://doi.org/10.1023/A:1015197908587</a>.
+</div>
+<div id="ref-radermacher_comparison_2013" class="csl-entry" role="listitem">
+Radermacher, Annika, and Stefanie Reese. 2013. <span>“A Comparison of Projection-Based Model Reduction Concepts in the Context of Nonlinear Biomechanics.”</span> <em>Archive of Applied Mechanics</em> 83 (8): 1193–213. <a href="https://doi.org/10.1007/s00419-013-0742-9">https://doi.org/10.1007/s00419-013-0742-9</a>.
+</div>
+<div id="ref-zhang_hierarchical_2021" class="csl-entry" role="listitem">
+Zhang, Lei, Lin Cheng, Hengyang Li, Jiaying Gao, Cheng Yu, Reno Domel, Yang Yang, Shaoqiang Tang, and Wing Kam Liu. 2021. <span>“Hierarchical Deep-Learning Neural Networks: Finite Elements and Beyond.”</span> <em>Computational Mechanics</em> 67 (1): 207–30. <a href="https://doi.org/10.1007/s00466-020-01928-9">https://doi.org/10.1007/s00466-020-01928-9</a>.
 </div>
 </div>
 </section></section>
