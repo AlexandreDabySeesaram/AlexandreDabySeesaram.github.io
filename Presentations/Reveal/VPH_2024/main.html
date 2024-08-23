@@ -32,6 +32,71 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
+    /* CSS for syntax highlighting */
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      { color: #003b4f; background-color: #f1f3f5; }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #003b4f; } /* Normal */
+    code span.al { color: #ad0000; } /* Alert */
+    code span.an { color: #5e5e5e; } /* Annotation */
+    code span.at { color: #657422; } /* Attribute */
+    code span.bn { color: #ad0000; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #003b4f; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #20794d; } /* Char */
+    code span.cn { color: #8f5902; } /* Constant */
+    code span.co { color: #5e5e5e; } /* Comment */
+    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+    code span.dt { color: #ad0000; } /* DataType */
+    code span.dv { color: #ad0000; } /* DecVal */
+    code span.er { color: #ad0000; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #ad0000; } /* Float */
+    code span.fu { color: #4758ab; } /* Function */
+    code span.im { color: #00769e; } /* Import */
+    code span.in { color: #5e5e5e; } /* Information */
+    code span.kw { color: #003b4f; font-weight: bold; } /* Keyword */
+    code span.op { color: #5e5e5e; } /* Operator */
+    code span.ot { color: #003b4f; } /* Other */
+    code span.pp { color: #ad0000; } /* Preprocessor */
+    code span.sc { color: #5e5e5e; } /* SpecialChar */
+    code span.ss { color: #20794d; } /* SpecialString */
+    code span.st { color: #20794d; } /* String */
+    code span.va { color: #111111; } /* Variable */
+    code span.vs { color: #20794d; } /* VerbatimString */
+    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     /* CSS for citations */
     div.csl-bib-body { }
     div.csl-entry {
@@ -586,16 +651,14 @@ $$ -->
 <div class="column" style="width:50%;">
 <div class="mybox">
 <div class="mybox-header">
-<p>The PGD is</p>
+<p>Tensor decomposition</p>
 </div>
 <div class="mybox-body">
 <ul>
-<li>An <em>a priori</em> ROM techniques
-<ul>
-<li>building the reduced-order basis on the fly.</li>
-</ul></li>
-<li>No off-line computations</li>
-<li><strong>On the fly</strong> mode generation adapted to the specifics of the problem <span class="citation" data-cites="DabyHybrid">(<a href="#/references" role="doc-biblioref" onclick="">Daby-Seesaram et al. 2023</a>)</span></li>
+<li>Separation of variables</li>
+<li>Low-rank <span class="math inline">\(m\)</span></li>
+<li><span class="math inline">\(\textcolor{BleuLMPS}{\overline{\boldsymbol{u}}_i(\boldsymbol{x})}\)</span> Space modes</li>
+<li><span class="math inline">\(\textcolor{LGreenLMS}{\lambda_i^j(\mu^j)}\)</span> Parameter modes</li>
 </ul>
 <div class="r-stack">
 <div data-id="1">
@@ -632,23 +695,22 @@ $$ -->
 <div class="column" style="width:50%;">
 <div class="mybox">
 <div class="mybox-header">
-<p>The PGD is</p>
+<p>Tensor decomposition</p>
 </div>
 <div class="mybox-body">
 <ul>
-<li>An <em>a priori</em> ROM techniques
-<ul>
-<li>building the reduced-order basis on the fly.</li>
-</ul></li>
-<li>No off-line computations</li>
-<li><strong>On the fly</strong> mode generation adapted to the specifics of the problem <span class="citation" data-cites="DabyHybrid">(<a href="#/references" role="doc-biblioref" onclick="">Daby-Seesaram et al. 2023</a>)</span> <!-- $$
+<li>Separation of variables</li>
+<li>Low-rank <span class="math inline">\(m\)</span></li>
+<li><span class="math inline">\(\textcolor{BleuLMPS}{\overline{\boldsymbol{u}}_i(\boldsymbol{x})}\)</span> Space modes</li>
+<li><span class="math inline">\(\textcolor{LGreenLMS}{\lambda_i^j(\mu^j)}\)</span> Parameter modes</li>
+</ul>
+<!-- $$
 \definecolor{BleuLMS}{RGB}{1, 66, 106}
 \definecolor{accentcolor}{RGB}{1, 66, 106}
 \definecolor{GreenLMS}{RGB}{0,103,127} 
 \definecolor{LGreenLMS}{RGB}{67,176,42} 
 \definecolor{RougeLMS}{RGB}{206,0,55} 
-$$ --></li>
-</ul>
+$$ -->
 <div class="r-stack">
 <div data-id="1">
 <p><span class="math display">\[            
@@ -695,35 +757,152 @@ $$ --></li>
 </ul>
 </div>
 </section>
-<section id="section" class="slide level2" data-auto-animate="true">
-<h2 data-id="quarto-animate-title"></h2>
-<p>Morphing test 1</p>
+<section id="proper-generalised-decomposition-pgd-2" class="slide level2" data-auto-animate="true">
+<h2 data-id="quarto-animate-title">Proper Generalised Decomposition (PGD)</h2>
+<ul>
+<li>Building the low-rank tensor decomposition</li>
+</ul>
 <div class="r-stack">
+<div class="fragment fade-out" data-fragment-index="2">
 <div data-id="1">
-<p><span class="math display">\[u\left(x, \mu\right) = \sum\limits_{i=0}^{m}\overline{u}_i\left(x\right)\lambda_i\left(\mu\right)\]</span></p>
+<p><span class="math display">\[
+\boldsymbol{u}\left(\boldsymbol{x}, \left\{\mu_i\right\}_{i \in \mathopen{~[\!\![~}1, \beta  \mathclose{~]\!\!]}}\right) =  \overline{\boldsymbol{u}}_i(\boldsymbol{x}) ~\prod_{j=1}^{\beta}\lambda_i^j(\mu^j) \]</span></p>
+</div>
+</div>
+<div class="fragment fade-in-then-out" data-fragment-index="2">
+<p><span class="math display">\[
+\boldsymbol{u}\left(\boldsymbol{x}, \left\{\mu_i\right\}_{i \in \mathopen{~[\!\![~}1, \beta  \mathclose{~]\!\!]}}\right) = \sum\limits_{i=1}^{2} \overline{\boldsymbol{u}}_i(\boldsymbol{x}) ~\prod_{j=1}^{\beta}\lambda_i^j(\mu^j) \]</span></p>
+</div>
+<div class="fragment fade-in" data-fragment-index="3">
+<div data-id="2">
+<p><span class="math display">\[
+\boldsymbol{u}\left(\boldsymbol{x}, \left\{\mu_i\right\}_{i \in \mathopen{~[\!\![~}1, \beta  \mathclose{~]\!\!]}}\right) = \sum\limits_{i=1}^m \overline{\boldsymbol{u}}_i(\boldsymbol{x}) ~\prod_{j=1}^{\beta}\lambda_i^j(\mu^j) \]</span></p>
+</div>
+</div>
+</div>
+<style>
+.add-space{
+padding-right: 10%;
+}
+</style>
+<div class="columns">
+<div class="column add-space" style="width:40%;">
+<p><strong>Greedy algorithm</strong></p>
+<div class="fragment fade-in" data-fragment-index="1">
+<ol type="1">
+<li>Start with a single mode</li>
+<li>Minimise the loss until stagnation</li>
+</ol>
+</div>
+<div class="fragment fade-in" data-fragment-index="2">
+<ol start="3" type="1">
+<li>Add a new mode</li>
+<li>If loss decreases continue training</li>
+</ol>
+</div>
+<div class="fragment fade-in" data-fragment-index="3">
+<ol start="5" type="1">
+<li>Else stop and returrn the converged model</li>
+</ol>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="fragment fade-in" data-fragment-index="4">
+<div class="mybox">
+<div class="mybox-header">
+<p>The PGD is</p>
+</div>
+<div class="mybox-body">
+<ul>
+<li>An <em>a priori</em> ROM techniques
+<ul>
+<li>building the reduced-order basis on the fly.</li>
+</ul></li>
+<li>No off-line computations</li>
+<li><strong>On the fly</strong> mode generation adapted to the specifics of the problem <span class="citation" data-cites="DabyHybrid">(<a href="#/references" role="doc-biblioref" onclick="">Daby-Seesaram et al. 2023</a>)</span></li>
+</ul>
+</div>
+</div>
+</div>
+</div></div>
+<div class="fragment fade-in" data-fragment-index="5">
+<div class="mybox">
+<div class="mybox-header">
+<p>Note</p>
+</div>
+<div class="mybox-body">
+<ul>
+<li>When minimising the loss
+<ul>
+<li>Training of the full tensor decomposition as not only the <span class="math inline">\(m\)</span>-th mode</li>
+<li>Actual minimisation implementation of the PGD</li>
+</ul></li>
+</ul>
+</div>
 </div>
 </div>
 </section>
-<section id="section-1" class="slide level2" data-auto-animate="true">
-<h2 data-id="quarto-animate-title"></h2>
-<p>Morphing test 2</p>
+<section id="neurom" class="slide level2" data-auto-animate="true">
+<h2 data-id="quarto-animate-title">NeuROM</h2>
+<p>Graphical implementation of Neural Network PGD</p>
 <div class="r-stack">
-<div data-id="1">
-<p><span class="math display">\[            \boldsymbol{u}\left(\textcolor{BleuLMPS}{\boldsymbol{x}}, \textcolor{LGreenLMS}{\left\{\mu_i\right\}_{i \in \mathopen{~[\!\![~}1, \beta  \mathclose{~]\!\!]}}}\right) = \sum\limits_{i=1}^m \textcolor{BleuLMPS}{\overline{\boldsymbol{u}}_i(\boldsymbol{x})} ~\textcolor{LGreenLMS}{\prod_{j=1}^{\beta}\lambda_i^j(\mu^j)} \in \mathcal{U}_{\text{ROM}},\]</span></p>
+<div data-id="2">
+<p><span class="math display">\[            \boldsymbol{u}\left(\textcolor{BleuLMPS}{\boldsymbol{x}}, \textcolor{LGreenLMS}{\left\{\mu_i\right\}_{i \in \mathopen{~[\!\![~}1, \beta  \mathclose{~]\!\!]}}}\right) = \sum\limits_{i=1}^m \textcolor{BleuLMPS}{\overline{\boldsymbol{u}}_i(\boldsymbol{x})} ~\textcolor{LGreenLMS}{\prod_{j=1}^{\beta}\lambda_i^j(\mu^j)} \]</span></p>
 </div>
 </div>
+<div class="columns">
+<div class="column" style="width:65%;">
+<div class="mybox">
+<div class="mybox-header">
+<p>Interpretable NN-PGD</p>
+</div>
+<div class="mybox-body">
+<ul>
+<li>No black box
+<ul>
+<li>Fully interpretable implementation</li>
+<li>Great transfer learning capabilities</li>
+</ul></li>
+<li>Straightfoward implenation
+<ul>
+<li>Benefiting from current ML developements</li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div class="fragment fade-in" data-fragment-index="1">
+<ul>
+<li>Straight forward definition of the physical loss using auto-differentiation</li>
+</ul>
+<div id="53bc5360" class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode python hljs"><span id="cb1-1" class="hljs-ln-code"><a href=""></a><span class="kw">def</span> Loss(model,x,detJ,mu):</span>
+<span id="cb1-2" class="hljs-ln-code"><a href=""></a>    </span>
+<span id="cb1-3" class="hljs-ln-code"><a href=""></a>    eps <span class="op">=</span> torch.autograd.grad(model.space_mode(x), x, grad_outputs<span class="op">=</span>torch.ones_like(u))</span>
+<span id="cb1-4" class="hljs-ln-code"><a href=""></a>    lmbda <span class="op">=</span> model.parameter_mode(mu)</span>
+<span id="cb1-5" class="hljs-ln-code"><a href=""></a>    W_int <span class="op">=</span> torch.einsum(<span class="st">'ij,ejm,eil,em,mp...,lp...,p-&gt;'</span>,C,eps,eps,detJ_i,lmbda,lmbda, mu)</span>
+<span id="cb1-6" class="hljs-ln-code"><a href=""></a></span>
+<span id="cb1-7" class="hljs-ln-code"><a href=""></a>    <span class="cf">return</span> <span class="fl">0.5</span><span class="op">*</span>W_int<span class="op">/</span>mu.shape[<span class="dv">0</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div><div class="column" style="width:35%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="Figures/NN_PGD.svg" height="400"></p>
+<figcaption>NN-PGD</figcaption>
+</figure>
+</div>
+</div></div>
 </section></section>
 <section>
 <section id="iii---preliminary-results" class="title-slide slide level1 center">
 <h1>III - Preliminary results</h1>
 
 </section>
-<section id="neurom" class="slide level2">
+<section id="neurom-1" class="slide level2">
 <h2>NeuROM</h2>
-<p>The convergence is investigated in <a href="#/neurom" class="quarto-xref">Figure&nbsp;1</a></p>
+<p>The convergence is investigated in <a href="#/neurom-1" class="quarto-xref">Figure&nbsp;1</a></p>
 <div class="columns">
 <div class="column" style="width:50%;">
-<div id="cell-fig-neurom-bistiffness" class="cell" data-execution_count="2">
+<div id="cell-fig-neurom-bistiffness" class="cell" data-execution_count="3">
 <div class="cell-output cell-output-display">
 <div id="fig-neurom-bistiffness" class="quarto-float quarto-figure quarto-figure-center">
 <figure class="quarto-float quarto-float-fig">
@@ -935,7 +1114,7 @@ Zhang, Lei, Lin Cheng, Hengyang Li, Jiaying Gao, Cheng Yu, Reno Domel, Yang Yang
         previewLinks: false,
 
         // Transition style (none/fade/slide/convex/concave/zoom)
-        transition: 'fade',
+        transition: 'none',
 
         // Transition speed (default/fast/slow)
         transitionSpeed: 'default',

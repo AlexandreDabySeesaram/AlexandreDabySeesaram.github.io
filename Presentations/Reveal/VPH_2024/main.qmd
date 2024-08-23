@@ -23,7 +23,7 @@ format:
     slide-number: c/t
     show-slide-number: all
     code-fold: true
-    transition: fade
+    # transition: fade
     theme: ./LMS_Slides
     logo: Logo.svg
     date: 09/04/2024
@@ -274,15 +274,15 @@ Finding the reduced-order basis
 :::{.mybox}
 
 ::::{.mybox-header}
-The PGD is 
+Tensor decomposition
 ::::
 
 ::::{.mybox-body}
 
-* An *a priori* ROM techniques
-  * building the reduced-order basis on the fly.
-* No off-line computations
-* **On the fly** mode generation adapted to the specifics of the problem [@DabyHybrid]
+* Separation of variables
+* Low-rank $m$
+* $\textcolor{BleuLMPS}{\overline{\vect{u}}_i(\vect{x})}$ Space modes
+* $\textcolor{LGreenLMS}{\lambda_i^j(\mu^j)}$ Parameter modes
 
 ::: {.r-stack}
 ::: {data-id="1" }
@@ -325,15 +325,16 @@ The PGD is
 :::{.mybox}
 
 ::::{.mybox-header}
-The PGD is 
+Tensor decomposition
 ::::
 
 ::::{.mybox-body}
 
-* An *a priori* ROM techniques
-  * building the reduced-order basis on the fly.
-* No off-line computations
-* **On the fly** mode generation adapted to the specifics of the problem [@DabyHybrid]
+* Separation of variables
+* Low-rank $m$
+* $\textcolor{BleuLMPS}{\overline{\vect{u}}_i(\vect{x})}$ Space modes
+* $\textcolor{LGreenLMS}{\lambda_i^j(\mu^j)}$ Parameter modes
+
 <!-- $$
 \definecolor{BleuLMS}{RGB}{1, 66, 106}
 \definecolor{accentcolor}{RGB}{1, 66, 106}
@@ -396,21 +397,154 @@ $$
 
 
 
-## {auto-animate=true}
-Morphing test 1
+## Proper Generalised Decomposition (PGD) {auto-animate=true}
+* Building the low-rank tensor decomposition
 
 ::: {.r-stack}
+::: {.fragment fragment-index=2 .fade-out}
 ::: {data-id="1" }
- $$u\left(x, \mu\right) = \sum\limits_{i=0}^{m}\overline{u}_i\left(x\right)\lambda_i\left(\mu\right)$$
+$$
+\vect{u}\left(\vect{x}, \para\right) =  \overline{\vect{u}}_i(\vect{x}) ~\prod_{j=1}^{\beta}\lambda_i^j(\mu^j) $$
+:::
+:::
+::: {.fragment fragment-index=2 .fade-in-then-out}
+$$
+\vect{u}\left(\vect{x}, \para\right) = \sum\limits_{i=1}^{2} \overline{\vect{u}}_i(\vect{x}) ~\prod_{j=1}^{\beta}\lambda_i^j(\mu^j) $$
+:::
+::: {.fragment fragment-index=3 .fade-in}
+::: {data-id="2" }
+$$
+\vect{u}\left(\vect{x}, \para\right) = \sum\limits_{i=1}^m \overline{\vect{u}}_i(\vect{x}) ~\prod_{j=1}^{\beta}\lambda_i^j(\mu^j) $$
+:::
+:::
+:::
+<style>
+.add-space{
+padding-right: 10%;
+}
+</style>
+::: columns
+
+::: {.column  width="40%" .add-space}
+
+**Greedy algorithm**
+
+::: {.fragment fragment-index=1 .fade-in}
+1. Start with a single mode
+2. Minimise the loss until stagnation
+:::
+::: {.fragment fragment-index=2 .fade-in}
+3. Add a new mode 
+4. If loss decreases continue training
+:::
+::: {.fragment fragment-index=3 .fade-in}
+5. Else stop and returrn the converged model
+:::
+
+:::
+
+::: {.column  width="50%" }
+
+::: {.fragment fragment-index=4 .fade-in}
+
+:::{.mybox}
+
+::::{.mybox-header}
+The PGD is
+::::
+
+::::{.mybox-body}
+
+* An *a priori* ROM techniques
+  * building the reduced-order basis on the fly.
+* No off-line computations
+* **On the fly** mode generation adapted to the specifics of the problem [@DabyHybrid]
+
+:::
+
+:::
+
+:::
+
+:::
+
+:::
+
+::: {.fragment fragment-index=5 .fade-in}
+
+:::{.mybox}
+
+::::{.mybox-header}
+Note
+::::
+
+::::{.mybox-body}
+
+* When minimising the loss
+  * Training of the full tensor decomposition as not only the $m$-th mode
+  * Actual minimisation implementation of the PGD
+
+:::
+
+:::
+
+:::
+
+## NeuROM {auto-animate=true}
+Graphical implementation of Neural Network PGD
+
+::: {.r-stack}
+::: {data-id="2" }
+$$            \vect{u}\left(\textcolor{BleuLMPS}{\vect{x}}, \textcolor{LGreenLMS}{\para}\right) = \sum\limits_{i=1}^m \textcolor{BleuLMPS}{\overline{\vect{u}}_i(\vect{x})} ~\textcolor{LGreenLMS}{\prod_{j=1}^{\beta}\lambda_i^j(\mu^j)} $$
 :::
 :::
 
-## {auto-animate=true}
-Morphing test 2
+::: columns
 
-::: {.r-stack}
-::: {data-id="1" }
-$$            \vect{u}\left(\textcolor{BleuLMPS}{\vect{x}}, \textcolor{LGreenLMS}{\para}\right) = \sum\limits_{i=1}^m \textcolor{BleuLMPS}{\overline{\vect{u}}_i(\vect{x})} ~\textcolor{LGreenLMS}{\prod_{j=1}^{\beta}\lambda_i^j(\mu^j)} \in \mathcal{U}_{\text{ROM}},$$
+::: {.column  width="65%"}
+
+:::{.mybox}
+
+::::{.mybox-header}
+Interpretable NN-PGD
+::::
+
+::::{.mybox-body}
+
+* No black box
+  * Fully interpretable implementation
+  * Great transfer learning capabilities
+* Straightfoward implenation
+  * Benefiting from current ML developements
+:::
+
+:::
+
+::: {.fragment fragment-index=1 .fade-in}
+
+* Straight forward definition of the physical loss using auto-differentiation
+```{python}
+#| echo: true
+#| code-fold: false
+#| code-summary: ""
+def Loss(model,x,detJ,mu):
+    
+    eps = torch.autograd.grad(model.space_mode(x), x, grad_outputs=torch.ones_like(u))
+    lmbda = model.parameter_mode(mu)
+    W_int = torch.einsum('ij,ejm,eil,em,mp...,lp...,p->',C,eps,eps,detJ_i,lmbda,lmbda, mu)
+
+    return 0.5*W_int/mu.shape[0]
+
+```
+
+:::
+
+:::
+
+::: {.column  width="35%"}
+
+![NN-PGD](Figures/NN_PGD.svg){height=400}
+
 :::
 :::
 
