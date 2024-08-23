@@ -560,6 +560,8 @@ Illustration of the surrogate model in use
 
 ::: {.column  width="50%"}
 
+![Mechanical problem 2D](Figures/2D_example.svg)
+
 * Parametrised stiffness $E$
 * Parametrised external forces $\vect{f} =  \begin{bmatrix}
            -\rho g \sin\left( \theta \right) \\
@@ -570,7 +572,7 @@ Illustration of the surrogate model in use
 
 ::: {.column  width="50%"}
 
-![FEM computation & mesh adaptation](Figures/Movies/BiSliders_2D_snappy.mov){.absolute left="70" height="400" loop="true" autoplay=true}
+![NeuROM](Figures/Movies/BiSliders_2D_snappy.mov){.absolute left="70" height="400" loop="true" autoplay=true}
 
 :::
 

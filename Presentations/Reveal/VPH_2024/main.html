@@ -873,7 +873,7 @@ padding-right: 10%;
 <ul>
 <li>Straight forward definition of the physical loss using auto-differentiation</li>
 </ul>
-<div id="5bc99f15" class="cell" data-execution_count="2">
+<div id="0ae3c544" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode python hljs"><span id="cb1-1" class="hljs-ln-code"><a href=""></a><span class="kw">def</span> Loss(model,x,detJ,mu):</span>
 <span id="cb1-2" class="hljs-ln-code"><a href=""></a>    </span>
 <span id="cb1-3" class="hljs-ln-code"><a href=""></a>    eps <span class="op">=</span> torch.autograd.grad(model.space_mode(x), x, grad_outputs<span class="op">=</span>torch.ones_like(u))</span>
@@ -902,6 +902,12 @@ padding-right: 10%;
 <p>Illustration of the surrogate model in use</p>
 <div class="columns">
 <div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="Figures/2D_example.svg"></p>
+<figcaption>Mechanical problem 2D</figcaption>
+</figure>
+</div>
 <ul>
 <li>Parametrised stiffness <span class="math inline">\(E\)</span></li>
 <li>Parametrised external forces <span class="math inline">\(\boldsymbol{f} =  \begin{bmatrix}
@@ -913,7 +919,7 @@ padding-right: 10%;
 <div class="quarto-figure quarto-figure-center" style="left: 70px; height: 400px; ">
 <figure>
 <p><video data-src="Figures/Movies/BiSliders_2D_snappy.mov" class="absolute" loop="true" autoplay="true" controls=""><a href="Figures/Movies/BiSliders_2D_snappy.mov">Video</a></video></p>
-<figcaption>FEM computation &amp; mesh adaptation</figcaption>
+<figcaption>NeuROM</figcaption>
 </figure>
 </div>
 </div></div>
