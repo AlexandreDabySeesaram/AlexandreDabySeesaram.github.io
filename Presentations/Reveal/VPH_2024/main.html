@@ -873,7 +873,7 @@ padding-right: 10%;
 <ul>
 <li>Straight forward definition of the physical loss using auto-differentiation</li>
 </ul>
-<div id="53bc5360" class="cell" data-execution_count="2">
+<div id="5bc99f15" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode python hljs"><span id="cb1-1" class="hljs-ln-code"><a href=""></a><span class="kw">def</span> Loss(model,x,detJ,mu):</span>
 <span id="cb1-2" class="hljs-ln-code"><a href=""></a>    </span>
 <span id="cb1-3" class="hljs-ln-code"><a href=""></a>    eps <span class="op">=</span> torch.autograd.grad(model.space_mode(x), x, grad_outputs<span class="op">=</span>torch.ones_like(u))</span>
@@ -896,6 +896,27 @@ padding-right: 10%;
 <section id="iii---preliminary-results" class="title-slide slide level1 center">
 <h1>III - Preliminary results</h1>
 
+</section>
+<section id="stiffness-and-external-forces-parametrisation" class="slide level2">
+<h2>Stiffness and external forces parametrisation</h2>
+<p>Illustration of the surrogate model in use</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<ul>
+<li>Parametrised stiffness <span class="math inline">\(E\)</span></li>
+<li>Parametrised external forces <span class="math inline">\(\boldsymbol{f} =  \begin{bmatrix}
+         -\rho g \sin\left( \theta \right) \\
+         ~\rho g \cos\left( \theta \right)
+       \end{bmatrix}\)</span></li>
+</ul>
+</div><div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center" style="left: 70px; height: 400px; ">
+<figure>
+<p><video data-src="Figures/Movies/BiSliders_2D_snappy.mov" class="absolute" loop="true" autoplay="true" controls=""><a href="Figures/Movies/BiSliders_2D_snappy.mov">Video</a></video></p>
+<figcaption>FEM computation &amp; mesh adaptation</figcaption>
+</figure>
+</div>
+</div></div>
 </section>
 <section id="neurom-1" class="slide level2">
 <h2>NeuROM</h2>
@@ -923,6 +944,37 @@ Figure&nbsp;1: Convergence plot NeuROM
 </ul>
 </div></div>
 </section>
+<section id="conclusion" class="slide level2">
+<h2>Conclusion</h2>
+<div class="mybox">
+<div class="mybox-header">
+<p>Conclusion</p>
+</div>
+<div class="mybox-body">
+<ul>
+<li>Robust and straitfoward general implementation of a NN-PGD
+<ul>
+<li>Interpretable</li>
+<li>Benefits from all recent developpments in ML</li>
+<li>Surrogate modelling of parametrised PDE solution</li>
+<li>Promising results</li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div class="mybox">
+<div class="mybox-header">
+<p>Perspectives for patient-specific applications</p>
+</div>
+<div class="mybox-body">
+<ul>
+<li>Implentation of the poro-mechanics lung model <span class="citation" data-cites="patte_quasi-static_2022">(<a href="#/references" role="doc-biblioref" onclick="">Patte, Genet, and Chapelle 2022</a>)</span></li>
+<li>Parametrisation of the segmented geometries</li>
+<li>Application to real-time lungs’ parameters estimation</li>
+</ul>
+</div>
+</div>
+</section>
 <section id="references" class="slide level2 smaller scrollable">
 <h2>References</h2>
 <div class="quarto-auto-generated-content">
@@ -949,6 +1001,9 @@ Hansteen, Ole Edvard, and Kolbein Bell. 1979. <span>“On the Accuracy of Mode S
 </div>
 <div id="ref-maday_reduced-basis_2002" class="csl-entry" role="listitem">
 Maday, Yvon, and Einar M. Rønquist. 2002. <span>“A <span>Reduced</span>-<span>Basis</span> <span>Element</span> <span>Method</span>.”</span> <em>Journal of Scientific Computing</em> 17 (1): 447–59. <a href="https://doi.org/10.1023/A:1015197908587">https://doi.org/10.1023/A:1015197908587</a>.
+</div>
+<div id="ref-patte_quasi-static_2022" class="csl-entry" role="listitem">
+Patte, Cécile, Martin Genet, and Dominique Chapelle. 2022. <span>“A Quasi-Static Poromechanical Model of the Lungs.”</span> <em>Biomechanics and Modeling in Mechanobiology</em> 21 (2): 527–51. <a href="https://doi.org/10.1007/s10237-021-01547-0">https://doi.org/10.1007/s10237-021-01547-0</a>.
 </div>
 <div id="ref-radermacher_comparison_2013" class="csl-entry" role="listitem">
 Radermacher, Annika, and Stefanie Reese. 2013. <span>“A Comparison of Projection-Based Model Reduction Concepts in the Context of Nonlinear Biomechanics.”</span> <em>Archive of Applied Mechanics</em> 83 (8): 1193–213. <a href="https://doi.org/10.1007/s00419-013-0742-9">https://doi.org/10.1007/s00419-013-0742-9</a>.

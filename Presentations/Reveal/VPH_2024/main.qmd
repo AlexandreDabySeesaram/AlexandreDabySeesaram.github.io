@@ -552,6 +552,31 @@ def Loss(model,x,detJ,mu):
 
 # III - Preliminary results
 
+## Stiffness and external forces parametrisation
+
+Illustration of the surrogate model in use
+
+::: columns
+
+::: {.column  width="50%"}
+
+* Parametrised stiffness $E$
+* Parametrised external forces $\vect{f} =  \begin{bmatrix}
+           -\rho g \sin\left( \theta \right) \\
+           ~\rho g \cos\left( \theta \right) 
+         \end{bmatrix}$
+
+:::
+
+::: {.column  width="50%"}
+
+![FEM computation & mesh adaptation](Figures/Movies/BiSliders_2D_snappy.mov){.absolute left="70" height="400" loop="true" autoplay=true}
+
+:::
+
+
+:::
+
 ## NeuROM
 
 The convergence is investigated in @fig-neurom-bistiffness
@@ -570,7 +595,41 @@ The convergence is investigated in @fig-neurom-bistiffness
 
 :::
 
+## Conclusion
+
+:::{.mybox}
+
+::::{.mybox-header}
+Conclusion
+::::
+
+::::{.mybox-body}
+
+* Robust and straitfoward general implementation of a NN-PGD
+  * Interpretable
+  * Benefits from all recent developpments in ML
+  * Surrogate modelling of parametrised PDE solution
+  * Promising results
+
+:::
+
+:::
+
+:::{.mybox}
+
+::::{.mybox-header}
+Perspectives for patient-specific applications
+::::
+
+::::{.mybox-body}
+
+* Implentation of the poro-mechanics lung model [@patte_quasi-static_2022]
+* Parametrisation of the segmented geometries
+* Application to real-time lungs' parameters estimation
 
 
+:::
+
+:::
 
 ## References
