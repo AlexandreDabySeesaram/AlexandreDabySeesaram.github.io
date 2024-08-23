@@ -43,9 +43,22 @@ bibliography: biblio.bib
 
 {{< include MyNotations.qmd >}}
 
-# I) Motivations & objectives
+
+# I - Motivations & objectives
   * Real-time simulation of the lungs
   * Mechanical problem
+$$
+\definecolor{BleuLMS}{RGB}{1, 66, 106}
+\definecolor{VioletLMS}{RGB}{77, 22, 84}
+\definecolor{TealLMS}{RGB}{0, 103, 127}
+% \definecolor{BleuLMS2}{RGB}{0, 103, 202}
+\definecolor{BleuLMS2}{RGB}{0, 169, 206}
+\definecolor{BleuLMPS}{RGB}{105, 144, 255}
+\definecolor{accentcolor}{RGB}{1, 66, 106}
+\definecolor{GreenLMS}{RGB}{0,103,127} 
+\definecolor{LGreenLMS}{RGB}{67,176,42} 
+\definecolor{RougeLMS}{RGB}{206,0,55} 
+$$
 
 ## Transfering tools to the clinic
 
@@ -103,7 +116,7 @@ Behaviour
 
 :::
 
-# II) Methods
+# II - Methods
 
 ## The finite element method interpolation
 
@@ -114,7 +127,7 @@ $$
     \vect{u} = \vect{u}_d \left(\text{resp.} =\vect{0} \right) \text{ on }\partial \Omega_d  \right\}  
 $$
 
-* an approximation thought after in the finite admissible (resp. admissible to zero) space
+* An approximation thought after in the finite admissible (resp. admissible to zero) space
 
 $$
     \mathcal{U}_h \left(\text{resp.} \mathcal{U}_h^0 \right) = \left\{\vect{u}_h  \; | \; \vect{u}_h \in \text{Span}\left( \left\{ N_i^{\Omega}\left(\vect{x} \right)\right\}_{i \in \llbracket 1,n_p\rrbracket} \right)^d \text{, }
@@ -136,8 +149,8 @@ Finite element neural network interpolation
 
 ::::{.mybox-body}
 
-* This interpolation can be done using sparse neural networks [@zhang_hierarchical_2021] 
-  * By constraining **weights** and **biases**
+* This interpolation can be done using sparse neural networks (SNN) [@zhang_hierarchical_2021] 
+  * $N_i^{\Omega}$ are SNN with constrained **weights** and **biases**
   * Continuous interpolated field that can be **automatically differentiated**
   * Gives the additional benefit of running on **GPUs**
   * Fully **interpretable** parameters
@@ -191,7 +204,7 @@ In practice
 
 
 ## Reduced-order modelling (ROM)
-Avoid the curse of dimensionality
+Low-rank approximatin of the solutoin to avoid the curse of dimensionality
 
 ::: columns
 
@@ -273,7 +286,7 @@ The PGD is
 
 ::: {.r-stack}
 ::: {data-id="1" }
- $$u\left(x, \mu\right) = \sum\limits_{i=0}^{m}\overline{u}_i\left(x\right)\lambda_i\left(\mu\right)$$
+ $$\textcolor{VioletLMS}{\vect{u}}\left(\textcolor{BleuLMPS}{\vect{x}}, \textcolor{LGreenLMS}{\mu}\right) = \sum\limits_{i=0}^{m}\textcolor{BleuLMPS}{\overline{u}_i\left(x\right)}\textcolor{LGreenLMS}{\lambda_i\left(\mu\right)}$$
 :::
 :::
 
@@ -285,9 +298,16 @@ The PGD is
 
 ::: {.column  width="50%"}
 
+**Discretised problem**
+
 ::: {.r-stack}
 ::: {data-id="2" }
 ![2D PGD](Figures/PGD_2D.svg){height=200}
+:::
+:::
+::: {.r-stack}
+::: {data-id="3" }
+* From $N\times N_{\mu}$ unknowns to $m\times\left(N + N_{\mu}\right)$
 :::
 :::
 :::
@@ -314,10 +334,18 @@ The PGD is
   * building the reduced-order basis on the fly.
 * No off-line computations
 * **On the fly** mode generation adapted to the specifics of the problem [@DabyHybrid]
+<!-- $$
+\definecolor{BleuLMS}{RGB}{1, 66, 106}
+\definecolor{accentcolor}{RGB}{1, 66, 106}
+\definecolor{GreenLMS}{RGB}{0,103,127} 
+\definecolor{LGreenLMS}{RGB}{67,176,42} 
+\definecolor{RougeLMS}{RGB}{206,0,55} 
+$$ -->
 
 ::: {.r-stack}
 ::: {data-id="1" }
-$$            \vect{u}\left(\textcolor{BleuLMS!70}{\vect{x}}, \textcolor{LGreenLMS}{\para}\right) = \sum\limits_{i=1}^m \textcolor{BleuLMS!70}{\overline{\vect{u}}_i(\vect{x})} ~\textcolor{LGreenLMS}{\prod_{j=1}^{\beta}\lambda_i^j(\mu^j)} \in \mathcal{U}_{\text{ROM}}$$
+$$            
+\textcolor{VioletLMS}{\vect{u}}\left(\textcolor{BleuLMPS}{\vect{x}}, \textcolor{LGreenLMS}{\para}\right) = \sum\limits_{i=1}^m \textcolor{BleuLMPS}{\overline{\vect{u}}_i(\vect{x})} ~\textcolor{LGreenLMS}{\prod_{j=1}^{\beta}\lambda_i^j(\mu^j)} $$
 :::
 :::
 
@@ -328,9 +356,17 @@ $$            \vect{u}\left(\textcolor{BleuLMS!70}{\vect{x}}, \textcolor{LGreenL
 :::
 
 ::: {.column  width="50%"}
+
+**Discretised problem**
+
 ::: {.r-stack}
 ::: {data-id="2" }
 ![3D PGD](Figures/PGD_3D.svg){height=200}
+:::
+:::
+::: {.r-stack}
+::: {data-id="3" }
+* From $N\bigtimes_{j=1}^{~\beta} N_{\mu}^j$ unknowns to $m\times\left(N + \sum\limits_{j=1}^{\beta} N_{\mu}^j\right)$
 :::
 :::
 :::
@@ -340,6 +376,7 @@ $$            \vect{u}\left(\textcolor{BleuLMS!70}{\vect{x}}, \textcolor{LGreenL
 
 
 ::: {.fragment .fade-up}
+* Finidng the tensor decomposition by **minimising** the **strain energy**
 $$
         \left(\left\{\overline{\vect{u}}_i \right\}_{i\in \llbracket 1,m\rrbracket},\left\{\lambda_i^j \right\}_{
           \begin{cases}
@@ -350,14 +387,11 @@ $$
             \begin{cases}
                 \left(\overline{\vect{u}}_1, \left\{\overline{\vect{u}}_i \right\} \right) & \in \mathcal{U}\times \mathcal{U}_0 \\ 
                 \left\{\left\{\lambda_i^j \right\}\right\} & \in \left( \bigtimes_{j=1}^{~\beta} \mathcal{L}_2\left(\mathcal{B}_j\right) \right)^{m-1}
-            \end{cases}} \int_{\mathcal{B}}\mathcal{J}\left(\vect{u}\right) \d \beta
+            \end{cases}}  ~\underbrace{\frac{1}{\int_{\mathcal{B}} 1 \mathrm{d}\beta} \int_{\mathcal{B}}\left[E_p\left(\vect{u}\left(\vect{x},\para\right), \ftensor{C}, \vect{F}, \vect{f} \right)  \right]\mathrm{d}\beta}_{\mathcal{L}}
             \label{eq:min_problem}
 $$
 
-$$ 
-        	\mathcal{U}_{\text{ROM}} \left(\text{resp.} \mathcal{U}_{\text{ROM}}^{0} \right) = \left\{\vect{u} \; | \; \vect{u}\left(\vect{x},\para\right) \in \mathcal{U}_h \bigotimes_{i=1}^{\beta} \mathcal{L}^2\left(\mathcal{B}_i, \mathbb{R}\right) \text{, }
-        	\vect{u} = \vect{u}_d \left(\text{resp.} =\vect{0} \right) \text{ on }\partial \Omega_d  \right\}  
-$$
+
 :::
 
 
@@ -376,13 +410,13 @@ Morphing test 2
 
 ::: {.r-stack}
 ::: {data-id="1" }
-$$            \vect{u}\left(\textcolor{BleuLMS!70}{\vect{x}}, \textcolor{LGreenLMS}{\para}\right) = \sum\limits_{i=1}^m \textcolor{BleuLMS!70}{\overline{\vect{u}}_i(\vect{x})} ~\textcolor{LGreenLMS}{\prod_{j=1}^{\beta}\lambda_i^j(\mu^j)} \in \mathcal{U}_{\text{ROM}},$$
+$$            \vect{u}\left(\textcolor{BleuLMPS}{\vect{x}}, \textcolor{LGreenLMS}{\para}\right) = \sum\limits_{i=1}^m \textcolor{BleuLMPS}{\overline{\vect{u}}_i(\vect{x})} ~\textcolor{LGreenLMS}{\prod_{j=1}^{\beta}\lambda_i^j(\mu^j)} \in \mathcal{U}_{\text{ROM}},$$
 :::
 :::
 
 
 
-# III) Preliminary results
+# III - Preliminary results
 
 ## NeuROM
 
