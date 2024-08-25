@@ -1,0 +1,25 @@
+---
+title: Talks (selection)
+format:
+  html:
+    page-layout: full
+---
+
+## Incoming talks
+
++----------------------------------------+----------------------------------------------------------------------------------+
+| Virtual Physiological Human (VPH) 2024 | Stuttgart, Germany, 3rd - 6th of September 2024                                  |
++========================================+==================================================================================+
+| Title                                  | Hybridising standard ROM methods with interpretable sparse neural networks       |
+|                                        |for real-time patient specific lung simulations                                   |
++----------------------------------------+----------------------------------------------------------------------------------+
+| Authors                                | <a href="index.qmd">A. Daby-seesaram<a>,                                         |
+|                                        | <a href="https://m3disim.saclay.inria.fr/people/katerina-skardova/">K. Škardová, |
+|                                        | <a href="https://m3disim.saclay.inria.fr/people/martin-genet/">M.Genet<a>        |
++----------------------------------------+----------------------------------------------------------------------------------+
+| Links                                  | <a href="Docs/CV_2024.pdf">slides<a>                                             |
++----------------------------------------+----------------------------------------------------------------------------------+
+
+
+
+## Past talks

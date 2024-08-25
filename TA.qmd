@@ -1,0 +1,24 @@
+---
+title: Teaching activities
+image: Resources/Images/Book_cover.jpg
+toc: false
+about:
+  template: broadside
+format:
+  html:
+    page-layout: full
+---
+
+#### Teaching undergraduate students at École Polytechnique
+
+- **2020 - 2023** Physics I: Mechanics and heat  
+  - Tutorials sessions
+  - Writing tutorials subjects
+- **2020 - 2023** Physics Lab I  
+  - Lab sessions
+  - Creation of lab session subjects
+
+#### Physique-chimie PSI-PSI* Concours X, ENS, CentraleSupélec, Mines-Ponts, CCINP
+
+- Writing a physics book for undergraduate students (Classes Préparatoires aux Grandes Écoles)
+- Physics problems, corrections, and comments, helping students prepare for their entrance exams to prestigious universities (French "Grandes Écoles").

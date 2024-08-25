@@ -1,0 +1,79 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Alexandre Daby-Seesaram",
+    "section": "",
+    "text": "I am Alexandre Daby-Seesaram,a Postdoctoral researcher at École Polytechnique and INRIA in the MΞDISIM team.\nI hold a Ph.D. in computational mechanics from the University Paris-Saclay (ENS Paris-Saclay), where I worked at the LMPS (Laboratory of Mechanics Paris-Saclay). You can learn more about my background on my [CV].\nMy main research interest consists of solving highly non-linear problems using model-order reduction techniques such as the Proper Generalised Decomposition (PGD). I’ve recently become interested in hybridising classical model-order reduction methods with machine learning approaches. Combining tensor decomposition and interpretable neural networks enables efficient and robust solving of large non-linear problems."
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "Alexandre Daby-Seesaram",
+    "section": "",
+    "text": "I am Alexandre Daby-Seesaram,a Postdoctoral researcher at École Polytechnique and INRIA in the MΞDISIM team.\nI hold a Ph.D. in computational mechanics from the University Paris-Saclay (ENS Paris-Saclay), where I worked at the LMPS (Laboratory of Mechanics Paris-Saclay). You can learn more about my background on my [CV].\nMy main research interest consists of solving highly non-linear problems using model-order reduction techniques such as the Proper Generalised Decomposition (PGD). I’ve recently become interested in hybridising classical model-order reduction methods with machine learning approaches. Combining tensor decomposition and interpretable neural networks enables efficient and robust solving of large non-linear problems."
+  },
+  {
+    "objectID": "education.html",
+    "href": "education.html",
+    "title": "Education",
+    "section": "",
+    "text": "2020 - 2023 PhD - Laboratoire de Mécanique Paris-Saclay (UMR 9026, Université Paris-Saclay, CentraleSupélec, ENS Paris-Saclay, CNRS)\n\n2019 - 2020 Master of science (M2R) - ENS Paris-Saclay / CentraleSupélec (MS2SC)\n\n2018 - 2019 Scientific teaching qualification (agrégation de mécanique)\n\n2017 - 2018 Master of science (1) - ENS Paris-Saclay (MMS)\n2016 - 2017 Bachelor's degree in Engineering\n2014 - 2016 MPSI-PSI* (Lycée Hoche, Versailles), Intensive two-year class of mathematics, physics and engineering sciences preparing for selective entrance examination to the French Grandes Ecoles\n2011 - 2014 Baccalauréat (A-levels) - with first class honours (Lycée Hoche, Versailles)\n\n\nAdditional resources:\n\nIn collaboration with Flavien Loiseau, we made our Ph.D. thesis template openly available on Github..\nA more detailed version of my background can be found in my [CV]."
+  },
+  {
+    "objectID": "TA.html",
+    "href": "TA.html",
+    "title": "Teaching activities",
+    "section": "",
+    "text": "Teaching undergraduate students at École Polytechnique\n\n2020 - 2023 Physics I: Mechanics and heat\n\nTutorials sessions\nWriting tutorials subjects\n\n2020 - 2023 Physics Lab I\n\nLab sessions\nCreation of lab session subjects\n\n\n\n\nPhysique-chimie PSI-PSI* Concours X, ENS, CentraleSupélec, Mines-Ponts, CCINP\n\nWriting a physics book for undergraduate students (Classes Préparatoires aux Grandes Écoles)\nPhysics problems, corrections, and comments, helping students prepare for their entrance exams to prestigious universities (French “Grandes Écoles”)."
+  },
+  {
+    "objectID": "add_resources.html",
+    "href": "add_resources.html",
+    "title": "Additional resources",
+    "section": "",
+    "text": "My PhD dissertation is available here.\nIn collaboration with Flavien Loiseau, we made our Ph.D. thesis template openly available on Github..\nA more detailed version of my background can be found in my [CV]."
+  },
+  {
+    "objectID": "add_resources.html#documents",
+    "href": "add_resources.html#documents",
+    "title": "Additional resources",
+    "section": "",
+    "text": "My PhD dissertation is available here.\nIn collaboration with Flavien Loiseau, we made our Ph.D. thesis template openly available on Github..\nA more detailed version of my background can be found in my [CV]."
+  },
+  {
+    "objectID": "add_resources.html#illustrations",
+    "href": "add_resources.html#illustrations",
+    "title": "Additional resources",
+    "section": "Illustrations",
+    "text": "Illustrations\n\nHybrid sparse neural network and Proper Generalised Decomposition (PGD)\n\n\n\n\n\nParametric interactive results\nFeel free to interact with it."
+  },
+  {
+    "objectID": "talks.html",
+    "href": "talks.html",
+    "title": "Talks (selection)",
+    "section": "",
+    "text": "Virtual Physiological Human (VPH) 2024\nStuttgart, Germany, 3rd - 6th of September 2024\n\n\n\n\nTitle\nHybridising standard ROM methods with interpretable sparse neural networks for real-time patient specific lung simulations\n\n\nAuthors\nA. Daby-seesaram, K. Škardová, M.Genet\n\n\nLinks\nslides"
+  },
+  {
+    "objectID": "talks.html#incoming-talks",
+    "href": "talks.html#incoming-talks",
+    "title": "Talks (selection)",
+    "section": "",
+    "text": "Virtual Physiological Human (VPH) 2024\nStuttgart, Germany, 3rd - 6th of September 2024\n\n\n\n\nTitle\nHybridising standard ROM methods with interpretable sparse neural networks for real-time patient specific lung simulations\n\n\nAuthors\nA. Daby-seesaram, K. Škardová, M.Genet\n\n\nLinks\nslides"
+  },
+  {
+    "objectID": "talks.html#past-talks",
+    "href": "talks.html#past-talks",
+    "title": "Talks (selection)",
+    "section": "Past talks",
+    "text": "Past talks"
+  },
+  {
+    "objectID": "research.html#illustrations",
+    "href": "research.html#illustrations",
+    "title": "Research",
+    "section": "Illustrations",
+    "text": "Illustrations\n\nHybrid sparse neural network and Proper Generalised Decomposition (PGD)\n\n\n\n\n\nParametric interactive results\nFeel free to interact with it."
+  }
+]

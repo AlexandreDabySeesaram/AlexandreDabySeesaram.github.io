@@ -1,0 +1,27 @@
+---
+title: Education
+image: Resources/Images/Defence_croped.jpeg
+toc: false
+about:
+  template: marquee
+#   image-shape: round
+  image-title: PhD Defence, 1st of December 2023
+format:
+  html:
+    page-layout: full
+---
+
+* **2020 - 2023** <a href="Resources/Documents/PhD_Thesis.pdf">PhD</a> - Laboratoire de Mécanique Paris-Saclay (UMR 9026, Université Paris-Saclay, CentraleSupélec, ENS Paris-Saclay, CNRS)  
+    <!-- - In collaboration with <a href="https://floiseau.github.io/">Flavien Loiseau</a>, we made our Ph.D. thesis template openly available <a href="https://github.com/floiseau/PhD_Thesis_Template">on GitHub</a>. -->
+* **2019 - 2020** Master of science (M2R) - ENS Paris-Saclay / CentraleSupélec (MS2SC)  
+* **2018 - 2019** Scientific teaching qualification (agrégation de mécanique)  
+* **2017 - 2018** Master of science (1) - ENS Paris-Saclay (MMS)
+* **2016 - 2017** Bachelor&#039;s degree in Engineering 
+* **2014 - 2016** MPSI-PSI* (Lycée Hoche, Versailles), Intensive two-year class of mathematics, physics and engineering sciences preparing for selective entrance examination to the French Grandes Ecoles 
+* **2011 - 2014** Baccalauréat (A-levels) - with first class honours (Lycée Hoche, Versailles)
+
+### Additional resources:
+
+* In collaboration with <a href="https://floiseau.github.io/">Flavien Loiseau</a>, we made our Ph.D. thesis template openly available <a href="https://github.com/floiseau/PhD_Thesis_Template">on Github.</a>.
+
+* A more detailed version of my background can be found in my <a href="Resources/Documents/CV.pdf">[CV]</a>.

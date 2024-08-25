@@ -1,0 +1,31 @@
+---
+title: Additional resources
+# toc: false
+# about:
+#   template: marquee
+#   image-shape: round
+format:
+  html:
+    page-layout: full
+---
+
+## Documents
+
+* My PhD dissertation is available <a href="Resources/Documents/PhD_Thesis.pdf">here.</a>
+
+* In collaboration with <a href="https://floiseau.github.io/">Flavien Loiseau</a>, we made our Ph.D. thesis template openly available <a href="https://github.com/floiseau/PhD_Thesis_Template">on Github.</a>.
+
+* A more detailed version of my background can be found in my <a href="Resources/Documents/CV.pdf">[CV]</a>.
+
+## Illustrations
+
+### Hybrid sparse neural network and Proper Generalised Decomposition (PGD)
+
+<video width="100%" controls>
+  <source src="Resources/Videos/HiDeNN.mp4" type="video/mp4">
+</video>
+
+### Parametric interactive results
+Feel free to interact with it.
+
+<iframe width="100%" height="550" src="Resources/Results/Parametric_E_Theta.html"></IFRAME>
