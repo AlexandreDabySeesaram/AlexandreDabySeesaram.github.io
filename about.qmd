@@ -19,7 +19,7 @@ format:
     page-layout: full
 ---
 
-I am Alexandre Daby-Seesaram,a Postdoctoral researcher at École Polytechnique and INRIA in the <a href="https://m3disim.saclay.inria.fr/">MΞDISIM team</a>.
+I am Alexandre Daby-Seesaram, a Postdoctoral researcher at École Polytechnique and INRIA in the <a href="https://m3disim.saclay.inria.fr/">MΞDISIM team</a>.
 
 I hold a Ph.D. in <b>computational mechanics</b> from the University Paris-Saclay (ENS Paris-Saclay), where I worked at the LMPS (Laboratory of Mechanics Paris-Saclay). You can learn more about my background on my <a href="Resources/Documents/CV.pdf">[CV]</a>. 
 
