@@ -17,7 +17,7 @@ format:
 |                                        | <a href="https://m3disim.saclay.inria.fr/people/katerina-skardova/">K. Škardová<a>, |
 |                                        | <a href="https://m3disim.saclay.inria.fr/people/martin-genet/">M. Genet<a>          |
 +----------------------------------------+-------------------------------------------------------------------------------------+
-| Link                                   | <a href="Resources/Documents/Presentations/Reveal/VPH_2024/main.html">slides<a>     |
+| Link                                   | <a href="Resources/Documents/Presentations/VPH2024/main.html">slides<a>             |
 +----------------------------------------+-------------------------------------------------------------------------------------+
 
 
