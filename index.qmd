@@ -17,6 +17,9 @@ about:
 format:
   html:
     page-layout: full
+    include-in-header:
+      - text: |
+          <meta name="google-site-verification" content="lyL1XECA_aIiJN9ihH1tHYGqzCDubMyGXCILlJTVjZw" />
 ---
 # Welcome, 
 I'm Alexandre Daby-Seesaram, a Postdoctoral researcher at École Polytechnique and INRIA in the <a href="https://m3disim.saclay.inria.fr/">MΞDISIM team</a>.
