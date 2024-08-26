@@ -14,7 +14,7 @@ website:
       - href: add_resources.qmd
         text: Resources
       - href: TA.qmd
-        text: Teaching activities
+        text: Teaching
       - href: education.qmd
         text: Education
       - text: CV
