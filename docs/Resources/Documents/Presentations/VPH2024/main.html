@@ -458,6 +458,11 @@ Martin Genet <a href="https://orcid.org/0000-0003-2204-201X" class="quarto-title
 <section>
 <section id="i---motivations-objectives" class="title-slide slide level1 center">
 <h1>I - Motivations &amp; objectives</h1>
+<style>
+r { color: Red }
+o { color: Orange }
+g { color: Green }
+</style>
 <table class="caption-top" style="width:67%;">
 <colgroup>
 <col style="width: 66%">
@@ -493,14 +498,66 @@ Martin Genet <a href="https://orcid.org/0000-0003-2204-201X" class="quarto-title
 \definecolor{RougeLMS}{RGB}{206,0,55}
 \]</span></p>
 </section>
-<section id="transfering-tools-to-the-clinic" class="slide level2">
-<h2>Transfering tools to the clinic</h2>
+<section id="idiopathic-pulmonary-fibrosis" class="slide level2">
+<h2>Idiopathic Pulmonary Fibrosis</h2>
+<div class="mybox">
+<div class="mybox-header">
+<p>Link with mechanics</p>
+</div>
+<div class="mybox-body">
 <ul>
-<li>Talk about IPF and link with mechanics</li>
+<li>Mechanics is assumed to be a key factor in the development of the dease
+<ul>
+<li>Vicious circle between has been hypothesized <span class="citation" data-cites="liu_feedback_2010">(<a href="#/references" role="doc-biblioref" onclick="">Liu et al. 2010</a>)</span>
+<ul>
+<li>Large stresses</li>
+<li>Fibrosis spread</li>
+</ul></li>
+</ul></li>
 </ul>
+</div>
+</div>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="mybox">
+<div class="mybox-header">
+<p>Objectives</p>
+</div>
+<div class="mybox-body">
+<ul>
+<li>Improved understanding of the physilogical mechanisms</li>
+<li>In silico prognostics</li>
+<li>Transfer tools to the clinic</li>
+</ul>
+</div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="mybox">
+<div class="mybox-header">
+<p>Requirements</p>
+</div>
+<div class="mybox-body">
+<div class="fragment fade-in">
+<ul>
+<li><g> Mecahnical model of the lung </g> <span class="citation" data-cites="patte_quasi-static_2022">(<a href="#/references" role="doc-biblioref" onclick="">Patte, Genet, and Chapelle 2022</a>)</span></li>
+</ul>
+</div>
+<div class="fragment fade-in">
+<ul>
+<li><o> Uncertainty quantification </o></li>
+</ul>
+</div>
+<div class="fragment fade-in">
+<ul>
+<li><r> Real-time estimation of the parameters </r></li>
+</ul>
+</div>
+</div>
+</div>
+</div></div>
 </section>
-<section id="mechanical-problem" class="slide level2">
-<h2>Mechanical problem</h2>
+<section id="poro-mechanical-problem" class="slide level2" data-auto-animate="true">
+<h2 data-id="quarto-animate-title">Poro-mechanical problem</h2>
 <ul>
 <li><strong>Parametrised</strong> (patient-specific) mechanical problem</li>
 </ul>
@@ -516,15 +573,17 @@ $$ -->
 <!-- ![Reference problem](Figures/Omega.svg){width=200} -->
 <div class="columns">
 <div class="column" style="width:65%;">
+<div data-id="2">
 <p><span class="math display">\[
          \begin{cases}
-            \boldsymbol{\nabla}\cdot \mathcal{\boldsymbol{\sigma}}+ \boldsymbol{f}\left(\left\{\mu_i\right\}_{i \in \mathopen{~[\!\![~}1, \beta  \mathclose{~]\!\!]}}\right) = 0 \qquad &amp; \mathrm{in} \ \Omega \\
-            \mathcal{\boldsymbol{\sigma}}\cdot \boldsymbol{n} = \boldsymbol{F}\left(\left\{\mu_i\right\}_{i \in \mathopen{~[\!\![~}1, \beta  \mathclose{~]\!\!]}}\right)  &amp; \text{on } \partial \Omega_{N} \\
+            \boldsymbol{\nabla}\cdot \mathcal{\boldsymbol{\sigma}}+ \boldsymbol{f} = 0 \qquad &amp; \mathrm{in} \ \Omega \\
+            \mathcal{\boldsymbol{\sigma}}\cdot \boldsymbol{n} = \boldsymbol{F}  &amp; \text{on } \partial \Omega_{N} \\
             \boldsymbol{u} = \boldsymbol{u}_d \qquad \qquad &amp; \text{on } \partial \Omega_{d} \\
-            \mathcal{\boldsymbol{\sigma}}= \mathbb{C}\left(\left\{\mu_i\right\}_{i \in \mathopen{~[\!\![~}1, \beta  \mathclose{~]\!\!]}}\right):\mathcal{\boldsymbol{\varepsilon}}(\boldsymbol{u}) &amp; \mathrm{in} \ \Omega
+            % \sigm = \ftensor{C}\left(\para\right):\eps(\vect{u}) &amp; \mathrm{in} \ \Omega
          \end{cases}
          \label{eq:MechPb}
 \]</span></p>
+</div>
 </div><div class="column" style="width:35%;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
@@ -538,6 +597,68 @@ $$ -->
 <p>Behaviour</p>
 </div>
 <div class="mybox-body">
+<div data-id="1">
+<ul>
+<li><span class="math inline">\(\boldsymbol{\Sigma} = \frac{\partial \Psi}{\partial \boldsymbol{E}}\)</span>
+<ul>
+<li>Nonlinear finite strain poro-mecahnics <span class="citation" data-cites="patte_quasi-static_2022">(<a href="#/references" role="doc-biblioref" onclick="">Patte, Genet, and Chapelle 2022</a>)</span></li>
+</ul></li>
+</ul>
+</div>
+<ul>
+<li><span class="math inline">\(\boldsymbol{\Sigma}\)</span> Second Piola-Kirchhoff stress tensor</li>
+<li><span class="math inline">\(\boldsymbol{E}\)</span> is the Green-Lagrange strain tensor</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="simple-mechanical-problem---surrogate-modelling" class="slide level2" data-auto-animate="true">
+<h2 data-id="quarto-animate-title">Simple mechanical problem - surrogate modelling</h2>
+<ul>
+<li><strong>Parametrised</strong> (patient-specific) mechanical problem</li>
+</ul>
+<!-- $$
+         \begin{cases}
+            \div \cdot \sigm  + \vect{f}\left(\para\right) = 0 \qquad & \mathrm{in} \ \Omega \\
+            \sigm \cdot \vect{n} = \vect{F}\left(\para\right)  & \text{on } \partial \Omega_{N} \\
+            \vect{u} = \vect{u}_d \qquad \qquad & \text{on } \partial \Omega_{d} \\
+            \sigm = \ftensor{C}\left(\para\right):\eps(\vect{u}) & \mathrm{in} \ \Omega
+         \end{cases}
+         \label{eq:MechPb}
+$$ -->
+<!-- ![Reference problem](Figures/Omega.svg){width=200} -->
+<div class="columns">
+<div class="column" style="width:65%;">
+<div data-id="2">
+<p><span class="math display">\[
+         \begin{cases}
+            \boldsymbol{\nabla}\cdot \mathcal{\boldsymbol{\sigma}}+ \boldsymbol{f}\left(\left\{\mu_i\right\}_{i \in \mathopen{~[\!\![~}1, \beta  \mathclose{~]\!\!]}}\right) = 0 \qquad &amp; \mathrm{in} \ \Omega \\
+            \mathcal{\boldsymbol{\sigma}}\cdot \boldsymbol{n} = \boldsymbol{F}\left(\left\{\mu_i\right\}_{i \in \mathopen{~[\!\![~}1, \beta  \mathclose{~]\!\!]}}\right)  &amp; \text{on } \partial \Omega_{N} \\
+            \boldsymbol{u} = \boldsymbol{u}_d \qquad \qquad &amp; \text{on } \partial \Omega_{d} \\
+         \end{cases}
+         \label{eq:MechPb2}
+\]</span></p>
+</div>
+</div><div class="column" style="width:35%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="Figures/Omega.svg" width="200"></p>
+<figcaption>Reference problem</figcaption>
+</figure>
+</div>
+</div></div>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="mybox">
+<div class="mybox-header">
+<p>Behaviour</p>
+</div>
+<div class="mybox-body">
+<div data-id="1">
+<ul>
+<li><span class="math inline">\(\mathcal{\boldsymbol{\sigma}}= \mathbb{C}\left(\left\{\mu_i\right\}_{i \in \mathopen{~[\!\![~}1, \beta  \mathclose{~]\!\!]}}\right):\mathcal{\boldsymbol{\varepsilon}}(\boldsymbol{u})\)</span></li>
+</ul>
+</div>
 <ul>
 <li><span class="math inline">\(\mathbb{C}\left(\left\{\mu_i\right\}_{i \in \mathopen{~[\!\![~}1, \beta  \mathclose{~]\!\!]}}\right)\)</span> the parametrised <strong>Hooke’s</strong> tensor</li>
 <li><span class="math inline">\(\mathcal{\boldsymbol{\varepsilon}}(\boldsymbol{u})\)</span> the linearised <strong>Green-Lagrange</strong> strain tensor</li>
@@ -545,6 +666,26 @@ $$ -->
 </ul>
 </div>
 </div>
+</div><div class="column" style="width:50%;">
+<div class="mybox">
+<div class="mybox-header">
+<p>Reduced-order model (ROM)</p>
+</div>
+<div class="mybox-body">
+<ul>
+<li>Build a <strong>surrogate model</strong>
+<ul>
+<li>Parametrised solution</li>
+</ul></li>
+<li>No computations online</li>
+<li><strong>On the fly</strong> evaluation of the model
+<ul>
+<li>Real-time parameters’ estimation</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div></div>
 </section></section>
 <section>
 <section id="ii---methods" class="title-slide slide level1 center">
@@ -937,7 +1078,7 @@ padding-right: 10%;
 <ul>
 <li>Straight forward definition of the physical loss using auto-differentiation</li>
 </ul>
-<div id="2998302f" class="cell" data-execution_count="2">
+<div id="d87f06c5" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode python hljs"><span id="cb1-1" class="hljs-ln-code"><a href=""></a><span class="kw">def</span> Loss(model,x,detJ,mu):</span>
 <span id="cb1-2" class="hljs-ln-code"><a href=""></a>    </span>
 <span id="cb1-3" class="hljs-ln-code"><a href=""></a>    eps <span class="op">=</span> torch.autograd.grad(model.space_mode(x), x, grad_outputs<span class="op">=</span>torch.ones_like(u))</span>
@@ -988,6 +1129,11 @@ padding-right: 10%;
 <figcaption>Mechanical problem 2D</figcaption>
 </figure>
 </div>
+<div class="mybox">
+<div class="mybox-header">
+<p>Parameters</p>
+</div>
+<div class="mybox-body">
 <ul>
 <li>Parametrised stiffness <span class="math inline">\(E\)</span></li>
 <li>Parametrised external forces <span class="math inline">\(\boldsymbol{f} =  \begin{bmatrix}
@@ -995,14 +1141,72 @@ padding-right: 10%;
          ~\rho g \cos\left( \theta \right)
        \end{bmatrix}\)</span></li>
 </ul>
+</div>
+</div>
 </div><div class="column" style="width:50%;">
-<div class="quarto-figure quarto-figure-center" style="left: 70px; height: 400px; ">
+<div class="quarto-figure quarto-figure-center" style="left: 70px; height: 394px; ">
 <figure>
 <p><video data-src="Figures/Movies/BiSliders_2D_snappy.mov" class="absolute" loop="true" autoplay="true" controls=""><a href="Figures/Movies/BiSliders_2D_snappy.mov">Video</a></video></p>
 <figcaption>NeuROM</figcaption>
 </figure>
 </div>
+<div class="mybox">
+<div class="mybox-header">
+<p>NN-PGD</p>
+</div>
+<div class="mybox-body">
+<ul>
+<li>Immediate evaluation of the surrogate model</li>
+<li>Straightforward differenciation capabilities regarding the input parameters</li>
+</ul>
+</div>
+</div>
 </div></div>
+</section>
+<section id="multi-level-training" class="slide level2">
+<h2>Multi-level training</h2>
+<div class="columns">
+<div class="column" style="width:65%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="Figures/Multi_level_NeuROM.svg" width="500"></p>
+<figcaption>Multi-level training convergence</figcaption>
+</figure>
+</div>
+</div><div class="column" style="width:35%;">
+<div class="mybox">
+<div class="mybox-header">
+<p>Strategy</p>
+</div>
+<div class="mybox-body">
+<ul>
+<li>The interpretability of the NN allows
+<ul>
+<li>Great transfer learning capabilities
+<ul>
+<li>Start by coarse (cheap) training</li>
+<li>Followed by fine tunning</li>
+</ul></li>
+</ul></li>
+<li>Extends the idea put forward by <span class="citation" data-cites="giacoma_toward_2015">(<a href="#/references" role="doc-biblioref" onclick="">Giacoma et al. 2015</a>)</span></li>
+</ul>
+</div>
+</div>
+</div></div>
+<div class="mybox">
+<div class="mybox-header-teal">
+<p>Note</p>
+</div>
+<div class="mybox-body">
+<ul>
+<li>The structure of the Tensor decomposition is kept throughout the multi-level training</li>
+<li>Last mode of each level is irrelevant by construction
+<ul>
+<li>It is removed before passing onto the next refinement level</li>
+</ul></li>
+</ul>
+</div>
+</div>
 </section>
 <section id="neural-network-pgd-1" class="slide level2">
 <h2>Neural Network PGD</h2>
@@ -1082,8 +1286,14 @@ Chinesta, Francisco, Pierre Ladeveze, and Elías Cueto. 2011. <span>“A <span>S
 <div id="ref-DabyHybrid" class="csl-entry" role="listitem">
 Daby-Seesaram, A., A. Fau, P.-É. Charbonnel, and D. Néron. 2023. <span>“A Hybrid Frequency-Temporal Reduced-Order Method for Nonlinear Dynamics.”</span> <em>Nonlinear Dynamics</em> 111 (15): 13669–89. <a href="https://doi.org/10.1007/s11071-023-08513-8">https://doi.org/10.1007/s11071-023-08513-8</a>.
 </div>
+<div id="ref-giacoma_toward_2015" class="csl-entry" role="listitem">
+Giacoma, A., D. Dureisseix, A. Gravouil, and M. Rochette. 2015. <span>“Toward an Optimal a Priori Reduced Basis Strategy for Frictional Contact Problems with <span>LATIN</span> Solver.”</span> <em>Computer Methods in Applied Mechanics and Engineering</em> 283 (January): 1357–81. <a href="https://doi.org/10.1016/j.cma.2014.09.005">https://doi.org/10.1016/j.cma.2014.09.005</a>.
+</div>
 <div id="ref-hansteen_accuracy_1979" class="csl-entry" role="listitem">
 Hansteen, Ole Edvard, and Kolbein Bell. 1979. <span>“On the Accuracy of Mode Superposition Analysis in Structural Dynamics.”</span> <em>Earthquake Engineering &amp; Structural Dynamics</em> 7 (5): 405–11. <a href="https://doi.org/10.1002/eqe.4290070502">https://doi.org/10.1002/eqe.4290070502</a>.
+</div>
+<div id="ref-liu_feedback_2010" class="csl-entry" role="listitem">
+Liu, Fei, Justin D. Mih, Barry S. Shea, Alvin T. Kho, Asma S. Sharif, Andrew M. Tager, and Daniel J. Tschumperlin. 2010. <span>“Feedback Amplification of Fibrosis Through Matrix Stiffening and <span>COX</span>-2 Suppression.”</span> <em>Journal of Cell Biology</em> 190 (4): 693–706. <a href="https://doi.org/10.1083/jcb.201004082">https://doi.org/10.1083/jcb.201004082</a>.
 </div>
 <div id="ref-maday_reduced-basis_2002" class="csl-entry" role="listitem">
 Maday, Yvon, and Einar M. Rønquist. 2002. <span>“A <span>Reduced</span>-<span>Basis</span> <span>Element</span> <span>Method</span>.”</span> <em>Journal of Scientific Computing</em> 17 (1): 447–59. <a href="https://doi.org/10.1023/A:1015197908587">https://doi.org/10.1023/A:1015197908587</a>.
