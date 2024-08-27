@@ -803,14 +803,16 @@ $$ -->
 <p>Degrees of freedom (Dofs)</p>
 </div>
 <div class="mybox-body">
-<div style="margin-top: 1em;">
-
-</div>
+<!-- ::: {style="margin-top: 0em;"}
+::: -->
 <ul>
-<li>Nodal values (standard FEM Dofs)</li>
+<li>Nodal values (standard FEM Dofs)
+<ul>
+<li>hr-adaptivity</li>
+</ul></li>
 <li>Nodal coordinates (Mesh adaptation)</li>
 </ul>
-<div style="margin-top: 1.3em;">
+<div style="margin-top: 0.15em;">
 
 </div>
 </div>
@@ -1132,7 +1134,7 @@ padding-right: 10%;
 <ul>
 <li>Straightforward definition of the physical loss using auto-differentiation</li>
 </ul>
-<div id="8320fb10" class="cell" data-execution_count="2">
+<div id="f83ae22e" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode python hljs"><span id="cb1-1" class="hljs-ln-code"><a href=""></a><span class="kw">def</span> Loss(model,x,detJ,mu):</span>
 <span id="cb1-2" class="hljs-ln-code"><a href=""></a>    </span>
 <span id="cb1-3" class="hljs-ln-code"><a href=""></a>    eps <span class="op">=</span> torch.autograd.grad(model.space_mode(x), x, grad_outputs<span class="op">=</span>torch.ones_like(u))</span>
