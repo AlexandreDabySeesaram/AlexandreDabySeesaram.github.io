@@ -1135,7 +1135,7 @@ padding-right: 10%;
 <ul>
 <li>Straightforward definition of the physical loss using auto-differentiation</li>
 </ul>
-<div id="858b2005" class="cell" data-execution_count="2">
+<div id="79da63bd" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode python hljs"><span id="cb1-1" class="hljs-ln-code"><a href=""></a><span class="kw">def</span> Loss(model,x,detJ,mu):</span>
 <span id="cb1-2" class="hljs-ln-code"><a href=""></a>    </span>
 <span id="cb1-3" class="hljs-ln-code"><a href=""></a>    eps <span class="op">=</span> torch.autograd.grad(model.space_mode(x), x, grad_outputs<span class="op">=</span>torch.ones_like(u))</span>
@@ -1327,6 +1327,8 @@ Figure&nbsp;1: Convergence plot NeuROM
 </section>
 <section id="conclusion" class="slide level2">
 <h2>Conclusion</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
 <div class="mybox">
 <div class="mybox-header">
 <p>Conclusion</p>
@@ -1345,8 +1347,7 @@ Figure&nbsp;1: Convergence plot NeuROM
 </ul>
 </div>
 </div>
-<div class="columns">
-<div class="column" style="width:50%;">
+</div><div class="column" style="width:50%;">
 <div class="mybox">
 <div class="mybox-header">
 <p>Perspectives for patient-specific applications</p>
@@ -1354,15 +1355,18 @@ Figure&nbsp;1: Convergence plot NeuROM
 <div class="mybox-body">
 <ul>
 <li>Implementation of the poro-mechanics lung model <span class="citation" data-cites="patte_quasi-static_2022">(<a href="#/references" role="doc-biblioref" onclick="">Patte, Genet, and Chapelle 2022</a>)</span></li>
-<li>Parametrisation of the segmented geometries</li>
+<li>Parametrisation of the segmented geometries
+<ul>
+<li>Variational encoder to reduce the segmentation’s parametrisation</li>
+</ul></li>
 <li>Application to real-time lung parameters estimation</li>
+<li>Error quantification on the estimated parameters</li>
 </ul>
-<div style="margin-top: 0.3em;">
-
 </div>
 </div>
-</div>
-</div><div class="column" style="width:50%;">
+</div></div>
+<div class="columns">
+<div class="column" style="width:50%;">
 <div class="mybox">
 <div class="mybox-header">
 <p>Technical perspectives</p>
@@ -1379,6 +1383,24 @@ Figure&nbsp;1: Convergence plot NeuROM
 </ul></li>
 </ul>
 </div>
+</div>
+</div><div class="column" style="width:50%;">
+<div style="margin-top: 1.8em;">
+
+</div>
+<div style="margin-left: 14%;">
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: center;"><img data-src="Figures/QR_code.svg"></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><a href="https://alexandredabyseesaram.github.io/">Github page</a></td>
+</tr>
+</tbody>
+</table>
 </div>
 </div></div>
 </section>
