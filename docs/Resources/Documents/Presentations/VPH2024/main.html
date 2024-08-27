@@ -14,7 +14,7 @@
   <meta name="author" content="Katerina Skardova">
   <meta name="author" content="Martin Genet">
   <meta name="dcterms.date" content="2024-09-04">
-  <title>Hybridising standard reduced-order modelling methods with interpretable sparse neural networks for real-time patient specific lung simulations</title>
+  <title>Hybridising standard reduced-order modelling methods with interpretable sparse neural networks for real-time patient-specific lung simulations</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -414,7 +414,7 @@
     <div class="slides">
 
 <section id="title-slide" data-background-image="HiDeNN_TD.png" class="quarto-title-block center">
-  <h1 class="title">Hybridising standard reduced-order modelling methods with interpretable sparse neural networks for real-time patient specific lung simulations</h1>
+  <h1 class="title">Hybridising standard reduced-order modelling methods with interpretable sparse neural networks for real-time patient-specific lung simulations</h1>
   <p class="subtitle">VPH 2024 - Stuttgart</p>
 
 <div class="quarto-title-authors">
@@ -506,12 +506,13 @@ g { color: Green }
 </div>
 <div class="mybox-body">
 <ul>
-<li>Mechanics is assumed to be a key factor in the development of the dease
+<li>Mechanics is assumed to be a key factor in the development of the disease
 <ul>
-<li>Vicious circle between has been hypothesized <span class="citation" data-cites="liu_feedback_2010">(<a href="#/references" role="doc-biblioref" onclick="">Liu et al. 2010</a>)</span>
+<li>A vicious circle has been hypothesized <span class="citation" data-cites="liu_feedback_2010">(<a href="#/references" role="doc-biblioref" onclick="">Liu et al. 2010</a>)</span> where
 <ul>
-<li>Large stresses</li>
+<li>Large stresses lead to</li>
 <li>Fibrosis spread</li>
+<li>In turn, this leads to stiffer zones and higher stresses</li>
 </ul></li>
 </ul></li>
 </ul>
@@ -523,12 +524,21 @@ g { color: Green }
 <div class="mybox-header">
 <p>Objectives</p>
 </div>
+<div style="margin-top: 0.5em;">
+
+</div>
 <div class="mybox-body">
 <ul>
-<li>Improved understanding of the physilogical mechanisms</li>
-<li>In silico prognostics</li>
+<li>Improved understanding of the physiological mechanisms</li>
+<li><em>In silico</em> prognostics
+<ul>
 <li>Transfer tools to the clinic</li>
+<li>Patient-specific digital twins</li>
+</ul></li>
 </ul>
+<div style="margin-top: 1em;">
+
+</div>
 </div>
 </div>
 </div><div class="column" style="width:50%;">
@@ -556,11 +566,9 @@ g { color: Green }
 </div>
 </div></div>
 </section>
-<section id="poro-mechanical-problem" class="slide level2" data-auto-animate="true">
-<h2 data-id="quarto-animate-title">Poro-mechanical problem</h2>
-<ul>
-<li><strong>Parametrised</strong> (patient-specific) mechanical problem</li>
-</ul>
+<section id="lung-poro-mechanics" class="slide level2" data-auto-animate="true">
+<h2 data-id="quarto-animate-title">Lung poro-mechanics</h2>
+<!-- * **Parametrised** (patient-specific) mechanical problem -->
 <!-- $$
          \begin{cases}
             \div \cdot \sigm  + \vect{f}\left(\para\right) = 0 \qquad & \mathrm{in} \ \Omega \\
@@ -573,6 +581,9 @@ $$ -->
 <!-- ![Reference problem](Figures/Omega.svg){width=200} -->
 <div class="columns">
 <div class="column" style="width:65%;">
+<div style="margin-top: 5em;">
+
+</div>
 <div data-id="2">
 <p><span class="math display">\[
          \begin{cases}
@@ -601,7 +612,7 @@ $$ -->
 <ul>
 <li><span class="math inline">\(\boldsymbol{\Sigma} = \frac{\partial \Psi}{\partial \boldsymbol{E}}\)</span>
 <ul>
-<li>Nonlinear finite strain poro-mecahnics <span class="citation" data-cites="patte_quasi-static_2022">(<a href="#/references" role="doc-biblioref" onclick="">Patte, Genet, and Chapelle 2022</a>)</span></li>
+<li>Nonlinear finite strain poro-mechanics <span class="citation" data-cites="patte_quasi-static_2022">(<a href="#/references" role="doc-biblioref" onclick="">Patte, Genet, and Chapelle 2022</a>)</span></li>
 </ul></li>
 </ul>
 </div>
@@ -629,6 +640,9 @@ $$ -->
 <!-- ![Reference problem](Figures/Omega.svg){width=200} -->
 <div class="columns">
 <div class="column" style="width:65%;">
+<div style="margin-top: 3em;">
+
+</div>
 <div data-id="2">
 <p><span class="math display">\[
          \begin{cases}
@@ -680,9 +694,12 @@ $$ -->
 <li>No computations online</li>
 <li><strong>On the fly</strong> evaluation of the model
 <ul>
-<li>Real-time parameters’ estimation</li>
+<li>Real-time parameters estimation</li>
 </ul></li>
 </ul>
+<div style="margin-top: 0.6em;">
+
+</div>
 </div>
 </div>
 </div></div>
@@ -707,7 +724,7 @@ $$ -->
 </tr>
 <tr class="odd">
 <td><ol start="3" type="1">
-<li><strong>Hybride Neural Network Proper Generalised Decomposition</strong></li>
+<li><strong>Hybrid Neural Network Proper Generalised Decomposition</strong> |</li>
 </ol></td>
 </tr>
 </tbody>
@@ -716,14 +733,14 @@ $$ -->
 <section id="the-finite-element-method-interpolation" class="slide level2">
 <h2>The finite element method interpolation</h2>
 <ul>
-<li>From the continous problem of finding the displacement <span class="math inline">\(\boldsymbol{u}\)</span> in</li>
+<li>From the continuous problem of finding the displacement <span class="math inline">\(\boldsymbol{u}\)</span> in</li>
 </ul>
 <p><span class="math display">\[
     \mathcal{U} \left(\text{resp.} \mathcal{U}^0 \right) = \left\{\boldsymbol{u} \; | \; \boldsymbol{u}\left(\boldsymbol{x}\right) \in \mathcal{H}^1\left(\Omega, \mathbb{R}^{\text{d}}\right) \text{, }
     \boldsymbol{u} = \boldsymbol{u}_d \left(\text{resp.} =\boldsymbol{0} \right) \text{ on }\partial \Omega_d  \right\}  
 \]</span></p>
 <ul>
-<li>An approximation thought after in the finite admissible (resp. admissible to zero) space</li>
+<li>An approximation is thought after in the finite admissible (resp. admissible to zero) space</li>
 </ul>
 <p><span class="math display">\[
     \mathcal{U}_h \left(\text{resp.} \mathcal{U}_h^0 \right) = \left\{\boldsymbol{u}_h  \; | \; \boldsymbol{u}_h \in \text{Span}\left( \left\{ N_i^{\Omega}\left(\boldsymbol{x} \right)\right\}_{i \in \mathopen{~[\!\![~}1,n_p\mathclose{~]\!\!]}} \right)^d \text{, }
@@ -760,7 +777,12 @@ $$ -->
 </section>
 <section id="solving-the-mechanical-problem" class="slide level2">
 <h2>Solving the mechanical problem</h2>
-<p>Once the interpolation is achieved, solving the mechanical problems amounts to finding the continous displacement field <strong>minimising the potential energy</strong> <span class="math display">\[E_p\left(\boldsymbol{u}\right) = \frac{1}{2} \int_{\Omega}\mathcal{\boldsymbol{\varepsilon}}: \mathbb{C} : \mathcal{\boldsymbol{\varepsilon}}~\mathrm{d}\Omega- \int_{\partial \Omega_N}\boldsymbol{F}\cdot \boldsymbol{u} ~\mathrm{d}A- \int_{\Omega}\boldsymbol{f}\cdot\boldsymbol{u}~\mathrm{d}\Omega. \]</span></p>
+<p>Solving the mechanical problems amounts to finding the continous displacement field <strong>minimising the potential energy</strong> <span class="math display">\[E_p\left(\boldsymbol{u}\right) = \frac{1}{2} \int_{\Omega}\mathcal{\boldsymbol{\varepsilon}}: \mathbb{C} : \mathcal{\boldsymbol{\varepsilon}}~\mathrm{d}\Omega- \int_{\partial \Omega_N}\boldsymbol{F}\cdot \boldsymbol{u} ~\mathrm{d}A- \int_{\Omega}\boldsymbol{f}\cdot\boldsymbol{u}~\mathrm{d}\Omega. \]</span></p>
+<div style="margin-top: -0.5em;">
+
+</div>
+<div class="columns">
+<div class="column" style="width:50%;">
 <div class="mybox">
 <div class="mybox-header">
 <p>In practice</p>
@@ -768,12 +790,34 @@ $$ -->
 <div class="mybox-body">
 <ul>
 <li>Compute the loss <span class="math inline">\(\mathcal{L} := E_p\)</span></li>
-<li>Find the parameters (node <strong>coordinates</strong> and nodal <strong>values</strong>) minimising the loss
+<li>Find the parameters <strong>minimising</strong> the loss
 <ul>
-<li>Rely on state of the art optimizers (SGD, ADAM, <strong>LBFGS</strong>, etc.)</li>
+<li>Rely on state-of-the-art optimizers (ADAM, <strong>LBFGS</strong>, etc.)</li>
 </ul></li>
 </ul>
 </div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="mybox">
+<div class="mybox-header">
+<p>Degrees of freedom (Dofs)</p>
+</div>
+<div class="mybox-body">
+<div style="margin-top: 1em;">
+
+</div>
+<ul>
+<li>Nodal values (standard FEM Dofs)</li>
+<li>Nodal coordinates (Mesh adaptation)</li>
+</ul>
+<div style="margin-top: 1.3em;">
+
+</div>
+</div>
+</div>
+</div></div>
+<div style="margin-top: -1.2em;">
+
 </div>
 <div class="fragment fade-in">
 <p><video data-src="Figures/Movies/out.mp4" class="absolute" style="left: 70px; height: 300px; " loop="true" autoplay="true" controls=""><a href="Figures/Movies/out.mp4">FEM computation &amp; mesh adaptation</a></video> <img data-src="Figures/VM_converged.svg" class="absolute" style="right: 70px; height: 300px; " alt="Von mises stress"></p>
@@ -781,7 +825,7 @@ $$ -->
 </section>
 <section id="reduced-order-modelling-rom" class="slide level2">
 <h2>Reduced-order modelling (ROM)</h2>
-<p><strong>Low-rank</strong> approximatin of the solutoin to avoid the <strong>curse of dimensionality</strong></p>
+<p><strong>Low-rank</strong> approximation of the solution to avoid the <strong>curse of dimensionality</strong></p>
 <div class="columns">
 <div class="column" style="width:50%;">
 <div class="mybox">
@@ -796,6 +840,9 @@ $$ -->
 </ul></li>
 <li>Requires computing <span class="math inline">\(N\times \beta\)</span> associated parametric functions</li>
 </ul>
+<div style="margin-top: 1.7em;">
+
+</div>
 </div>
 </div>
 </div><div class="column" style="width:50%;">
@@ -821,15 +868,15 @@ $$ -->
 </div>
 <div class="mybox-body">
 <ul>
-<li>Linear Normal Modes (eigenmodes of the structure) <span class="citation" data-cites="hansteen_accuracy_1979">(<a href="#/references" role="doc-biblioref" onclick="">Hansteen and Bell 1979</a>)</span>
+<li><strong>Linear Normal Modes</strong> (eigenmodes of the structure) <span class="citation" data-cites="hansteen_accuracy_1979">(<a href="#/references" role="doc-biblioref" onclick="">Hansteen and Bell 1979</a>)</span>
 <ul>
 <li>Do not account for the loading and behaviour specifics</li>
 </ul></li>
-<li>Proper Orthogonal Decomposition <span class="citation" data-cites="chatterjee_introduction_2000">(<a href="#/references" role="doc-biblioref" onclick="">Chatterjee 2000</a>)</span>,<span class="citation" data-cites="radermacher_comparison_2013">(<a href="#/references" role="doc-biblioref" onclick="">Radermacher and Reese 2013</a>)</span>
+<li><strong>Proper Orthogonal Decomposition</strong> <span class="citation" data-cites="chatterjee_introduction_2000">(<a href="#/references" role="doc-biblioref" onclick="">Chatterjee 2000</a>)</span>,<span class="citation" data-cites="radermacher_comparison_2013">(<a href="#/references" role="doc-biblioref" onclick="">Radermacher and Reese 2013</a>)</span>
 <ul>
 <li>Require wise selection of the snapshots and costly computations</li>
 </ul></li>
-<li>Reduced basis method <span class="citation" data-cites="maday_reduced-basis_2002">(<a href="#/references" role="doc-biblioref" onclick="">Maday and Rønquist 2002</a>)</span> with EIM <span class="citation" data-cites="barrault_empirical_2004">(<a href="#/references" role="doc-biblioref" onclick="">Barrault et al. 2004</a>)</span>
+<li><strong>Reduced basis method</strong> <span class="citation" data-cites="maday_reduced-basis_2002">(<a href="#/references" role="doc-biblioref" onclick="">Maday and Rønquist 2002</a>)</span> with EIM <span class="citation" data-cites="barrault_empirical_2004">(<a href="#/references" role="doc-biblioref" onclick="">Barrault et al. 2004</a>)</span>
 <ul>
 <li>Rely on prior expensive computations</li>
 </ul></li>
@@ -967,6 +1014,9 @@ $$ --> <span class="math display">\[
 <ul>
 <li>Building the low-rank tensor decomposition</li>
 </ul>
+<div style="margin-top: -1em;">
+
+</div>
 <div class="r-stack">
 <div class="fragment fade-out" data-fragment-index="2">
 <div data-id="1">
@@ -990,6 +1040,9 @@ $$ --> <span class="math display">\[
 padding-right: 10%;
 }
 </style>
+<div style="margin-top: -1em;">
+
+</div>
 <div class="columns">
 <div class="column add-space" style="width:40%;">
 <p><strong>Greedy algorithm</strong></p>
@@ -1002,12 +1055,12 @@ padding-right: 10%;
 <div class="fragment fade-in" data-fragment-index="2">
 <ol start="3" type="1">
 <li>Add a new mode</li>
-<li>If loss decreases continue training</li>
+<li>If loss decreases, continue training</li>
 </ol>
 </div>
 <div class="fragment fade-in" data-fragment-index="3">
 <ol start="5" type="1">
-<li>Else stop and returrn the converged model</li>
+<li>Else stop and return the converged model</li>
 </ol>
 </div>
 </div><div class="column" style="width:50%;">
@@ -1020,9 +1073,9 @@ padding-right: 10%;
 <ul>
 <li>An <em>a priori</em> ROM techniques
 <ul>
-<li>building the reduced-order basis on the fly.</li>
+<li>Building the reduced-order basis on the fly.</li>
 </ul></li>
-<li>No off-line computations</li>
+<li>No full-order computations</li>
 <li><strong>On the fly</strong> mode generation adapted to the specifics of the problem <span class="citation" data-cites="DabyHybrid">(<a href="#/references" role="doc-biblioref" onclick="">Daby-Seesaram et al. 2023</a>)</span></li>
 </ul>
 </div>
@@ -1036,10 +1089,11 @@ padding-right: 10%;
 </div>
 <div class="mybox-body">
 <ul>
-<li>When minimising the loss
-<ul>
-<li>Training of the full tensor decomposition as not only the <span class="math inline">\(m\)</span>-th mode</li>
+<li>Training of the full tensor decomposition, not only the <span class="math inline">\(m\)</span>-th mode</li>
 <li>Actual <em>minimisation</em> implementation of the PGD</li>
+<li>No need to solve a new problem for any new parameter
+<ul>
+<li>The online stage is a <strong>simple evaluation</strong> of the tensor decomposition</li>
 </ul></li>
 </ul>
 </div>
@@ -1067,18 +1121,18 @@ padding-right: 10%;
 <li>Fully interpretable implementation</li>
 <li>Great transfer learning capabilities</li>
 </ul></li>
-<li>Straightfoward implenation
+<li>Straightforward implementation
 <ul>
-<li>Benefiting from current ML developements</li>
+<li>Benefiting from current ML developments</li>
 </ul></li>
 </ul>
 </div>
 </div>
 <div class="fragment fade-in" data-fragment-index="1">
 <ul>
-<li>Straight forward definition of the physical loss using auto-differentiation</li>
+<li>Straightforward definition of the physical loss using auto-differentiation</li>
 </ul>
-<div id="d87f06c5" class="cell" data-execution_count="2">
+<div id="16995349" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode python hljs"><span id="cb1-1" class="hljs-ln-code"><a href=""></a><span class="kw">def</span> Loss(model,x,detJ,mu):</span>
 <span id="cb1-2" class="hljs-ln-code"><a href=""></a>    </span>
 <span id="cb1-3" class="hljs-ln-code"><a href=""></a>    eps <span class="op">=</span> torch.autograd.grad(model.space_mode(x), x, grad_outputs<span class="op">=</span>torch.ones_like(u))</span>
@@ -1157,8 +1211,11 @@ padding-right: 10%;
 <div class="mybox-body">
 <ul>
 <li>Immediate evaluation of the surrogate model</li>
-<li>Straightforward differenciation capabilities regarding the input parameters</li>
+<li>Straightforward differentiation capabilities regarding the input parameters</li>
 </ul>
+<div style="margin-top: 0.15em;">
+
+</div>
 </div>
 </div>
 </div></div>
@@ -1174,6 +1231,9 @@ padding-right: 10%;
 </figure>
 </div>
 </div><div class="column" style="width:35%;">
+<div style="margin-top: 4em;">
+
+</div>
 <div class="mybox">
 <div class="mybox-header">
 <p>Strategy</p>
@@ -1184,7 +1244,7 @@ padding-right: 10%;
 <ul>
 <li>Great transfer learning capabilities
 <ul>
-<li>Start by coarse (cheap) training</li>
+<li>Start with coarse (cheap) training</li>
 <li>Followed by fine tunning</li>
 </ul></li>
 </ul></li>
@@ -1210,9 +1270,42 @@ padding-right: 10%;
 </section>
 <section id="neural-network-pgd-1" class="slide level2">
 <h2>Neural Network PGD</h2>
-<p>The convergence is investigated in <a href="#/neural-network-pgd-1" class="quarto-xref">Figure&nbsp;1</a></p>
 <div class="columns">
 <div class="column" style="width:50%;">
+<ul>
+<li>Bi-stiffness structure with unknown
+<ul>
+<li>Stiffness jump <span class="math inline">\(\Delta E\)</span></li>
+<li>Jump position <span class="math inline">\(\alpha\)</span></li>
+</ul></li>
+</ul>
+</div><div class="column" style="width:50%;">
+<ul>
+<li>2-level training
+<ul>
+<li><span class="math inline">\(9\)</span> PGD modes</li>
+<li>Mode addition when stagnation</li>
+</ul></li>
+</ul>
+</div></div>
+<div style="margin-top: 4em;">
+
+</div>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div style="margin-top: -3em;">
+
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="Figures/2D_example_BiStiffness.svg" width="400"></p>
+<figcaption>Bi-siffness NN-PGD parametrisation</figcaption>
+</figure>
+</div>
+</div><div class="column" style="width:50%;">
+<div style="margin-top: 5em;">
+
+</div>
 <div id="cell-fig-neurom-bistiffness" class="cell" data-execution_count="3">
 <div class="cell-output cell-output-display">
 <div id="fig-neurom-bistiffness" class="quarto-float quarto-figure quarto-figure-center">
@@ -1227,11 +1320,6 @@ Figure&nbsp;1: Convergence plot NeuROM
 </div>
 </div>
 </div>
-</div><div class="column" style="width:50%;">
-<ul>
-<li>On the fly mode addition</li>
-<li>Multi-level (2) training</li>
-</ul>
 </div></div>
 </section>
 <section id="conclusion" class="slide level2">
@@ -1242,28 +1330,52 @@ Figure&nbsp;1: Convergence plot NeuROM
 </div>
 <div class="mybox-body">
 <ul>
-<li>Robust and straitfoward general implementation of a NN-PGD
+<li>Robust and straightforward general implementation of a NN-PGD
 <ul>
 <li>Interpretable</li>
-<li>Benefits from all recent developpments in ML</li>
-<li>Surrogate modelling of parametrised PDE solution</li>
-<li>Promising results</li>
+<li>Benefits from all recent developments in machine learning</li>
+</ul></li>
+<li>Surrogate modelling of parametrised PDE solution
+<ul>
+<li>Promising results on simple linear toy case</li>
 </ul></li>
 </ul>
 </div>
 </div>
+<div class="columns">
+<div class="column" style="width:50%;">
 <div class="mybox">
 <div class="mybox-header">
 <p>Perspectives for patient-specific applications</p>
 </div>
 <div class="mybox-body">
 <ul>
-<li>Implentation of the poro-mechanics lung model <span class="citation" data-cites="patte_quasi-static_2022">(<a href="#/references" role="doc-biblioref" onclick="">Patte, Genet, and Chapelle 2022</a>)</span></li>
+<li>Implementation of the poro-mechanics lung model <span class="citation" data-cites="patte_quasi-static_2022">(<a href="#/references" role="doc-biblioref" onclick="">Patte, Genet, and Chapelle 2022</a>)</span></li>
 <li>Parametrisation of the segmented geometries</li>
-<li>Application to real-time lungs’ parameters estimation</li>
+<li>Application to real-time lung parameters estimation</li>
+</ul>
+<div style="margin-top: 0.3em;">
+
+</div>
+</div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="mybox">
+<div class="mybox-header">
+<p>Technical perspectives</p>
+</div>
+<div class="mybox-body">
+<ul>
+<li>3D implementation</li>
+<li>Publication of the code
+<ul>
+<li>to come shortly</li>
+<li>Do not hesitate to check the github</li>
+</ul></li>
 </ul>
 </div>
 </div>
+</div></div>
 </section>
 <section id="references" class="slide level2 smaller scrollable">
 <h2>References</h2>
