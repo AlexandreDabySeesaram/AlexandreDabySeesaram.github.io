@@ -549,7 +549,7 @@ g { color: Green }
 <div class="mybox-body">
 <div class="fragment fade-in">
 <ul>
-<li><g> Mecahnical model of the lung </g> <span class="citation" data-cites="patte_quasi-static_2022">(<a href="#/references" role="doc-biblioref" onclick="">Patte, Genet, and Chapelle 2022</a>)</span></li>
+<li><g> Mechanical model of the lung </g> <span class="citation" data-cites="patte_quasi-static_2022">(<a href="#/references" role="doc-biblioref" onclick="">Patte, Genet, and Chapelle 2022</a>)</span></li>
 </ul>
 </div>
 <div class="fragment fade-in">
@@ -1134,7 +1134,7 @@ padding-right: 10%;
 <ul>
 <li>Straightforward definition of the physical loss using auto-differentiation</li>
 </ul>
-<div id="f83ae22e" class="cell" data-execution_count="2">
+<div id="cc9636e7" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode python hljs"><span id="cb1-1" class="hljs-ln-code"><a href=""></a><span class="kw">def</span> Loss(model,x,detJ,mu):</span>
 <span id="cb1-2" class="hljs-ln-code"><a href=""></a>    </span>
 <span id="cb1-3" class="hljs-ln-code"><a href=""></a>    eps <span class="op">=</span> torch.autograd.grad(model.space_mode(x), x, grad_outputs<span class="op">=</span>torch.ones_like(u))</span>
