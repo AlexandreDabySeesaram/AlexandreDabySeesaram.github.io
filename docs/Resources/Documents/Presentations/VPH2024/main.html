@@ -1132,7 +1132,7 @@ padding-right: 10%;
 <ul>
 <li>Straightforward definition of the physical loss using auto-differentiation</li>
 </ul>
-<div id="16995349" class="cell" data-execution_count="2">
+<div id="e9a26075" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode python hljs"><span id="cb1-1" class="hljs-ln-code"><a href=""></a><span class="kw">def</span> Loss(model,x,detJ,mu):</span>
 <span id="cb1-2" class="hljs-ln-code"><a href=""></a>    </span>
 <span id="cb1-3" class="hljs-ln-code"><a href=""></a>    eps <span class="op">=</span> torch.autograd.grad(model.space_mode(x), x, grad_outputs<span class="op">=</span>torch.ones_like(u))</span>
@@ -1191,8 +1191,8 @@ padding-right: 10%;
 <ul>
 <li>Parametrised stiffness <span class="math inline">\(E\)</span></li>
 <li>Parametrised external forces <span class="math inline">\(\boldsymbol{f} =  \begin{bmatrix}
-         -\rho g \sin\left( \theta \right) \\
-         ~\rho g \cos\left( \theta \right)
+         ~\rho g \sin\left( \theta \right) \\
+         -\rho g \cos\left( \theta \right)
        \end{bmatrix}\)</span></li>
 </ul>
 </div>
