@@ -1,0 +1,1086 @@
+---
+title: "Hybridising standard reduced-order modelling methods with interpretable sparse neural networks for real-time patient-specific lung simulations"
+subtitle: "VPH 2024 - Stuttgart"
+format: 
+  revealjs:
+    # pdf-separate-fragments: true
+    # embed-resources: true
+    includes:
+      in-header: MyNotations.sty
+    smaller: true
+    html-math-method: mathjax
+    author: 
+        - name: Alexandre Daby-Seesaram <sup><span style="color:#a6ce39ff">[{{< iconify fa-brands:orcid >}}](https://orcid.org/0000-0002-2374-0971)</span></sup>
+          email: alexandre.daby-seesaram@polytechnique.edu
+          # orcid: 0000-0002-2374-0971
+          affiliations:
+            - ref: lms
+        - name: Katerina Skardova <sup><span style="color:#a6ce39ff">[{{< iconify fa-brands:orcid >}}](https://orcid.org/0000-0002-9870-3438)</span></sup>
+          email: katerina.skardova@polytechnique.edu
+          # orcid: 0000-0002-9870-3438
+          affiliations:
+            - ref: lms
+        - name: Martin Genet <sup><span style="color:#a6ce39ff">[{{< iconify fa-brands:orcid >}}](https://orcid.org/0000-0003-2204-201X)</span></sup>
+          email: martin.genet@polytechnique.edu
+          # orcid: 0000-0003-2204-201X
+          affiliations:
+            - ref: lms
+    affiliations:
+    - id: lms
+      name: LMS, École Polytechnique, France
+    slide-number: c/t
+    show-slide-number: all
+    code-fold: true
+    # transition: fade
+    theme: ./LMS_Slides
+    logo: Logo.svg
+    date: 09/04/2024
+    date-format: long
+    title-slide-attributes: 
+        data-background-image: "HiDeNN_TD.png"
+jupyter: python3
+progress: true
+touch: true
+controls: true
+loadIcons: true
+# slideNumber: true
+bibliography: biblio.bib
+csl: apa.csl
+---
+{{< include MyNotations.qmd >}}
+
+
+# I - Motivations & objectives
+
+<style>
+r { color: Red }
+o { color: Orange }
+g { color: Green }
+</style>
+
+
++--------------------------------------+
+|  1. **Idiopathic Pulmonary Fibrosis**         |
++--------------------------------------+
+|  2. **Mechanical problem**                    |
++--------------------------------------+
+|  3. **Real-time simulation of the lungs**     |
++--------------------------------------+
+
+$$
+\definecolor{BleuLMS}{RGB}{1, 66, 106}
+\definecolor{VioletLMS}{RGB}{77, 22, 84}
+\definecolor{TealLMS}{RGB}{0, 103, 127}
+% \definecolor{BleuLMS2}{RGB}{0, 103, 202}
+\definecolor{BleuLMS2}{RGB}{0, 169, 206}
+\definecolor{BleuLMPS}{RGB}{105, 144, 255}
+\definecolor{accentcolor}{RGB}{1, 66, 106}
+\definecolor{GreenLMS}{RGB}{0,103,127} 
+\definecolor{LGreenLMS}{RGB}{67,176,42} 
+\definecolor{RougeLMS}{RGB}{206,0,55} 
+$$
+
+## Idiopathic Pulmonary Fibrosis
+
+:::: {.mybox}
+
+::: {.mybox-header}
+Link with mechanics
+:::
+
+::: {.mybox-body}
+* Mechanics is assumed to be a key factor in the development of the disease
+  * A vicious circle has been hypothesized [@liu_feedback_2010] where
+    * Large stresses lead to
+    * Fibrosis spread
+    * In turn, this leads to stiffer zones and higher stresses
+:::
+
+::::
+
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+:::: {.mybox}
+
+::: {.mybox-header}
+Objectives
+:::
+
+::: {style="margin-top: 0.5em;"}
+:::
+::: {.mybox-body}
+* Improved understanding of the physiological mechanisms
+* *In silico* prognostics
+  * Transfer tools to the clinic
+  * Patient-specific digital twins
+
+::: {style="margin-top: 1em;"}
+:::
+:::
+
+::::
+
+:::
+
+::: {.column width="50%"}
+
+:::: {.mybox}
+
+::: {.mybox-header}
+Requirements
+:::
+
+::: {.mybox-body}
+
+::: {.fragment .fade-in}
+
+* <g> Mechanical model of the lung </g> [@patte_quasi-static_2022]
+
+:::
+::: {.fragment .fade-in}
+
+
+* <o> Uncertainty quantification </o> 
+
+:::
+::: {.fragment .fade-in}
+
+* <r> Real-time estimation of the parameters </r>
+:::
+
+:::
+::::
+:::
+
+::::
+
+## Lung poro-mechanics{auto-animate=true}
+
+<!-- * **Parametrised** (patient-specific) mechanical problem -->
+
+
+<!-- $$
+         \begin{cases}
+            \div \cdot \sigm  + \vect{f}\left(\para\right) = 0 \qquad & \mathrm{in} \ \Omega \\
+            \sigm \cdot \vect{n} = \vect{F}\left(\para\right)  & \text{on } \partial \Omega_{N} \\
+            \vect{u} = \vect{u}_d \qquad \qquad & \text{on } \partial \Omega_{d} \\
+            \sigm = \ftensor{C}\left(\para\right):\eps(\vect{u}) & \mathrm{in} \ \Omega
+         \end{cases}
+         \label{eq:MechPb}
+$$ -->
+
+<!-- ![Reference problem](Figures/Omega.svg){width=200} -->
+
+::: columns
+::: {.column  width="65%"}
+
+:::: {style='margin-top: 5em;'}
+::::
+
+::: {data-id="2" }
+
+$$
+         \begin{cases}
+            \div \cdot \sigm  + \vect{f} = 0 \qquad & \mathrm{in} \ \Omega \\
+            \sigm \cdot \vect{n} = \vect{F}  & \text{on } \partial \Omega_{N} \\
+            \vect{u} = \vect{u}_d \qquad \qquad & \text{on } \partial \Omega_{d} \\
+            % \sigm = \ftensor{C}\left(\para\right):\eps(\vect{u}) & \mathrm{in} \ \Omega
+         \end{cases}
+         \label{eq:MechPb}
+$$
+
+:::
+
+:::
+
+::: {.column  width="35%"}
+![Reference problem](Figures/Omega.svg){width=200}
+:::
+:::
+
+
+:::{.mybox}
+
+::::{.mybox-header}
+Behaviour
+::::
+
+::::{.mybox-body}
+
+::: {data-id="1" }
+
+  * $\matrice{\Sigma} = \frac{\partial \Psi}{\partial \matrice{E}}$
+    * Non-linear finite strain poro-mechanics [@patte_quasi-static_2022]
+:::
+  * $\matrice{\Sigma}$ Second Piola-Kirchhoff stress tensor
+  * $\matrice{E}$ is the Green-Lagrange strain tensor
+
+:::
+
+:::
+
+
+## Simple mechanical problem - surrogate modelling{auto-animate=true}
+
+* **Parametrised** (patient-specific) mechanical problem
+
+
+<!-- $$
+         \begin{cases}
+            \div \cdot \sigm  + \vect{f}\left(\para\right) = 0 \qquad & \mathrm{in} \ \Omega \\
+            \sigm \cdot \vect{n} = \vect{F}\left(\para\right)  & \text{on } \partial \Omega_{N} \\
+            \vect{u} = \vect{u}_d \qquad \qquad & \text{on } \partial \Omega_{d} \\
+            \sigm = \ftensor{C}\left(\para\right):\eps(\vect{u}) & \mathrm{in} \ \Omega
+         \end{cases}
+         \label{eq:MechPb}
+$$ -->
+
+<!-- ![Reference problem](Figures/Omega.svg){width=200} -->
+
+::: columns
+::: {.column  width="65%"}
+
+:::: {style='margin-top: 3em;'}
+::::
+
+::: {data-id="2" }
+
+$$
+         \begin{cases}
+            \div \cdot \sigm  + \vect{f}\left(\para\right) = 0 \qquad & \mathrm{in} \ \Omega \\
+            \sigm \cdot \vect{n} = \vect{F}\left(\para\right)  & \text{on } \partial \Omega_{N} \\
+            \vect{u} = \vect{u}_d \qquad \qquad & \text{on } \partial \Omega_{d} \\
+         \end{cases}
+         \label{eq:MechPb2}
+$$
+
+:::
+
+:::
+
+::: {.column  width="35%"}
+![Reference problem](Figures/Omega.svg){width=200}
+:::
+:::
+
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+:::{.mybox}
+
+::::{.mybox-header}
+Behaviour
+::::
+
+::::{.mybox-body}
+
+::: {data-id="1" }
+  * $\sigm = \ftensor{C}\left(\para\right):\eps(\vect{u})$
+:::
+
+  * $\ftensor{C}\left(\para\right)$ the parametrised **Hooke's** tensor
+  * $\eps(\vect{u})$ the linearised **Green-Lagrange** strain tensor
+  * $\sigm$ the **Cauchy** stress tensor
+
+:::
+
+:::
+
+:::
+
+::: {.column width="50%"}
+
+:::{.mybox}
+
+::::{.mybox-header}
+Reduced-order model (ROM) 
+::::
+
+::::{.mybox-body}
+
+* Build a **surrogate model**
+  * Parametrised solution
+* No computations online
+* **On the fly** evaluation of the model
+  * Real-time parameters estimation
+
+::: {style="margin-top: 0.6em;"}
+:::
+:::
+
+:::
+
+:::
+
+::::
+
+
+
+# II - Methods
+
++--------------------------------------+
+|  1. **Mechanical solution interpolation**                           |
++--------------------------------------+
+|  2. **Reduced-order modelling**                                     |
++--------------------------------------+
+|  3. **Hybrid Neural Network Proper Generalised Decomposition**      |
++--------------------------------------+
+
+## The finite element method interpolation
+
+  * From the continuous problem of finding the displacement $\vect{u}$ in 
+
+$$
+    \mathcal{U} \left(\text{resp.} \mathcal{U}^0 \right) = \left\{\vect{u} \; | \; \vect{u}\left(\vect{x}\right) \in \mathcal{H}^1\left(\Omega, \mathbb{R}^{\text{d}}\right) \text{, }
+    \vect{u} = \vect{u}_d \left(\text{resp.} =\vect{0} \right) \text{ on }\partial \Omega_d  \right\}  
+$$
+
+* An approximation is thought after in the finite admissible (resp. admissible to zero) space
+
+$$
+    \mathcal{U}_h \left(\text{resp.} \mathcal{U}_h^0 \right) = \left\{\vect{u}_h  \; | \; \vect{u}_h \in \text{Span}\left( \left\{ N_i^{\Omega}\left(\vect{x} \right)\right\}_{i \in \llbracket 1,n_p\rrbracket} \right)^d \text{, }
+    \vect{u}_h = \vect{u}_d \left(\text{resp.} =\vect{0} \right) \text{ on }\partial \Omega_d  \right\} 
+$$
+
+
+::: {.fragment .fade-up}
+
+::: columns
+
+::: {.column  width="50%"}
+
+:::{.mybox}
+
+::::{.mybox-header}
+Finite element neural network interpolation
+::::
+
+::::{.mybox-body}
+
+* This interpolation can be done using sparse neural networks (SNN) [@zhang_hierarchical_2021] 
+  * $N_i^{\Omega}$ are SNN with constrained **weights** and **biases**
+  * Continuous interpolated field that can be **automatically differentiated**
+  * Gives the additional benefit of running on **GPUs**
+  * Fully **interpretable** parameters
+
+:::
+
+:::
+
+
+
+:::
+
+::: {.column  width="50%"}
+![Illustration of Finite Element Neural Network Interpolation (FENNI)](Figures/HiDeNN_Space_2.svg){width=500}
+
+:::
+
+:::
+:::
+
+
+
+
+## Solving the mechanical problem
+
+Solving the mechanical problems amounts to finding the continuous displacement field **minimising the potential energy**
+$$E_p\left(\vect{u}\right) = \frac{1}{2} \intV \eps : \ftensor{C} : \eps \dV - \intSn \vect{F}\cdot \vect{u} \dS - \intV\vect{f}\cdot\vect{u}\dV. $$
+
+::: {style="margin-top: -0.5em;"}
+:::
+
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+:::{.mybox}
+
+::::{.mybox-header}
+In practice
+::::
+
+::::{.mybox-body}
+
+* Compute the loss $\mathcal{L} := E_p$ 
+* Find the parameters **minimising** the loss
+  * Rely on state-of-the-art optimizers (ADAM, **LBFGS**, etc.)
+
+:::
+
+:::
+
+:::
+
+::: {.column width="50%"}
+
+:::{.mybox}
+
+::::{.mybox-header}
+Degrees of freedom (Dofs)
+::::
+
+::::{.mybox-body}
+
+<!-- ::: {style="margin-top: 0em;"}
+::: -->
+
+* Nodal values (standard FEM Dofs)
+  * hr-adaptivity
+* Nodal coordinates (Mesh adaptation)
+
+::: {style="margin-top: 0.15em;"}
+:::
+
+:::
+
+:::
+
+:::
+
+::::
+
+::: {style="margin-top: -1.2em;"}
+:::
+
+
+
+::: {.fragment .fade-in}
+
+![FEM computation & mesh adaptation](Figures/Movies/out.mp4){.absolute left="70" height="300" loop="true" autoplay=true}
+![Von mises stress](Figures/VM_converged.svg){.absolute right="70" height="300" }
+
+:::
+
+
+## Reduced-order modelling (ROM)
+**Low-rank** approximation of the solution to avoid the **curse of dimensionality**
+
+::: columns
+
+::: {.column  width="50%"}
+:::{.mybox}
+
+::::{.mybox-header}
+Full-order discretised model
+::::
+
+::::{.mybox-body}
+
+* $N$ spatial shape functions
+  * Span a finite spatial space of dimension $N$
+* Requires computing $N\times \beta$ associated parametric functions
+
+::: {style="margin-top: 1.7em;"}
+:::
+:::
+
+:::
+:::
+::: {.column  width="50%"}
+:::{.mybox}
+
+::::{.mybox-header}
+Reduced-order model  
+::::
+
+::::{.mybox-body}
+
+* $m \ll N$ spatial modes
+  * Similar to global shape functions
+  * Span a **smaller space**
+* Galerkin projection
+:::
+
+:::
+
+:::
+:::
+
+:::{.mybox}
+
+::::{.mybox-header-teal}
+Finding the reduced-order basis
+::::
+
+::::{.mybox-body}
+
+* **Linear Normal Modes** (eigenmodes of the structure) [@hansteen_accuracy_1979]
+  * Do not account for the loading and behaviour specifics
+* **Proper Orthogonal Decomposition** [@chatterjee_introduction_2000],[@radermacher_comparison_2013]
+  * Require wise selection of the snapshots and \emph{a priori} costly computations 
+* **Reduced basis method** [@maday_reduced-basis_2002] with EIM [@barrault_empirical_2004]
+  * Rely on prior expensive computations
+:::
+
+:::
+
+
+## Proper Generalised Decomposition (PGD){auto-animate=true}
+[@chinesta_short_2011]
+
+::: columns
+
+::: {.column  width="50%"}
+
+:::{.mybox}
+
+::::{.mybox-header}
+Tensor decomposition
+::::
+
+::::{.mybox-body}
+
+* Separation of variables
+* Low-rank $m$
+* $\textcolor{BleuLMPS}{\overline{\vect{u}}_i(\vect{x})}$ Space modes
+* $\textcolor{LGreenLMS}{\lambda_i^j(\mu^j)}$ Parameter modes
+
+::: {.r-stack}
+::: {data-id="1" }
+ $$\textcolor{VioletLMS}{\vect{u}}\left(\textcolor{BleuLMPS}{\vect{x}}, \textcolor{LGreenLMS}{\mu}\right) = \sum\limits_{i=0}^{m}\textcolor{BleuLMPS}{\overline{u}_i\left(x\right)}\textcolor{LGreenLMS}{\lambda_i\left(\mu\right)}$$
+:::
+:::
+
+:::
+
+:::
+
+:::
+
+::: {.column  width="50%"}
+
+**Discretised problem**
+
+::: {.r-stack}
+::: {data-id="2" }
+![2D PGD](Figures/PGD_2D.svg){height=200}
+:::
+:::
+::: {.r-stack}
+::: {data-id="3" }
+* From $N\times N_{\mu}$ unknowns to $m\times\left(N + N_{\mu}\right)$
+:::
+:::
+:::
+
+:::
+
+
+## Proper Generalised Decomposition (PGD){auto-animate=true}
+[@chinesta_short_2011]
+
+::: columns
+
+::: {.column  width="50%"}
+
+:::{.mybox}
+
+::::{.mybox-header}
+Tensor decomposition
+::::
+
+::::{.mybox-body}
+
+* Separation of variables
+* Low-rank $m$
+* $\textcolor{BleuLMPS}{\overline{\vect{u}}_i(\vect{x})}$ Space modes
+* $\textcolor{LGreenLMS}{\lambda_i^j(\mu^j)}$ Parameter modes
+
+<!-- $$
+\definecolor{BleuLMS}{RGB}{1, 66, 106}
+\definecolor{accentcolor}{RGB}{1, 66, 106}
+\definecolor{GreenLMS}{RGB}{0,103,127} 
+\definecolor{LGreenLMS}{RGB}{67,176,42} 
+\definecolor{RougeLMS}{RGB}{206,0,55} 
+$$ -->
+
+::: {.r-stack}
+::: {data-id="1" }
+$$            
+\textcolor{VioletLMS}{\vect{u}}\left(\textcolor{BleuLMPS}{\vect{x}}, \textcolor{LGreenLMS}{\para}\right) = \sum\limits_{i=1}^m \textcolor{BleuLMPS}{\overline{\vect{u}}_i(\vect{x})} ~\textcolor{LGreenLMS}{\prod_{j=1}^{\beta}\lambda_i^j(\mu^j)} $$
+:::
+:::
+
+:::
+
+:::
+
+:::
+
+::: {.column  width="50%"}
+
+**Discretised problem**
+
+::: {.r-stack}
+::: {data-id="2" }
+![3D PGD](Figures/PGD_3D.svg){height=200}
+:::
+:::
+::: {.r-stack}
+::: {data-id="3" }
+* From $N\bigtimes_{j=1}^{~\beta} N_{\mu}^j$ unknowns to $m\times\left(N + \sum\limits_{j=1}^{\beta} N_{\mu}^j\right)$
+:::
+:::
+:::
+
+:::
+
+
+
+::: {.fragment .fade-up}
+* Finding the tensor decomposition by **minimising** the **strain energy**
+<!-- $$
+        \left(\left\{\overline{\vect{u}}_i \right\}_{i\in \llbracket 1,m\rrbracket},\left\{\lambda_i^j \right\}_{
+          \begin{cases}
+              i\in \llbracket 1,m\rrbracket \\
+              j\in \llbracket 1,\beta \rrbracket
+          \end{cases}
+        } \right) = \argmin_{
+            \begin{cases}
+                \left(\overline{\vect{u}}_1, \left\{\overline{\vect{u}}_i \right\} \right) & \in \mathcal{U}\times \mathcal{U}_0 \\ 
+                \left\{\left\{\lambda_i^j \right\}\right\} & \in \left( \bigtimes_{j=1}^{~\beta} \mathcal{L}_2\left(\mathcal{B}_j\right) \right)^{m-1}
+            \end{cases}}  ~\underbrace{\frac{1}{\int_{\mathcal{B}} 1 \mathrm{d}\beta} \int_{\mathcal{B}}\left[E_p\left(\vect{u}\left(\vect{x},\para\right), \ftensor{C}, \vect{F}, \vect{f} \right)  \right]\mathrm{d}\beta}_{\mathcal{L}}
+            \label{eq:min_problem}
+$$ -->
+$$
+        \left(\left\{\overline{\vect{u}}_i \right\}_{i\in \llbracket 1,m\rrbracket},\left\{\lambda_i^j \right\}_{
+          \begin{cases}
+              i\in \llbracket 1,m\rrbracket \\
+              j\in \llbracket 1,\beta \rrbracket
+          \end{cases}
+        } \right) = \argmin_{
+            \begin{cases}
+                \left(\overline{\vect{u}}_1, \left\{\overline{\vect{u}}_i \right\} \right) & \in \mathcal{U}\times \mathcal{U}_0 \\ 
+                \left\{\left\{\lambda_i^j \right\}\right\} & \in \left( \bigtimes_{j=1}^{~\beta} \mathcal{L}_2\left(\mathcal{B}_j\right) \right)^{m-1}
+            \end{cases}}  ~\underbrace{\int_{\mathcal{B}}\left[E_p\left(\vect{u}\left(\vect{x},\para\right), \ftensor{C}, \vect{F}, \vect{f} \right)  \right]\mathrm{d}\beta}_{\mathcal{L}}
+            \label{eq:min_problem}
+$$
+
+:::
+
+
+
+## Proper Generalised Decomposition (PGD) {auto-animate=true}
+* Building the low-rank tensor decomposition
+
+:::: {style='margin-top: -1em;'}
+::::
+
+::: {.r-stack}
+::: {.fragment fragment-index=2 .fade-out}
+::: {data-id="1" }
+$$
+\vect{u}\left(\vect{x}, \para\right) =  \overline{\vect{u}}_i(\vect{x}) ~\prod_{j=1}^{\beta}\lambda_i^j(\mu^j) $$
+:::
+:::
+::: {.fragment fragment-index=2 .fade-in-then-out}
+$$
+\vect{u}\left(\vect{x}, \para\right) = \textcolor{RougeLMS}{\sum\limits_{i=1}^{2}} \overline{\vect{u}}_i(\vect{x}) ~\prod_{j=1}^{\beta}\lambda_i^j(\mu^j) $$
+:::
+::: {.fragment fragment-index=3 .fade-in}
+::: {data-id="2" }
+$$
+\vect{u}\left(\vect{x}, \para\right) = \sum\limits_{i=1}^{\textcolor{RougeLMS}{m}} \overline{\vect{u}}_i(\vect{x}) ~\prod_{j=1}^{\beta}\lambda_i^j(\mu^j) $$
+:::
+:::
+:::
+<style>
+.add-space{
+padding-right: 10%;
+}
+</style>
+
+:::: {style='margin-top: -1em;'}
+::::
+
+::: columns
+
+::: {.column  width="40%" .add-space}
+
+**Greedy algorithm**
+
+::: {.fragment fragment-index=1 .fade-in}
+1. Start with a single mode
+2. Minimise the loss until stagnation
+:::
+::: {.fragment fragment-index=2 .fade-in}
+3. Add a new mode 
+4. If loss decreases, continue training
+:::
+::: {.fragment fragment-index=3 .fade-in}
+5. Else stop and return the converged model
+:::
+
+:::
+
+::: {.column  width="50%" }
+
+::: {.fragment fragment-index=4 .fade-in}
+
+:::{.mybox}
+
+::::{.mybox-header}
+The PGD is
+::::
+
+::::{.mybox-body}
+
+* An *a priori* ROM techniques
+  * Building the reduced-order basis on the fly.
+* No full-order computations
+* **On the fly** mode generation adapted to the specifics of the problem [@DabyHybrid]
+
+:::
+
+:::
+
+:::
+
+:::
+
+:::
+
+::: {.fragment fragment-index=5 .fade-in}
+
+:::{.mybox}
+
+::::{.mybox-header}
+Note
+::::
+
+::::{.mybox-body}
+
+* Training of the full tensor decomposition, not only the $m$-th mode
+* Actual *minimisation* implementation of the PGD
+* No need to solve a new problem for any new parameter 
+  * The online stage is a **simple evaluation** of the tensor decomposition
+
+:::
+
+:::
+
+:::
+
+## Neural Network PGD {auto-animate=true}
+Graphical implementation of Neural Network PGD
+
+::: {.r-stack}
+::: {data-id="2" }
+$$            \vect{u}\left(\textcolor{BleuLMPS}{\vect{x}}, \textcolor{LGreenLMS}{\para}\right) = \sum\limits_{i=1}^m \textcolor{BleuLMPS}{\overline{\vect{u}}_i(\vect{x})} ~\textcolor{LGreenLMS}{\prod_{j=1}^{\beta}\lambda_i^j(\mu^j)} $$
+:::
+:::
+
+::: columns
+
+::: {.column  width="65%"}
+
+:::{.mybox}
+
+::::{.mybox-header}
+Interpretable NN-PGD
+::::
+
+::::{.mybox-body}
+
+* No black box
+  * Fully interpretable implementation
+  * Great transfer learning capabilities
+* Straightforward implementation
+  * Benefiting from current ML developments
+:::
+
+:::
+
+::: {.fragment fragment-index=1 .fade-in}
+
+* Straightforward definition of the physical loss using auto-differentiation
+```{python}
+#| echo: true
+#| code-fold: false
+#| code-summary: ""
+def Loss(model,x,detJ,mu):
+  
+    u = model.space_mode(x)
+    eps = torch.autograd.grad(u, x, grad_outputs=torch.ones_like(u))
+    lmbda = model.parameter_mode(mu)
+    W_int = torch.einsum('ij,ejm,eil,em,mp...,lp...,p->',C,eps,eps,detJ,lmbda,lmbda, mu)
+
+    return 0.5*W_int/mu.shape[0]
+
+```
+
+:::
+
+:::
+
+::: {.column  width="35%"}
+
+![NN-PGD](Figures/NN_PGD.svg){height=400}
+
+:::
+:::
+
+
+
+# III - Preliminary results
++--------------------------------------+
+|  1. **Surrogate model in use**                |
++--------------------------------------+
+|  2. **Training and convergence proprieties**  |
++--------------------------------------+
+
+
+## Stiffness and external forces parametrisation
+
+Illustration of the surrogate model in use
+
+::: columns
+
+::: {.column  width="50%"}
+
+![Mechanical problem 2D](Figures/2D_example.svg)
+
+
+:::: {.mybox}
+
+::: {.mybox-header}
+Parameters
+:::
+
+::: {.mybox-body}
+* Parametrised stiffness $E$
+* Parametrised external force $\vect{f} =  \begin{bmatrix}
+           ~ \rho g \sin\left( \theta \right) \\
+           -\rho g \cos\left( \theta \right) 
+         \end{bmatrix}$
+:::
+
+::::
+
+
+
+:::
+
+::: {.column  width="50%"}
+
+![NeuROM](Figures/Movies/BiSliders_2D_snappy.mov){.absolute left="70" height="394" loop="true" autoplay=true}
+
+:::: {.mybox}
+
+::: {.mybox-header}
+NN-PGD
+:::
+
+::: {.mybox-body}
+* Immediate evaluation of the surrogate model 
+* Straightforward differentiation capabilities regarding the input parameters
+
+::: {style="margin-top: 0.15em;"}
+:::
+:::
+
+::::
+
+:::
+
+
+
+:::
+
+
+
+## Multi-level training
+
+
+:::: {.columns}
+
+::: {.column width="65%"}
+![Multi-level training convergence](Figures/Multi_level_NeuROM.svg){width=500}
+:::
+
+::: {.column width="35%"}
+
+::: {style="margin-top: 4em;"}
+:::
+
+:::: {.mybox}
+
+::: {.mybox-header}
+Strategy
+:::
+
+::: {.mybox-body}
+* The interpretability of the NN allows
+  * Great transfer learning capabilities
+    * Start with coarse (cheap) training
+    * Followed by fine tuning
+* Extends the idea put forward by [@giacoma_toward_2015]
+:::
+
+::::
+
+:::
+
+::::
+
+
+:::: {.mybox}
+
+::: {.mybox-header-teal}
+Note
+:::
+
+::: {.mybox-body}
+* The structure of the Tensor decomposition is kept throughout the multi-level training
+* Last mode of each level is irrelevant by construction
+  * It is removed before passing onto the next refinement level
+
+:::
+
+::::
+
+
+## Neural Network PGD
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+* Bi-stiffness structure with unknown 
+  - Stiffness jump $\Delta E$ 
+  - Jump position $\alpha$ 
+
+:::
+
+::: {.column width="50%"}
+
+* 2-level training
+  - $9$ PGD modes
+  - Mode addition when stagnation
+
+:::
+
+::::
+
+:::: {style='margin-top: 4em;'}
+::::
+
+::: columns
+
+::: {.column  width="50%"}
+
+:::: {style='margin-top: -3em;'}
+::::
+![Bi-stiffness NN-PGD parametrisation](Figures/2D_example_BiStiffness.svg){width=400}
+
+:::
+
+::: {.column  width="50%"}
+
+:::: {style='margin-top: 5em;'}
+::::
+
+{{< include Figures/neurom_convergence_bistiffness.qmd >}}
+
+:::
+
+:::
+
+## Conclusion
+
+
+
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+:::: {.mybox}
+
+::: {.mybox-header}
+Conclusion
+:::
+
+::: {.mybox-body}
+
+* Robust and straightforward general implementation of a NN-PGD
+  * Interpretable
+  * Benefits from all recent developments in machine learning
+* Surrogate modelling of parametrised PDE solution
+  * Promising results on simple linear toy case
+:::
+
+::::
+
+:::
+
+::: {.column width="50%"}
+
+:::: {.mybox}
+
+::: {.mybox-header}
+Perspectives for patient-specific applications
+:::
+
+::: {.mybox-body}
+* Implementation of the poro-mechanics lung model [@patte_quasi-static_2022]
+* Parametrisation of the segmented geometries
+  * Variational encoder to reduce the segmentation's parametrisation
+* Application to real-time lung parameters estimation 
+* Error quantification on the estimated parameters
+:::
+
+::::
+:::
+
+::::
+
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+:::: {.mybox}
+
+::: {.mybox-header}
+Technical perspectives
+:::
+
+::: {.mybox-body}
+* 3D implementation
+* Publication of the code ...
+  * ... to come shortly
+    * Do not hesitate to check the [**Github page**](https://github.com/AlexandreDabySeesaram?tab=repositories)
+
+:::
+
+::::
+
+:::
+
+::: {.column width="50%"}
+
+:::: {style='margin-top: 1.8em;'}
+::::
+
+:::: {style='margin-left: 14%;'}
+|![](Figures/QR_code.svg)|
+|:--:| 
+|[Github page](https://alexandredabyseesaram.github.io/)|
+::::
+:::
+
+::::
+
+
+
+
+
+## References
