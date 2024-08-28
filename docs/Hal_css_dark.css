@@ -1,0 +1,48 @@
+
+
+
+
+
+/* classe css de la page*/
+#res_script{
+	border:0;
+	background-color:#222;
+	color:#fff;
+}
+
+/*Titre*/
+div.ZoneTitreResultat
+{
+	display:none;
+}
+/* classes pour les rubriques pour certains type de classement (type de publi, annÃ©e de publi) */ 
+.Rubrique{
+	border-bottom: 2px solid #fff;
+}
+
+/*nom du champ*/
+.ChampRes {
+	display:none;
+}
+
+/* classe commune Ã  tous les champs affichÃ©s */ 
+.ValeurRes {
+	color:black;
+  margin-left:1em;
+}
+/* classe pour les titres */ 
+.Titre, .Titre a {
+   font-weight:bold;
+	color:#fff;
+}
+
+.annee_publi, .typdoc, .Rubrique, .SousRubrique {
+    color:#fff;
+}
+
+.NoticeRes {
+	border-bottom: 0px;
+}
+.NoticeResAvecVignette {
+	border-bottom: 0px;
+}
