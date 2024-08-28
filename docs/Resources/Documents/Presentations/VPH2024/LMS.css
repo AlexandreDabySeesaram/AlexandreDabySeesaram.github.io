@@ -1,0 +1,12 @@
+::selection {
+    color: #e6ecefff !important;
+    background: #00677F !important;
+}
+
+
+.my-custom-class {
+    color: #4CAF50;
+    font-size: 1.2em;
+    padding: 10px;
+    background-color: #f4f4f4;
+}
