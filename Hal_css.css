@@ -13,7 +13,7 @@ div.ZoneTitreResultat
 }
 /* classes pour les rubriques pour certains type de classement (type de publi, annÃ©e de publi) */ 
 .Rubrique{
-	border-bottom: 2px solid #01426aff;
+	border-bottom: 2px solid #2c3e50;
 }
 
 /*nom du champ*/
@@ -29,7 +29,11 @@ div.ZoneTitreResultat
 /* classe pour les titres */ 
 .Titre, .Titre a {
    font-weight:bold;
-	color:#01426aff;
+	color:#2c3e50;
+}
+
+.annee_publi {
+    color:#2c3e50;
 }
 /* classe pour les auteurs */ 
 .Auteurs {
