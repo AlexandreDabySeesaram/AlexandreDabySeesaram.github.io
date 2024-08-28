@@ -120,6 +120,7 @@
       margin-left: 2em;
     }  </style>
   <link rel="stylesheet" href="main_files/libs/revealjs/dist/theme/quarto.css">
+  <link rel="stylesheet" href="LMS.css">
   <link href="main_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="main_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="main_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -826,7 +827,51 @@ $$ -->
 
 </div>
 <div class="fragment fade-in">
-<p><video data-src="Figures/Movies/out.mp4" class="absolute" style="left: 70px; height: 300px; " loop="true" autoplay="true" controls=""><a href="Figures/Movies/out.mp4">FEM computation &amp; mesh adaptation</a></video> <img data-src="Figures/VM_converged.svg" class="absolute" style="right: 70px; height: 300px; " alt="Von mises stress"></p>
+<div class="columns">
+<div class="column" style="width:32%;">
+<div style="margin-top: 0.5em;">
+
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><video data-src="Figures/Movies/out.mp4" loop="true" autoplay="true" height="300" controls=""><a href="Figures/Movies/out.mp4">Video</a></video></p>
+<figcaption>FEM computation &amp; mesh adaptation</figcaption>
+</figure>
+</div>
+</div><div class="column" style="width:33%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="Figures/VM_converged.svg" height="300"></p>
+<figcaption>Von mises stress</figcaption>
+</figure>
+</div>
+</div><div class="column" style="width:24%;">
+<div style="margin-top: 6em;">
+
+</div>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Dofs (initially)</th>
+<th style="text-align: center;"><span class="math inline">\(569~438\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>Training time (s) </strong></td>
+<td style="text-align: center;"><span class="math inline">\(7\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>GPU (V100)</strong></td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>CPUs </strong></td>
+<td style="text-align: center;">40</td>
+</tr>
+</tbody>
+</table>
+</div></div>
 </div>
 </section>
 <section id="reduced-order-modelling-rom" class="slide level2">
@@ -1138,7 +1183,7 @@ padding-right: 10%;
 <ul>
 <li>Straightforward definition of the physical loss using auto-differentiation</li>
 </ul>
-<div id="f0a406f2" class="cell" data-execution_count="2">
+<div id="6009b147" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode python hljs"><span id="cb1-1" class="hljs-ln-code"><a href=""></a><span class="kw">def</span> Loss(model,x,detJ,mu):</span>
 <span id="cb1-2" class="hljs-ln-code"><a href=""></a>  </span>
 <span id="cb1-3" class="hljs-ln-code"><a href=""></a>    u <span class="op">=</span> model.space_mode(x)</span>
