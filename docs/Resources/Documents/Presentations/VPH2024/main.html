@@ -747,7 +747,7 @@ $$ -->
 <li>An approximation is thought after in the finite admissible (resp. admissible to zero) space</li>
 </ul>
 <p><span class="math display">\[
-    \mathcal{U}_h \left(\text{resp.} \mathcal{U}_h^0 \right) = \left\{\boldsymbol{u}_h  \; | \; \boldsymbol{u}_h \in \text{Span}\left( \left\{ N_i^{\Omega}\left(\boldsymbol{x} \right)\right\}_{i \in \mathopen{~[\!\![~}1,n_p\mathclose{~]\!\!]}} \right)^d \text{, }
+    \mathcal{U}_h \left(\text{resp.} \mathcal{U}_h^0 \right) = \left\{\boldsymbol{u}_h  \; | \; \boldsymbol{u}_h \in \text{Span}\left( \left\{ N_i^{\Omega}\left(\boldsymbol{x} \right)\right\}_{i \in \mathopen{~[\!\![~}1,N\mathclose{~]\!\!]}} \right)^d \text{, }
     \boldsymbol{u}_h = \boldsymbol{u}_d \left(\text{resp.} =\boldsymbol{0} \right) \text{ on }\partial \Omega_d  \right\}
 \]</span></p>
 <div class="fragment fade-up">
@@ -1138,7 +1138,7 @@ padding-right: 10%;
 <ul>
 <li>Straightforward definition of the physical loss using auto-differentiation</li>
 </ul>
-<div id="2058aaea" class="cell" data-execution_count="2">
+<div id="f0a406f2" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode python hljs"><span id="cb1-1" class="hljs-ln-code"><a href=""></a><span class="kw">def</span> Loss(model,x,detJ,mu):</span>
 <span id="cb1-2" class="hljs-ln-code"><a href=""></a>  </span>
 <span id="cb1-3" class="hljs-ln-code"><a href=""></a>    u <span class="op">=</span> model.space_mode(x)</span>

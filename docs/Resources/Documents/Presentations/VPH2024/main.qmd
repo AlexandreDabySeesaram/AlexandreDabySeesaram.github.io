@@ -109,7 +109,7 @@ Link with mechanics
 Objectives
 :::
 
-::: {style="margin-top: 0.5em;"}
+::: {style="margin-top: 0em;"}
 :::
 ::: {.mybox-body}
 * Improved understanding of the physiological mechanisms
@@ -117,7 +117,7 @@ Objectives
   * Transfer tools to the clinic
   * Patient-specific digital twins
 
-::: {style="margin-top: 1em;"}
+::: {style="margin-top: 0em;"}
 :::
 :::
 
@@ -151,6 +151,8 @@ Requirements
 * <r> Real-time estimation of the parameters </r>
 :::
 
+::: {style="margin-top: 0.2em;"}
+:::
 :::
 ::::
 :::
@@ -309,7 +311,7 @@ Reduced-order model (ROM)
 * **On the fly** evaluation of the model
   * Real-time parameters estimation
 
-::: {style="margin-top: 0.6em;"}
+::: {style="margin-top: 0.72em;"}
 :::
 :::
 
@@ -343,7 +345,7 @@ $$
 * An approximation is thought after in the finite admissible (resp. admissible to zero) space
 
 $$
-    \mathcal{U}_h \left(\text{resp.} \mathcal{U}_h^0 \right) = \left\{\vect{u}_h  \; | \; \vect{u}_h \in \text{Span}\left( \left\{ N_i^{\Omega}\left(\vect{x} \right)\right\}_{i \in \llbracket 1,n_p\rrbracket} \right)^d \text{, }
+    \mathcal{U}_h \left(\text{resp.} \mathcal{U}_h^0 \right) = \left\{\vect{u}_h  \; | \; \vect{u}_h \in \text{Span}\left( \left\{ N_i^{\Omega}\left(\vect{x} \right)\right\}_{i \in \llbracket 1,N\rrbracket} \right)^d \text{, }
     \vect{u}_h = \vect{u}_d \left(\text{resp.} =\vect{0} \right) \text{ on }\partial \Omega_d  \right\} 
 $$
 
