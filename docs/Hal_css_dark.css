@@ -17,7 +17,7 @@ div.ZoneTitreResultat
 }
 /* classes pour les rubriques pour certains type de classement (type de publi, annÃ©e de publi) */ 
 .Rubrique{
-	border-bottom: 2px solid #fff;
+	border-bottom: 0px solid #fff;
 }
 
 /*nom du champ*/
