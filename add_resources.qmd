@@ -10,12 +10,14 @@ format:
 ---
 
 ## Documents
+### PhD dissertation
+My PhD dissertation is available <a href="Resources/Documents/PhD_Thesis.pdf">here.</a>
 
-* My PhD dissertation is available <a href="Resources/Documents/PhD_Thesis.pdf">here.</a>
+### PhD dissertation template
+In collaboration with <a href="https://floiseau.github.io/">Flavien Loiseau</a>, we made our Ph.D. thesis template openly available <a href="https://github.com/floiseau/PhD_Thesis_Template">on Github.</a>.
 
-* In collaboration with <a href="https://floiseau.github.io/">Flavien Loiseau</a>, we made our Ph.D. thesis template openly available <a href="https://github.com/floiseau/PhD_Thesis_Template">on Github.</a>.
-
-* A more detailed version of my background can be found in my <a href="Resources/Documents/CV.pdf">[CV]</a>.
+### CV
+A more detailed version of my background can be found in my <a href="Resources/Documents/CV.pdf">[CV]</a>.
 
 ## Illustrations
 
