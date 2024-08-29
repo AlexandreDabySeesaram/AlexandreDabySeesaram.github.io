@@ -36,7 +36,7 @@ div.ZoneTitreResultat
 	color:#fff;
 }
 
-.annee_publi, .typdoc, .Rubrique, .Auteurs .article {
+.annee_publi, .typdoc, .Rubrique, .Auteurs, .article {
     color:#fff;
 }
 
@@ -48,6 +48,6 @@ div.ZoneTitreResultat
 	border-bottom: 0px;
 }
 
-.LienBibtexACoteFulltext .DOI {
+.LienBibtexACoteFulltext, .DOI {
     color:#00bc8c;
 }

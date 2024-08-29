@@ -48,6 +48,6 @@ div.ZoneTitreResultat
 }
 
 
-.LienBibtexACoteFulltext .DOI {
+.LienBibtexACoteFulltext, .DOI {
     color:#18bc9c;
 }
