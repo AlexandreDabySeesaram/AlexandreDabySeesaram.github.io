@@ -8,7 +8,7 @@
     let iframe = document.createElement("iframe");
     iframe.width = "100%";
     iframe.height = "500";
-    iframe.FRAMEBORDER="0";
+    iframe.frameborder="0";
   
     iframe.scrolling="auto";
   
@@ -17,8 +17,8 @@
       iframe.src = "https://haltools.archives-ouvertes.fr/Public/afficheRequetePubli.php?auteur_exp=Alexandre+Daby-Seesaram&idHal=alexandre-daby-seesaram&CB_auteur=oui&CB_titre=oui&CB_article=oui&CB_DOI=oui&CB_vignette=oui&langue=Anglais&tri_exp=annee_publi&tri_exp2=typdoc&tri_exp3=date_publi&ordre_aff=TA&CB_rubriqueDiv=oui&Fen=Aff&css=https://alexandredabyseesaram.github.io/Hal_css.css";
     } else {
       iframe.src = "https://haltools.archives-ouvertes.fr/Public/afficheRequetePubli.php?auteur_exp=Alexandre+Daby-Seesaram&idHal=alexandre-daby-seesaram&CB_auteur=oui&CB_titre=oui&CB_article=oui&CB_DOI=oui&langue=Anglais&tri_exp=annee_publi&tri_exp2=typdoc&tri_exp3=date_publi&ordre_aff=TA&CB_rubriqueDiv=oui&Fen=Aff&css=https://alexandredabyseesaram.github.io/Hal_css_dark.css";
-      iframe.style="background: #222;";
-      iframe.allowtransparency="true";
+      // iframe.style="background: #222;";
+      // iframe.allowtransparency="true";
     }
   
     iframeContainer.appendChild(iframe);
