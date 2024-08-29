@@ -51,3 +51,20 @@ div.ZoneTitreResultat
 .LienBibtexACoteFulltext, .DOI {
     color:#00bc8c;
 }
+
+a:link { 
+    text-decoration: none; 
+    color:#00bc8c;
+  } 
+  a:visited { 
+    text-decoration: none; 
+  } 
+  a:hover { 
+    text-decoration: underline; 
+    color:#18bc9c;
+	font-weight:bold;
+
+  } 
+  a:active { 
+    text-decoration: none; 
+  }
