@@ -46,3 +46,8 @@ div.ZoneTitreResultat
 .NoticeResAvecVignette {
 	border-bottom: 0px;
 }
+
+
+.LienBibtexACoteFulltext {
+    color:#18bc9c;
+}
