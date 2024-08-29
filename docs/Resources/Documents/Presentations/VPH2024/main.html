@@ -1072,12 +1072,12 @@ $$ --> <span class="math display">\[
 <div class="fragment fade-out" data-fragment-index="2">
 <div data-id="1">
 <p><span class="math display">\[
-\boldsymbol{u}\left(\boldsymbol{x}, \left\{\mu_i\right\}_{i \in \mathopen{~[\!\![~}1, \beta  \mathclose{~]\!\!]}}\right) =  \overline{\boldsymbol{u}}_i(\boldsymbol{x}) ~\prod_{j=1}^{\beta}\lambda_i^j(\mu^j) \]</span></p>
+\boldsymbol{u}\left(\boldsymbol{x}, \left\{\mu_i\right\}_{i \in \mathopen{~[\!\![~}1, \beta  \mathclose{~]\!\!]}}\right) =  \overline{\boldsymbol{u}}(\boldsymbol{x}) ~\prod_{j=1}^{\beta}\lambda^j(\mu^j) \]</span></p>
 </div>
 </div>
 <div class="fragment fade-in-then-out" data-fragment-index="2">
 <p><span class="math display">\[
-\boldsymbol{u}\left(\boldsymbol{x}, \left\{\mu_i\right\}_{i \in \mathopen{~[\!\![~}1, \beta  \mathclose{~]\!\!]}}\right) = \textcolor{RougeLMS}{\sum\limits_{i=1}^{2}} \overline{\boldsymbol{u}}_i(\boldsymbol{x}) ~\prod_{j=1}^{\beta}\lambda_i^j(\mu^j) \]</span></p>
+\boldsymbol{u}\left(\boldsymbol{x}, \left\{\mu_i\right\}_{i \in \mathopen{~[\!\![~}1, \beta  \mathclose{~]\!\!]}}\right) = \textcolor{RougeLMS}{\sum\limits_{i=1}^{2}} \overline{\boldsymbol{u}}_{\textcolor{RougeLMS}{i}}(\boldsymbol{x}) ~\prod_{j=1}^{\beta}\lambda_{\textcolor{RougeLMS}{i}}^j(\mu^j) \]</span></p>
 </div>
 <div class="fragment fade-in" data-fragment-index="3">
 <div data-id="2">
@@ -1183,7 +1183,7 @@ padding-right: 10%;
 <ul>
 <li>Straightforward definition of the physical loss using auto-differentiation</li>
 </ul>
-<div id="660628ba" class="cell" data-execution_count="2">
+<div id="920bfaa8" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode python hljs"><span id="cb1-1" class="hljs-ln-code"><a href=""></a><span class="kw">def</span> Loss(model,x,detJ,mu):</span>
 <span id="cb1-2" class="hljs-ln-code"><a href=""></a>  </span>
 <span id="cb1-3" class="hljs-ln-code"><a href=""></a>    u <span class="op">=</span> model.space_mode(x)</span>
