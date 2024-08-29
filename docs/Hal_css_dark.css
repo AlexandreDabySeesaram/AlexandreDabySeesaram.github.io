@@ -27,7 +27,7 @@ div.ZoneTitreResultat
 
 /* classe commune Ã  tous les champs affichÃ©s */ 
 .ValeurRes {
-	color:black;
+	color:#fff;
   margin-left:1em;
 }
 /* classe pour les titres */ 
