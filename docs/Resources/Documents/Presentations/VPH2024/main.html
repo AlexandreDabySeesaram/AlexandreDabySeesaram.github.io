@@ -551,12 +551,12 @@ g { color: Green }
 <div class="mybox-body">
 <div class="fragment fade-in">
 <ul>
-<li><g> Mechanical model of the lung </g> <span class="citation" data-cites="patte_quasi-static_2022">(<a href="#/references" role="doc-biblioref" onclick="">Patte et al., 2022</a>)</span></li>
+<li><g> Mechanical model of the lung <span class="citation" data-cites="patte_quasi-static_2022">(<a href="#/references" role="doc-biblioref" onclick="">Patte et al., 2022</a>)</span></g></li>
 </ul>
 </div>
 <div class="fragment fade-in">
 <ul>
-<li><o> Uncertainty quantification </o></li>
+<li><o> Uncertainty quantification <span class="citation" data-cites="peyraut_quantification_2024">(<a href="#/references" role="doc-biblioref" onclick="">Peyraut &amp; Genet, 2024</a>)</span></o></li>
 </ul>
 </div>
 <div class="fragment fade-in">
@@ -1183,7 +1183,7 @@ padding-right: 10%;
 <ul>
 <li>Straightforward definition of the physical loss using auto-differentiation</li>
 </ul>
-<div id="920bfaa8" class="cell" data-execution_count="2">
+<div id="101a5a2d" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode python hljs"><span id="cb1-1" class="hljs-ln-code"><a href=""></a><span class="kw">def</span> Loss(model,x,detJ,mu):</span>
 <span id="cb1-2" class="hljs-ln-code"><a href=""></a>  </span>
 <span id="cb1-3" class="hljs-ln-code"><a href=""></a>    u <span class="op">=</span> model.space_mode(x)</span>
@@ -1488,6 +1488,9 @@ Maday, Y., &amp; Rønquist, E. M. (2002). A <span>Reduced</span>-<span>Basis</sp
 </div>
 <div id="ref-patte_quasi-static_2022" class="csl-entry" role="listitem">
 Patte, C., Genet, M., &amp; Chapelle, D. (2022). A quasi-static poromechanical model of the lungs. <em>Biomechanics and Modeling in Mechanobiology</em>, <em>21</em>(2), 527–551. <a href="https://doi.org/10.1007/s10237-021-01547-0">https://doi.org/10.1007/s10237-021-01547-0</a>
+</div>
+<div id="ref-peyraut_quantification_2024" class="csl-entry" role="listitem">
+Peyraut, A., &amp; Genet, M. (2024, May). Quantification d’incertitudes pour la modélisation pulmonaire personnalisée. <em>16ème <span>Colloque</span> <span>National</span> En <span>Calcul</span> de <span>Structures</span></em>. <a href="https://hal.science/hal-04611023">https://hal.science/hal-04611023</a>
 </div>
 <div id="ref-radermacher_comparison_2013" class="csl-entry" role="listitem">
 Radermacher, A., &amp; Reese, S. (2013). A comparison of projection-based model reduction concepts in the context of nonlinear biomechanics. <em>Archive of Applied Mechanics</em>, <em>83</em>(8), 1193–1213. <a href="https://doi.org/10.1007/s00419-013-0742-9">https://doi.org/10.1007/s00419-013-0742-9</a>
