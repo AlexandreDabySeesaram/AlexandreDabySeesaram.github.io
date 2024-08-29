@@ -811,11 +811,11 @@ $$ -->
 <!-- ::: {style="margin-top: 0em;"}
 ::: -->
 <ul>
-<li>Nodal values (standard FEM Dofs)
+<li>Nodal values (standard FEM Dofs)</li>
+<li>Nodal coordinates (Mesh adaptation)
 <ul>
 <li>hr-adaptivity</li>
 </ul></li>
-<li>Nodal coordinates (Mesh adaptation)</li>
 </ul>
 <div style="margin-top: 0.15em;">
 
@@ -1183,7 +1183,7 @@ padding-right: 10%;
 <ul>
 <li>Straightforward definition of the physical loss using auto-differentiation</li>
 </ul>
-<div id="12b0d31e" class="cell" data-execution_count="2">
+<div id="660628ba" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode python hljs"><span id="cb1-1" class="hljs-ln-code"><a href=""></a><span class="kw">def</span> Loss(model,x,detJ,mu):</span>
 <span id="cb1-2" class="hljs-ln-code"><a href=""></a>  </span>
 <span id="cb1-3" class="hljs-ln-code"><a href=""></a>    u <span class="op">=</span> model.space_mode(x)</span>
