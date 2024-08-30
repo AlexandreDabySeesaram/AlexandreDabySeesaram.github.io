@@ -458,68 +458,25 @@ Martin Genet <sup><span style="color:#a6ce39ff"><a href="https://orcid.org/0000-
   <p class="date">September 4, 2024</p>
 </section>
 <section>
-<section id="i---motivations-objectives" class="title-slide slide level1 center">
-<h1>I - Motivations &amp; objectives</h1>
-<style>
-r { color: Red }
-o { color: Orange }
-g { color: Green }
-</style>
-<table class="caption-top" style="width:67%;">
-<colgroup>
-<col style="width: 66%">
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><ol type="1">
-<li><strong>Idiopathic Pulmonary Fibrosis</strong></li>
-</ol></td>
-</tr>
-<tr class="even">
-<td><ol start="2" type="1">
-<li><strong>Mechanical problem</strong></li>
-</ol></td>
-</tr>
-<tr class="odd">
-<td><ol start="3" type="1">
-<li><strong>Real-time simulation of the lungs</strong></li>
-</ol></td>
-</tr>
-</tbody>
-</table>
-<p><span class="math display">\[
-\definecolor{BleuLMS}{RGB}{1, 66, 106}
-\definecolor{VioletLMS}{RGB}{77, 22, 84}
-\definecolor{TealLMS}{RGB}{0, 103, 127}
-% \definecolor{BleuLMS2}{RGB}{0, 103, 202}
-\definecolor{BleuLMS2}{RGB}{0, 169, 206}
-\definecolor{BleuLMPS}{RGB}{105, 144, 255}
-\definecolor{accentcolor}{RGB}{1, 66, 106}
-\definecolor{GreenLMS}{RGB}{0,103,127}
-\definecolor{LGreenLMS}{RGB}{67,176,42}
-\definecolor{RougeLMS}{RGB}{206,0,55}
-\]</span></p>
-</section>
+
 <section id="idiopathic-pulmonary-fibrosis" class="slide level2">
 <h2>Idiopathic Pulmonary Fibrosis</h2>
-<div class="mybox">
-<div class="mybox-header">
-<p>Link with mechanics</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><video data-src="Figures/Movies/lung-im.mp4" loop="true" autoplay="true" height="300" controls=""><a href="Figures/Movies/lung-im.mp4">Video</a></video></p>
+<figcaption>Inspiration &amp; expiration of diseased lungs</figcaption>
+</figure>
 </div>
-<div class="mybox-body">
-<ul>
-<li>Mechanics is assumed to be a key factor in the development of the disease
-<ul>
-<li>A vicious circle has been theorised <span class="citation" data-cites="liu_feedback_2010">(<a href="#/references" role="doc-biblioref" onclick="">Liu et al., 2010</a>)</span> where
-<ul>
-<li>Large stresses lead to</li>
-<li>Fibrosis spread</li>
-<li>In turn, this leads to stiffer zones and higher stresses</li>
-</ul></li>
-</ul></li>
-</ul>
+</div><div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><video data-src="Figures/Movies/lung-geometry.mp4" loop="true" autoplay="true" height="300" controls=""><a href="Figures/Movies/lung-geometry.mp4">Video</a></video></p>
+<figcaption>Digital twin from images</figcaption>
+</figure>
 </div>
-</div>
+</div></div>
 <div class="columns">
 <div class="column" style="width:50%;">
 <div class="mybox">
@@ -535,7 +492,7 @@ g { color: Green }
 <li><em>In silico</em> prognostics
 <ul>
 <li>Transfer tools to the clinic</li>
-<li>Patient-specific digital twins</li>
+<li>Patient-specific <strong>digital twins</strong></li>
 </ul></li>
 </ul>
 <div style="margin-top: 0em;">
@@ -549,7 +506,7 @@ g { color: Green }
 <p>Requirements</p>
 </div>
 <div class="mybox-body">
-<div class="fragment fade-in">
+<div class="fragment fade-in" data-fragment-index="1">
 <ul>
 <li><g> Mechanical model of the lung <span class="citation" data-cites="patte_quasi-static_2022">(<a href="#/references" role="doc-biblioref" onclick="">Patte et al., 2022</a>)</span></g></li>
 </ul>
@@ -561,7 +518,7 @@ g { color: Green }
 </div>
 <div class="fragment fade-in">
 <ul>
-<li><r> Real-time estimation of the parameters </r></li>
+<li><r> <strong>Real-time</strong> estimation of the parameters </r></li>
 </ul>
 </div>
 <div style="margin-top: 0.2em;">
@@ -570,6 +527,11 @@ g { color: Green }
 </div>
 </div>
 </div></div>
+<style>
+r { color: Red }
+o { color: Orange }
+g { color: Green }
+</style>
 </section>
 <section id="lung-poro-mechanics" class="slide level2" data-auto-animate="true">
 <h2 data-id="quarto-animate-title">Lung poro-mechanics</h2>
@@ -712,6 +674,23 @@ $$ -->
 <section>
 <section id="ii---methods" class="title-slide slide level1 center">
 <h1>II - Methods</h1>
+<p><span class="math display">\[
+\definecolor{BleuLMS}{RGB}{1, 66, 106}
+\definecolor{VioletLMS}{RGB}{77, 22, 84}
+\definecolor{TealLMS}{RGB}{0, 103, 127}
+% \definecolor{BleuLMS2}{RGB}{0, 103, 202}
+\definecolor{BleuLMS2}{RGB}{0, 169, 206}
+\definecolor{BleuLMPS}{RGB}{105, 144, 255}
+\definecolor{accentcolor}{RGB}{1, 66, 106}
+\definecolor{GreenLMS}{RGB}{0,103,127}
+\definecolor{LGreenLMS}{RGB}{67,176,42}
+\definecolor{RougeLMS}{RGB}{206,0,55}
+\]</span></p>
+<style>
+r { color: Red }
+o { color: Orange }
+g { color: Green }
+</style>
 <table class="caption-top" style="width:97%;">
 <colgroup>
 <col style="width: 97%">
@@ -735,45 +714,86 @@ $$ -->
 </tbody>
 </table>
 </section>
-<section id="the-finite-element-method-interpolation" class="slide level2">
-<h2>The finite element method interpolation</h2>
-<ul>
-<li>From the continuous problem of finding the displacement <span class="math inline">\(\boldsymbol{u}\)</span> in</li>
-</ul>
-<p><span class="math display">\[
-    \mathcal{U} \left(\text{resp.} \mathcal{U}^0 \right) = \left\{\boldsymbol{u} \; | \; \boldsymbol{u}\left(\boldsymbol{x}\right) \in \mathcal{H}^1\left(\Omega, \mathbb{R}^{\text{d}}\right) \text{, }
-    \boldsymbol{u} = \boldsymbol{u}_d \left(\text{resp.} =\boldsymbol{0} \right) \text{ on }\partial \Omega_d  \right\}  
-\]</span></p>
-<ul>
-<li>An approximation is thought after in the finite admissible (resp. admissible to zero) space</li>
-</ul>
-<p><span class="math display">\[
-    \mathcal{U}_h \left(\text{resp.} \mathcal{U}_h^0 \right) = \left\{\boldsymbol{u}_h  \; | \; \boldsymbol{u}_h \in \text{Span}\left( \left\{ N_i^{\Omega}\left(\boldsymbol{x} \right)\right\}_{i \in \mathopen{~[\!\![~}1,N\mathclose{~]\!\!]}} \right)^d \text{, }
-    \boldsymbol{u}_h = \boldsymbol{u}_d \left(\text{resp.} =\boldsymbol{0} \right) \text{ on }\partial \Omega_d  \right\}
-\]</span></p>
-<div class="fragment fade-up">
+<section id="interpolation-of-the-solution" class="slide level2">
+<h2>Interpolation of the solution</h2>
+<p><!-- * From the continuous problem of finding the displacement $\vect{u}$ in 
+
+$$
+    \mathcal{U} = \left\{\vect{u} \; | \; \vect{u}\left(\vect{x}\right) \in \mathcal{H}^1\left(\Omega, \mathbb{R}^{\text{d}}\right) \text{, }
+    \vect{u} = \vect{u}_d \text{ on }\partial \Omega_d  \right\}  
+$$ --></p>
 <div class="columns">
-<div class="column" style="width:50%;">
-<div class="mybox">
-<div class="mybox-header">
-<p>Finite element neural network interpolation</p>
-</div>
-<div class="mybox-body">
+<div class="column" style="width:55%;">
 <ul>
-<li>This interpolation can be done using sparse neural networks (SNN) <span class="citation" data-cites="zhang_hierarchical_2021">(<a href="#/references" role="doc-biblioref" onclick="">Zhang et al., 2021</a>)</span>
+<li><strong>FEM</strong> finite admissible space</li>
+</ul>
+<p><span class="math display">\[
+    \mathcal{U}_h = \left\{\boldsymbol{u}_h  \; | \; \boldsymbol{u}_h \in \text{Span}\left( \left\{ N_i^{\Omega}\left(\boldsymbol{x} \right)\right\}_{i \in \mathopen{~[\!\![~}1,N\mathclose{~]\!\!]}} \right)^d \text{, }
+    \boldsymbol{u}_h = \boldsymbol{u}_d \text{ on }\partial \Omega_d  \right\}
+\]</span></p>
+</div><div class="column" style="width:45%;">
+<div class="fragment fade-left">
+<div class="custom-bullets-pos">
 <ul>
-<li><span class="math inline">\(N_i^{\Omega}\)</span> are SNN with constrained <strong>weights</strong> and <strong>biases</strong></li>
-<li>Continuous interpolated field that can be <strong>automatically differentiated</strong></li>
-<li>Gives the additional benefit of running on <strong>GPUs</strong></li>
-<li>Fully <strong>interpretable</strong> parameters</li>
+<li><f>Interpretabilty</f></li>
+<li><f>Kronecker propriety</f>
+<ul>
+<li><f>Easy to prescribe Dirichlet boundary conditions</f></li>
 </ul></li>
 </ul>
 </div>
+<div class="custom-bullets-neg">
+<ul>
+<li><f>Fixed mesh </f></li>
+</ul>
 </div>
-</div><div class="column" style="width:50%;">
+</div>
+</div></div>
+<div class="columns">
+<div class="column" style="width:55%;">
+<div class="fragment fade-up">
+<ul>
+<li>Physics Informed Neural Networks (<strong>PINNs</strong>)</li>
+</ul>
+<p><span class="math display">\[ \boldsymbol{u} \left(x_{0,0,0} \right) = \sum\limits_{i = 0}^C \sum\limits_{j = 0}^{N_i} \sigma \left( \sum\limits_{k = 0}^{M_{i,j}} b_{i,j}+\omega_{i,j,k}~ x_{i,j,k} \right) \]</span></p>
+</div>
+</div><div class="column" style="width:45%;">
+<div class="fragment fade-left">
+<div class="custom-bullets-pos">
+<ul>
+<li><f>All interpolation parameters are trainable </f></li>
+<li><f>Benefits from ML developments </f></li>
+</ul>
+</div>
+<style>
+f { color: #01426aff }
+</style>
+<div class="custom-bullets-neg">
+<ul>
+<li><f>Not easily interpretable</f></li>
+<li><f>Difficult to prescribe Dirichlet boundary conditions </f></li>
+</ul>
+</div>
+</div>
+</div></div>
+<div class="fragment fade-up">
+<div class="columns">
+<div class="column" style="width:55%;">
+<ul>
+<li><strong>HiDeNN</strong> framework <span class="citation" data-cites="zhang_hierarchical_2021 liu_hidenn-fem_2023 park_convolution_2023">(<a href="#/references" role="doc-biblioref" onclick="">Liu et al., 2023</a>; <a href="#/references" role="doc-biblioref" onclick="">Park et al., 2023</a>; <a href="#/references" role="doc-biblioref" onclick="">Zhang et al., 2021</a>)</span>
+<ul>
+<li>Best of both worlds</li>
+<li>Reproducing <strong>FEM interpolation</strong> with constrained sparse neural networks</li>
+<li><span class="math inline">\(N_i^{\Omega}\)</span> are SNN with constrained <strong>weights</strong> and <strong>biases</strong></li>
+<li>Fully <strong>interpretable</strong> parameters</li>
+<li>Continuous interpolated field that can be <strong>automatically differentiated</strong></li>
+<li>Runs on <strong>GPUs</strong></li>
+</ul></li>
+</ul>
+</div><div class="column" style="width:45%;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="Figures/HiDeNN_Space_2.svg" width="500"></p>
+<p><img data-src="Figures/HiDeNN_Space_2.svg" width="400"></p>
 <figcaption>Illustration of Finite Element Neural Network Interpolation (FENNI)</figcaption>
 </figure>
 </div>
@@ -846,7 +866,7 @@ $$ -->
 </figure>
 </div>
 </div><div class="column" style="width:24%;">
-<div style="margin-top: 6em;">
+<div style="margin-top: 3em;">
 
 </div>
 <table class="caption-top">
@@ -871,12 +891,16 @@ $$ -->
 </tr>
 </tbody>
 </table>
+<div class="fragment fade-up">
+<p><strong>More details:</strong></p>
+<p>Katerina Skardova at <strong>4pm</strong> <strong>tomorrow</strong> in <strong>02.011</strong></p>
+</div>
 </div></div>
 </div>
 </section>
 <section id="reduced-order-modelling-rom" class="slide level2">
 <h2>Reduced-order modelling (ROM)</h2>
-<p><strong>Low-rank</strong> approximation of the solution to avoid the <strong>curse of dimensionality</strong></p>
+<p><strong>Low-rank</strong> approximation of the solution to avoid the <strong>curse of dimensionality</strong> with <span class="math inline">\(\beta\)</span> parameters</p>
 <div class="columns">
 <div class="column" style="width:50%;">
 <div class="mybox">
@@ -923,7 +947,7 @@ $$ -->
 <ul>
 <li>Do not account for the loading and behaviour specifics</li>
 </ul></li>
-<li><strong>Proper Orthogonal Decomposition</strong> <span class="citation" data-cites="chatterjee_introduction_2000">(<a href="#/references" role="doc-biblioref" onclick="">Chatterjee, 2000</a>)</span>,<span class="citation" data-cites="radermacher_comparison_2013">(<a href="#/references" role="doc-biblioref" onclick="">Radermacher &amp; Reese, 2013</a>)</span>
+<li><strong>Proper Orthogonal Decomposition</strong> <span class="citation" data-cites="chatterjee_introduction_2000 radermacher_comparison_2013">(<a href="#/references" role="doc-biblioref" onclick="">Chatterjee, 2000</a>; <a href="#/references" role="doc-biblioref" onclick="">Radermacher &amp; Reese, 2013</a>)</span>
 <ul>
 <li>Require wise selection of the snapshots and costly computations</li>
 </ul></li>
@@ -937,7 +961,7 @@ $$ -->
 </section>
 <section id="proper-generalised-decomposition-pgd" class="slide level2" data-auto-animate="true">
 <h2 data-id="quarto-animate-title">Proper Generalised Decomposition (PGD)</h2>
-<p><span class="citation" data-cites="chinesta_short_2011">(<a href="#/references" role="doc-biblioref" onclick="">Chinesta et al., 2011</a>)</span></p>
+<p>PGD: <span class="citation" data-cites="chinesta_short_2011 Ladeveze85">(<a href="#/references" role="doc-biblioref" onclick="">Chinesta et al., 2011</a>; <a href="#/references" role="doc-biblioref" onclick="">Ladevèze, 1985</a>)</span></p>
 <div class="columns">
 <div class="column" style="width:50%;">
 <div class="mybox">
@@ -981,7 +1005,7 @@ $$ -->
 </section>
 <section id="proper-generalised-decomposition-pgd-1" class="slide level2" data-auto-animate="true">
 <h2 data-id="quarto-animate-title">Proper Generalised Decomposition (PGD)</h2>
-<p><span class="citation" data-cites="chinesta_short_2011">(<a href="#/references" role="doc-biblioref" onclick="">Chinesta et al., 2011</a>)</span></p>
+<p>PGD: <span class="citation" data-cites="chinesta_short_2011 Ladeveze85">(<a href="#/references" role="doc-biblioref" onclick="">Chinesta et al., 2011</a>; <a href="#/references" role="doc-biblioref" onclick="">Ladevèze, 1985</a>)</span></p>
 <div class="columns">
 <div class="column" style="width:50%;">
 <div class="mybox">
@@ -1063,7 +1087,7 @@ $$ --> <span class="math display">\[
 <section id="proper-generalised-decomposition-pgd-2" class="slide level2" data-auto-animate="true">
 <h2 data-id="quarto-animate-title">Proper Generalised Decomposition (PGD)</h2>
 <ul>
-<li>Building the low-rank tensor decomposition</li>
+<li>Building the low-rank tensor decomposition greedily <span class="citation" data-cites="Ladeveze85 nouy_priori_2010">(<a href="#/references" role="doc-biblioref" onclick="">Ladevèze, 1985</a>; <a href="#/references" role="doc-biblioref" onclick="">Nouy, 2010</a>)</span></li>
 </ul>
 <div style="margin-top: -1em;">
 
@@ -1124,10 +1148,10 @@ padding-right: 10%;
 <ul>
 <li>An <em>a priori</em> ROM techniques
 <ul>
-<li>Building the reduced-order basis on the fly.</li>
+<li>Building the model <strong>from scratch</strong> on the fly</li>
 </ul></li>
 <li>No full-order computations</li>
-<li><strong>On the fly</strong> mode generation adapted to the specifics of the problem <span class="citation" data-cites="DabyHybrid">(<a href="#/references" role="doc-biblioref" onclick="">Daby-Seesaram et al., 2023</a>)</span></li>
+<li>Reduced-order basis tailored to the specifics of the problem <span class="citation" data-cites="DabyHybrid">(<a href="#/references" role="doc-biblioref" onclick="">Daby-Seesaram et al., 2023</a>)</span></li>
 </ul>
 </div>
 </div>
@@ -1141,7 +1165,7 @@ padding-right: 10%;
 <div class="mybox-body">
 <ul>
 <li>Training of the full tensor decomposition, not only the <span class="math inline">\(m\)</span>-th mode</li>
-<li>Actual <em>minimisation</em> implementation of the PGD</li>
+<li>Actual <strong>minimisation</strong> implementation of the PGD</li>
 <li>No need to solve a new problem for any new parameter
 <ul>
 <li>The online stage is a <strong>simple evaluation</strong> of the tensor decomposition</li>
@@ -1183,7 +1207,7 @@ padding-right: 10%;
 <ul>
 <li>Straightforward definition of the physical loss using auto-differentiation</li>
 </ul>
-<div id="88188d7f" class="cell" data-execution_count="2">
+<div id="9ff76ec0" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode python hljs"><span id="cb1-1" class="hljs-ln-code"><a href=""></a><span class="kw">def</span> Loss(model,x,detJ,mu):</span>
 <span id="cb1-2" class="hljs-ln-code"><a href=""></a>  </span>
 <span id="cb1-3" class="hljs-ln-code"><a href=""></a>    u <span class="op">=</span> model.space_mode(x)</span>
@@ -1292,12 +1316,12 @@ padding-right: 10%;
 </div>
 <div class="mybox-body">
 <ul>
-<li>The interpretability of the NN allows
+<li>The <strong>interpretability</strong> of the NN allows
 <ul>
-<li>Great transfer learning capabilities
+<li>Great <strong>transfer learning</strong> capabilities
 <ul>
-<li>Start with coarse (cheap) training</li>
-<li>Followed by fine tuning</li>
+<li>Start with <strong>coarse</strong> (cheap) training</li>
+<li>Followed by <strong>fine tuning</strong>, refining all modes</li>
 </ul></li>
 </ul></li>
 <li>Extends the idea put forward by <span class="citation" data-cites="giacoma_toward_2015">(<a href="#/references" role="doc-biblioref" onclick="">Giacoma et al., 2015</a>)</span></li>
@@ -1311,7 +1335,7 @@ padding-right: 10%;
 </div>
 <div class="mybox-body">
 <ul>
-<li>The structure of the Tensor decomposition is kept throughout the multi-level training</li>
+<li>The structure of the <strong>Tensor decomposition</strong> is kept throughout the multi-level training</li>
 <li>Last mode of each level is irrelevant by construction
 <ul>
 <li>It is removed before passing onto the next refinement level</li>
@@ -1480,11 +1504,20 @@ Giacoma, A., Dureisseix, D., Gravouil, A., &amp; Rochette, M. (2015). Toward an 
 <div id="ref-hansteen_accuracy_1979" class="csl-entry" role="listitem">
 Hansteen, O. E., &amp; Bell, K. (1979). On the accuracy of mode superposition analysis in structural dynamics. <em>Earthquake Engineering &amp; Structural Dynamics</em>, <em>7</em>(5), 405–411. <a href="https://doi.org/10.1002/eqe.4290070502">https://doi.org/10.1002/eqe.4290070502</a>
 </div>
-<div id="ref-liu_feedback_2010" class="csl-entry" role="listitem">
-Liu, F., Mih, J. D., Shea, B. S., Kho, A. T., Sharif, A. S., Tager, A. M., &amp; Tschumperlin, D. J. (2010). Feedback amplification of fibrosis through matrix stiffening and <span>COX</span>-2 suppression. <em>Journal of Cell Biology</em>, <em>190</em>(4), 693–706. <a href="https://doi.org/10.1083/jcb.201004082">https://doi.org/10.1083/jcb.201004082</a>
+<div id="ref-Ladeveze85" class="csl-entry" role="listitem">
+Ladevèze, P. (1985). Sur une famille d’algorithmes en mécanique des structures. <em>Comptes-Rendus Des Séances de l’Acad<span>é</span>mie Des Sciences. Série 2, Mécanique, Physique, Chimie, Sciences de l’univers, Sciences de La Terre</em>, <em>300</em>(2).
+</div>
+<div id="ref-liu_hidenn-fem_2023" class="csl-entry" role="listitem">
+Liu, Y., Park, C., Lu, Y., Mojumder, S., Liu, W. K., &amp; Qian, D. (2023). <span>HiDeNN</span>-<span>FEM</span>: A seamless machine learning approach to nonlinear finite element analysis. <em>Computational Mechanics</em>, <em>72</em>(1), 173–194. <a href="https://doi.org/10.1007/s00466-023-02293-z">https://doi.org/10.1007/s00466-023-02293-z</a>
 </div>
 <div id="ref-maday_reduced-basis_2002" class="csl-entry" role="listitem">
 Maday, Y., &amp; Rønquist, E. M. (2002). A <span>Reduced</span>-<span>Basis</span> <span>Element</span> <span>Method</span>. <em>Journal of Scientific Computing</em>, <em>17</em>(1), 447–459. <a href="https://doi.org/10.1023/A:1015197908587">https://doi.org/10.1023/A:1015197908587</a>
+</div>
+<div id="ref-nouy_priori_2010" class="csl-entry" role="listitem">
+Nouy, A. (2010). A priori model reduction through <span>Proper</span> <span>Generalized</span> <span>Decomposition</span> for solving time-dependent partial differential equations. <em>Computer Methods in Applied Mechanics and Engineering</em>, <em>199</em>(23-24), 1603–1626. <a href="https://doi.org/10.1016/j.cma.2010.01.009">https://doi.org/10.1016/j.cma.2010.01.009</a>
+</div>
+<div id="ref-park_convolution_2023" class="csl-entry" role="listitem">
+Park, C., Lu, Y., Saha, S., Xue, T., Guo, J., Mojumder, S., Apley, D. W., Wagner, G. J., &amp; Liu, W. K. (2023). Convolution hierarchical deep-learning neural network (<span>C</span>-<span>HiDeNN</span>) with graphics processing unit (<span>GPU</span>) acceleration. <em>Computational Mechanics</em>, <em>72</em>(2), 383–409. <a href="https://doi.org/10.1007/s00466-023-02329-4">https://doi.org/10.1007/s00466-023-02329-4</a>
 </div>
 <div id="ref-patte_quasi-static_2022" class="csl-entry" role="listitem">
 Patte, C., Genet, M., &amp; Chapelle, D. (2022). A quasi-static poromechanical model of the lungs. <em>Biomechanics and Modeling in Mechanobiology</em>, <em>21</em>(2), 527–551. <a href="https://doi.org/10.1007/s10237-021-01547-0">https://doi.org/10.1007/s10237-021-01547-0</a>
