@@ -110,5 +110,75 @@
     "title": "Research",
     "section": "Bridging micro to macro in pulmonary mechanics: Interpretable neural networks for surrogate modelling",
     "text": "Bridging micro to macro in pulmonary mechanics: Interpretable neural networks for surrogate modelling\nAuthors: K. Škardová, A. Daby-seesaram, M. Genet\nIdiopathic Pulmonary Fibrosis (IPF) is a disease characterized by the progressive formation of scar tissue in the lungs, leading to locally increased tissue stiffness and impaired respiratory function. Despite its significant impact on patient health, IPF remains poorly understood and poorly diagnosed. Our focus on IPF is motivated by the complex impact the fibrosis has not only on the lung tissue structure but also on the lung kinematics, and mechanics. The coupling between the disease progress and mechanical environment, as well as the multiscale nature of the disease, calls for a multiscale modeling approach to connect phenomena arising on various spatial scales. In order to integrate the existing micromechanical and organ-level models, the micro-model needs to undergo reduction. In our work, we propose to address this challenge by using a machine learning-based surrogate modeling framework.\nIn the presented framework, we use structured neural networks designed to be able to produce standard FEM shape functions. Similarly, to classical Physics-informed neural networks, this framework also has the capability to incorporate mechanistic knowledge through appropriate definition of the loss function. Due to the specific structure of the neural network, the number of trained parameters is significantly lower compared to a fully connected neural network and the individual weights and biases have a clear interpretation. In addition to higher reliability, the interpretability also allows us to strongly impose Dirichlet boundary conditions and thus avoid some of the changes caused by including additional terms in the loss function.\nIn this contribution, we present the capabilities of the model on several 1D and 2D test cases. The architecture of the neural network is defined by the discretization of the domain on which the governing equations are solved. There are however other choices, that effect the results, including the definition of the loss function and selection of optimizer and training strategy. We discuss the benefits and limitation of the tested variants and show how they affect the results obtained by the model."
+  },
+  {
+    "objectID": "news.html",
+    "href": "news.html",
+    "title": "News",
+    "section": "",
+    "text": "New position\n\n\n\n\n\n\n\n\n\n\n\nJan 2, 2024\n\n\n\n\n\n\n\n\n\n\n\n\nPhD Defence\n\n\n\n\n\n\n\n\n\n\n\nDec 1, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nMortech 2023\n\n\n\n\n\n\n\n\n\n\n\nNov 24, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nNew paper is out\n\n\n\n\n\n\n\n\n\n\n\nApr 12, 2023\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "posts/2024/2023-12-01-PhD-Defence/index.html",
+    "href": "posts/2024/2023-12-01-PhD-Defence/index.html",
+    "title": "PhD Defence",
+    "section": "",
+    "text": "Today I successfully defended my PhD in front of a jury composed of\n\nProfessor Daniel Rixen (President of the jury),\n\nTU München\n\nProfessor Francisco Chinest (Reviewer),\n\nENSAM Paris\n\nProfessor Anthony Gravouil (Reviewer),\n\nINSA Lyon\n\nProfessor Udo Nackenhorst (Examiner),\n\nLU Hannover\n\nDoctor Maria Paola Santisi d’Avila (Examiner),\n\nUniversité Côte d’Azur"
+  },
+  {
+    "objectID": "posts/2024/2023-12-01-PhD-Defence/index.html#towards-an-optimal-multi-query-framework-based-on-model-order-reduction-for-non-linear-dynamics",
+    "href": "posts/2024/2023-12-01-PhD-Defence/index.html#towards-an-optimal-multi-query-framework-based-on-model-order-reduction-for-non-linear-dynamics",
+    "title": "PhD Defence",
+    "section": "",
+    "text": "Today I successfully defended my PhD in front of a jury composed of\n\nProfessor Daniel Rixen (President of the jury),\n\nTU München\n\nProfessor Francisco Chinest (Reviewer),\n\nENSAM Paris\n\nProfessor Anthony Gravouil (Reviewer),\n\nINSA Lyon\n\nProfessor Udo Nackenhorst (Examiner),\n\nLU Hannover\n\nDoctor Maria Paola Santisi d’Avila (Examiner),\n\nUniversité Côte d’Azur"
+  },
+  {
+    "objectID": "posts/2024/2023-12-01-PhD-Defence/index.html#documents",
+    "href": "posts/2024/2023-12-01-PhD-Defence/index.html#documents",
+    "title": "PhD Defence",
+    "section": "Documents",
+    "text": "Documents\nMy PhD dissertation is available here."
+  },
+  {
+    "objectID": "posts/2023/2023-12-01-PhD-Defence/index.html",
+    "href": "posts/2023/2023-12-01-PhD-Defence/index.html",
+    "title": "PhD Defence",
+    "section": "",
+    "text": "Today I successfully defended my PhD in front of a jury composed of\n\nProfessor Daniel Rixen (President of the jury),\n\nTU München\n\nProfessor Francisco Chinest (Reviewer),\n\nENSAM Paris\n\nProfessor Anthony Gravouil (Reviewer),\n\nINSA Lyon\n\nProfessor Udo Nackenhorst (Examiner),\n\nLU Hannover\n\nDoctor Maria Paola Santisi d’Avila (Examiner),\n\nUniversité Côte d’Azur"
+  },
+  {
+    "objectID": "posts/2023/2023-12-01-PhD-Defence/index.html#towards-an-optimal-multi-query-framework-based-on-model-order-reduction-for-non-linear-dynamics",
+    "href": "posts/2023/2023-12-01-PhD-Defence/index.html#towards-an-optimal-multi-query-framework-based-on-model-order-reduction-for-non-linear-dynamics",
+    "title": "PhD Defence",
+    "section": "",
+    "text": "Today I successfully defended my PhD in front of a jury composed of\n\nProfessor Daniel Rixen (President of the jury),\n\nTU München\n\nProfessor Francisco Chinest (Reviewer),\n\nENSAM Paris\n\nProfessor Anthony Gravouil (Reviewer),\n\nINSA Lyon\n\nProfessor Udo Nackenhorst (Examiner),\n\nLU Hannover\n\nDoctor Maria Paola Santisi d’Avila (Examiner),\n\nUniversité Côte d’Azur"
+  },
+  {
+    "objectID": "posts/2023/2023-12-01-PhD-Defence/index.html#documents",
+    "href": "posts/2023/2023-12-01-PhD-Defence/index.html#documents",
+    "title": "PhD Defence",
+    "section": "Documents",
+    "text": "Documents\nMy PhD dissertation is available here."
+  },
+  {
+    "objectID": "posts/2024/2024-01-02-NewPosition-X/index.html",
+    "href": "posts/2024/2024-01-02-NewPosition-X/index.html",
+    "title": "New position",
+    "section": "",
+    "text": "I got a new position as Postdoctoral researcher at École Polytechnique and INRIA in the MΞDISIM team."
+  },
+  {
+    "objectID": "posts/2023/2023-04-12-ArticleOut/index.html",
+    "href": "posts/2023/2023-04-12-ArticleOut/index.html",
+    "title": "New paper is out",
+    "section": "",
+    "text": "Our new paper on reduced-order modelling using the PGD in the frequency domain for non-linear dynamics is out in Nonlinear dynamics."
+  },
+  {
+    "objectID": "posts/2023/2023-11-24-Mortech/index.html",
+    "href": "posts/2023/2023-11-24-Mortech/index.html",
+    "title": "Mortech 2023",
+    "section": "",
+    "text": "I presented my PhD work at MORTech 2023 (6th International Workshop on Model Reduction Techniques) at Laboratoire de Mécanique de Paris-Saclay (LMPS), École Normale Supérieure de Paris-Saclay where I met my future colleagues Martin Genet and Kateřina Škardová."
   }
 ]

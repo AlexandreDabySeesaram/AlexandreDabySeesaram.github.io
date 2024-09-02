@@ -11,6 +11,8 @@ website:
         text: Research
       - href: talks.qmd
         text: Talks
+      - href: news.qmd
+        text: News
       - href: add_resources.qmd
         text: Resources
       - href: TA.qmd
