@@ -1,5 +1,5 @@
 ---
-title: "CSMA 2022"
+title: "CSMA 2024"
 date: "2024-05-17"
 categories: 
   - "News"
