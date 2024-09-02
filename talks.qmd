@@ -15,7 +15,7 @@ format:
 +----------------------------------------+-------------------------------------------------------------------------------------+
 | Authors                                | <a href="index.qmd">A. Daby-seesaram<a>,                                            |
 |                                        | <a href="https://m3disim.saclay.inria.fr/people/katerina-skardova/">K. Škardová<a>, |
-|                                        | <a href="https://m3disim.saclay.inria.fr/people/martin-genet/">M. Genet<a>          |
+|                                        | <a href="https://mgenet.github.io/">M. Genet<a>                                     |
 +----------------------------------------+-------------------------------------------------------------------------------------+
 | Link                                   | <a href="Resources/Documents/Presentations/VPH2024/TODO.html">slides<a>             |
 +----------------------------------------+-------------------------------------------------------------------------------------+

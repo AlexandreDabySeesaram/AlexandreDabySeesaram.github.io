@@ -15,7 +15,7 @@ format:
 
 ## Hybridising standard reduced-order modelling methods with interpretable sparse neural networks for real-time patient specific lung simulations
 
-**Authors:**  <a href="index.qmd">A. Daby-seesaram<a>, <a href="https://m3disim.saclay.inria.fr/people/katerina-skardova/">K. Škardová<a>, <a href="https://m3disim.saclay.inria.fr/people/martin-genet/">M. Genet<a>  
+**Authors:**  <a href="index.qmd">A. Daby-seesaram<a>, <a href="https://m3disim.saclay.inria.fr/people/katerina-skardova/">K. Škardová<a>, <a href="https://mgenet.github.io/">M. Genet<a>  
 
 Mechanics and, more specifically, stress fields possibly play a crucial role in the development of pulmonary fibrosis. This work aims to provide clinicians with diagnostic and prognostic tools based on mechanical simulation. Personalisation of these tools is critical for clinical pertinence, thus requiring numerical techniques for real-time estimation of patient-specific mechanical parameters.
 
@@ -42,7 +42,7 @@ Feel free to interact with it.
 
 ## Bridging micro to macro in pulmonary mechanics: Interpretable neural networks for surrogate modelling
 
-**Authors:** <a href="https://m3disim.saclay.inria.fr/people/katerina-skardova/">K. Škardová<a>,  <a href="index.qmd">A. Daby-seesaram<a>, <a href="https://m3disim.saclay.inria.fr/people/martin-genet/">M. Genet<a>  
+**Authors:** <a href="https://m3disim.saclay.inria.fr/people/katerina-skardova/">K. Škardová<a>,  <a href="index.qmd">A. Daby-seesaram<a>, <a href="https://mgenet.github.io/">M. Genet<a>  
 
 Idiopathic Pulmonary Fibrosis (IPF) is a disease characterized by the progressive formation of scar tissue in the lungs, leading to locally increased tissue stiffness and impaired respiratory function. Despite its significant impact on patient health, IPF remains poorly understood and poorly diagnosed. Our focus on IPF is motivated by the complex impact the fibrosis has not only on the lung tissue structure but also on the lung kinematics, and mechanics. The coupling between the disease progress and mechanical environment, as well as the multiscale nature of the disease, calls for a multiscale modeling approach to connect phenomena arising on various spatial scales. In order to integrate the existing micromechanical and organ-level models, the micro-model needs to undergo reduction. In our work, we propose to address this challenge by using a machine learning-based surrogate modeling framework.
 
