@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss  xmlns:atom="http://www.w3.org/2005/Atom" 
+      xmlns:media="http://search.yahoo.com/mrss/" 
+      xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+      xmlns:dc="http://purl.org/dc/elements/1.1/" 
+      version="2.0">
+<channel>
+<title>Alexandre Daby-Seesaram</title>
+<link>https://alexandredabyseesaram.github.io/news.html</link>
+<atom:link href="https://alexandredabyseesaram.github.io/news.xml" rel="self" type="application/rss+xml"/>
+<description>Alexandre Daby-Seesaram, PHD, personal webpage</description>
+<generator>quarto-1.5.56</generator>
+<lastBuildDate>Thu, 16 May 2024 22:00:00 GMT</lastBuildDate>
+<item>
+  <title>CSMA 2024</title>
+  <link>https://alexandredabyseesaram.github.io/posts/2024/2024-05-17-CSMA/</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>I presented <a href="https://hal.science/hal-03717959">my PhD work</a> at <a href="https://csma2024.sciencesconf.org/">CSMA 2024</a> in Giens.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://alexandredabyseesaram.github.io/posts/2024/2024-05-17-CSMA/giens_2024.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:50.0%"></p>
+</figure>
+</div>
+
+
+
+ ]]></description>
+  <category>News</category>
+  <guid>https://alexandredabyseesaram.github.io/posts/2024/2024-05-17-CSMA/</guid>
+  <pubDate>Thu, 16 May 2024 22:00:00 GMT</pubDate>
+  <media:content url="https://alexandredabyseesaram.github.io/posts/2024/2024-05-17-CSMA/giens_2024.jpg" medium="image" type="image/jpeg"/>
+</item>
+<item>
+  <title>New position</title>
+  <link>https://alexandredabyseesaram.github.io/posts/2024/2024-01-02-NewPosition-X/</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>I got a new position as Postdoctoral researcher at École Polytechnique and INRIA in the <a href="https://m3disim.saclay.inria.fr/">MΞDISIM team</a>.</p>
+
+
+
+ ]]></description>
+  <category>News</category>
+  <guid>https://alexandredabyseesaram.github.io/posts/2024/2024-01-02-NewPosition-X/</guid>
+  <pubDate>Mon, 01 Jan 2024 23:00:00 GMT</pubDate>
+  <media:content url="https://alexandredabyseesaram.github.io/posts/2024/2024-01-02-NewPosition-X/Logo_X.png" medium="image" type="image/png" height="73" width="144"/>
+</item>
+<item>
+  <title>IRTG 2657 2nd Annual Meeting</title>
+  <link>https://alexandredabyseesaram.github.io/posts/2023/2023-12-06-IRTG/</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>The <a href="https://www.irtg2657.uni-hannover.de/en/">IRTG 2657</a> 2nd Annual Meeting was held in Wernigerode.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://alexandredabyseesaram.github.io/posts/2023/2023-12-06-IRTG/IRTG_Logo_2.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:50.0%"></p>
+</figure>
+</div>
+
+
+
+ ]]></description>
+  <category>News</category>
+  <guid>https://alexandredabyseesaram.github.io/posts/2023/2023-12-06-IRTG/</guid>
+  <pubDate>Tue, 05 Dec 2023 23:00:00 GMT</pubDate>
+  <media:content url="https://alexandredabyseesaram.github.io/posts/2023/2023-12-06-IRTG/IRTG_Logo_2.png" medium="image" type="image/png" height="72" width="144"/>
+</item>
+<item>
+  <title>PhD Defence</title>
+  <link>https://alexandredabyseesaram.github.io/posts/2023/2023-12-01-PhD-Defence/</link>
+  <description><![CDATA[ 
+
+
+
+
+<section id="towards-an-optimal-multi-query-framework-based-on-model-order-reduction-for-non-linear-dynamics" class="level2">
+<h2 class="anchored" data-anchor-id="towards-an-optimal-multi-query-framework-based-on-model-order-reduction-for-non-linear-dynamics">Towards an Optimal Multi-query Framework based on Model-order Reduction for Non-linear Dynamics</h2>
+<p>Today I successfully defended my PhD in front of a jury composed of</p>
+<ul>
+<li>Professor Daniel Rixen (President of the jury),
+<ul>
+<li><em>TU München</em></li>
+</ul></li>
+<li>Professor Francisco Chinest (Reviewer),
+<ul>
+<li><em>ENSAM Paris</em></li>
+</ul></li>
+<li>Professor Anthony Gravouil (Reviewer),
+<ul>
+<li><em>INSA Lyon</em></li>
+</ul></li>
+<li>Professor Udo Nackenhorst (Examiner),
+<ul>
+<li><em>LU Hannover</em></li>
+</ul></li>
+<li>Doctor Maria Paola Santisi d’Avila (Examiner),
+<ul>
+<li><em>Université Côte d’Azur</em></li>
+</ul></li>
+</ul>
+</section>
+<section id="documents" class="level2">
+<h2 class="anchored" data-anchor-id="documents">Documents</h2>
+<p>My PhD dissertation is available <a href="Resources/Documents/PhD_Thesis.pdf">here.</a></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://alexandredabyseesaram.github.io/posts/2023/2023-12-01-PhD-Defence/Defence.jpeg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:50.0%"></p>
+</figure>
+</div>
+
+
+</section>
+
+ ]]></description>
+  <category>News</category>
+  <guid>https://alexandredabyseesaram.github.io/posts/2023/2023-12-01-PhD-Defence/</guid>
+  <pubDate>Thu, 30 Nov 2023 23:00:00 GMT</pubDate>
+  <media:content url="https://alexandredabyseesaram.github.io/posts/2023/2023-12-01-PhD-Defence/Defence.jpeg" medium="image" type="image/jpeg"/>
+</item>
+<item>
+  <title>Mortech 2023</title>
+  <link>https://alexandredabyseesaram.github.io/posts/2023/2023-11-24-Mortech/</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>I presented my PhD work at <a href="https://mortech2023.sciencesconf.org/">MORTech 2023 (6th International Workshop on Model Reduction Techniques)</a> at Laboratoire de Mécanique de Paris-Saclay (LMPS), École Normale Supérieure de Paris-Saclay where I met my future colleagues <a href="https://mgenet.github.io/">Martin Genet</a> and <a href="https://m3disim.saclay.inria.fr/people/katerina-skardova">Kateřina Škardová</a>.</p>
+
+
+
+ ]]></description>
+  <category>News</category>
+  <guid>https://alexandredabyseesaram.github.io/posts/2023/2023-11-24-Mortech/</guid>
+  <pubDate>Thu, 23 Nov 2023 23:00:00 GMT</pubDate>
+  <media:content url="https://alexandredabyseesaram.github.io/posts/2023/2023-11-24-Mortech/Mortech.jpg" medium="image" type="image/jpeg"/>
+</item>
+<item>
+  <title>Visiting scholar at Leibniz University Hannover</title>
+  <link>https://alexandredabyseesaram.github.io/posts/2022/2022-07-31-IRTG/</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>As part of the <a href="https://www.irtg2657.uni-hannover.de/en/">IRTG 2657</a>, I have been invited to join Prof.&nbsp;Dr.-Ing. Michael Beer’s team at the <a href="https://www.irz.uni-hannover.de/en/">Institute for Risk and Reliability</a> and Prof.&nbsp;Dr.-Ing. Udo Nackenhorst’s team at the <a href="https://www.ibnm.uni-hannover.de/en/">Institute of Mechanics and Computational Mechanics</a>.</p>
+
+
+
+ ]]></description>
+  <category>News</category>
+  <guid>https://alexandredabyseesaram.github.io/posts/2022/2022-07-31-IRTG/</guid>
+  <pubDate>Sun, 30 Jul 2023 22:00:00 GMT</pubDate>
+  <media:content url="https://alexandredabyseesaram.github.io/posts/2022/2022-07-31-IRTG/IRTG.jpg" medium="image" type="image/jpeg"/>
+</item>
+<item>
+  <title>COMPDYN 2023 congress</title>
+  <link>https://alexandredabyseesaram.github.io/posts/2023/2023-06-14-COMPDYN/</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>I presented my PhD work at <a href="http://2023.compdyn.org/">COMPDYN 2023 congress</a> in Athens, Greece.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://alexandredabyseesaram.github.io/posts/2023/2023-06-14-COMPDYN/compdyn.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:50.0%"></p>
+</figure>
+</div>
+
+
+
+ ]]></description>
+  <category>News</category>
+  <guid>https://alexandredabyseesaram.github.io/posts/2023/2023-06-14-COMPDYN/</guid>
+  <pubDate>Tue, 13 Jun 2023 22:00:00 GMT</pubDate>
+  <media:content url="https://alexandredabyseesaram.github.io/posts/2023/2023-06-14-COMPDYN/compdyn.jpg" medium="image" type="image/jpeg"/>
+</item>
+<item>
+  <title>New paper is out</title>
+  <link>https://alexandredabyseesaram.github.io/posts/2023/2023-04-12-ArticleOut/</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>Our new paper on reduced-order modelling using the PGD in the frequency domain for non-linear dynamics is out in <a href="https://link.springer.com/journal/11071">Nonlinear dynamics</a>.</p>
+
+
+
+ ]]></description>
+  <category>News</category>
+  <guid>https://alexandredabyseesaram.github.io/posts/2023/2023-04-12-ArticleOut/</guid>
+  <pubDate>Tue, 11 Apr 2023 22:00:00 GMT</pubDate>
+  <media:content url="https://alexandredabyseesaram.github.io/posts/2023/2023-04-12-ArticleOut/Hybrid_LATIN_PGD.png" medium="image" type="image/png" height="73" width="144"/>
+</item>
+<item>
+  <title>ECCOMAS 2022 congress</title>
+  <link>https://alexandredabyseesaram.github.io/posts/2022/2022-06-09-ECCOMAS/</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>I presented my PhD work at <a href="https://eccomas.org/2021/01/22/3542/">ECCOMAS 2022 congress</a> in Oslo, Norway.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://alexandredabyseesaram.github.io/posts/2022/2022-06-09-ECCOMAS/ECCOMAS.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:50.0%"></p>
+</figure>
+</div>
+
+
+
+ ]]></description>
+  <category>News</category>
+  <guid>https://alexandredabyseesaram.github.io/posts/2022/2022-06-09-ECCOMAS/</guid>
+  <pubDate>Wed, 08 Jun 2022 22:00:00 GMT</pubDate>
+  <media:content url="https://alexandredabyseesaram.github.io/posts/2022/2022-06-09-ECCOMAS/ECCOMAS.png" medium="image" type="image/png" height="72" width="144"/>
+</item>
+<item>
+  <title>CSMA 2022</title>
+  <link>https://alexandredabyseesaram.github.io/posts/2022/2022-05-18-CSMA/</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>I presented <a href="https://hal.science/hal-03717959">my PhD work</a> at <a href="https://csma2022.sciencesconf.org/">CSMA 2022</a> in Giens.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://alexandredabyseesaram.github.io/posts/2022/2022-05-18-CSMA/CSMA_2022.jpeg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:50.0%"></p>
+</figure>
+</div>
+
+
+
+ ]]></description>
+  <category>News</category>
+  <guid>https://alexandredabyseesaram.github.io/posts/2022/2022-05-18-CSMA/</guid>
+  <pubDate>Tue, 17 May 2022 22:00:00 GMT</pubDate>
+  <media:content url="https://alexandredabyseesaram.github.io/posts/2022/2022-05-18-CSMA/CSMA_2022.jpeg" medium="image" type="image/jpeg"/>
+</item>
+<item>
+  <title>YIC 2021 congress</title>
+  <link>https://alexandredabyseesaram.github.io/posts/2021/2021-07-09-YIC/</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>I presented my <a href="https://dx.doi.org/10.4995/YIC2021.2021.13255">PhD work</a> at <a href="https://gdocu.upv.es/alfresco/service/api/node/content/workspace/SpacesStore/1fc120c1-6a63-4995-8e27-ccbe47d5ceb0/6651.pdf?guest=true">YIC 2021 congress</a>, held online from Valence, Spain.</p>
+
+
+
+ ]]></description>
+  <category>News</category>
+  <guid>https://alexandredabyseesaram.github.io/posts/2021/2021-07-09-YIC/</guid>
+  <pubDate>Thu, 08 Jul 2021 22:00:00 GMT</pubDate>
+</item>
+</channel>
+</rss>

@@ -3,6 +3,8 @@ project:
   output-dir: docs
 website:
   title: "Alexandre Daby-Seesaram"
+  description: "Alexandre Daby-Seesaram, PHD, personal webpage"
+  site-url: https://alexandredabyseesaram.github.io/
   navbar:
     right:
       - href: index.qmd
