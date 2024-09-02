@@ -20,7 +20,12 @@ website:
       - text: CV
         href: Resources/Documents/CV.pdf
         target: _blank
-
+  announcement: 
+    icon: info-circle
+    dismissable: true
+    content: "**Conference incoming** - We'll be presenting our work at the incoming VPH2024 in Stuttgart "
+    type: light
+    position: below-navbar
 
 format:
   html:
