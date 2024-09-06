@@ -10,7 +10,32 @@
 <atom:link href="https://alexandredabyseesaram.github.io/news.xml" rel="self" type="application/rss+xml"/>
 <description>Alexandre Daby-Seesaram, PHD, personal webpage</description>
 <generator>quarto-1.5.56</generator>
-<lastBuildDate>Thu, 16 May 2024 22:00:00 GMT</lastBuildDate>
+<lastBuildDate>Thu, 05 Sep 2024 22:00:00 GMT</lastBuildDate>
+<item>
+  <title>VPH 2024</title>
+  <link>https://alexandredabyseesaram.github.io/posts/2024/2024-09-06-VPH/</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>This week, my colleagues <a href="https://m3disim.saclay.inria.fr/people/katerina-skardova">Kateřina Škardová</a> and <a href="https://mgenet.github.io/">Martin Genet</a>, and I attended the <a href="https://vph-conference.org/">2024 VPH</a> conference.</p>
+<p><a href="https://m3disim.saclay.inria.fr/people/katerina-skardova">Kateřina Škardová</a> and I both presented our <a href="https://alexandredabyseesaram.github.io/research.html#work-in-progress">on going research work</a> towards getting a real-time digital twin of the lungs.</p>
+<p>Meanwhile <a href="https://mgenet.github.io/">Martin Genet</a> presented the latest progress of the poro-mechanics lung model developed in the team.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://alexandredabyseesaram.github.io/posts/2024/2024-09-06-VPH/VPH_2.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:75.0%"></p>
+</figure>
+</div>
+
+
+
+ ]]></description>
+  <category>News</category>
+  <guid>https://alexandredabyseesaram.github.io/posts/2024/2024-09-06-VPH/</guid>
+  <pubDate>Thu, 05 Sep 2024 22:00:00 GMT</pubDate>
+  <media:content url="https://alexandredabyseesaram.github.io/posts/2024/2024-09-06-VPH/VPH_1.jpeg" medium="image" type="image/jpeg"/>
+</item>
 <item>
   <title>CSMA 2024</title>
   <link>https://alexandredabyseesaram.github.io/posts/2024/2024-05-17-CSMA/</link>

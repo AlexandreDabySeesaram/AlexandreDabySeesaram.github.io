@@ -24,12 +24,12 @@ website:
       - text: CV
         href: Resources/Documents/CV.pdf
         target: _blank
-  announcement: 
-    icon: info-circle
-    dismissable: true
-    content: "**Conference incoming** - We'll be [presenting our work](https://alexandredabyseesaram.github.io/talks.html) at the incoming [VPH2024 in Stuttgart](https://vph-conference.org/) "
-    type: light
-    position: below-navbar
+  # announcement: 
+  #   icon: info-circle
+  #   dismissable: true
+  #   content: "**Conference incoming** - We'll be [presenting our work](https://alexandredabyseesaram.github.io/talks.html) at the incoming [VPH2024 in Stuttgart](https://vph-conference.org/) "
+  #   type: light
+  #   position: below-navbar
 
 format:
   html:
