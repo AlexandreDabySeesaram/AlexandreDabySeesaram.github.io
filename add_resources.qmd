@@ -25,7 +25,7 @@ A more detailed version of my background can be found in my <a href="Resources/D
 
 ![](Resources/Images/NeuROM_ter.svg){width="50%" fig-align="center"}
 
-The reduced-order modelling code used to create surrogate models based on an hybridisation of standard reduced-order modelling methods such as the PGD and Deep learning method is made [public](https://TODO) and [notebooks with tutorials are also available](https://TODO).
+The reduced-order modelling code used to create surrogate models based on an hybridisation of standard reduced-order modelling methods such as the PGD and Deep learning methods is [public](https://TODO) and [notebooks with tutorials are also available](https://TODO).
 
 ## Illustrations
 
