@@ -236,5 +236,12 @@
     "title": "VPH 2024",
     "section": "",
     "text": "This week, my colleagues Kateřina Škardová and Martin Genet, and I attended the 2024 VPH conference. Kateřina Škardová and I both presented our ongoing research work towards getting a real-time digital twin of the lungs.\nMeanwhile Martin Genet presented the latest progress of the poro-mechanics lung model developed in the team."
+  },
+  {
+    "objectID": "add_resources.html#code",
+    "href": "add_resources.html#code",
+    "title": "Additional resources",
+    "section": "Code",
+    "text": "Code\n\nNeuROM\n\n\n\n\n\nThe reduced-order modelling code used to create surrogate models based on an hybridisation of standard reduced-order modelling methods such as the PGD and Deep learning method is made public and notebooks with tutorials are also available."
   }
 ]

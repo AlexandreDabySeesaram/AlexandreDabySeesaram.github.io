@@ -19,6 +19,14 @@ In collaboration with <a href="https://floiseau.github.io/">Flavien Loiseau</a>,
 ### CV
 A more detailed version of my background can be found in my <a href="Resources/Documents/CV.pdf">[CV]</a>.
 
+## Code
+
+### NeuROM
+
+![](Resources/Images/NeuROM_ter.svg){width="50%" fig-align="center"}
+
+The reduced-order modelling code used to create surrogate models based on an hybridisation of standard reduced-order modelling methods such as the PGD and Deep learning method is made [public](https://TODO) and [notebooks with tutorials are also available](https://TODO).
+
 ## Illustrations
 
 ### Hybrid sparse neural network and Proper Generalised Decomposition (PGD)
