@@ -1,5 +1,6 @@
 ---
 title: Additional resources
+bibliography: Resources/biblio_web.bib
 # toc: false
 # about:
 #   template: marquee
@@ -21,7 +22,11 @@ A more detailed version of my background can be found in my <a href="Resources/D
 
 ## Code
 
-### NeuROM
+### NeuROM [@neurom_2024]
+[![PyPI Downloads](https://img.shields.io/pypi/dm/NeuROM-Py.svg?label=PyPI%20downloads)](
+https://pypi.org/project/NeuROM-Py/)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.13772741.svg)](https://doi.org/10.5281/zenodo.13772741)
+
 
 ![](Resources/Images/NeuROM_ter.svg){width="50%" fig-align="center"}
 

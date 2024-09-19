@@ -242,6 +242,6 @@
     "href": "add_resources.html#code",
     "title": "Additional resources",
     "section": "Code",
-    "text": "Code\n\nNeuROM\n\n\n\n\n\nThe reduced-order modelling code used to create surrogate models based on an hybridisation of standard reduced-order modelling methods such as the PGD and Deep learning methods is public and notebooks with tutorials are also available."
+    "text": "Code\n\nNeuROM (Daby-Seesaram, Skardova, and Genet 2024)\n \n\n\n\n\n\nThe reduced-order modelling code used to create surrogate models based on an hybridisation of standard reduced-order modelling methods such as the PGD and Deep learning methods is public and notebooks with tutorials are also available."
   }
 ]

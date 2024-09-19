@@ -20,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -147,7 +167,7 @@ ul.task-list li input[type="checkbox"] {
   </ul></li>
   <li><a href="#code" id="toc-code" class="nav-link" data-scroll-target="#code">Code</a>
   <ul class="collapse">
-  <li><a href="#neurom" id="toc-neurom" class="nav-link" data-scroll-target="#neurom">NeuROM</a></li>
+  <li><a href="#neurom-neurom_2024" id="toc-neurom-neurom_2024" class="nav-link" data-scroll-target="#neurom-neurom_2024">NeuROM <span class="citation" data-cites="neurom_2024">(Daby-Seesaram, Skardova, and Genet 2024)</span></a></li>
   </ul></li>
   <li><a href="#illustrations" id="toc-illustrations" class="nav-link" data-scroll-target="#illustrations">Illustrations</a>
   <ul class="collapse">
@@ -196,8 +216,9 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="code" class="level2">
 <h2 class="anchored" data-anchor-id="code">Code</h2>
-<section id="neurom" class="level3">
-<h3 class="anchored" data-anchor-id="neurom">NeuROM</h3>
+<section id="neurom-neurom_2024" class="level3">
+<h3 class="anchored" data-anchor-id="neurom-neurom_2024">NeuROM <span class="citation" data-cites="neurom_2024">(<a href="#ref-neurom_2024" role="doc-biblioref">Daby-Seesaram, Skardova, and Genet 2024</a>)</span></h3>
+<p><a href="https://pypi.org/project/NeuROM-Py/"><img src="https://img.shields.io/pypi/dm/NeuROM-Py.svg?label=PyPI%20downloads" class="img-fluid" alt="PyPI Downloads"></a> <a href="https://doi.org/10.5281/zenodo.13772741"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.13772741.svg" class="img-fluid" alt="DOI"></a></p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="Resources/Images/NeuROM_ter.svg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:50.0%"></p>
@@ -221,10 +242,15 @@ ul.task-list li input[type="checkbox"] {
 </iframe>
 
 
+
 </section>
 </section>
 
-</main> <!-- /main -->
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-neurom_2024" class="csl-entry" role="listitem">
+Daby-Seesaram, A., K. Skardova, and M. Genet. 2024. <span>“<span>NeuROM</span>.”</span> Zenodo. <a href="https://doi.org/10.5281/zenodo.13772741 ">https://doi.org/10.5281/zenodo.13772741 </a>.
+</div>
+</div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
