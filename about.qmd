@@ -16,7 +16,7 @@ about:
       href: https://github.com/AlexandreDabySeesaram?tab=repositories
     - icon: envelope
       text: Email
-      href: alexandre.daby-seesaram
+      href: 'mailto: alexandre.daby-seesaram@polytechnique.edu'
 format:
   html:
     page-layout: full
