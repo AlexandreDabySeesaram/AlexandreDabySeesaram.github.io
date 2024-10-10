@@ -1,19 +1,5 @@
 [
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Alexandre Daby-Seesaram",
-    "section": "",
-    "text": "Welcome,\nI’m Alexandre Daby-Seesaram, a Postdoctoral researcher at École Polytechnique and INRIA in the MΞDISIM team.\nI hold a Ph.D. in computational mechanics from the University Paris-Saclay (ENS Paris-Saclay), where I worked at the LMPS (Laboratory of Mechanics Paris-Saclay). You can learn more about my background in my [CV].\nMy main research interest consists of solving highly non-linear problems using model-order reduction techniques such as the Proper Generalised Decomposition (PGD). I’ve recently become interested in hybridising classical model-order reduction methods with machine learning approaches. Combining tensor decomposition and interpretable neural networks enables efficient and robust solving of large non-linear problems."
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "Alexandre Daby-Seesaram",
-    "section": "",
-    "text": "Welcome,\nI’m Alexandre Daby-Seesaram, a Postdoctoral researcher at École Polytechnique and INRIA in the MΞDISIM team.\nI hold a Ph.D. in computational mechanics from the University Paris-Saclay (ENS Paris-Saclay), where I worked at the LMPS (Laboratory of Mechanics Paris-Saclay). You can learn more about my background in my [CV].\nMy main research interest consists of solving highly non-linear problems using model-order reduction techniques such as the Proper Generalised Decomposition (PGD). I’ve recently become interested in hybridising classical model-order reduction methods with machine learning approaches. Combining tensor decomposition and interpretable neural networks enables efficient and robust solving of large non-linear problems."
-  },
-  {
     "objectID": "education.html",
     "href": "education.html",
     "title": "Education",
@@ -28,90 +14,6 @@
     "text": "Teaching undergraduate students at École Polytechnique\n\n2020 - 2023 Physics I: Mechanics and heat\n\nTutorials sessions\nWriting tutorials subjects\n\n2020 - 2023 Physics Lab I\n\nLab sessions\nCreation of lab session subjects\n\n\n\n\nPhysique-chimie PSI-PSI* Concours X, ENS, CentraleSupélec, Mines-Ponts, CCINP\n\nWriting a physics book for undergraduate students (Classes Préparatoires aux Grandes Écoles)\nPhysics problems, corrections, and comments, helping students prepare for their entrance exams to prestigious universities (French “Grandes Écoles”)."
   },
   {
-    "objectID": "add_resources.html",
-    "href": "add_resources.html",
-    "title": "Additional resources",
-    "section": "",
-    "text": "My PhD dissertation is available here.\n\n\n\nIn collaboration with Flavien Loiseau, we made our Ph.D. thesis template openly available on Github..\n\n\n\nA more detailed version of my background can be found in my CV."
-  },
-  {
-    "objectID": "add_resources.html#documents",
-    "href": "add_resources.html#documents",
-    "title": "Additional resources",
-    "section": "",
-    "text": "My PhD dissertation is available here.\n\n\n\nIn collaboration with Flavien Loiseau, we made our Ph.D. thesis template openly available on Github..\n\n\n\nA more detailed version of my background can be found in my CV."
-  },
-  {
-    "objectID": "add_resources.html#illustrations",
-    "href": "add_resources.html#illustrations",
-    "title": "Additional resources",
-    "section": "Illustrations",
-    "text": "Illustrations\n\nHybrid sparse neural network and Proper Generalised Decomposition (PGD)\n\n\n\n\n\nParametric interactive results\nFeel free to interact with it."
-  },
-  {
-    "objectID": "talks.html",
-    "href": "talks.html",
-    "title": "Talks (selection)",
-    "section": "",
-    "text": "Austrian Academy of Sciences, RICAM\nLinz, Austria, 21st-28th of October 2024\n\n\n\n\nAuthors\nA. Daby-seesaram, K. Škardová, M. Genet"
-  },
-  {
-    "objectID": "talks.html#incoming-talks",
-    "href": "talks.html#incoming-talks",
-    "title": "Talks (selection)",
-    "section": "",
-    "text": "Austrian Academy of Sciences, RICAM\nLinz, Austria, 21st-28th of October 2024\n\n\n\n\nAuthors\nA. Daby-seesaram, K. Škardová, M. Genet"
-  },
-  {
-    "objectID": "talks.html#past-talks",
-    "href": "talks.html#past-talks",
-    "title": "Talks (selection)",
-    "section": "Past talks",
-    "text": "Past talks\n\n\n\nVirtual Physiological Human (VPH) 2024\nStuttgart, Germany, 3rd - 6th of September 2024\n\n\n\n\nTitle\nHybridising standard ROM methods with interpretable sparse neural networks for real-time patient specific lung simulations\n\n\nAuthors\nA. Daby-seesaram, K. Škardová, M. Genet\n\n\nLink\nSlides, Code"
-  },
-  {
-    "objectID": "research.html#illustrations",
-    "href": "research.html#illustrations",
-    "title": "Research",
-    "section": "Illustrations",
-    "text": "Illustrations\n\nHybrid sparse neural network and Proper Generalised Decomposition (PGD)\n\n\n\n\n\nParametric interactive results\nFeel free to interact with it."
-  },
-  {
-    "objectID": "research.html",
-    "href": "research.html",
-    "title": "Research",
-    "section": "",
-    "text": "** * Authors: * ** K. Škardová, M. Genet\nMechanics and, more specifically, stress fields possibly play a crucial role in the development of pulmonary fibrosis. This work aims to provide clinicians with diagnostic and prognostic tools based on mechanical simulation. Personalisation of these tools is critical for clinical pertinence, thus requiring numerical techniques for real-time estimation of patient-specific mechanical parameters.\nThis work proposes hybridising classical model-order reduction methods with machine learning capabilities to provide a fine-tuned surrogate model of the highly non-linear mechanics problem.\nSimilarly to techniques like the Proper Generalised Decomposition (PGD) or the High-Order Singular Value Decomposition (HOSVD), the parametric mechanical field is represented through tensor decomposition, effectively mitigating the curse of dimensionality associated with high-dimensional parameters. Each mode of the tensor decomposition is given by the output of a sparse neural network within the HiDeNN framework, constraining the weights and biases to emulate classical shape functions used in the Finite Element Method.\nThis hybridisation preserves interpretability while affording greater flexibility than standard model-order reduction methods. For instance, it allows for employing diverse meshes for each mode in the tensor decomposition, with the added capability of mesh adaptation during the training stage. Moreover, the model’s architecture results directly from the number of nodes and the order of elements used for the interpolation, thus eliminating the arbitrariness in its choice.\nIn this framework, the training stage amounts to solving the minimisation problem classically encountered with classical model reduction methods. However, the automatic differentiation tools naturally available in the neural network framework allow greater flexibility in solving the non-linear problem when its linearisation is not straightforward. Finally, this framework allows for transfer learning between different models with different architectures, leading to high efficiency in the model’s design and limiting the wasteful use of resources.\n\n\n\n\n\n\n\n\n\n\nFeel free to interact with it.\n\n\n\n\n\n\n\nIdiopathic Pulmonary Fibrosis (IPF) is a disease characterized by the progressive formation of scar tissue in the lungs, leading to locally increased tissue stiffness and impaired respiratory function. Despite its significant impact on patient health, IPF remains poorly understood and poorly diagnosed. Our focus on IPF is motivated by the complex impact the fibrosis has not only on the lung tissue structure but also on the lung kinematics, and mechanics. The coupling between the disease progress and mechanical environment, as well as the multiscale nature of the disease, calls for a multiscale modeling approach to connect phenomena arising on various spatial scales. In order to integrate the existing micromechanical and organ-level models, the micro-model needs to undergo reduction. In our work, we propose to address this challenge by using a machine learning-based surrogate modeling framework.\nIn the presented framework, we use structured neural networks designed to be able to produce standard FEM shape functions. Similarly, to classical Physics-informed neural networks, this framework also has the capability to incorporate mechanistic knowledge through appropriate definition of the loss function. Due to the specific structure of the neural network, the number of trained parameters is significantly lower compared to a fully connected neural network and the individual weights and biases have a clear interpretation. In addition to higher reliability, the interpretability also allows us to strongly impose Dirichlet boundary conditions and thus avoid some of the changes caused by including additional terms in the loss function.\nIn this contribution, we present the capabilities of the model on several 1D and 2D test cases. The architecture of the neural network is defined by the discretization of the domain on which the governing equations are solved. There are however other choices, that effect the results, including the definition of the loss function and selection of optimizer and training strategy. We discuss the benefits and limitation of the tested variants and show how they affect the results obtained by the model."
-  },
-  {
-    "objectID": "research.html#work-in-progress",
-    "href": "research.html#work-in-progress",
-    "title": "Research",
-    "section": "",
-    "text": "** * Authors: * ** K. Škardová, M. Genet\nMechanics and, more specifically, stress fields possibly play a crucial role in the development of pulmonary fibrosis. This work aims to provide clinicians with diagnostic and prognostic tools based on mechanical simulation. Personalisation of these tools is critical for clinical pertinence, thus requiring numerical techniques for real-time estimation of patient-specific mechanical parameters.\nThis work proposes hybridising classical model-order reduction methods with machine learning capabilities to provide a fine-tuned surrogate model of the highly non-linear mechanics problem.\nSimilarly to techniques like the Proper Generalised Decomposition (PGD) or the High-Order Singular Value Decomposition (HOSVD), the parametric mechanical field is represented through tensor decomposition, effectively mitigating the curse of dimensionality associated with high-dimensional parameters. Each mode of the tensor decomposition is given by the output of a sparse neural network within the HiDeNN framework, constraining the weights and biases to emulate classical shape functions used in the Finite Element Method.\nThis hybridisation preserves interpretability while affording greater flexibility than standard model-order reduction methods. For instance, it allows for employing diverse meshes for each mode in the tensor decomposition, with the added capability of mesh adaptation during the training stage. Moreover, the model’s architecture results directly from the number of nodes and the order of elements used for the interpolation, thus eliminating the arbitrariness in its choice.\nIn this framework, the training stage amounts to solving the minimisation problem classically encountered with classical model reduction methods. However, the automatic differentiation tools naturally available in the neural network framework allow greater flexibility in solving the non-linear problem when its linearisation is not straightforward. Finally, this framework allows for transfer learning between different models with different architectures, leading to high efficiency in the model’s design and limiting the wasteful use of resources.\n\n\n\n\n\n\n\n\n\n\nFeel free to interact with it.\n\n\n\n\n\n\n\nIdiopathic Pulmonary Fibrosis (IPF) is a disease characterized by the progressive formation of scar tissue in the lungs, leading to locally increased tissue stiffness and impaired respiratory function. Despite its significant impact on patient health, IPF remains poorly understood and poorly diagnosed. Our focus on IPF is motivated by the complex impact the fibrosis has not only on the lung tissue structure but also on the lung kinematics, and mechanics. The coupling between the disease progress and mechanical environment, as well as the multiscale nature of the disease, calls for a multiscale modeling approach to connect phenomena arising on various spatial scales. In order to integrate the existing micromechanical and organ-level models, the micro-model needs to undergo reduction. In our work, we propose to address this challenge by using a machine learning-based surrogate modeling framework.\nIn the presented framework, we use structured neural networks designed to be able to produce standard FEM shape functions. Similarly, to classical Physics-informed neural networks, this framework also has the capability to incorporate mechanistic knowledge through appropriate definition of the loss function. Due to the specific structure of the neural network, the number of trained parameters is significantly lower compared to a fully connected neural network and the individual weights and biases have a clear interpretation. In addition to higher reliability, the interpretability also allows us to strongly impose Dirichlet boundary conditions and thus avoid some of the changes caused by including additional terms in the loss function.\nIn this contribution, we present the capabilities of the model on several 1D and 2D test cases. The architecture of the neural network is defined by the discretization of the domain on which the governing equations are solved. There are however other choices, that effect the results, including the definition of the loss function and selection of optimizer and training strategy. We discuss the benefits and limitation of the tested variants and show how they affect the results obtained by the model."
-  },
-  {
-    "objectID": "research.html#publications",
-    "href": "research.html#publications",
-    "title": "Research",
-    "section": "Publications",
-    "text": "Publications"
-  },
-  {
-    "objectID": "research.html#hybridising-standard-reduced-order-modelling-methods-with-interpretable-sparse-neural-networks-for-real-time-patient-specific-lung-simulations",
-    "href": "research.html#hybridising-standard-reduced-order-modelling-methods-with-interpretable-sparse-neural-networks-for-real-time-patient-specific-lung-simulations",
-    "title": "Research",
-    "section": "Hybridising standard reduced-order modelling methods with interpretable sparse neural networks for real-time patient specific lung simulations",
-    "text": "Hybridising standard reduced-order modelling methods with interpretable sparse neural networks for real-time patient specific lung simulations\nAuthors: A. Daby-seesaram, K. Škardová, M. Genet\nMechanics and, more specifically, stress fields possibly play a crucial role in the development of pulmonary fibrosis. This work aims to provide clinicians with diagnostic and prognostic tools based on mechanical simulation. Personalisation of these tools is critical for clinical pertinence, thus requiring numerical techniques for real-time estimation of patient-specific mechanical parameters.\nThis work proposes hybridising classical model-order reduction methods with machine learning capabilities to provide a fine-tuned surrogate model of the highly non-linear mechanics problem.\nSimilarly to techniques like the Proper Generalised Decomposition (PGD) or the High-Order Singular Value Decomposition (HOSVD), the parametric mechanical field is represented through a tensor decomposition, effectively mitigating the curse of dimensionality associated with high-dimensional parameters. Each mode of the tensor decomposition is given by the output of a sparse neural network within the HiDeNN framework, constraining the weights and biases to emulate classical shape functions used in the Finite Element Method.\nThis hybridisation preserves interpretability while affording greater flexibility than standard model-order reduction methods. For instance, it allows for employing diverse meshes for each mode in the tensor decomposition, with the added capability of mesh adaptation during the training stage. Moreover, the model’s architecture results directly from the number of nodes and the order of elements used for the interpolation, thus eliminating the arbitrariness in its choice.\nIn this framework, the training stage amounts to solving the minimisation problem classically encountered with classical model reduction methods. However, the automatic differentiation tools naturally available in the neural network framework allow greater flexibility in solving the non-linear problem when its linearisation is not straightforward. Finally, this framework allows for transfer learning between different models with different architectures, leading to high efficiency in the model’s design and limiting the wasteful use of resources.\n\nIllustrations\n\nHybrid sparse neural network and Proper Generalised Decomposition (PGD)\n\n\n\n\n\nParametric interactive results\nFeel free to interact with it."
-  },
-  {
-    "objectID": "research.html#bridging-micro-to-macro-in-pulmonary-mechanics-interpretable-neural-networks-for-surrogate-modelling",
-    "href": "research.html#bridging-micro-to-macro-in-pulmonary-mechanics-interpretable-neural-networks-for-surrogate-modelling",
-    "title": "Research",
-    "section": "Bridging micro to macro in pulmonary mechanics: Interpretable neural networks for surrogate modelling",
-    "text": "Bridging micro to macro in pulmonary mechanics: Interpretable neural networks for surrogate modelling\nAuthors: K. Škardová, A. Daby-seesaram, M. Genet\nIdiopathic Pulmonary Fibrosis (IPF) is a disease characterized by the progressive formation of scar tissue in the lungs, leading to locally increased tissue stiffness and impaired respiratory function. Despite its significant impact on patient health, IPF remains poorly understood and poorly diagnosed. Our focus on IPF is motivated by the complex impact the fibrosis has not only on the lung tissue structure but also on the lung kinematics, and mechanics. The coupling between the disease progress and mechanical environment, as well as the multiscale nature of the disease, calls for a multiscale modeling approach to connect phenomena arising on various spatial scales. In order to integrate the existing micromechanical and organ-level models, the micro-model needs to undergo reduction. In our work, we propose to address this challenge by using a machine learning-based surrogate modeling framework.\nIn the presented framework, we use structured neural networks designed to be able to produce standard FEM shape functions. Similarly, to classical Physics-informed neural networks, this framework also has the capability to incorporate mechanistic knowledge through appropriate definition of the loss function. Due to the specific structure of the neural network, the number of trained parameters is significantly lower compared to a fully connected neural network and the individual weights and biases have a clear interpretation. In addition to higher reliability, the interpretability also allows us to strongly impose Dirichlet boundary conditions and thus avoid some of the changes caused by including additional terms in the loss function.\nIn this contribution, we present the capabilities of the model on several 1D and 2D test cases. The architecture of the neural network is defined by the discretization of the domain on which the governing equations are solved. There are however other choices, that effect the results, including the definition of the loss function and selection of optimizer and training strategy. We discuss the benefits and limitation of the tested variants and show how they affect the results obtained by the model."
-  },
-  {
     "objectID": "news.html",
     "href": "news.html",
     "title": "News",
@@ -119,25 +21,18 @@
     "text": "VPH 2024\n\n\n\n\n\n\n\n\n\n\n\nSep 6, 2024\n\n\n\n\n\n\n\n\n\n\n\n\nCSMA 2024\n\n\n\n\n\n\n\n\n\n\n\nMay 17, 2024\n\n\n\n\n\n\n\n\n\n\n\n\nNew position\n\n\n\n\n\n\n\n\n\n\n\nJan 2, 2024\n\n\n\n\n\n\n\n\n\n\n\n\nIRTG 2657 2nd Annual Meeting\n\n\n\n\n\n\n\n\n\n\n\nDec 6, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nPhD Defence\n\n\n\n\n\n\n\n\n\n\n\nDec 1, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nMortech 2023\n\n\n\n\n\n\n\n\n\n\n\nNov 24, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nVisiting scholar at Leibniz University Hannover\n\n\n\n\n\n\n\n\n\n\n\nJul 31, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nCOMPDYN 2023 congress\n\n\n\n\n\n\n\n\n\n\n\nJun 14, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nNew paper is out\n\n\n\n\n\n\n\n\n\n\n\nApr 12, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nECCOMAS 2022 congress\n\n\n\n\n\n\n\n\n\n\n\nJun 9, 2022\n\n\n\n\n\n\n\n\n\n\n\n\nCSMA 2022\n\n\n\n\n\n\n\n\n\n\n\nMay 18, 2022\n\n\n\n\n\n\n\n\n\n\n\n\nYIC 2021 congress\n\n\n\n\n\n\n\n\n\n\n\nJul 9, 2021\n\n\n\n\n\n\nNo matching items"
   },
   {
-    "objectID": "posts/2024/2023-12-01-PhD-Defence/index.html",
-    "href": "posts/2024/2023-12-01-PhD-Defence/index.html",
-    "title": "PhD Defence",
+    "objectID": "posts/2021/2021-07-09-YIC/index.html",
+    "href": "posts/2021/2021-07-09-YIC/index.html",
+    "title": "YIC 2021 congress",
     "section": "",
-    "text": "Today I successfully defended my PhD in front of a jury composed of\n\nProfessor Daniel Rixen (President of the jury),\n\nTU München\n\nProfessor Francisco Chinest (Reviewer),\n\nENSAM Paris\n\nProfessor Anthony Gravouil (Reviewer),\n\nINSA Lyon\n\nProfessor Udo Nackenhorst (Examiner),\n\nLU Hannover\n\nDoctor Maria Paola Santisi d’Avila (Examiner),\n\nUniversité Côte d’Azur"
+    "text": "I presented my PhD work at YIC 2021 congress, held online from Valence, Spain."
   },
   {
-    "objectID": "posts/2024/2023-12-01-PhD-Defence/index.html#towards-an-optimal-multi-query-framework-based-on-model-order-reduction-for-non-linear-dynamics",
-    "href": "posts/2024/2023-12-01-PhD-Defence/index.html#towards-an-optimal-multi-query-framework-based-on-model-order-reduction-for-non-linear-dynamics",
-    "title": "PhD Defence",
+    "objectID": "posts/2023/2023-04-12-ArticleOut/index.html",
+    "href": "posts/2023/2023-04-12-ArticleOut/index.html",
+    "title": "New paper is out",
     "section": "",
-    "text": "Today I successfully defended my PhD in front of a jury composed of\n\nProfessor Daniel Rixen (President of the jury),\n\nTU München\n\nProfessor Francisco Chinest (Reviewer),\n\nENSAM Paris\n\nProfessor Anthony Gravouil (Reviewer),\n\nINSA Lyon\n\nProfessor Udo Nackenhorst (Examiner),\n\nLU Hannover\n\nDoctor Maria Paola Santisi d’Avila (Examiner),\n\nUniversité Côte d’Azur"
-  },
-  {
-    "objectID": "posts/2024/2023-12-01-PhD-Defence/index.html#documents",
-    "href": "posts/2024/2023-12-01-PhD-Defence/index.html#documents",
-    "title": "PhD Defence",
-    "section": "Documents",
-    "text": "Documents\nMy PhD dissertation is available here."
+    "text": "Our new paper on reduced-order modelling using the PGD in the frequency domain for non-linear dynamics is out in Nonlinear dynamics."
   },
   {
     "objectID": "posts/2023/2023-12-01-PhD-Defence/index.html",
@@ -161,32 +56,18 @@
     "text": "Documents\nMy PhD dissertation is available here."
   },
   {
+    "objectID": "posts/2024/2024-05-17-CSMA/index.html",
+    "href": "posts/2024/2024-05-17-CSMA/index.html",
+    "title": "CSMA 2024",
+    "section": "",
+    "text": "I presented my PhD work at CSMA 2024 in Giens."
+  },
+  {
     "objectID": "posts/2024/2024-01-02-NewPosition-X/index.html",
     "href": "posts/2024/2024-01-02-NewPosition-X/index.html",
     "title": "New position",
     "section": "",
     "text": "I got a new position as Postdoctoral researcher at École Polytechnique and INRIA in the MΞDISIM team."
-  },
-  {
-    "objectID": "posts/2023/2023-04-12-ArticleOut/index.html",
-    "href": "posts/2023/2023-04-12-ArticleOut/index.html",
-    "title": "New paper is out",
-    "section": "",
-    "text": "Our new paper on reduced-order modelling using the PGD in the frequency domain for non-linear dynamics is out in Nonlinear dynamics."
-  },
-  {
-    "objectID": "posts/2023/2023-11-24-Mortech/index.html",
-    "href": "posts/2023/2023-11-24-Mortech/index.html",
-    "title": "Mortech 2023",
-    "section": "",
-    "text": "I presented my PhD work at MORTech 2023 (6th International Workshop on Model Reduction Techniques) at Laboratoire de Mécanique de Paris-Saclay (LMPS), École Normale Supérieure de Paris-Saclay where I met my future colleagues Martin Genet and Kateřina Škardová."
-  },
-  {
-    "objectID": "posts/2022/2022-05-18-CSMA/index.html",
-    "href": "posts/2022/2022-05-18-CSMA/index.html",
-    "title": "CSMA 2022",
-    "section": "",
-    "text": "I presented my PhD work at CSMA 2022 in Giens."
   },
   {
     "objectID": "posts/2022/2022-06-09-ECCOMAS/index.html",
@@ -196,32 +77,46 @@
     "text": "I presented my PhD work at ECCOMAS 2022 congress in Oslo, Norway."
   },
   {
-    "objectID": "posts/2021/2021-07-09-YIC/index.html",
-    "href": "posts/2021/2021-07-09-YIC/index.html",
-    "title": "YIC 2021 congress",
-    "section": "",
-    "text": "I presented my PhD work at YIC 2021 congress, held online from Valence, Spain."
+    "objectID": "research.html#hybridising-standard-reduced-order-modelling-methods-with-interpretable-sparse-neural-networks-for-real-time-patient-specific-lung-simulations",
+    "href": "research.html#hybridising-standard-reduced-order-modelling-methods-with-interpretable-sparse-neural-networks-for-real-time-patient-specific-lung-simulations",
+    "title": "Research",
+    "section": "Hybridising standard reduced-order modelling methods with interpretable sparse neural networks for real-time patient specific lung simulations",
+    "text": "Hybridising standard reduced-order modelling methods with interpretable sparse neural networks for real-time patient specific lung simulations\nAuthors: A. Daby-seesaram, K. Škardová, M. Genet\nMechanics and, more specifically, stress fields possibly play a crucial role in the development of pulmonary fibrosis. This work aims to provide clinicians with diagnostic and prognostic tools based on mechanical simulation. Personalisation of these tools is critical for clinical pertinence, thus requiring numerical techniques for real-time estimation of patient-specific mechanical parameters.\nThis work proposes hybridising classical model-order reduction methods with machine learning capabilities to provide a fine-tuned surrogate model of the highly non-linear mechanics problem.\nSimilarly to techniques like the Proper Generalised Decomposition (PGD) or the High-Order Singular Value Decomposition (HOSVD), the parametric mechanical field is represented through a tensor decomposition, effectively mitigating the curse of dimensionality associated with high-dimensional parameters. Each mode of the tensor decomposition is given by the output of a sparse neural network within the HiDeNN framework, constraining the weights and biases to emulate classical shape functions used in the Finite Element Method.\nThis hybridisation preserves interpretability while affording greater flexibility than standard model-order reduction methods. For instance, it allows for employing diverse meshes for each mode in the tensor decomposition, with the added capability of mesh adaptation during the training stage. Moreover, the model’s architecture results directly from the number of nodes and the order of elements used for the interpolation, thus eliminating the arbitrariness in its choice.\nIn this framework, the training stage amounts to solving the minimisation problem classically encountered with classical model reduction methods. However, the automatic differentiation tools naturally available in the neural network framework allow greater flexibility in solving the non-linear problem when its linearisation is not straightforward. Finally, this framework allows for transfer learning between different models with different architectures, leading to high efficiency in the model’s design and limiting the wasteful use of resources.\n\nIllustrations\n\nHybrid sparse neural network and Proper Generalised Decomposition (PGD)\n\n\n\n\n\nParametric interactive results\nFeel free to interact with it."
   },
   {
-    "objectID": "posts/2023/2023-06-14-COMPDYN/index.html",
-    "href": "posts/2023/2023-06-14-COMPDYN/index.html",
-    "title": "COMPDYN 2023 congress",
-    "section": "",
-    "text": "I presented my PhD work at COMPDYN 2023 congress in Athens, Greece."
+    "objectID": "research.html#bridging-micro-to-macro-in-pulmonary-mechanics-interpretable-neural-networks-for-surrogate-modelling",
+    "href": "research.html#bridging-micro-to-macro-in-pulmonary-mechanics-interpretable-neural-networks-for-surrogate-modelling",
+    "title": "Research",
+    "section": "Bridging micro to macro in pulmonary mechanics: Interpretable neural networks for surrogate modelling",
+    "text": "Bridging micro to macro in pulmonary mechanics: Interpretable neural networks for surrogate modelling\nAuthors: K. Škardová, A. Daby-seesaram, M. Genet\nIdiopathic Pulmonary Fibrosis (IPF) is a disease characterized by the progressive formation of scar tissue in the lungs, leading to locally increased tissue stiffness and impaired respiratory function. Despite its significant impact on patient health, IPF remains poorly understood and poorly diagnosed. Our focus on IPF is motivated by the complex impact the fibrosis has not only on the lung tissue structure but also on the lung kinematics, and mechanics. The coupling between the disease progress and mechanical environment, as well as the multiscale nature of the disease, calls for a multiscale modeling approach to connect phenomena arising on various spatial scales. In order to integrate the existing micromechanical and organ-level models, the micro-model needs to undergo reduction. In our work, we propose to address this challenge by using a machine learning-based surrogate modeling framework.\nIn the presented framework, we use structured neural networks designed to be able to produce standard FEM shape functions. Similarly, to classical Physics-informed neural networks, this framework also has the capability to incorporate mechanistic knowledge through appropriate definition of the loss function. Due to the specific structure of the neural network, the number of trained parameters is significantly lower compared to a fully connected neural network and the individual weights and biases have a clear interpretation. In addition to higher reliability, the interpretability also allows us to strongly impose Dirichlet boundary conditions and thus avoid some of the changes caused by including additional terms in the loss function.\nIn this contribution, we present the capabilities of the model on several 1D and 2D test cases. The architecture of the neural network is defined by the discretization of the domain on which the governing equations are solved. There are however other choices, that effect the results, including the definition of the loss function and selection of optimizer and training strategy. We discuss the benefits and limitation of the tested variants and show how they affect the results obtained by the model."
   },
   {
-    "objectID": "posts/2024/2024-05-17-CSMA/index.html",
-    "href": "posts/2024/2024-05-17-CSMA/index.html",
-    "title": "CSMA 2024",
+    "objectID": "add_resources.html",
+    "href": "add_resources.html",
+    "title": "Additional resources",
     "section": "",
-    "text": "I presented my PhD work at CSMA 2024 in Giens."
+    "text": "My PhD dissertation is available here.\n\n\n\nIn collaboration with Flavien Loiseau, we made our Ph.D. thesis template openly available on Github..\n\n\n\nA more detailed version of my background can be found in my CV."
   },
   {
-    "objectID": "posts/2023/2023-12-06-IRTG/index.html",
-    "href": "posts/2023/2023-12-06-IRTG/index.html",
-    "title": "IRTG 2657 2nd Annual Meeting",
+    "objectID": "add_resources.html#documents",
+    "href": "add_resources.html#documents",
+    "title": "Additional resources",
     "section": "",
-    "text": "The IRTG 2657 2nd Annual Meeting was held in Wernigerode."
+    "text": "My PhD dissertation is available here.\n\n\n\nIn collaboration with Flavien Loiseau, we made our Ph.D. thesis template openly available on Github..\n\n\n\nA more detailed version of my background can be found in my CV."
+  },
+  {
+    "objectID": "add_resources.html#code",
+    "href": "add_resources.html#code",
+    "title": "Additional resources",
+    "section": "Code",
+    "text": "Code\n\nNeuROM (Daby-Seesaram, Skardova, and Genet 2024)\n \n\n\n\n\n\nThe reduced-order modelling code used to create surrogate models based on an hybridisation of standard reduced-order modelling methods such as the PGD and Deep learning methods is public and notebooks with tutorials are also available."
+  },
+  {
+    "objectID": "add_resources.html#illustrations",
+    "href": "add_resources.html#illustrations",
+    "title": "Additional resources",
+    "section": "Illustrations",
+    "text": "Illustrations\n\nHybrid sparse neural network and Proper Generalised Decomposition (PGD)\n\n\n\n\n\nParametric interactive results\nFeel free to interact with it."
   },
   {
     "objectID": "posts/2022/2022-07-31-IRTG/index.html",
@@ -231,6 +126,13 @@
     "text": "As part of the IRTG 2657, I have been invited to join Prof. Dr.-Ing. Michael Beer’s team at the Institute for Risk and Reliability and Prof. Dr.-Ing. Udo Nackenhorst’s team at the Institute of Mechanics and Computational Mechanics."
   },
   {
+    "objectID": "posts/2022/2022-05-18-CSMA/index.html",
+    "href": "posts/2022/2022-05-18-CSMA/index.html",
+    "title": "CSMA 2022",
+    "section": "",
+    "text": "I presented my PhD work at CSMA 2022 in Giens."
+  },
+  {
     "objectID": "posts/2024/2024-09-06-VPH/index.html",
     "href": "posts/2024/2024-09-06-VPH/index.html",
     "title": "VPH 2024",
@@ -238,10 +140,94 @@
     "text": "This week, my colleagues Kateřina Škardová and Martin Genet, and I attended the 2024 VPH conference. Kateřina Škardová and I both presented our ongoing research work towards getting a real-time digital twin of the lungs.\nMeanwhile Martin Genet presented the latest progress of the poro-mechanics lung model developed in the team."
   },
   {
-    "objectID": "add_resources.html#code",
-    "href": "add_resources.html#code",
-    "title": "Additional resources",
-    "section": "Code",
-    "text": "Code\n\nNeuROM (Daby-Seesaram, Skardova, and Genet 2024)\n \n\n\n\n\n\nThe reduced-order modelling code used to create surrogate models based on an hybridisation of standard reduced-order modelling methods such as the PGD and Deep learning methods is public and notebooks with tutorials are also available."
+    "objectID": "posts/2023/2023-12-06-IRTG/index.html",
+    "href": "posts/2023/2023-12-06-IRTG/index.html",
+    "title": "IRTG 2657 2nd Annual Meeting",
+    "section": "",
+    "text": "The IRTG 2657 2nd Annual Meeting was held in Wernigerode."
+  },
+  {
+    "objectID": "posts/2023/2023-11-24-Mortech/index.html",
+    "href": "posts/2023/2023-11-24-Mortech/index.html",
+    "title": "Mortech 2023",
+    "section": "",
+    "text": "I presented my PhD work at MORTech 2023 (6th International Workshop on Model Reduction Techniques) at Laboratoire de Mécanique de Paris-Saclay (LMPS), École Normale Supérieure de Paris-Saclay where I met my future colleagues Martin Genet and Kateřina Škardová."
+  },
+  {
+    "objectID": "posts/2023/2023-06-14-COMPDYN/index.html",
+    "href": "posts/2023/2023-06-14-COMPDYN/index.html",
+    "title": "COMPDYN 2023 congress",
+    "section": "",
+    "text": "I presented my PhD work at COMPDYN 2023 congress in Athens, Greece."
+  },
+  {
+    "objectID": "talks.html",
+    "href": "talks.html",
+    "title": "Talks (selection)",
+    "section": "",
+    "text": "Austrian Academy of Sciences, RICAM\nLinz, Austria, 21st-28th of October 2024\n\n\n\n\nAuthors\nA. Daby-seesaram, K. Škardová, M. Genet"
+  },
+  {
+    "objectID": "talks.html#incoming-talks",
+    "href": "talks.html#incoming-talks",
+    "title": "Talks (selection)",
+    "section": "",
+    "text": "Austrian Academy of Sciences, RICAM\nLinz, Austria, 21st-28th of October 2024\n\n\n\n\nAuthors\nA. Daby-seesaram, K. Škardová, M. Genet"
+  },
+  {
+    "objectID": "talks.html#past-talks",
+    "href": "talks.html#past-talks",
+    "title": "Talks (selection)",
+    "section": "Past talks",
+    "text": "Past talks\n\n\n\nVirtual Physiological Human (VPH) 2024\nStuttgart, Germany, 3rd - 6th of September 2024\n\n\n\n\nTitle\nHybridising standard ROM methods with interpretable sparse neural networks for real-time patient specific lung simulations\n\n\nAuthors\nA. Daby-seesaram, K. Škardová, M. Genet\n\n\nLink\nSlides, Code"
+  },
+  {
+    "objectID": "Resources/Documents/Presentations/TeamMeetings/LungManyScale_2024-09-24.html#vph-4-6th-of-september-2024",
+    "href": "Resources/Documents/Presentations/TeamMeetings/LungManyScale_2024-09-24.html#vph-4-6th-of-september-2024",
+    "title": "Lung many scale meeting",
+    "section": "VPH 4-6th of September 2024",
+    "text": "VPH 4-6th of September 2024\n\n\n\n\nVideo\nFENNI - paper 1\n\n\n\n\n\nVideo\nNeuROM - paper 2\n\n\n\n\n\n\n\nFENNI\n\n\n\n\n\n\nBridge the gap between PINNs and FEM\n\nInterpretable\nStraightforward mesh adaptivity\n\n\n\n\n\n\n\n\n\n\nNN-PGD\n\n\n\nGreedy parameterised surrogate\n\nAutomatic tensor decomposition\nOn the fly evaluation of the model for new parameters"
+  },
+  {
+    "objectID": "Resources/Documents/Presentations/TeamMeetings/LungManyScale_2024-09-24.html#neurom-surrogate-modelling-code",
+    "href": "Resources/Documents/Presentations/TeamMeetings/LungManyScale_2024-09-24.html#neurom-surrogate-modelling-code",
+    "title": "Lung many scale meeting",
+    "section": "NeuROM: surrogate modelling code",
+    "text": "NeuROM: surrogate modelling code\n\n\n   \n\n\n\n\n\n\nCode is live\n\n\n\nPyPI\nZenodo\n\n\n\n\n1 & 2D FENNI + tensor decomposition\nUnfortunately a ‘neuroM’ package already exist…\n\npip install NeuROM-Py"
+  },
+  {
+    "objectID": "Resources/Documents/Presentations/TeamMeetings/LungManyScale_2024-09-24.html#fenni-interpretable-neural-networks-for-solving-pdes",
+    "href": "Resources/Documents/Presentations/TeamMeetings/LungManyScale_2024-09-24.html#fenni-interpretable-neural-networks-for-solving-pdes",
+    "title": "Lung many scale meeting",
+    "section": "FENNI: Interpretable Neural Networks for solving PDEs",
+    "text": "FENNI: Interpretable Neural Networks for solving PDEs\n\n\n\n\n\n\n\n\n\n\nPaper’s submitted\n\n\n\nCMAME\nWith interactive demos\n\nEverything is on the Gitlab"
+  },
+  {
+    "objectID": "Resources/Documents/Presentations/TeamMeetings/LungManyScale_2024-09-24.html#hybridising-rom-with-fenni",
+    "href": "Resources/Documents/Presentations/TeamMeetings/LungManyScale_2024-09-24.html#hybridising-rom-with-fenni",
+    "title": "Lung many scale meeting",
+    "section": "Hybridising ROM with FENNI",
+    "text": "Hybridising ROM with FENNI\n\n\n\n\n\n\n\n\n\n\nto be submitted\n\n\n\nCMAME\nWith interactive demos\n\nWork in progress\nEverything is on the Gitlab"
+  },
+  {
+    "objectID": "Resources/Documents/Presentations/TeamMeetings/LungManyScale_2024-09-24.html#current-challenges",
+    "href": "Resources/Documents/Presentations/TeamMeetings/LungManyScale_2024-09-24.html#current-challenges",
+    "title": "Lung many scale meeting",
+    "section": "Current challenges",
+    "text": "Current challenges\n\n\n\n\nPerspectives for patient-specific applications\n\n\n\nImplementation of the poro-mechanics lung model\n\nNonlinear - non polynomial loss\nGreedy Latin hypercube sampling (LHS) to be tested\n\nParametrisation of the segmented geometries\n\nVariational encoder to reduce the segmentation’s parametrisation’s dimensionnality\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nGithub page"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Alexandre Daby-Seesaram",
+    "section": "",
+    "text": "Welcome,\nI’m Alexandre Daby-Seesaram, a Postdoctoral researcher at École Polytechnique and INRIA in the MΞDISIM team.\nI hold a Ph.D. in computational mechanics from the University Paris-Saclay (ENS Paris-Saclay), where I worked at the LMPS (Laboratory of Mechanics Paris-Saclay). You can learn more about my background in my [CV].\nMy main research interest consists of solving highly non-linear problems using model-order reduction techniques such as the Proper Generalised Decomposition (PGD). I’ve recently become interested in hybridising classical model-order reduction methods with machine learning approaches. Combining tensor decomposition and interpretable neural networks enables efficient and robust solving of large non-linear problems."
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "Alexandre Daby-Seesaram",
+    "section": "",
+    "text": "Welcome,\nI’m Alexandre Daby-Seesaram, a Postdoctoral researcher at École Polytechnique and INRIA in the MΞDISIM team.\nI hold a Ph.D. in computational mechanics from the University Paris-Saclay (ENS Paris-Saclay), where I worked at the LMPS (Laboratory of Mechanics Paris-Saclay). You can learn more about my background in my [CV].\nMy main research interest consists of solving highly non-linear problems using model-order reduction techniques such as the Proper Generalised Decomposition (PGD). I’ve recently become interested in hybridising classical model-order reduction methods with machine learning approaches. Combining tensor decomposition and interpretable neural networks enables efficient and robust solving of large non-linear problems."
   }
 ]

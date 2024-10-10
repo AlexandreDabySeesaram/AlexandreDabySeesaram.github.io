@@ -1,8 +1,12 @@
 project:
+  resources:
+    - "Resources"
   type: website
   output-dir: docs
 website:
   title: "Alexandre Daby-Seesaram"
+  image: avatar.jpg
+  favicon: avatar.jpg
   description: "Alexandre Daby-Seesaram, PHD, personal webpage"
   site-url: https://alexandredabyseesaram.github.io/
   navbar:

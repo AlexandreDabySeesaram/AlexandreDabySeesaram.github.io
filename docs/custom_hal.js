@@ -7,7 +7,7 @@
   
     let iframe = document.createElement("iframe");
     iframe.width = "100%";
-    iframe.height = "550";
+    iframe.height = "700";
     iframe.frameborder="0";
   
     iframe.scrolling="auto";

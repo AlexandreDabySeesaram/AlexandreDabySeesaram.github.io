@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://alexandredabyseesaram.github.io/news.html</loc>
-    <lastmod>2024-09-06T14:01:03.268Z</lastmod>
-  </url>
-  <url>
     <loc>https://alexandredabyseesaram.github.io/education.html</loc>
     <lastmod>2024-09-06T14:01:10.869Z</lastmod>
   </url>
@@ -13,71 +9,83 @@
     <lastmod>2024-09-06T14:00:56.211Z</lastmod>
   </url>
   <url>
-    <loc>https://alexandredabyseesaram.github.io/talks.html</loc>
-    <lastmod>2024-10-08T09:49:35.330Z</lastmod>
+    <loc>https://alexandredabyseesaram.github.io/news.html</loc>
+    <lastmod>2024-09-06T14:01:03.268Z</lastmod>
   </url>
   <url>
-    <loc>https://alexandredabyseesaram.github.io/about.html</loc>
-    <lastmod>2024-09-24T20:09:53.760Z</lastmod>
-  </url>
-  <url>
-    <loc>https://alexandredabyseesaram.github.io/add_resources.html</loc>
-    <lastmod>2024-09-18T16:58:48.951Z</lastmod>
-  </url>
-  <url>
-    <loc>https://alexandredabyseesaram.github.io/index.html</loc>
-    <lastmod>2024-09-24T20:09:38.125Z</lastmod>
-  </url>
-  <url>
-    <loc>https://alexandredabyseesaram.github.io/posts/2022/2022-05-18-CSMA/index.html</loc>
-    <lastmod>2024-09-02T15:45:11.347Z</lastmod>
-  </url>
-  <url>
-    <loc>https://alexandredabyseesaram.github.io/posts/2022/2022-06-09-ECCOMAS/index.html</loc>
-    <lastmod>2024-09-02T15:45:18.174Z</lastmod>
-  </url>
-  <url>
-    <loc>https://alexandredabyseesaram.github.io/posts/2023/2023-12-06-IRTG/index.html</loc>
-    <lastmod>2024-09-02T15:45:58.458Z</lastmod>
-  </url>
-  <url>
-    <loc>https://alexandredabyseesaram.github.io/posts/2023/2023-06-14-COMPDYN/index.html</loc>
-    <lastmod>2024-09-02T15:45:39.618Z</lastmod>
+    <loc>https://alexandredabyseesaram.github.io/Resources/Documents/Presentations/TeamMeetings/MyNotations.html</loc>
+    <lastmod>2024-08-26T13:31:39.371Z</lastmod>
   </url>
   <url>
     <loc>https://alexandredabyseesaram.github.io/posts/2021/2021-07-09-YIC/index.html</loc>
     <lastmod>2024-09-02T15:45:02.498Z</lastmod>
   </url>
   <url>
-    <loc>https://alexandredabyseesaram.github.io/research.html</loc>
-    <lastmod>2024-09-06T14:00:59.753Z</lastmod>
-  </url>
-  <url>
-    <loc>https://alexandredabyseesaram.github.io/posts/2022/2022-07-31-IRTG/index.html</loc>
-    <lastmod>2024-09-02T15:45:25.346Z</lastmod>
-  </url>
-  <url>
     <loc>https://alexandredabyseesaram.github.io/posts/2023/2023-04-12-ArticleOut/index.html</loc>
     <lastmod>2024-09-02T15:45:33.484Z</lastmod>
-  </url>
-  <url>
-    <loc>https://alexandredabyseesaram.github.io/posts/2023/2023-11-24-Mortech/index.html</loc>
-    <lastmod>2024-09-02T15:45:46.129Z</lastmod>
   </url>
   <url>
     <loc>https://alexandredabyseesaram.github.io/posts/2023/2023-12-01-PhD-Defence/index.html</loc>
     <lastmod>2024-09-02T15:45:52.831Z</lastmod>
   </url>
   <url>
-    <loc>https://alexandredabyseesaram.github.io/posts/2024/2024-01-02-NewPosition-X/index.html</loc>
-    <lastmod>2024-09-02T15:46:07.617Z</lastmod>
-  </url>
-  <url>
     <loc>https://alexandredabyseesaram.github.io/posts/2024/2024-05-17-CSMA/index.html</loc>
     <lastmod>2024-09-02T15:46:13.170Z</lastmod>
   </url>
   <url>
+    <loc>https://alexandredabyseesaram.github.io/posts/2024/2024-01-02-NewPosition-X/index.html</loc>
+    <lastmod>2024-09-02T15:46:07.617Z</lastmod>
+  </url>
+  <url>
+    <loc>https://alexandredabyseesaram.github.io/posts/2022/2022-06-09-ECCOMAS/index.html</loc>
+    <lastmod>2024-09-02T15:45:18.174Z</lastmod>
+  </url>
+  <url>
+    <loc>https://alexandredabyseesaram.github.io/research.html</loc>
+    <lastmod>2024-09-06T14:00:59.753Z</lastmod>
+  </url>
+  <url>
+    <loc>https://alexandredabyseesaram.github.io/add_resources.html</loc>
+    <lastmod>2024-09-18T16:58:48.951Z</lastmod>
+  </url>
+  <url>
+    <loc>https://alexandredabyseesaram.github.io/posts/2022/2022-07-31-IRTG/index.html</loc>
+    <lastmod>2024-09-02T15:45:25.346Z</lastmod>
+  </url>
+  <url>
+    <loc>https://alexandredabyseesaram.github.io/posts/2022/2022-05-18-CSMA/index.html</loc>
+    <lastmod>2024-09-02T15:45:11.347Z</lastmod>
+  </url>
+  <url>
     <loc>https://alexandredabyseesaram.github.io/posts/2024/2024-09-06-VPH/index.html</loc>
     <lastmod>2024-09-06T14:43:56.892Z</lastmod>
+  </url>
+  <url>
+    <loc>https://alexandredabyseesaram.github.io/posts/2023/2023-12-06-IRTG/index.html</loc>
+    <lastmod>2024-09-02T15:45:58.458Z</lastmod>
+  </url>
+  <url>
+    <loc>https://alexandredabyseesaram.github.io/posts/2023/2023-11-24-Mortech/index.html</loc>
+    <lastmod>2024-09-02T15:45:46.129Z</lastmod>
+  </url>
+  <url>
+    <loc>https://alexandredabyseesaram.github.io/posts/2023/2023-06-14-COMPDYN/index.html</loc>
+    <lastmod>2024-09-02T15:45:39.618Z</lastmod>
+  </url>
+  <url>
+    <loc>https://alexandredabyseesaram.github.io/talks.html</loc>
+    <lastmod>2024-10-08T09:49:35.330Z</lastmod>
+  </url>
+  <url>
+    <loc>https://alexandredabyseesaram.github.io/Resources/Documents/Presentations/TeamMeetings/LungManyScale_2024-09-24.html</loc>
+    <lastmod>2024-09-24T09:32:22.214Z</lastmod>
+  </url>
+  <url>
+    <loc>https://alexandredabyseesaram.github.io/index.html</loc>
+    <lastmod>2024-09-24T20:09:38.125Z</lastmod>
+  </url>
+  <url>
+    <loc>https://alexandredabyseesaram.github.io/about.html</loc>
+    <lastmod>2024-09-24T20:09:53.760Z</lastmod>
   </url>
 </urlset>
