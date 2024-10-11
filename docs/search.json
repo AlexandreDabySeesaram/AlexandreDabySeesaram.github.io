@@ -182,41 +182,6 @@
     "text": "Past talks\n\n\n\nVirtual Physiological Human (VPH) 2024\nStuttgart, Germany, 3rd - 6th of September 2024\n\n\n\n\nTitle\nHybridising standard ROM methods with interpretable sparse neural networks for real-time patient specific lung simulations\n\n\nAuthors\nA. Daby-seesaram, K. Škardová, M. Genet\n\n\nLink\nSlides, Code"
   },
   {
-    "objectID": "Resources/Documents/Presentations/TeamMeetings/LungManyScale_2024-09-24.html#vph-4-6th-of-september-2024",
-    "href": "Resources/Documents/Presentations/TeamMeetings/LungManyScale_2024-09-24.html#vph-4-6th-of-september-2024",
-    "title": "Lung many scale meeting",
-    "section": "VPH 4-6th of September 2024",
-    "text": "VPH 4-6th of September 2024\n\n\n\n\nVideo\nFENNI - paper 1\n\n\n\n\n\nVideo\nNeuROM - paper 2\n\n\n\n\n\n\n\nFENNI\n\n\n\n\n\n\nBridge the gap between PINNs and FEM\n\nInterpretable\nStraightforward mesh adaptivity\n\n\n\n\n\n\n\n\n\n\nNN-PGD\n\n\n\nGreedy parameterised surrogate\n\nAutomatic tensor decomposition\nOn the fly evaluation of the model for new parameters"
-  },
-  {
-    "objectID": "Resources/Documents/Presentations/TeamMeetings/LungManyScale_2024-09-24.html#neurom-surrogate-modelling-code",
-    "href": "Resources/Documents/Presentations/TeamMeetings/LungManyScale_2024-09-24.html#neurom-surrogate-modelling-code",
-    "title": "Lung many scale meeting",
-    "section": "NeuROM: surrogate modelling code",
-    "text": "NeuROM: surrogate modelling code\n\n\n   \n\n\n\n\n\n\nCode is live\n\n\n\nPyPI\nZenodo\n\n\n\n\n1 & 2D FENNI + tensor decomposition\nUnfortunately a ‘neuroM’ package already exist…\n\npip install NeuROM-Py"
-  },
-  {
-    "objectID": "Resources/Documents/Presentations/TeamMeetings/LungManyScale_2024-09-24.html#fenni-interpretable-neural-networks-for-solving-pdes",
-    "href": "Resources/Documents/Presentations/TeamMeetings/LungManyScale_2024-09-24.html#fenni-interpretable-neural-networks-for-solving-pdes",
-    "title": "Lung many scale meeting",
-    "section": "FENNI: Interpretable Neural Networks for solving PDEs",
-    "text": "FENNI: Interpretable Neural Networks for solving PDEs\n\n\n\n\n\n\n\n\n\n\nPaper’s submitted\n\n\n\nCMAME\nWith interactive demos\n\nEverything is on the Gitlab"
-  },
-  {
-    "objectID": "Resources/Documents/Presentations/TeamMeetings/LungManyScale_2024-09-24.html#hybridising-rom-with-fenni",
-    "href": "Resources/Documents/Presentations/TeamMeetings/LungManyScale_2024-09-24.html#hybridising-rom-with-fenni",
-    "title": "Lung many scale meeting",
-    "section": "Hybridising ROM with FENNI",
-    "text": "Hybridising ROM with FENNI\n\n\n\n\n\n\n\n\n\n\nto be submitted\n\n\n\nCMAME\nWith interactive demos\n\nWork in progress\nEverything is on the Gitlab"
-  },
-  {
-    "objectID": "Resources/Documents/Presentations/TeamMeetings/LungManyScale_2024-09-24.html#current-challenges",
-    "href": "Resources/Documents/Presentations/TeamMeetings/LungManyScale_2024-09-24.html#current-challenges",
-    "title": "Lung many scale meeting",
-    "section": "Current challenges",
-    "text": "Current challenges\n\n\n\n\nPerspectives for patient-specific applications\n\n\n\nImplementation of the poro-mechanics lung model\n\nNonlinear - non polynomial loss\nGreedy Latin hypercube sampling (LHS) to be tested\n\nParametrisation of the segmented geometries\n\nVariational encoder to reduce the segmentation’s parametrisation’s dimensionnality\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nGithub page"
-  },
-  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Alexandre Daby-Seesaram",

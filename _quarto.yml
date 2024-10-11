@@ -1,6 +1,9 @@
 project:
   resources:
     - "Resources"
+    - "Hal_css.css"
+    - "Hal_css_dark.css"
+    - "custom_hal.js"
   type: website
   output-dir: docs
 website:
