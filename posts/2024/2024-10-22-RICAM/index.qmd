@@ -1,0 +1,12 @@
+---
+title: "Invited speaker at the Austrian Academy of Science"
+date: "2024-10-22"
+categories: 
+  - "News"
+image: "OAW.png"
+---
+
+Today I was invited to give a seminar at the Austrian Academy of Science at [RICAM](https://www.oeaw.ac.at/ricam/), in the Computational Methods for PDEs group. I had the opportunity to present our work on reduced-order modelling and recent hybridisation of the PGD with the Finite Element Neural Network Interpolation (FENNI) framework.
+
+
+![](RICAM.jpeg){width="50%" fig-align="center"}
