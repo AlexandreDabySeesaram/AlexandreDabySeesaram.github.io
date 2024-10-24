@@ -12,6 +12,8 @@ format:
 
 ## Past talks
 
+### Invited Speaker
+
 +-----------------------------------------------------------------------+-------------------------------------------------------------------------------------+
 | Austrian Academy of Sciences,                                         |  Linz, Austria, 21st-28th of October 2024                                           |                                
 |[RICAM](https://www.oeaw.ac.at/de/ricam/research/groups/group-egger)   |                                                                                     |
@@ -24,6 +26,10 @@ format:
 | Link                                                                  | [Slides](Resources/Documents/Presentations/RICAM/TODO.html),                        |
 |                                                                       |                                [Code](https://pypi.org/project/NeuROM-Py/)          |
 +-----------------------------------------------------------------------+-------------------------------------------------------------------------------------+
+
+
+### Conferences
+
 
 +----------------------------------------+-------------------------------------------------------------------------------------+
 | Virtual Physiological Human (VPH) 2024 | Stuttgart, Germany, 3rd - 6th of September 2024                                     |
