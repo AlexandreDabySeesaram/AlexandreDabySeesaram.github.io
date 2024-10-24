@@ -14,6 +14,9 @@ format:
 
 ### Invited Speaker
 
+:::: {style='margin-top: 2em;'}
+::::
+
 +-----------------------------------------------------------------------+-------------------------------------------------------------------------------------+
 | Austrian Academy of Sciences,                                         |  Linz, Austria, 21st-28th of October 2024                                           |                                
 |[RICAM](https://www.oeaw.ac.at/de/ricam/research/groups/group-egger)   |                                                                                     |
@@ -29,7 +32,8 @@ format:
 
 
 ### Conferences
-
+:::: {style='margin-top: 2em;'}
+::::
 
 +----------------------------------------+-------------------------------------------------------------------------------------+
 | Virtual Physiological Human (VPH) 2024 | Stuttgart, Germany, 3rd - 6th of September 2024                                     |
