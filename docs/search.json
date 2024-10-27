@@ -67,7 +67,7 @@
     "href": "posts/2024/2024-10-22-RICAM/index.html",
     "title": "Invited speaker at the RICAM of the Austrian Academy of Sciences",
     "section": "",
-    "text": "Today I was invited to give a seminar at the Johann Radon Institute for Computational and Applied Mathematics (RICAM) of the Austrian Academy of Sciences, in the Computational Methods for PDEs group. I had the opportunity to present our work on reduced-order modelling and recent hybridisation of the PGD with the Finite Element Neural Network Interpolation (FENNI) framework."
+    "text": "Today I was invited to give a seminar at the Johann Radon Institute for Computational and Applied Mathematics (RICAM) of the Austrian Academy of Sciences, in the Computational Methods for PDEs group. I had the opportunity to present our work on reduced-order modelling and recent hybridisation of the PGD with the Finite Element Neural Network Interpolation (FENNI) framework (Daby-Seesaram, Škardová, and Genet 2024; Škardová, Daby-Seesaram, and Genet 2024).\nThe shown exemples used our open-source code, NeuROM\n\n\n\n\n\nReferences\n\nDaby-Seesaram, Alexandre, Kateřina Škardová, and Martin Genet. 2024. “Finite Element Neural Network Interpolation: Hybridisation with the Proper Generalised Decomposition for Surrogate Modelling.” In Preparation.\n\n\nŠkardová, Kateřina, Alexandre Daby-Seesaram, and Martin Genet. 2024. “Finite Element Neural Network Interpolation: Interpretable Neural Networks for Solving PDEs.” Submitted."
   },
   {
     "objectID": "posts/2022/2022-05-18-CSMA/index.html",
@@ -102,7 +102,7 @@
     "href": "add_resources.html#code",
     "title": "Additional resources",
     "section": "Code",
-    "text": "Code\n\nNeuROM (Daby-Seesaram, Skardova, and Genet 2024)\n  \n\n\n\n\n\n\n\n\n\n\n\nThe reduced-order modelling code used to create surrogate models based on an hybridisation of standard reduced-order modelling methods such as the PGD and Deep learning methods is public and notebooks with tutorials are also available."
+    "text": "Code\n\nNeuROM (Daby-Seesaram, Škardová, and Genet 2024)\n  \n\n\n\n\n\n\n\n\n\n\n\nThe reduced-order modelling code used to create surrogate models based on an hybridisation of standard reduced-order modelling methods such as the PGD and Deep learning methods is public and notebooks with tutorials are also available."
   },
   {
     "objectID": "add_resources.html#illustrations",

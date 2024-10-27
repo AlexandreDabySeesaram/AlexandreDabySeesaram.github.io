@@ -10,6 +10,7 @@ format:
     page-layout: full
 ---
 
+
 ## Documents
 ### PhD dissertation
 My PhD dissertation is available <a href="Resources/Documents/PhD_Thesis.pdf">here.</a>
@@ -22,7 +23,7 @@ A more detailed version of my background can be found in my <a href="Resources/D
 
 ## Code
 
-### NeuROM [@neurom_2024]
+### NeuROM [@daby-seesaramNeurom2024a]
 [![PyPI Downloads](https://img.shields.io/pypi/dm/NeuROM-Py.svg?label=PyPI%20downloads)](
 https://pypi.org/project/NeuROM-Py/)
 [![GitHub license](https://img.shields.io/github/license/alexandredabyseesaram/neurom)](https://github.com/alexandredabyseesaram/neurom)

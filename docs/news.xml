@@ -24,12 +24,21 @@
 
 
 
-<p>Today I was invited to give a seminar at the Johann Radon Institute for Computational and Applied Mathematics (<a href="https://www.oeaw.ac.at/ricam/">RICAM</a>) of the Austrian Academy of Sciences, in the Computational Methods for PDEs group. I had the opportunity to present our work on reduced-order modelling and recent hybridisation of the PGD with the Finite Element Neural Network Interpolation (FENNI) framework.</p>
+<p>Today I was invited to give a seminar at the Johann Radon Institute for Computational and Applied Mathematics (<a href="https://www.oeaw.ac.at/ricam/">RICAM</a>) of the Austrian Academy of Sciences, in the Computational Methods for PDEs group. I had the opportunity to present our work on reduced-order modelling and recent hybridisation of the PGD with the Finite Element Neural Network Interpolation (FENNI) framework <span class="citation" data-cites="daby-seesaramFiniteElementNeural2024 skardovaFiniteElementNeural2024">(Daby-Seesaram, Škardová, and Genet 2024; Škardová, Daby-Seesaram, and Genet 2024)</span>.</p>
+<p>The shown exemples used our open-source code, <a href="https://pypi.org/project/NeuROM-Py/">NeuROM</a></p>
 <!-- ![](RICAM.jpeg){width="50%" fig-align="center"} -->
 
 
 
- ]]></description>
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0">
+<div id="ref-daby-seesaramFiniteElementNeural2024" class="csl-entry">
+Daby-Seesaram, Alexandre, Kateřina Škardová, and Martin Genet. 2024. <span>“Finite <span>Element Neural Network Interpolation</span>: <span>Hybridisation</span> with the <span>Proper Generalised Decomposition</span> for Surrogate Modelling.”</span> <em>In Preparation</em>.
+</div>
+<div id="ref-skardovaFiniteElementNeural2024" class="csl-entry">
+Škardová, Kateřina, Alexandre Daby-Seesaram, and Martin Genet. 2024. <span>“Finite <span>Element Neural Network Interpolation</span>: <span>Interpretable Neural Networks</span> for Solving <span>PDEs</span>.”</span> <em>Submitted</em>.
+</div>
+</div></section></div> ]]></description>
   <category>News</category>
   <guid>https://alexandredabyseesaram.github.io/posts/2024/2024-10-22-RICAM/</guid>
   <pubDate>Mon, 21 Oct 2024 22:00:00 GMT</pubDate>
