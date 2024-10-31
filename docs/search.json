@@ -88,14 +88,21 @@
     "href": "add_resources.html",
     "title": "Additional resources",
     "section": "",
-    "text": "My PhD dissertation is available here.\n\n\n\nIn collaboration with Flavien Loiseau, we made our Ph.D. thesis template openly available on Github..\n\n\n\nA more detailed version of my background can be found in my CV."
+    "text": "Some Reduced-order modelling relevant small courses are available on my github.\n\nCourse 1 Non-linear manifold learning: SVD and kernel PCA\nCourse 2 Non-linear manifold learning: Autoencoder"
+  },
+  {
+    "objectID": "add_resources.html#courses",
+    "href": "add_resources.html#courses",
+    "title": "Additional resources",
+    "section": "",
+    "text": "Some Reduced-order modelling relevant small courses are available on my github.\n\nCourse 1 Non-linear manifold learning: SVD and kernel PCA\nCourse 2 Non-linear manifold learning: Autoencoder"
   },
   {
     "objectID": "add_resources.html#documents",
     "href": "add_resources.html#documents",
     "title": "Additional resources",
-    "section": "",
-    "text": "My PhD dissertation is available here.\n\n\n\nIn collaboration with Flavien Loiseau, we made our Ph.D. thesis template openly available on Github..\n\n\n\nA more detailed version of my background can be found in my CV."
+    "section": "Documents",
+    "text": "Documents\n\nPhD dissertation\nMy PhD dissertation is available here.\n\n\nPhD dissertation template\nIn collaboration with Flavien Loiseau, we made our Ph.D. thesis template openly available on Github..\n\n\nCV\nA more detailed version of my background can be found in my CV."
   },
   {
     "objectID": "add_resources.html#code",
