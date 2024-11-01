@@ -34,6 +34,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
@@ -136,23 +137,34 @@ ul.task-list li input[type="checkbox"] {
 <!-- margin-sidebar -->
     
 <!-- main -->
-<div class="quarto-about-broadside column-body">
-  <div class="about-main">
-    <div class="about-entity" style="background-image: url('Resources/Images/Book_cover.jpg')"></div>
-    <div class="about-contents"><header id="title-block-header" class="quarto-title-block default">
+<main class="content column-page" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
 <h1 class="title">Teaching activities</h1>
 </div>
-<div class="quarto-title-meta column-body">
+
+
+
+<div class="quarto-title-meta column-page">
+
+    
+  
+    
   </div>
-</header><main class="content column-body" id="quarto-document-content">
-<section id="teaching-undergraduate-students-at-école-polytechnique" class="level4">
-<h4 data-anchor-id="teaching-undergraduate-students-at-école-polytechnique">Teaching undergraduate students at École Polytechnique</h4>
+  
+
+
+</header>
+
+
+<section id="teaching-undergraduate-students-at-école-polytechnique" class="level3">
+<h3 class="anchored" data-anchor-id="teaching-undergraduate-students-at-école-polytechnique">Teaching undergraduate students at École Polytechnique</h3>
 <ul>
 <li><strong>2020 - 2023</strong> Physics I: Mechanics and heat
 <ul>
 <li>Tutorials sessions</li>
-<li>Writing tutorials subjects</li>
+<li><strong>Designing</strong> and <strong>writing</strong> tutorials subjects</li>
 </ul></li>
 <li><strong>2020 - 2023</strong> Physics Lab I
 <ul>
@@ -161,19 +173,38 @@ ul.task-list li input[type="checkbox"] {
 </ul></li>
 </ul>
 </section>
-<section id="physique-chimie-psi-psi-concours-x-ens-centralesupélec-mines-ponts-ccinp" class="level4">
-<h4 data-anchor-id="physique-chimie-psi-psi-concours-x-ens-centralesupélec-mines-ponts-ccinp">Physique-chimie PSI-PSI* Concours X, ENS, CentraleSupélec, Mines-Ponts, CCINP</h4>
+<section id="physique-chimie-psi-psi-concours-x-ens-centralesupélec-mines-ponts-ccinp" class="level3">
+<h3 class="anchored" data-anchor-id="physique-chimie-psi-psi-concours-x-ens-centralesupélec-mines-ponts-ccinp">Physique-chimie PSI-PSI* Concours X, ENS, CentraleSupélec, Mines-Ponts, CCINP</h3>
+<div class="columns">
+<div class="column" style="width:25%;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Resources/Images/Book_cover.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%"></p>
+</figure>
+</div>
+</div><div class="column" style="width:75%;">
+<div style="margin-top: 7em;">
+
+</div>
 <ul>
-<li>Writing a physics book for undergraduate students (Classes Préparatoires aux Grandes Écoles)</li>
-<li>Physics problems, corrections, and comments, helping students prepare for their entrance exams to prestigious universities (French “Grandes Écoles”).</li>
+<li>Writing a <strong>physics book</strong> for undergraduate students (<strong>Classes Préparatoires aux Grandes Écoles</strong>)</li>
+<li><strong>Physics</strong> problems, <strong>corrections</strong>, and <strong>comments</strong>, helping students prepare for their entrance exams to prestigious universities (French “Grandes Écoles”).</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="advanced-level-courses" class="level3">
+<h3 class="anchored" data-anchor-id="advanced-level-courses">Advanced-level courses</h3>
+<p>I designed notebooks about <strong>dimensionnality reduction</strong> in both linear and non-linear contexts. Those few short courses relevant to model reduction are available on my github</p>
+<ul>
+<li><a href="https://alexandredabyseesaram.github.io/Non-linear_ROM/kPCA_v_SVD.html"><strong>Course 1</strong></a> Non-linear manifold learning: SVD and kernel PCA</li>
+<li><a href="https://alexandredabyseesaram.github.io/SVD_Investigations/Autoencoder.html"><strong>Course 2</strong></a> Non-linear manifold learning: Autoencoder</li>
 </ul>
 
 
 </section>
-</main></div>
-  </div>
-</div>
- <!-- /main -->
+
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -338,6 +369,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   } else {
     toggleColorMode(false);
   }
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
   const isCodeAnnotation = (el) => {
     for (const clz of el.classList) {
       if (clz.startsWith('code-annotation-')) {                     
