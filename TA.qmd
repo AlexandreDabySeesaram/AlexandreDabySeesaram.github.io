@@ -31,7 +31,7 @@ format:
 
 ::: {.column width="75%"}
 
-:::: {style='margin-top: 7em;'}
+:::: {style='margin-top: 5em;'}
 ::::
 
 - Writing a **physics book** for undergraduate students (**Classes Préparatoires aux Grandes Écoles**)
