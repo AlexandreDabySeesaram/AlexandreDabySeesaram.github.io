@@ -1,6 +1,7 @@
 project:
   resources:
     - "Resources"
+    - "style_site.scss"
     - "Hal_css.css"
     - "Hal_css_dark.css"
     - "custom_hal.js"
@@ -41,7 +42,7 @@ website:
 format:
   html:
     theme:
-      light: flatly
+      light: [flatly,style_site.scss]
       dark: darkly
     css: styles.css
     toc: true
