@@ -49,21 +49,21 @@ div.ZoneTitreResultat
 
 
 .LienBibtexACoteFulltext, .DOI {
-    color:#b5171d;
+    color:#a2151a;
 }
 
 a:link { 
     text-decoration: none; 
-    color:#b5171d;
+    color:#a2151a;
   } 
   a:visited { 
     text-decoration: none; 
-    color:#b5171d;
+    color:#a2151a;
 
   } 
   a:hover { 
     text-decoration: underline; 
-    color:#b5171d;
+    color:#a2151a;
 	font-weight:bold;
 
   } 
