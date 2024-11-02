@@ -16,3 +16,14 @@ a:link {
     text-decoration: none; 
   }
   
+
+  .navbar {
+    background-image: url("Resources/Images/BackGroundCode.png");
+    background-size: cover; /* Adjust as needed */
+    background-position: center;
+    height: 120px; /* Adjust this value as needed */
+    display: flex;
+    align-items: center; /* Center-aligns the content vertically */
+  }
+
+  
