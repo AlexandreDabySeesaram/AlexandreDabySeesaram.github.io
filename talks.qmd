@@ -5,9 +5,13 @@ format:
     page-layout: full
 ---
 
+:::: {style='margin-top: 3em;'}
+::::
+
 ## {{< iconify fa-solid:bullhorn >}} &nbsp; Incoming talks
 
-
+:::: {style='margin-top: 3em;'}
+::::
 
 
 ## {{< iconify fa-solid:backward >}} &nbsp; Past talks
