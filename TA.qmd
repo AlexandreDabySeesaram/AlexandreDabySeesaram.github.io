@@ -11,12 +11,27 @@ format:
 
 ### Teaching undergraduate students at École Polytechnique
 
+:::: {.columns}
+
+::: {.column width="50%"}
+
 - **2020 - 2023** Physics I: Mechanics and heat  
   - Tutorials sessions
   - **Designing** and **writing** tutorials subjects
 - **2020 - 2023** Physics Lab I  
   - Lab sessions
   - Creation of lab session subjects
+
+:::
+
+::: {.column width="50%"}
+
+![](Resources/Images/EcolePolytechnique.jpg){width="80%" fig-align="right"}
+
+
+:::
+
+::::
 
 ### Physique-chimie PSI-PSI* Concours X, ENS, CentraleSupélec, Mines-Ponts, CCINP
 

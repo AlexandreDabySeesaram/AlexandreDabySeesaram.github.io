@@ -5,14 +5,14 @@ format:
     page-layout: full
 ---
 
-## Incoming talks
+## {{< iconify fa-solid:bullhorn >}} &nbsp; Incoming talks
 
 
 
 
-## Past talks
+## {{< iconify fa-solid:backward >}} &nbsp; Past talks
 
-### Invited Speaker
+### &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Invited Speaker
 
 :::: {style='margin-top: 2em;'}
 ::::
@@ -31,7 +31,7 @@ format:
 +-----------------------------------------------------------------------+-------------------------------------------------------------------------------------+
 
 
-### Conferences
+### &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Conferences
 :::: {style='margin-top: 2em;'}
 ::::
 
