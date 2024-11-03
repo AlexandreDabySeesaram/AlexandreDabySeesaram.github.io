@@ -87,21 +87,21 @@
     "objectID": "add_resources.html#courses",
     "href": "add_resources.html#courses",
     "title": "Additional resources",
-    "section": " Courses",
+    "section": "   Courses",
     "text": "Courses\nA few short courses relevant to model reduction are available on my github\n\nCourse 1 Non-linear manifold learning: SVD and kernel PCA\nCourse 2 Non-linear manifold learning: Autoencoders"
   },
   {
     "objectID": "add_resources.html#documents",
     "href": "add_resources.html#documents",
     "title": "Additional resources",
-    "section": " Documents",
+    "section": "   Documents",
     "text": "Documents\n\nPhD dissertation\nMy PhD dissertation is available here.\n\n\nPhD dissertation template\nIn collaboration with Flavien Loiseau, we made our Ph.D. thesis template openly available on Github..\n\n\nCV\nA more detailed version of my background can be found in my CV."
   },
   {
     "objectID": "add_resources.html#code",
     "href": "add_resources.html#code",
     "title": "Additional resources",
-    "section": " Code",
+    "section": "   Code",
     "text": "Code\n\nNeuROM (Daby-Seesaram, Škardová, and Genet 2024)\n  \n\n\n\n\n\n\n\n\n\n\n\nThe reduced-order modelling code used to create surrogate models based on an hybridisation of standard reduced-order modelling methods such as the PGD and Deep learning methods is public and notebooks with tutorials are also available."
   },
   {
