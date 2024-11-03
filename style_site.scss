@@ -23,3 +23,28 @@ h2 {
 h3 {
   color: rgb(43, 80, 122);
 }
+
+.navbar {
+  background-image: url("Resources/Images/BackGroundCode.png");
+  // background-color: #00436d;
+  background-size: cover; /* Adjust as needed */
+  background-position: center;
+  // height: 120px; /* Adjust this value as needed */
+  display: flex;
+  align-items: center; /* Center-aligns the content vertically */
+}
+
+
+//  REQUIRED BLOCK TO CHANGE HEIGHT THAT WORKS IN MOBILE MODE 
+// .navbar-collapse.show  {
+//   transition: background-color 0s; /* Instant change, no animation */
+//   background-color: #00436d;
+//   background-size: cover; 
+//   background-position: center;
+// }
+
+
+// /* Adjust for inner elements like the brand/logo if necessary */
+// .navbar-brand, .navbar-nav {
+//   line-height: 120px; /* Match this value to the navbar height for vertical alignment */
+// }

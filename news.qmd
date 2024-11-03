@@ -1,6 +1,6 @@
 ---
 title: "News"
-title-block-banner: true
+title-block-banner: false
 page-layout: full
 listing:
   contents: posts
