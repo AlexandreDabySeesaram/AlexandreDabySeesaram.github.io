@@ -14,7 +14,7 @@ format:
 ::::
 
 
-## {{< iconify fa-solid:backward >}} &nbsp; Past talks
+## {{< iconify fa6-solid:clock-rotate-left >}} &nbsp; Past talks
 
 ### &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Invited Speaker
 
