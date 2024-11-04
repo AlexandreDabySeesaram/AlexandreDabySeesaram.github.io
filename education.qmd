@@ -12,7 +12,6 @@ format:
 ---
 
 * **2020 - 2023** <a href="Resources/Documents/PhD_Thesis.pdf">PhD</a> - Laboratoire de Mécanique Paris-Saclay (UMR 9026, Université Paris-Saclay, CentraleSupélec, ENS Paris-Saclay, CNRS)  
-    <!-- - In collaboration with <a href="https://floiseau.github.io/">Flavien Loiseau</a>, we made our Ph.D. thesis template openly available <a href="https://github.com/floiseau/PhD_Thesis_Template">on GitHub</a>. -->
 * **2019 - 2020** Master of science (M2R) - ENS Paris-Saclay / CentraleSupélec (MS2SC)  
 * **2018 - 2019** Scientific teaching qualification (agrégation de mécanique)  
 * **2017 - 2018** Master of science (1) - ENS Paris-Saclay (MMS)
