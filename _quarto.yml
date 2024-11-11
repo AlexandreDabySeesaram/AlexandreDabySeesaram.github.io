@@ -44,7 +44,7 @@ format:
     theme:
       light: [flatly,style_site.scss]
       dark: darkly
-    # mainfont: Inter
+    # mainfont: Lato 
     css: styles.css
     toc: true
     include-after-body:
