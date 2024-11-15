@@ -12,8 +12,7 @@ format:
 
 | Component      | Price          |
 |----------------|----------------|
-| <a href="https://www.adidas.com/us/velostan-smith-shoes/IE8398.html" rel="noreferrer">Chaussure Velostan Smith</a>
- - 41 1/3 | 140 eur  |
+| [Chaussure Velostan Smith](https://www.adidas.com/us/velostan-smith-shoes/IE8398.html){rel=noreferrer} - 41 1/3 | 140 eur  |
 
 
 
