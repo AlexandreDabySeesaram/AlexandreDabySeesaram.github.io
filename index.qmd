@@ -25,15 +25,8 @@ format:
           <meta name="google-site-verification" content="lyL1XECA_aIiJN9ihH1tHYGqzCDubMyGXCILlJTVjZw" />
 ---
 
-<!-- <style>
-  body {
-  background-image: url("Resources/Images/Background_Lungs_mesh.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-  
-</style> -->
 
+<!-- 
 <style>
   body {
     position: relative;
@@ -52,7 +45,7 @@ format:
     opacity: 0.2; /* Adjust the opacity here (0 is fully transparent, 1 is fully opaque) */
     z-index: -1; /* Keep it behind the content */
   }
-</style>
+</style> -->
 
 
 
@@ -63,4 +56,28 @@ I hold a Ph.D. in <b>computational mechanics</b> from the University Paris-Sacla
 
 My main research interest consists of solving highly non-linear problems using <b>model-order reduction</b> techniques such as the Proper Generalised Decomposition (PGD). I've recently become interested in hybridising classical model-order reduction methods with machine learning approaches. Combining tensor decomposition and interpretable neural networks enables efficient and robust solving of large non-linear problems. 
 
+:::: {style='margin-top: 2em;'}
+::::
 
+::: {.line}
+
+<div style="border-top: 1px solid #00436d; width: 45%; margin: 0 auto;"></div>
+
+:::
+
+:::: {style='margin-top: 2em;'}
+::::
+
+:::: {.columns}
+
+::: {.column width="15%"}
+
+:::
+
+::: {.column width="80%"}
+
+![](Resources/Images/Background_Lungs_mesh_2.png){width="100%"}
+
+:::
+
+::::
