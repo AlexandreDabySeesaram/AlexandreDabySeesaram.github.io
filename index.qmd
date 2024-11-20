@@ -56,7 +56,7 @@ I hold a Ph.D. in <b>computational mechanics</b> from the University Paris-Sacla
 
 My main research interest consists of solving highly non-linear problems using <b>model-order reduction</b> techniques such as the Proper Generalised Decomposition (PGD). I've recently become interested in hybridising classical model-order reduction methods with machine learning approaches. Combining tensor decomposition and interpretable neural networks enables efficient and robust solving of large non-linear problems. 
 
-:::: {style='margin-top: 2em;'}
+:::: {style='margin-top: 1em;'}
 ::::
 
 ::: {.line}
@@ -76,7 +76,7 @@ My main research interest consists of solving highly non-linear problems using <
 
 ::: {.column width="80%"}
 
-![](Resources/Images/Background_Lungs_mesh_2.png){width="100%"}
+![](Resources/Images/Background_Lungs_mesh_2.png){width="80%" style="display: block; margin: 0 auto;"}
 
 :::
 
