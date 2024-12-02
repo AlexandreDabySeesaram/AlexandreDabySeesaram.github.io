@@ -83,11 +83,3 @@ My main research interest consists of solving highly non-linear problems using <
 ::::
 
 
-::: {.button}
-
-[<iconify-icon icon="fa-brands:orcid" aria-label="Orcid"></iconify-icon> Orcid](http://orcid.org/0000-0002-2374-0971){.button target="_blank"}
-
-:::
-
-
-[<iconify-icon icon="fa-brands:orcid" aria-label="Orcid"></iconify-icon> Orcid](http://orcid.org/0000-0002-2374-0971){.about-link target="_blank"}
