@@ -18,6 +18,8 @@ format:
 
 ### Manifold learning - geometry parametrisation of lungs
 
+**Authors:** [A. Daby-seesaram](index.qmd), [M. Genet](https://mgenet.github.io/)
+
 :::: {.columns}
 
 ::: {.column width="50%"}
