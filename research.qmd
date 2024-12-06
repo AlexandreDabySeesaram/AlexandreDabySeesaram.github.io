@@ -16,6 +16,27 @@ format:
 
 ## {{< iconify fa6-regular:pen-to-square >}} &nbsp; Work in progress
 
+### Manifold learning - geometry parametrisation of lungs
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+![](Resources/Videos/Lungs_digital_twin4.mp4){ width="70%" loop="true" autoplay=true fig-align="center"}
+
+:::
+
+::: {.column width="50%"}
+
+:::: {style='margin-top: 3em;'}
+::::
+
+With the goal of building a digital twin of the lung, a key requirement is to be able to handle a wide variety of patient's geometries without running new costly computations. To that aims, reducing the dimensionality in which the shape variety of shape is expressed appears crucial. Staring from a generic lung shapes, the variety of encoutered shapes is expressed as a familly of mapping from the generic shape to each specific patient morphology.
+
+:::
+
+::::
+
 ### Hybridising standard reduced-order modelling methods with interpretable sparse neural networks for real-time patient specific lung simulations
 
 **Authors:**  <a href="index.qmd">A. Daby-seesaram<a>, <a href="https://m3disim.saclay.inria.fr/people/katerina-skardova/">K. Škardová<a>, <a href="https://mgenet.github.io/">M. Genet<a>  
