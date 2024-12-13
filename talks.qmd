@@ -58,7 +58,7 @@ format:
 
 ::: {.button}
 
-[<iconify-icon icon="fa-solid:chalkboard" aria-label="Slides"></iconify-icon> Slides](Resources/Documents/Presentations/RICAM/TODO.html){.button target="_blank"}
+[<iconify-icon icon="fa-solid:chalkboard" aria-label="Slides"></iconify-icon> Slides](Resources/Documents/Presentations/RICAM/main.html){.button target="_blank"}
 
 :::
 
@@ -112,7 +112,7 @@ format:
 
 ::: {.button}
 
-[<iconify-icon icon="fa-solid:chalkboard" aria-label="Slides"></iconify-icon> Slides](Resources/Documents/Presentations/VPH2024/TODO.html){.button target="_blank"}
+[<iconify-icon icon="fa-solid:chalkboard" aria-label="Slides"></iconify-icon> Slides](Resources/Documents/Presentations/VPH2024/main.html){.button target="_blank"}
 
 :::
 
