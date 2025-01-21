@@ -74,6 +74,17 @@ format:
 
 :::
 
+
+::: {.column width="85pt"}
+
+::: {.button}
+
+[<iconify-icon icon="fa-regular:file" aria-label="Code"></iconify-icon> Abstract](https://www.oeaw.ac.at/ricam/detail/event/group-seminar-computational-methods-for-pdes-11){.button target="_blank"}
+
+:::
+
+:::
+
 ::::
 
 :::
