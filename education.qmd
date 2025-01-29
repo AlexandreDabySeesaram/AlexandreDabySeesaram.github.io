@@ -14,7 +14,7 @@ format:
 * **2020 - 2023** <a href="Resources/Documents/PhD_Thesis.pdf">PhD</a> in Computational mechanics 
   * **Title** [Towards an Optimal Multi-query Framework based on Model-order Reduction for Non-linear Dynamics](Resources/Documents/PhD_Thesis.pdf)
   * **At** [Laboratoire de Mécanique Paris-Saclay](https://lmps.ens-paris-saclay.fr/en/presentation) (UMR 9026, Université Paris-Saclay, CentraleSupélec, [ENS Paris-Saclay](https://ens-paris-saclay.fr/en), CNRS)  
-  * **Supervision** [Pr. David Néron](https://lmps.ens-paris-saclay.fr/en/node/1215)
+  * **Supervision** [Pr. David Néron](https://lmps.ens-paris-saclay.fr/en/node/1215), Dr. A. Fau, Dr. PÉ Charbonnel
 * **2019 - 2020** Master of science (M2R) - [École Normale Supérieure Paris-Saclay](https://ens-paris-saclay.fr/en) / [CentraleSupélec](https://www.centralesupelec.fr/en) (MS2SC)  
   * **Thesis** Model reduction in non-linear dynamics for visco-plasticity problems
   * **At** [Laboratoire de Mécanique Paris-Saclay](https://lmps.ens-paris-saclay.fr/en/presentation) (UMR 9026, Université Paris-Saclay, CentraleSupélec, [ENS Paris-Saclay](https://ens-paris-saclay.fr/en), CNRS)  
