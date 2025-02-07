@@ -1,4 +1,9 @@
-<model-viewer src="lung_nonflipped.glb" ar ar-modes="scene-viewer webxr quick-look" camera-controls tone-mapping="neutral" poster="poster.webp" shadow-intensity="0.35" shadow-softness="1" exposure="0.79" camera-orbit="4.628deg 101deg 54.63m" field-of-view="30deg" auto-rotate>
+<model-viewer src="Lungs_LL_Inverted_RL_NonInverted.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral" poster="poster.webp" shadow-intensity="1.33" camera-orbit="173.7deg 81.78deg 6.515m" field-of-view="30deg" auto-rotate exposure="0.62">
+    <button class="Hotspot" slot="hotspot-1" data-position="-0.8184790388448595m -0.0321828500967391m -0.8610020719018683m" data-normal="-0.28390831089996554m 0.23131470193568243m -0.9305318799860298m" data-visibility-attribute="visible">
+        <div class="HotspotAnnotation">Left lung</div>
+    </button><button class="Hotspot" slot="hotspot-2" data-position="0.6534892525396154m 0.007311898550674656m -0.7524544861608939m" data-normal="0.5117217086691623m 0.3018112928340044m -0.8043947018687903m" data-visibility-attribute="visible">
+        <div class="HotspotAnnotation">Right lung</div>
+    </button>
     <div class="progress-bar hide" slot="progress-bar">
         <div class="update-bar"></div>
     </div>
