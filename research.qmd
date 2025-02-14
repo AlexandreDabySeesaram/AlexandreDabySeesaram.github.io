@@ -40,6 +40,28 @@ To achieve the goal of building a digital twin of the lung, a key requirement is
 
 ::::
 
+
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+![](Resources/Videos/tracking_3D_lung_raw.mp4){ width="70%" loop="true" autoplay=true fig-align="center"}
+
+:::
+
+::: {.column width="50%"}
+
+The first step to get a parametrised model of the lung is to register the geometry of the lungs. We encode the geometry of lungs throught displacement fields from generic shapes to deformed meshes closely matching the shape of each patient's lungs. The mapping $\phi$ minimises
+
+$$ \int_{\Omega} I\circ\phi\left(\underline{X}\right) \mathrm{det}\left(\underline{\underline{F}}\right) \mathrm{d}\Omega $$ with $I$ the signed segmented scan of the patient.
+
+:::
+
+::::
+
+
+
 ### Hybridising standard reduced-order modelling methods with interpretable sparse neural networks for real-time patient specific lung simulations
 
 **Authors:**  <a href="index.qmd">A. Daby-seesaram<a>, <a href="https://m3disim.saclay.inria.fr/people/katerina-skardova/">K. Škardová<a>, <a href="https://mgenet.github.io/">M. Genet<a>  

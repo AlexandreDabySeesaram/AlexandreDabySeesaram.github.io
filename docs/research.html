@@ -71,6 +71,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="styles.css">
 <meta property="og:title" content="Research – Alexandre Daby-Seesaram">
@@ -203,6 +232,18 @@ ul.task-list li input[type="checkbox"] {
 
 </div>
 <p>To achieve the goal of building a digital twin of the lung, a key requirement is the ability to accommodate a wide variety of patient geometries without the need for costly new computations. To this end, reducing the dimensionality in which the variability of shapes is expressed is crucial. Starting from a generic lung shape, the diversity of encountered morphologies is represented as a family of mappings from the generic shape to each patient’s specific anatomy on which reduced-order modelling techniques are used.</p>
+</div>
+</div>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><video src="Resources/Videos/tracking_3D_lung_raw.mp4" class="img-fluid quarto-figure quarto-figure-center" style="width:70.0%" loop="true" autoplay="true" controls=""><a href="Resources/Videos/tracking_3D_lung_raw.mp4">Video</a></video></p>
+</figure>
+</div>
+</div><div class="column" style="width:50%;">
+<p>The first step to get a parametrised model of the lung is to register the geometry of the lungs. We encode the geometry of lungs throught displacement fields from generic shapes to deformed meshes closely matching the shape of each patient’s lungs. The mapping <span class="math inline">\(\phi\)</span> minimises</p>
+<p><span class="math display">\[ \int_{\Omega} I\circ\phi\left(\underline{X}\right) \mathrm{det}\left(\underline{\underline{F}}\right) \mathrm{d}\Omega \]</span> with <span class="math inline">\(I\)</span> the signed segmented scan of the patient.</p>
 </div>
 </div>
 </section>
