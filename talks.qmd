@@ -28,7 +28,7 @@ format:
 
 ::: {.button}
 
-[<iconify-icon icon="fa-solid:code" aria-label="Code"></iconify-icon> Code](https://pypi.org/project/NeuROM-Py/){.button target="_blank"}
+[<iconify-icon icon="fa-solid:code" aria-label="Code"></iconify-icon> Code 1](https://pypi.org/project/NeuROM-Py/){.button target="_blank"}
 
 
 :::
@@ -39,6 +39,7 @@ format:
 
 ::: {.button}
 
+[<iconify-icon icon="fa-solid:code" aria-label="Code"></iconify-icon> Code 2](https://github.com/AlexandreDabySeesaram/shape_registration){.button target="_blank"}
 
 :::
 
