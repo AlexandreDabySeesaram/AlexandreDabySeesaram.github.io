@@ -22,6 +22,30 @@ format:
 
 **Authors:** [A. Daby-Seesaram](index.qmd), [K. Škardová](https://m3disim.saclay.inria.fr/people/katerina-skardova), [M. Genet](https://mgenet.github.io/)
 
+:::: {.columns}
+
+::: {.column width="80pt"}
+
+::: {.button}
+
+[<iconify-icon icon="fa-solid:code" aria-label="Code"></iconify-icon> Code](https://pypi.org/project/NeuROM-Py/){.button target="_blank"}
+
+
+:::
+
+:::
+
+::: {.column width="80pt"}
+
+::: {.button}
+
+
+:::
+
+:::
+
+::::
+
 :::::
 
 
