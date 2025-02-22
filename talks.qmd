@@ -28,6 +28,16 @@ format:
 
 ::: {.button}
 
+[<iconify-icon icon="fa-solid:chalkboard" aria-label="Slides"></iconify-icon> Slides](Resources/Documents/Presentations/DTE/main.html){.button target="_blank"}
+
+:::
+
+:::
+
+::: {.column width="80pt"}
+
+::: {.button}
+
 [<iconify-icon icon="fa-solid:code" aria-label="Code"></iconify-icon> Code 1](https://alexandredabyseesaram.github.io/FENNI-II-PGD-paper-demo/){.button target="_blank"}
 
 
