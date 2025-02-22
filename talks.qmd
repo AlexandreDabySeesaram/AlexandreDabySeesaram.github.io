@@ -14,51 +14,6 @@ format:
 ::::
 
 
-::::: {.talk-card}
-### DTE & AICOMAS 2025 ([website](https://dte_aicomas_2025.iacm.info/me/contributions))
-*Paris, France, 17th - 21st of February 2025*
-
-**Title:** Finite Element Neural Network Interpolation: Hybridisation with the Proper Generalised Decomposition for Surrogate Modelling 
-
-**Authors:** [A. Daby-Seesaram](index.qmd), [K. Škardová](https://m3disim.saclay.inria.fr/people/katerina-skardova), [M. Genet](https://mgenet.github.io/)
-
-:::: {.columns}
-
-::: {.column width="80pt"}
-
-::: {.button}
-
-[<iconify-icon icon="fa-solid:chalkboard" aria-label="Slides"></iconify-icon> Slides](Resources/Documents/Presentations/DTE/main.html){.button target="_blank"}
-
-:::
-
-:::
-
-::: {.column width="80pt"}
-
-::: {.button}
-
-[<iconify-icon icon="fa-solid:code" aria-label="Code"></iconify-icon> Code 1](https://alexandredabyseesaram.github.io/FENNI-II-PGD-paper-demo/){.button target="_blank"}
-
-
-:::
-
-:::
-
-::: {.column width="80pt"}
-
-::: {.button}
-
-[<iconify-icon icon="fa-solid:code" aria-label="Code"></iconify-icon> Code 2](https://github.com/AlexandreDabySeesaram/shape_registration){.button target="_blank"}
-
-:::
-
-:::
-
-::::
-
-:::::
-
 
 ## {{< iconify fa6-solid:clock-rotate-left >}} &nbsp; Past talks
 
@@ -129,20 +84,50 @@ format:
 :::: {style='margin-top: 2em;'}
 ::::
 
-<!-- +----------------------------------------+-------------------------------------------------------------------------------------+
-| Virtual Physiological Human (VPH) 2024 | Stuttgart, Germany, 3rd - 6th of September 2024                                     |
-+========================================+=====================================================================================+
-| Title                                  | Hybridising standard ROM methods with interpretable sparse neural networks          |
-|                                        |for real-time patient specific lung simulations                                      |
-+----------------------------------------+-------------------------------------------------------------------------------------+
-| Authors                                | <a href="index.qmd">A. Daby-seesaram<a>,                                            |
-|                                        | <a href="https://m3disim.saclay.inria.fr/people/katerina-skardova/">K. Škardová<a>, |
-|                                        | <a href="https://mgenet.github.io/">M. Genet<a>                                     |
-+----------------------------------------+-------------------------------------------------------------------------------------+
-| Link                                   | [Slides](Resources/Documents/Presentations/VPH2024/TODO.html),                      |
-|                                        |                                [Code](https://pypi.org/project/NeuROM-Py/)          |
-+----------------------------------------+-------------------------------------------------------------------------------------+ -->
+::::: {.talk-card}
+### DTE & AICOMAS 2025 ([website](https://dte_aicomas_2025.iacm.info/me/contributions))
+*Paris, France, 17th - 21st of February 2025*
 
+**Title:** Finite Element Neural Network Interpolation: Hybridisation with the Proper Generalised Decomposition for Surrogate Modelling 
+
+**Authors:** [A. Daby-Seesaram](index.qmd), [K. Škardová](https://m3disim.saclay.inria.fr/people/katerina-skardova), [M. Genet](https://mgenet.github.io/)
+
+:::: {.columns}
+
+::: {.column width="80pt"}
+
+::: {.button}
+
+[<iconify-icon icon="fa-solid:chalkboard" aria-label="Slides"></iconify-icon> Slides](Resources/Documents/Presentations/DTE/main.html){.button target="_blank"}
+
+:::
+
+:::
+
+::: {.column width="80pt"}
+
+::: {.button}
+
+[<iconify-icon icon="fa-solid:code" aria-label="Code"></iconify-icon> Code 1](https://alexandredabyseesaram.github.io/FENNI-II-PGD-paper-demo/){.button target="_blank"}
+
+
+:::
+
+:::
+
+::: {.column width="80pt"}
+
+::: {.button}
+
+[<iconify-icon icon="fa-solid:code" aria-label="Code"></iconify-icon> Code 2](https://github.com/AlexandreDabySeesaram/shape_registration){.button target="_blank"}
+
+:::
+
+:::
+
+::::
+
+:::::
 
 ::: {.talk-card}
 ### Virtual Physiological Human (VPH) 2024 ([website](https://vph-conference.org/))
