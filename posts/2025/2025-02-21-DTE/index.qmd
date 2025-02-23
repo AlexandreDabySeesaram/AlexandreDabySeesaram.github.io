@@ -1,5 +1,5 @@
 ---
-title: "DTE-AICOMS 2025"
+title: "DTE-AICOMAS 2025"
 date: "2025-02-21"
 categories: 
   - "News"
