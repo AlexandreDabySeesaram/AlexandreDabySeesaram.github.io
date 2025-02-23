@@ -1,5 +1,6 @@
 ---
 title: Teaching activities
+bibliography: Resources/biblio_web.bib
 image: Resources/Images/Book_cover.jpg
 toc: false
 # about:
