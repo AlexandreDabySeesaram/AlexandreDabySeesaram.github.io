@@ -15,7 +15,31 @@
 <link>https://alexandredabyseesaram.github.io/news.html</link>
 </image>
 <generator>quarto-1.5.56</generator>
-<lastBuildDate>Mon, 21 Oct 2024 22:00:00 GMT</lastBuildDate>
+<lastBuildDate>Thu, 20 Feb 2025 23:00:00 GMT</lastBuildDate>
+<item>
+  <title>DTE-AICOMS 2025</title>
+  <link>https://alexandredabyseesaram.github.io/posts/2025/2025-02-21-DTE/</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>This week, my colleagues <a href="https://m3disim.saclay.inria.fr/people/katerina-skardova">Kateřina Škardová</a> and <a href="https://mgenet.github.io/">Martin Genet</a>, and I attended the <a href="https://dte_aicomas_2025.iacm.info/">2025 DTE-AICOMAS</a> conference. <a href="https://m3disim.saclay.inria.fr/people/katerina-skardova">Kateřina Škardová</a> and I both presented our towards getting a real-time digital twin of the lungs <span class="citation" data-cites="daby-seesaramFiniteElementNeural2024 skardovaFiniteElementNeural2024">[@daby-seesaramFiniteElementNeural2024;@skardovaFiniteElementNeural2024]</span>.</p>
+<p>Meanwhile, <a href="https://mgenet.github.io/">Martin Genet</a> chaired the mini-symposium <a href="https://dte_aicomas_2025.iacm.info/event/area/8d4fc12b-710a-11ef-a6b7-000c29ddfc0c">MS020 Digital twins of living systems: theoretical, implementation &amp; application challenges</a> he co-organised.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://alexandredabyseesaram.github.io/posts/2025/2025-02-21-DTE/DTE_3.jpeg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:75.0%"></p>
+</figure>
+</div>
+
+
+
+<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
+  <category>News</category>
+  <guid>https://alexandredabyseesaram.github.io/posts/2025/2025-02-21-DTE/</guid>
+  <pubDate>Thu, 20 Feb 2025 23:00:00 GMT</pubDate>
+  <media:content url="https://alexandredabyseesaram.github.io/posts/2025/2025-02-21-DTE/DTE_1.png" medium="image" type="image/png" height="73" width="144"/>
+</item>
 <item>
   <title>Invited speaker at the RICAM of the Austrian Academy of Sciences</title>
   <link>https://alexandredabyseesaram.github.io/posts/2024/2024-10-22-RICAM/</link>
@@ -26,7 +50,11 @@
 
 <p>Today I was invited to give a seminar at the Johann Radon Institute for Computational and Applied Mathematics (<a href="https://www.oeaw.ac.at/ricam/">RICAM</a>) of the Austrian Academy of Sciences, in the Computational Methods for PDEs group. I had the opportunity to present our work on reduced-order modelling and recent hybridisation of the PGD with the Finite Element Neural Network Interpolation (FENNI) framework <span class="citation" data-cites="daby-seesaramFiniteElementNeural2024 skardovaFiniteElementNeural2024">(Daby-Seesaram, Škardová, and Genet 2024; Škardová, Daby-Seesaram, and Genet 2024)</span>.</p>
 <p>The shown exemples used our open-source code, <a href="https://pypi.org/project/NeuROM-Py/">NeuROM</a></p>
-<!-- ![](RICAM.jpeg){width="50%" fig-align="center"} -->
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://alexandredabyseesaram.github.io/posts/2024/2024-10-22-RICAM/RICAM.jpeg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:50.0%"></p>
+</figure>
+</div>
 
 
 

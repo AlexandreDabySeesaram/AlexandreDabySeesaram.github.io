@@ -14,4 +14,4 @@ Today I was invited to give a seminar at the Johann Radon Institute for Computat
 The shown exemples used our open-source code, [NeuROM](https://pypi.org/project/NeuROM-Py/)
 
 
-<!-- ![](RICAM.jpeg){width="50%" fig-align="center"} -->
+![](RICAM.jpeg){width="50%" fig-align="center"}
