@@ -74,7 +74,7 @@
     "href": "posts/2025/2025-02-21-DTE/index.html",
     "title": "DTE-AICOMAS 2025",
     "section": "",
-    "text": "This week, my colleagues Kateřina Škardová and Martin Genet, and I attended the 2025 DTE-AICOMAS conference. Kateřina Škardová and I both presented our towards getting a real-time digital twin of the lungs [@daby-seesaramFiniteElementNeural2024;@skardovaFiniteElementNeural2024].\nMeanwhile, Martin Genet chaired the mini-symposium MS020 Digital twins of living systems: theoretical, implementation & application challenges he co-organised.\n\n\n\n\n\n\n\n\n Back to top"
+    "text": "This week, my colleagues Kateřina Škardová and Martin Genet, and I attended the 2025 DTE-AICOMAS conference. Kateřina Škardová and I both presented our towards getting a real-time digital twin of the lungs (Daby-Seesaram, Škardová, and Genet 2024; Škardová, Daby-Seesaram, and Genet 2024).\nMeanwhile, Martin Genet chaired the mini-symposium MS020 Digital twins of living systems: theoretical, implementation & application challenges he co-organised.\n\n\n\n\n\n\n\n\n\n Back to topReferences\n\nDaby-Seesaram, Alexandre, Kateřina Škardová, and Martin Genet. 2024. “Finite Element Neural Network Interpolation. Part II: Hybridisation with the Proper Generalised Decomposition for Non-Linear Surrogate Modelling.” December 7, 2024. https://doi.org/10.48550/arXiv.2412.05714.\n\n\nŠkardová, Kateřina, Alexandre Daby-Seesaram, and Martin Genet. 2024. “Finite Element Neural Network Interpolation. Part I: Interpretable and Adaptive Discretization for Solving PDEs.” December 7, 2024. https://doi.org/10.48550/arXiv.2412.05719."
   },
   {
     "objectID": "posts/2022/2022-06-09-ECCOMAS/index.html",

@@ -21,7 +21,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -176,7 +196,7 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>This week, my colleagues <a href="https://m3disim.saclay.inria.fr/people/katerina-skardova">Kateřina Škardová</a> and <a href="https://mgenet.github.io/">Martin Genet</a>, and I attended the <a href="https://dte_aicomas_2025.iacm.info/">2025 DTE-AICOMAS</a> conference. <a href="https://m3disim.saclay.inria.fr/people/katerina-skardova">Kateřina Škardová</a> and I both presented our towards getting a real-time digital twin of the lungs <span class="citation" data-cites="daby-seesaramFiniteElementNeural2024 skardovaFiniteElementNeural2024">[@daby-seesaramFiniteElementNeural2024;@skardovaFiniteElementNeural2024]</span>.</p>
+<p>This week, my colleagues <a href="https://m3disim.saclay.inria.fr/people/katerina-skardova">Kateřina Škardová</a> and <a href="https://mgenet.github.io/">Martin Genet</a>, and I attended the <a href="https://dte_aicomas_2025.iacm.info/">2025 DTE-AICOMAS</a> conference. <a href="https://m3disim.saclay.inria.fr/people/katerina-skardova">Kateřina Škardová</a> and I both presented our towards getting a real-time digital twin of the lungs <span class="citation" data-cites="daby-seesaramFiniteElementNeural2024a skardovaFiniteElementNeural2024a">(<a href="#ref-daby-seesaramFiniteElementNeural2024a" role="doc-biblioref">Daby-Seesaram, Škardová, and Genet 2024</a>; <a href="#ref-skardovaFiniteElementNeural2024a" role="doc-biblioref">Škardová, Daby-Seesaram, and Genet 2024</a>)</span>.</p>
 <p>Meanwhile, <a href="https://mgenet.github.io/">Martin Genet</a> chaired the mini-symposium <a href="https://dte_aicomas_2025.iacm.info/event/area/8d4fc12b-710a-11ef-a6b7-000c29ddfc0c">MS020 Digital twins of living systems: theoretical, implementation &amp; application challenges</a> he co-organised.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -186,7 +206,15 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
+
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-daby-seesaramFiniteElementNeural2024a" class="csl-entry" role="listitem">
+Daby-Seesaram, Alexandre, Kateřina Škardová, and Martin Genet. 2024. <span>“Finite <span>Element Neural Network Interpolation</span>. <span>Part II</span>: <span>Hybridisation</span> with the <span>Proper Generalised Decomposition</span> for Non-Linear Surrogate Modelling.”</span> December 7, 2024. <a href="https://doi.org/10.48550/arXiv.2412.05714">https://doi.org/10.48550/arXiv.2412.05714</a>.
+</div>
+<div id="ref-skardovaFiniteElementNeural2024a" class="csl-entry" role="listitem">
+Škardová, Kateřina, Alexandre Daby-Seesaram, and Martin Genet. 2024. <span>“Finite <span>Element Neural Network Interpolation</span>. <span>Part I</span>: <span>Interpretable</span> and <span>Adaptive Discretization</span> for <span>Solving PDEs</span>.”</span> December 7, 2024. <a href="https://doi.org/10.48550/arXiv.2412.05719">https://doi.org/10.48550/arXiv.2412.05719</a>.
+</div>
+</div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
