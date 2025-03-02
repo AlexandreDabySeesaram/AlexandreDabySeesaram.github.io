@@ -15,7 +15,30 @@
 <link>https://alexandredabyseesaram.github.io/news.html</link>
 </image>
 <generator>quarto-1.5.56</generator>
-<lastBuildDate>Thu, 20 Feb 2025 23:00:00 GMT</lastBuildDate>
+<lastBuildDate>Sat, 01 Mar 2025 23:00:00 GMT</lastBuildDate>
+<item>
+  <title>New versionis out</title>
+  <link>https://alexandredabyseesaram.github.io/posts/2025/2025-03-02-NeuROM/</link>
+  <description><![CDATA[ 
+
+
+
+
+<p><a href="https://pypi.org/project/NeuROM-Py/#description">NeuROM</a> v4.0.0 is out today! You can now solve parametrised PDEs on 3D geometries. As always, it’s open source—check it out!</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><video src="../../../Resources/Videos/NeuROM_3D.mp4" class="img-fluid quarto-figure quarto-figure-center" style="width:50.0%" loop="true" autoplay="true" controls=""><a href="../../../Resources/Videos/NeuROM_3D.mp4">Video</a></video></p>
+</figure>
+</div>
+
+
+
+<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
+  <category>News</category>
+  <guid>https://alexandredabyseesaram.github.io/posts/2025/2025-03-02-NeuROM/</guid>
+  <pubDate>Sat, 01 Mar 2025 23:00:00 GMT</pubDate>
+  <media:content url="https://alexandredabyseesaram.github.io/posts/2025/2025-03-02-NeuROM/Logo.png" medium="image" type="image/png" height="71" width="144"/>
+</item>
 <item>
   <title>DTE-AICOMAS 2025</title>
   <link>https://alexandredabyseesaram.github.io/posts/2025/2025-02-21-DTE/</link>
