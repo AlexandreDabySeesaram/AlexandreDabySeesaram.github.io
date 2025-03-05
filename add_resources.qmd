@@ -59,6 +59,18 @@ The reduced-order modelling code used to create surrogate models based on an hyb
 ::::
 
 
+:::: {.columns}
+
+::: {.column width="50%"}
+![](Resources/Videos/NeuROM_3D.mp4){ width="70%" loop="true" autoplay=true fig-align="center"}
+:::
+
+::: {.column width="50%"}
+![](Resources/Videos/NeuROM_3D_gravity_bis.mov){ width="100%" loop="true" autoplay=true fig-align="center"}
+:::
+
+::::
+
 
 ## Illustrations
 
