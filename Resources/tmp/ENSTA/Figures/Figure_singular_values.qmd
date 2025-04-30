@@ -1,0 +1,91 @@
+```{python}
+#| label: fig-singular-values
+#| fig-cap: "lung mappings separability"
+
+# import numpy as np
+# import pandas as pd
+
+
+
+import pandas as pd
+import plotly.graph_objects as go
+
+data = pd.read_csv("Figures/Figure_Singular_values.csv")
+
+x = data['N']
+y_RL = data['SV_RL']
+y_LL = data['SV_LL']
+y_full_RL = data['SV_full_RL']
+y_full_LL = data['SV_full_LL']
+
+fig = go.Figure()
+color_RL = 'first_color'    # Corresponds to 'BleuLMS' in TikZ
+color_LL = 'second_color'   # Corresponds to 'RougeLMS' in TikZ
+
+# Add a trace with a legend name
+fig.add_trace(go.Scatter(   x=x, 
+                            y=y_RL, 
+                            mode='lines', 
+                            name='Right lung',  
+                             line=dict(
+                        color='#01426a',
+                        width=2.5 )
+                    ))
+
+fig.add_trace(go.Scatter(   x=x, 
+                            y=y_LL, 
+                            mode='lines', 
+                            name='Left lung',  
+                             line=dict(
+                        color='#CE0037',
+                        width=2.5 )
+                    ))
+
+fig.add_trace(go.Scatter(   x=x, 
+                            y=y_full_RL, 
+                            mode='lines', 
+                            name='RL full kinematics',  
+                             line=dict(
+                        color='#01426a',
+                        width=2.5,
+                        dash= 'dot' )
+                    ))
+
+fig.add_trace(go.Scatter(   x=x, 
+                            y=y_full_LL, 
+                            mode='lines', 
+                            name='LL full kinematics',  
+                             line=dict(
+                        color='#CE0037',
+                        width=2.5,
+                        dash= 'dot' )
+                    ))
+
+fig.update_layout(
+        plot_bgcolor='rgba(0,0,0,0)',  # Remove background color
+    width=450, 
+    height=255,  
+    # title='Singular values decay',
+    xaxis=dict(title='Modes',
+        showgrid=True,
+        gridcolor='lightgray'),
+    yaxis=dict(
+        title='Singular values',
+
+        showgrid=True,
+        gridcolor='lightgray'
+    ),
+
+    font=dict(
+        size=14,  
+)   
+
+)
+
+fig.update_yaxes(type="log")
+
+fig.show()
+
+
+
+```
