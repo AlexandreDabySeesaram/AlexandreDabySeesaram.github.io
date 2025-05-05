@@ -27,3 +27,7 @@
 .light {
   color: #6e7b7d; /* Text color */
 }
+
+.important {
+  color: rgb(169, 32, 33); /* Text color */
+}
