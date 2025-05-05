@@ -46,6 +46,7 @@ website:
 
 format:
   html:
+    email-obfuscation: javascript
     theme:
       light: [flatly,style_site.scss]
       dark: darkly

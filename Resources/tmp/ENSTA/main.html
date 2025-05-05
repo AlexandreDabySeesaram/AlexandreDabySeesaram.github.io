@@ -520,16 +520,16 @@ Alexandre Daby-Seesaram <sup><span style="color:#a6ce39ff"><a href="https://orci
 </div>
 <div class="mybox-body">
 <ul>
-<li>L3 Pluridisciplinaire</li>
-<li>M1 Mécanique des Matériaux et des Structures
+<li><strong>L3</strong> Pluridisciplinaire</li>
+<li><strong>M1</strong> Mécanique des Matériaux et des Structures
 <ul>
 <li>Coloration <strong>numérique</strong></li>
 </ul></li>
-<li>M2 Formation à l’Enseignement Supérieur
+<li><strong>M2E</strong> Formation à l’Enseignement Supérieur
 <ul>
 <li><strong>Agrégation</strong></li>
 </ul></li>
-<li>M2 Modélisation et Simulation en Mécanique des Structures et Systèmes Couplés (MS2SC)</li>
+<li><strong>M2R</strong> Modélisation et Simulation en Mécanique des Structures et Systèmes Couplés (MS2SC)</li>
 </ul>
 </div>
 </div>
@@ -661,7 +661,7 @@ Alexandre Daby-Seesaram <sup><span style="color:#a6ce39ff"><a href="https://orci
 </div>
 <div class="mybox-body">
 <ul>
-<li>Bases mécanique
+<li>Bases mécaniques
 <ul>
 <li>MMC</li>
 <li>Élasticité</li>
@@ -675,7 +675,6 @@ Alexandre Daby-Seesaram <sup><span style="color:#a6ce39ff"><a href="https://orci
 </ul>
 </div>
 </div>
-</div><div class="column" style="width:50%;">
 <div class="mybox">
 <div class="mybox-header">
 <p>Master BME</p>
@@ -695,9 +694,13 @@ Alexandre Daby-Seesaram <sup><span style="color:#a6ce39ff"><a href="https://orci
 </ul>
 </div>
 </div>
-</div></div>
-<iframe src="https://alexandredabyseesaram.github.io/Non-linear_ROM/kPCA_v_SVD.html" title="courses" width="100%" height="300">
+</div><div class="column" style="width:50%;">
+<div style="margin-top: 1em;">
+
+</div>
+<iframe src="https://alexandredabyseesaram.github.io/Non-linear_ROM/kPCA_v_SVD.html" title="courses" width="100%" height="600">
 </iframe>
+</div></div>
 </section></section>
 <section>
 <section id="activités-de-recherche" class="title-slide slide level1 center">
@@ -745,7 +748,7 @@ Alexandre Daby-Seesaram <sup><span style="color:#a6ce39ff"><a href="https://orci
 <ul>
 <li>Individualisation et simulation en temps réel d’un modèle pulmonaire par application de techniques de <strong>réduction de modèles</strong></li>
 <li>des outils théoriques à l’<strong>application clinique</strong> pour des patients atteints de fibrose pulmonaire idiopathique.</li>
-<li>Encadrement d’un stage de M2 en collaboration avec CentraleSupélec</li>
+<li><strong>Encadrement</strong> d’un stage de M2 en collaboration avec <strong>CentraleSupélec</strong> (Geeps)</li>
 </ul>
 </div>
 </div>
@@ -880,10 +883,10 @@ Alexandre Daby-Seesaram <sup><span style="color:#a6ce39ff"><a href="https://orci
 </ul>
 </div>
 </div>
-</section>
-<section id="proper-generalised-decomposition-pgd" class="slide level2" data-auto-animate="true">
-<h2 data-id="quarto-animate-title">Proper Generalised Decomposition (PGD)</h2>
-<p><span class="math display">\[
+<!-- 
+## Proper Generalised Decomposition (PGD){auto-animate=true}
+
+$$
 \definecolor{BleuLMS}{RGB}{1, 66, 106}
 \definecolor{VioletLMS}{RGB}{77, 22, 84}
 \definecolor{TealLMS}{RGB}{0, 103, 127}
@@ -891,63 +894,69 @@ Alexandre Daby-Seesaram <sup><span style="color:#a6ce39ff"><a href="https://orci
 \definecolor{BleuLMS2}{RGB}{0, 169, 206}
 \definecolor{BleuLMPS}{RGB}{105, 144, 255}
 \definecolor{accentcolor}{RGB}{1, 66, 106}
-\definecolor{GreenLMS}{RGB}{0,103,127}
-\definecolor{LGreenLMS}{RGB}{67,176,42}
-\definecolor{RougeLMS}{RGB}{206,0,55}
-\]</span></p>
+\definecolor{GreenLMS}{RGB}{0,103,127} 
+\definecolor{LGreenLMS}{RGB}{67,176,42} 
+\definecolor{RougeLMS}{RGB}{206,0,55} 
+$$
+
+PGD: [@chinestaShortReviewModel2011;@ladevezeFamilleDalgorithmesMecanique1985]
+
+::: columns
+
+::: {.column  width="50%"}
+
+:::{.mybox}
+
+::::{.mybox-header}
+Decomposition tensorielle
+::::
+
+::::{.mybox-body}
+
+* Separation de variables
+* Faible rang $m$
+* $\textcolor{BleuLMPS}{\overline{\vect{u}}_i(\vect{x})}$ modes spatiaux
+* $\textcolor{LGreenLMS}{\lambda_i^j(\mu^j)}$ modes paramétriques
+
+::: {.r-stack}
+::: {data-id="1" }
+ $$\textcolor{VioletLMS}{\vect{u}}\left(\textcolor{BleuLMPS}{\vect{x}}, \textcolor{LGreenLMS}{\mu}\right) = \sum\limits_{i=0}^{m}\textcolor{BleuLMPS}{\overline{u}_i\left(x\right)}\textcolor{LGreenLMS}{\lambda_i\left(\mu\right)}$$
+:::
+:::
+
+:::
+
+:::
+
+:::
+
+::: {.column  width="50%"}
+
+**Discretised problem**
+
+::: {.r-stack}
+::: {data-id="2" }
+![2D PGD](Figures/PGD_2D.svg){height=200}
+:::
+:::
+::: {.r-stack}
+::: {data-id="3" }
+* De $N\times N_{\mu}$ inconnues à $m\times\left(N + N_{\mu}\right)$
+  * *e.g.* $10000 \times 1000 = 1e7 \gg 5\left( 10 000+ 1000 \right) = 5.5e4$
+:::
+:::
+:::
+
+::: -->
+</section>
+<section id="proper-generalised-decomposition-pgd" class="slide level2">
+<h2>Proper Generalised Decomposition (PGD)</h2>
 <p>PGD: <span class="citation" data-cites="chinestaShortReviewModel2011 ladevezeFamilleDalgorithmesMecanique1985">(<a href="#/references" role="doc-biblioref" onclick="">Chinesta et al., 2011</a>; <a href="#/references" role="doc-biblioref" onclick="">Ladeveze, 1985</a>)</span></p>
 <div class="columns">
 <div class="column" style="width:50%;">
 <div class="mybox">
 <div class="mybox-header">
 <p>Decomposition tensorielle</p>
-</div>
-<div class="mybox-body">
-<ul>
-<li>Separation de variables</li>
-<li>Faible rang <span class="math inline">\(m\)</span></li>
-<li><span class="math inline">\(\textcolor{BleuLMPS}{\overline{\boldsymbol{u}}_i(\boldsymbol{x})}\)</span> modes spatiaux</li>
-<li><span class="math inline">\(\textcolor{LGreenLMS}{\lambda_i^j(\mu^j)}\)</span> modes paramétriques</li>
-</ul>
-<div class="r-stack">
-<div data-id="1">
-<p><span class="math display">\[\textcolor{VioletLMS}{\boldsymbol{u}}\left(\textcolor{BleuLMPS}{\boldsymbol{x}}, \textcolor{LGreenLMS}{\mu}\right) = \sum\limits_{i=0}^{m}\textcolor{BleuLMPS}{\overline{u}_i\left(x\right)}\textcolor{LGreenLMS}{\lambda_i\left(\mu\right)}\]</span></p>
-</div>
-</div>
-</div>
-</div>
-</div><div class="column" style="width:50%;">
-<p><strong>Discretised problem</strong></p>
-<div class="r-stack">
-<div data-id="2">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="Figures/PGD_2D.svg" height="200"></p>
-<figcaption>2D PGD</figcaption>
-</figure>
-</div>
-</div>
-</div>
-<div class="r-stack">
-<div data-id="3">
-<ul>
-<li>De <span class="math inline">\(N\times N_{\mu}\)</span> inconnues à <span class="math inline">\(m\times\left(N + N_{\mu}\right)\)</span>
-<ul>
-<li><em>e.g.</em> <span class="math inline">\(10000 \times 1000 = 1e7 \gg 5\left( 10 000+ 1000 \right) = 5.5e4\)</span></li>
-</ul></li>
-</ul>
-</div>
-</div>
-</div></div>
-</section>
-<section id="proper-generalised-decomposition-pgd-1" class="slide level2" data-auto-animate="true" data-visibility="uncounted">
-<h2 data-id="quarto-animate-title">Proper Generalised Decomposition (PGD)</h2>
-<p>PGD: <span class="citation" data-cites="chinestaShortReviewModel2011 ladevezeFamilleDalgorithmesMecanique1985">(<a href="#/references" role="doc-biblioref" onclick="">Chinesta et al., 2011</a>; <a href="#/references" role="doc-biblioref" onclick="">Ladeveze, 1985</a>)</span></p>
-<div class="columns">
-<div class="column" style="width:50%;">
-<div class="mybox">
-<div class="mybox-header">
-<p>Decomposition tensorielle - extra-coordnnées</p>
 </div>
 <div class="mybox-body">
 <ul>
@@ -1029,10 +1038,10 @@ $$ -->
 <ul>
 <li>pour chaque niveau de chargement un grand nombre de calculs doivent être réalisés</li>
 </ul></li>
-<li>Chaque calcul est couteux car fortement non-linéaire
+<li>Chaque calcul est couteux car fortement <strong>non-linéaire</strong>
 <ul>
 <li>Edommagement ductile piloté par la plasticité</li>
-<li>Écrouissage cinématique et isotrop linéaires</li>
+<li>Écrouissages cinématique et isotrope linéaires</li>
 </ul></li>
 </ul>
 </div>
@@ -1044,11 +1053,11 @@ $$ -->
 <li><p>PGD espace-temps <span class="math display">\[\textcolor{VioletLMS}{\boldsymbol{u}}\left(\textcolor{BleuLMPS}{\boldsymbol{x}}, \textcolor{LGreenLMS}{t}\right) = \sum\limits_{i=1}^m \textcolor{BleuLMPS}{\overline{\boldsymbol{u}}_i(\boldsymbol{x})} ~\lambda_i(t)\]</span></p></li>
 <li><p>Linéarisateur <em>ad hoc</em> LATIN-PGD</p>
 <ul>
-<li>Space-time iterrative solveur</li>
+<li>Solveur itératif <strong>espace-temps</strong></li>
 </ul></li>
 <li><p>Stratégie optimale de chainage des calculs</p>
 <ul>
-<li>tirer partie de la redondance entre les différents calculs pour dimuner le cout total de l’étude paramétrique</li>
+<li>Tirer partie de la redondance entre les différents calculs pour dimuner le coût total de l’<strong>étude paramétrique</strong></li>
 </ul></li>
 </ul>
 </div><div class="column" style="width:50%;">
@@ -1101,14 +1110,14 @@ $$ -->
 
 </div>
 <ul>
-<li>Recherche de structures de faible rang sous-jacentes dans les solutions paramétriques des EDP ou, plus directement, dans les structures de données en grande dimension.</li>
-<li>Au service de la bio-mécanique et des cliniciens
+<li>Recherche de structures de <strong>faible rang</strong> sous-jacentes dans les <strong>solutions paramétriques</strong> des EDP ou, plus directement, dans les <strong>structures de données</strong> en grande dimension.</li>
+<li>Au service de la <strong>bio-mécanique</strong> et des <strong>cliniciens</strong>
 <ul>
-<li>Améliorer la compréhension de certains phénomènes</li>
-<li>Rendre accessible les apports de la mécanique en clinique
+<li>Améliorer la <strong>compréhension</strong> de certains phénomènes</li>
+<li>Rendre <strong>accessible</strong> les apports de la mécanique en clinique
 <ul>
-<li>Simulation en temps réelle</li>
-<li>Optimisation robuste</li>
+<li>Simulation en <strong>temps réelle</strong></li>
+<li>Optimisation <strong>robuste</strong></li>
 </ul></li>
 </ul></li>
 </ul>
@@ -1135,23 +1144,23 @@ $$ -->
 <div class="column" style="width:50%;">
 <div class="mybox">
 <div class="mybox-header">
-<p>Objectives</p>
+<p>Objectifs</p>
 </div>
 <div style="margin-top: 0em;">
 
 </div>
 <div class="mybox-body">
 <ul>
-<li>Improved understanding of the physiological mechanisms</li>
+<li>Meilleure compréhension des mécanismes physiologiques</li>
 </ul>
 <div style="margin-top: 0.8em;">
 
 </div>
 <ul>
-<li><em>In silico</em> prognostics
+<li>Pronostiques <em>in silico</em>
 <ul>
-<li>Transfer tools to the clinic</li>
-<li>Patient-specific <strong>digital twins</strong></li>
+<li>Transférer les outils à la clinique</li>
+<li><strong>jumeaux numériques</strong> “patient-spécifiques”</li>
 </ul></li>
 </ul>
 <div style="margin-top: 1em;">
@@ -1162,22 +1171,22 @@ $$ -->
 </div><div class="column" style="width:50%;">
 <div class="mybox">
 <div class="mybox-header">
-<p>Requirements</p>
+<p>Besoins</p>
 </div>
 <div class="mybox-body">
 <div class="fragment fade-in" data-fragment-index="1">
 <ul>
-<li><g> Mechanical model of the lung <span class="citation" data-cites="patteQuasistaticPoromechanicalModel2022 peyrautQuantificationDincertitudesPour2024a">(<a href="#/references" role="doc-biblioref" onclick="">Patte et al., 2022</a>; <a href="#/references" role="doc-biblioref" onclick="">Peyraut &amp; Genet, 2024</a>)</span></g></li>
+<li><g> Modèle mécanique du poumon <span class="citation" data-cites="patteQuasistaticPoromechanicalModel2022 peyrautQuantificationDincertitudesPour2024a">(<a href="#/references" role="doc-biblioref" onclick="">Patte et al., 2022</a>; <a href="#/references" role="doc-biblioref" onclick="">Peyraut &amp; Genet, 2024</a>)</span></g></li>
 </ul>
 </div>
 <div class="fragment fade-in">
 <ul>
-<li><o> Uncertainty quantification <span class="citation" data-cites="zotero-2069 lavilleComparisonOptimizationParametrizations2023">(<a href="#/references" role="doc-biblioref" onclick="">Laville et al., 2023</a>; <a href="#/references" role="doc-biblioref" onclick="">Peyraut &amp; Genet, 2025</a>)</span></o></li>
+<li><o> Quantification d’incertitudes <span class="citation" data-cites="zotero-2069 lavilleComparisonOptimizationParametrizations2023">(<a href="#/references" role="doc-biblioref" onclick="">Laville et al., 2023</a>; <a href="#/references" role="doc-biblioref" onclick="">Peyraut &amp; Genet, 2025</a>)</span></o></li>
 </ul>
 </div>
 <div class="fragment fade-in">
 <ul>
-<li><r> <strong>Real-time</strong> estimation of the parameters </r></li>
+<li><r> Estimation en <strong>temps réel</strong> des paramètres </r></li>
 </ul>
 </div>
 <div style="margin-top: 0.2em;">
@@ -1208,7 +1217,7 @@ g { color: Green }
 </div>
 <div class="mybox-body">
 <ul>
-<li>Pas de boite noire
+<li>Pas de boîte noire
 <ul>
 <li>Architecture entièrement interpretable</li>
 <li>Excellente capacité d’apprentissage par transfert</li>
@@ -1224,7 +1233,7 @@ g { color: Green }
 <ul>
 <li>Définition directe de la fonction coût physique à l’aide de l’auto-différenciation</li>
 </ul>
-<div id="b05374df" class="cell" data-execution_count="2">
+<div id="776a052d" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href=""></a><span class="kw">def</span> Loss(model,x,detJ,mu):</span>
 <span id="cb1-2"><a href=""></a>  </span>
 <span id="cb1-3"><a href=""></a>    u <span class="op">=</span> model.space_mode(x)</span>
@@ -1439,9 +1448,9 @@ NN-PGD
 <div id="fig-singular-values" class="cell-output cell-output-display quarto-float quarto-figure quarto-figure-center">
 <figure class="quarto-float quarto-float-fig">
 <div aria-describedby="fig-singular-values-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div>                            <div id="50c20830-6012-4753-a497-8f8feff4ba31" class="plotly-graph-div" style="height:255px; width:450px;"></div>            <script type="text/javascript">                require(["plotly"], function(Plotly) {                    window.PLOTLYENV=window.PLOTLYENV || {};                                    if (document.getElementById("50c20830-6012-4753-a497-8f8feff4ba31")) {                    Plotly.newPlot(                        "50c20830-6012-4753-a497-8f8feff4ba31",                        [{"line":{"color":"#01426a","width":2.5},"mode":"lines","name":"Right lung","x":[0.0,1.0294117647058822,2.0588235294117645,3.0882352941176467,4.117647058823529,5.147058823529411,6.1764705882352935,7.205882352941176,8.235294117647058,9.26470588235294,10.294117647058822,11.323529411764705,12.352941176470589,13.38235294117647,14.411764705882351,15.441176470588234,16.470588235294116,17.5,18.52941176470588,19.55882352941176,20.588235294117645,21.61764705882353,22.64705882352941,23.67647058823529,24.705882352941178,25.735294117647054,26.76470588235294,27.79411764705882,28.823529411764703,29.852941176470587,30.882352941176467,31.911764705882348,32.94117647058823,33.970588235294116,35.0],"y":[2128.5267211681353,506.3633408815767,438.0545698557159,393.2453002229619,326.57854619433556,299.61980796357324,246.4927509334324,225.90638967705507,208.83820071696945,199.60808858781783,189.94869112138096,162.03251598245794,151.04797176804405,135.65362194621983,125.47654792506796,120.5122659376938,115.25675933812602,110.53873702639308,105.1388915851182,96.87753769833336,92.97920813618724,87.97359109612549,85.94757926807247,80.64399399168096,77.0894714192103,72.8476581224372,69.60316212511529,68.27129004229866,63.74255010304698,57.83624692002761,54.50144400626111,52.606134258629034,51.0193777619102,47.44057143889149,44.15036189917483],"type":"scatter"},{"line":{"color":"#CE0037","width":2.5},"mode":"lines","name":"Left lung","x":[0.0,1.0294117647058822,2.0588235294117645,3.0882352941176467,4.117647058823529,5.147058823529411,6.1764705882352935,7.205882352941176,8.235294117647058,9.26470588235294,10.294117647058822,11.323529411764705,12.352941176470589,13.38235294117647,14.411764705882351,15.441176470588234,16.470588235294116,17.5,18.52941176470588,19.55882352941176,20.588235294117645,21.61764705882353,22.64705882352941,23.67647058823529,24.705882352941178,25.735294117647054,26.76470588235294,27.79411764705882,28.823529411764703,29.852941176470587,30.882352941176467,31.911764705882348,32.94117647058823,33.970588235294116,35.0],"y":[2287.847971501423,708.971692133521,551.8091309861724,524.432353975533,385.0191823217823,352.3376473300475,324.5529404439127,294.62098984108525,260.36419316736965,241.5318016906249,209.00879081914496,197.30411844468983,194.20305427212267,183.34112569991404,168.3161937982862,147.73156243816376,139.68402436243016,134.473518995883,123.24530883537172,115.65753923284888,109.19201867378176,106.4324833773898,100.04136572319864,88.61643708817134,85.60929791486049,82.96935454749861,79.49528871040722,71.17383677899673,69.48808598237625,65.98041309455562,58.80087067081996,55.94575329959661,50.49664845581621,49.002167039779216,46.24713213086733],"type":"scatter"},{"line":{"color":"#01426a","dash":"dot","width":2.5},"mode":"lines","name":"RL full kinematics","x":[0.0,1.0294117647058822,2.0588235294117645,3.0882352941176467,4.117647058823529,5.147058823529411,6.1764705882352935,7.205882352941176,8.235294117647058,9.26470588235294,10.294117647058822,11.323529411764705,12.352941176470589,13.38235294117647,14.411764705882351,15.441176470588234,16.470588235294116,17.5,18.52941176470588,19.55882352941176,20.588235294117645,21.61764705882353,22.64705882352941,23.67647058823529,24.705882352941178,25.735294117647054,26.76470588235294,27.79411764705882,28.823529411764703,29.852941176470587,30.882352941176467,31.911764705882348,32.94117647058823,33.970588235294116,35.0],"y":[11919.162820740954,3499.974374636945,2679.7357464452307,1079.729076615966,698.3263130703958,627.1901559207594,440.11860765108605,379.5864238130199,299.12560893822746,284.0573478892494,243.7496619691596,211.5769357112258,203.9264381868591,170.374315078402,165.60658014036184,146.39885343618056,130.48926090858816,127.23950148874763,116.78477698246544,106.92377947239598,100.95635772183834,94.056292955433,91.88254893300486,90.6986709752981,84.93016295165802,79.93470451776894,75.82595574057015,74.31345577437484,70.95510378022779,62.45785102187872,60.49337590739585,57.44721296427377,55.84369868690753,53.86221264116458,46.75737728745174],"type":"scatter"},{"line":{"color":"#CE0037","dash":"dot","width":2.5},"mode":"lines","name":"LL full kinematics","x":[0.0,1.0294117647058822,2.0588235294117645,3.0882352941176467,4.117647058823529,5.147058823529411,6.1764705882352935,7.205882352941176,8.235294117647058,9.26470588235294,10.294117647058822,11.323529411764705,12.352941176470589,13.38235294117647,14.411764705882351,15.441176470588234,16.470588235294116,17.5,18.52941176470588,19.55882352941176,20.588235294117645,21.61764705882353,22.64705882352941,23.67647058823529,24.705882352941178,25.735294117647054,26.76470588235294,27.79411764705882,28.823529411764703,29.852941176470587,30.882352941176467,31.911764705882348,32.94117647058823,33.970588235294116,35.0],"y":[11785.961953341584,6354.144161492557,2523.377715073332,2291.2295071677468,1873.9545772471977,1018.7908971504362,906.4822525869334,576.1064410134234,443.42217026555585,379.14342580844686,319.58918418561126,283.50374960599106,260.5158453951992,241.11717556058625,206.1170549618227,187.7226352836186,182.49748883781544,150.76526280780445,147.62255449467247,143.80778112889274,133.37789850162682,123.79258883512912,120.27219399902933,113.11150902894322,107.43272773712866,102.548978247078,96.9264251601782,85.79050087647784,80.81346928667975,77.15287452308131,72.34158407007939,65.61828779870632,64.19365772145142,60.3434273622765,51.94688629635935],"type":"scatter"}],                        {"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmapgl":[{"type":"heatmapgl","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"},"margin":{"b":0,"l":0,"r":0,"t":30}}},"xaxis":{"title":{"text":"Modes"},"showgrid":true,"gridcolor":"lightgray"},"yaxis":{"title":{"text":"Singular values"},"showgrid":true,"gridcolor":"lightgray","type":"log"},"font":{"size":14},"plot_bgcolor":"rgba(0,0,0,0)","width":450,"height":255},                        {"responsive": true}                    ).then(function(){
+<div>                            <div id="78fd2a87-5cc9-40b6-bf9d-be55c7a8b518" class="plotly-graph-div" style="height:255px; width:450px;"></div>            <script type="text/javascript">                require(["plotly"], function(Plotly) {                    window.PLOTLYENV=window.PLOTLYENV || {};                                    if (document.getElementById("78fd2a87-5cc9-40b6-bf9d-be55c7a8b518")) {                    Plotly.newPlot(                        "78fd2a87-5cc9-40b6-bf9d-be55c7a8b518",                        [{"line":{"color":"#01426a","width":2.5},"mode":"lines","name":"Right lung","x":[0.0,1.0294117647058822,2.0588235294117645,3.0882352941176467,4.117647058823529,5.147058823529411,6.1764705882352935,7.205882352941176,8.235294117647058,9.26470588235294,10.294117647058822,11.323529411764705,12.352941176470589,13.38235294117647,14.411764705882351,15.441176470588234,16.470588235294116,17.5,18.52941176470588,19.55882352941176,20.588235294117645,21.61764705882353,22.64705882352941,23.67647058823529,24.705882352941178,25.735294117647054,26.76470588235294,27.79411764705882,28.823529411764703,29.852941176470587,30.882352941176467,31.911764705882348,32.94117647058823,33.970588235294116,35.0],"y":[2128.5267211681353,506.3633408815767,438.0545698557159,393.2453002229619,326.57854619433556,299.61980796357324,246.4927509334324,225.90638967705507,208.83820071696945,199.60808858781783,189.94869112138096,162.03251598245794,151.04797176804405,135.65362194621983,125.47654792506796,120.5122659376938,115.25675933812602,110.53873702639308,105.1388915851182,96.87753769833336,92.97920813618724,87.97359109612549,85.94757926807247,80.64399399168096,77.0894714192103,72.8476581224372,69.60316212511529,68.27129004229866,63.74255010304698,57.83624692002761,54.50144400626111,52.606134258629034,51.0193777619102,47.44057143889149,44.15036189917483],"type":"scatter"},{"line":{"color":"#CE0037","width":2.5},"mode":"lines","name":"Left lung","x":[0.0,1.0294117647058822,2.0588235294117645,3.0882352941176467,4.117647058823529,5.147058823529411,6.1764705882352935,7.205882352941176,8.235294117647058,9.26470588235294,10.294117647058822,11.323529411764705,12.352941176470589,13.38235294117647,14.411764705882351,15.441176470588234,16.470588235294116,17.5,18.52941176470588,19.55882352941176,20.588235294117645,21.61764705882353,22.64705882352941,23.67647058823529,24.705882352941178,25.735294117647054,26.76470588235294,27.79411764705882,28.823529411764703,29.852941176470587,30.882352941176467,31.911764705882348,32.94117647058823,33.970588235294116,35.0],"y":[2287.847971501423,708.971692133521,551.8091309861724,524.432353975533,385.0191823217823,352.3376473300475,324.5529404439127,294.62098984108525,260.36419316736965,241.5318016906249,209.00879081914496,197.30411844468983,194.20305427212267,183.34112569991404,168.3161937982862,147.73156243816376,139.68402436243016,134.473518995883,123.24530883537172,115.65753923284888,109.19201867378176,106.4324833773898,100.04136572319864,88.61643708817134,85.60929791486049,82.96935454749861,79.49528871040722,71.17383677899673,69.48808598237625,65.98041309455562,58.80087067081996,55.94575329959661,50.49664845581621,49.002167039779216,46.24713213086733],"type":"scatter"},{"line":{"color":"#01426a","dash":"dot","width":2.5},"mode":"lines","name":"RL full kinematics","x":[0.0,1.0294117647058822,2.0588235294117645,3.0882352941176467,4.117647058823529,5.147058823529411,6.1764705882352935,7.205882352941176,8.235294117647058,9.26470588235294,10.294117647058822,11.323529411764705,12.352941176470589,13.38235294117647,14.411764705882351,15.441176470588234,16.470588235294116,17.5,18.52941176470588,19.55882352941176,20.588235294117645,21.61764705882353,22.64705882352941,23.67647058823529,24.705882352941178,25.735294117647054,26.76470588235294,27.79411764705882,28.823529411764703,29.852941176470587,30.882352941176467,31.911764705882348,32.94117647058823,33.970588235294116,35.0],"y":[11919.162820740954,3499.974374636945,2679.7357464452307,1079.729076615966,698.3263130703958,627.1901559207594,440.11860765108605,379.5864238130199,299.12560893822746,284.0573478892494,243.7496619691596,211.5769357112258,203.9264381868591,170.374315078402,165.60658014036184,146.39885343618056,130.48926090858816,127.23950148874763,116.78477698246544,106.92377947239598,100.95635772183834,94.056292955433,91.88254893300486,90.6986709752981,84.93016295165802,79.93470451776894,75.82595574057015,74.31345577437484,70.95510378022779,62.45785102187872,60.49337590739585,57.44721296427377,55.84369868690753,53.86221264116458,46.75737728745174],"type":"scatter"},{"line":{"color":"#CE0037","dash":"dot","width":2.5},"mode":"lines","name":"LL full kinematics","x":[0.0,1.0294117647058822,2.0588235294117645,3.0882352941176467,4.117647058823529,5.147058823529411,6.1764705882352935,7.205882352941176,8.235294117647058,9.26470588235294,10.294117647058822,11.323529411764705,12.352941176470589,13.38235294117647,14.411764705882351,15.441176470588234,16.470588235294116,17.5,18.52941176470588,19.55882352941176,20.588235294117645,21.61764705882353,22.64705882352941,23.67647058823529,24.705882352941178,25.735294117647054,26.76470588235294,27.79411764705882,28.823529411764703,29.852941176470587,30.882352941176467,31.911764705882348,32.94117647058823,33.970588235294116,35.0],"y":[11785.961953341584,6354.144161492557,2523.377715073332,2291.2295071677468,1873.9545772471977,1018.7908971504362,906.4822525869334,576.1064410134234,443.42217026555585,379.14342580844686,319.58918418561126,283.50374960599106,260.5158453951992,241.11717556058625,206.1170549618227,187.7226352836186,182.49748883781544,150.76526280780445,147.62255449467247,143.80778112889274,133.37789850162682,123.79258883512912,120.27219399902933,113.11150902894322,107.43272773712866,102.548978247078,96.9264251601782,85.79050087647784,80.81346928667975,77.15287452308131,72.34158407007939,65.61828779870632,64.19365772145142,60.3434273622765,51.94688629635935],"type":"scatter"}],                        {"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmapgl":[{"type":"heatmapgl","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"},"margin":{"b":0,"l":0,"r":0,"t":30}}},"xaxis":{"title":{"text":"Modes"},"showgrid":true,"gridcolor":"lightgray"},"yaxis":{"title":{"text":"Singular values"},"showgrid":true,"gridcolor":"lightgray","type":"log"},"font":{"size":14},"plot_bgcolor":"rgba(0,0,0,0)","width":450,"height":255},                        {"responsive": true}                    ).then(function(){
                             
-var gd = document.getElementById('50c20830-6012-4753-a497-8f8feff4ba31');
+var gd = document.getElementById('78fd2a87-5cc9-40b6-bf9d-be55c7a8b518');
 var x = new MutationObserver(function (mutations, observer) {{
         var display = window.getComputedStyle(gd).display;
         if (!display || display === 'none') {{
@@ -1600,15 +1609,18 @@ Figure&nbsp;1: lung mappings separability
 <div class="columns">
 <div class="column" style="width:50%;">
 <ul>
-<li>Normalien, agrégé de mécanique</li>
-<li>Postdoctorant LMS</li>
+<li><strong>Normalien</strong>, <strong>agrégé</strong> de mécanique</li>
+<li>Postdoctorant <strong>LMS</strong></li>
 </ul>
 </div><div class="column" style="width:50%;">
 <ul>
-<li>Mécanique computationnelle</li>
-<li>Jumeaux numérique</li>
+<li>Mécanique <strong>computationnelle</strong></li>
+<li><strong>Jumeaux numérique</strong></li>
 </ul>
 </div></div>
+<div style="margin-top: -1em;">
+
+</div>
 <div class="columns">
 <div class="column" style="width:50%;">
 <div class="mybox">
@@ -1653,11 +1665,39 @@ Figure&nbsp;1: lung mappings separability
 <li>Implication dans la vie collective
 <ul>
 <li>Création du séminaire Pôle mécanique</li>
-<li>Labo1.5</li>
+<li>Elu au conseil de l’école doctorale SMEMAG</li>
 </ul></li>
 </ul>
 </div>
 </div>
+</div></div>
+<div style="margin-top: -1em;">
+
+</div>
+<div class="columns">
+<div class="column" style="width:15%;">
+
+</div><div class="column" style="width:65%;">
+<div class="mybox">
+<div class="mybox-header-teal">
+<p>Compétences transversales</p>
+</div>
+<div class="mybox-body">
+<div class="columns">
+<div class="column" style="width:50%;">
+<ul>
+<li>Outils numériques (Git, ssh, html, jupyterbooks)</li>
+<li>Outils graphiques (Inkscape, Gimp)</li>
+</ul>
+</div><div class="column" style="width:50%;">
+<ul>
+<li>Rédaction (Template latex, Beamer, quarto)</li>
+</ul>
+</div></div>
+</div>
+</div>
+</div><div class="column" style="width:15%;">
+
 </div></div>
 </section>
 <section id="references" class="slide level2 smaller scrollable">
