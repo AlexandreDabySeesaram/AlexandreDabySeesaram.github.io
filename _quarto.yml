@@ -49,7 +49,7 @@ format:
     email-obfuscation: javascript
     theme:
       light: [flatly,style_site.scss]
-      dark: darkly
+      dark: [darkly,style_site_dark.scss]
     # mainfont: Lato 
     css: styles.css
     toc: true

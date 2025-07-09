@@ -203,13 +203,6 @@
     "text": "Past talks\n\n          Invited Speaker\n\n\n\n\n\n\nRICAM - Austrian Academy of Sciences Seminar (website)\nLinz, Austria, 21st-28th of October\nAuthors: A. Daby-Seesaram, K. Škardová, M. Genet\n\n\n\n Slides\n\n\n\n Code\n\n\n\n Abstract\n\n\n\n\n\n          Conferences\n\n\n\n\n\nDTE & AICOMAS 2025 (website)\nParis, France, 17th - 21st of February 2025\nTitle: Finite Element Neural Network Interpolation: Hybridisation with the Proper Generalised Decomposition for Surrogate Modelling\nAuthors: A. Daby-Seesaram, K. Škardová, M. Genet\n\n\n\n Slides\n\n\n\n Code 1\n\n\n\n Code 2\n\n\n\n\n\nVirtual Physiological Human (VPH) 2024 (website)\nStuttgart, Germany, 3rd - 6th of September 2024\nTitle: Hybridising standard ROM methods with interpretable sparse neural networks for real-time patient specific lung simulations\nAuthors: A. Daby-Seesaram, K. Škardová, M. Genet\n\n\n\n Slides\n\n\n\n Code"
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Alexandre Daby-Seesaram",
-    "section": "",
-    "text": "Welcome,\nI’m Alexandre Daby-Seesaram, a Postdoctoral researcher at École Polytechnique and INRIA in the MΞDISIM team.\nI hold a Ph.D. in computational mechanics from the University Paris-Saclay (ENS Paris-Saclay), where I worked at the LMPS (Laboratory of Mechanics Paris-Saclay). You can learn more about my background in my [CV].\nMy main research interest consists of solving highly non-linear problems using model-order reduction techniques such as the Proper Generalised Decomposition (PGD). I’ve recently become interested in hybridising classical model-order reduction methods with machine learning approaches. Combining tensor decomposition and interpretable neural networks enables efficient and robust solving of large non-linear problems.\nThe ultimate goal of my research during my postdoctoral position is to achieve individualisation and real-time simulation of a lung digital twin using model-order reduction techniques, thus going from theoretical tools to clinical application for patients with idiopathic pulmonary fibrosis (IPF).\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThanks to (Mathur, Brozovich, and Rausch 2023) for the details on how to set up the AR environment\n\n\n\n\n\n\n Back to topReferences\n\nMathur, Mrudang, Josef M. Brozovich, and Manuel K. Rausch. 2023. “A Brief Note on Building Augmented Reality Models for Scientific Visualization.” Finite Elements in Analysis and Design 213 (January): 103851. https://doi.org/10.1016/j.finel.2022.103851."
-  },
-  {
     "objectID": "about.html",
     "href": "about.html",
     "title": "Alexandre Daby-Seesaram",

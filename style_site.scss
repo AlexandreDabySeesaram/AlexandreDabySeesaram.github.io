@@ -8,11 +8,12 @@
 // $body-bg: #f3f3f3;
 // $body-color: #212121ff;
 // RED link:
-$link-color: #b5171d;
+// $link-color: #b5171d; RED Polytechnique
+$link-color: rgb(58, 70, 245); // Blue ENSTA
 // YELLOW link:
 // $link-color: #bf8f43ff;
 // $navbar-bg: #27466bff;
-$navbar-bg: #00436d;
+$navbar-bg: rgb(23, 15, 57);
 // $h2-font-size: 20px;
 
 
@@ -21,15 +22,18 @@ $navbar-bg: #00436d;
 
 
 h1 {
-  color: #27466bff;
+  // color: #27466bff;  // dark Blue Polytechnique
+  color: rgb(23, 15, 57);  // dark Blue ENSTA
 }
 
 h2 {
-  color: rgb(43, 80, 122);
+  // color: rgb(43, 80, 122); // dark Blue Polytechnique
+  color: rgb(23, 15, 57); // dark Blue ENSTA
 }
 
 h3 {
-  color: rgb(43, 80, 122);
+  // color: rgb(43, 80, 122); // dark Blue Polytechnique
+  color: rgb(23, 15, 57); // dark Blue ENSTA
 }
 
 .navbar {
@@ -98,3 +102,20 @@ body {
     }
   }
 }
+
+
+// scss for about page
+
+
+div.quarto-about-trestles {
+  background-color: var(--bs-body-bg) !important;
+  margin-top: 60vh; /* This ensures the white background starts at the middle of the page */
+
+  margin-left: 40 !important;
+  margin-right: 40 !important;
+  // width: 100vw;
+  // max-width: 100vw;
+  padding: 15vw; 
+
+}
+
