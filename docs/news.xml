@@ -15,7 +15,45 @@
 <link>https://alexandredabyseesaram.github.io/news.html</link>
 </image>
 <generator>quarto-1.5.56</generator>
-<lastBuildDate>Sat, 01 Mar 2025 23:00:00 GMT</lastBuildDate>
+<lastBuildDate>Fri, 29 Aug 2025 22:00:00 GMT</lastBuildDate>
+<item>
+  <title>Two new papers in Computational Mechanics</title>
+  <link>https://alexandredabyseesaram.github.io/posts/2025/2025-08-30-Papers_CM/</link>
+  <description><![CDATA[ 
+
+
+
+
+<p><a href="https://mgenet.github.io/">Martin Genet</a>, <a href="https://m3disim.saclay.inria.fr/people/katerina-skardova/">Katerina Skardova</a> and I just published two papers in <a href="https://link.springer.com/journal/466"><em>Computational Mechanics</em></a>, entitled</p>
+<ul>
+<li><a href="https://link.springer.com/article/10.1007/s00466-025-02677-3">Finite element neural network interpolation: Part I—interpretable and adaptive discretization for solving PDEs</a>, and</li>
+<li><a href="https://link.springer.com/article/10.1007/s00466-025-02676-4">Finite element neural network interpolation: Part II—hybridisation with the proper generalised decomposition for non-linear surrogate modelling</a>.</li>
+</ul>
+<p>All computations from the paper (which rely on NeuROM <span class="citation" data-cites="daby-seesaramNeuROM2024a">(Daby-Seesaram, Škardová, and Genet 2025)</span>) are easily reproducible at</p>
+<ul>
+<li><a href="https://alexandredabyseesaram.github.io/FENNI-I-paper-demo/">https://alexandredabyseesaram.github.io/FENNI-I-paper-demo</a>, and</li>
+<li><a href="https://alexandredabyseesaram.github.io/FENNI-II-PGD-paper-demo">https://alexandredabyseesaram.github.io/FENNI-II-PGD-paper-demo</a>,</li>
+</ul>
+<p>so do not hesitate to give it a try, and let us know how it goes!</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><video src="../../../Resources/Videos/NeuROM_3D_gravity_ter.mov" class="img-fluid quarto-figure quarto-figure-center" style="width:75.0%" loop="true" autoplay="true" controls=""><a href="../../../Resources/Videos/NeuROM_3D_gravity_ter.mov">Video</a></video></p>
+</figure>
+</div>
+
+
+
+
+<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0">
+<div id="ref-daby-seesaramNeuROM2024a" class="csl-entry">
+Daby-Seesaram, Alexandre, Kateřina Škardová, and Martin Genet. 2025. <span>“<span>NeuROM</span>.”</span> Zenodo. <a href="https://doi.org/10.5281/zenodo.13772740">https://doi.org/10.5281/zenodo.13772740</a>.
+</div>
+</div></section></div> ]]></description>
+  <category>News</category>
+  <guid>https://alexandredabyseesaram.github.io/posts/2025/2025-08-30-Papers_CM/</guid>
+  <pubDate>Fri, 29 Aug 2025 22:00:00 GMT</pubDate>
+  <media:content url="https://alexandredabyseesaram.github.io/posts/2025/2025-08-30-Papers_CM/logo_PGD.png" medium="image" type="image/png" height="74" width="144"/>
+</item>
 <item>
   <title>New version is out</title>
   <link>https://alexandredabyseesaram.github.io/posts/2025/2025-03-02-NeuROM/</link>
