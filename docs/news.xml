@@ -15,7 +15,35 @@
 <link>https://alexandredabyseesaram.github.io/news.html</link>
 </image>
 <generator>quarto-1.5.56</generator>
-<lastBuildDate>Fri, 29 Aug 2025 22:00:00 GMT</lastBuildDate>
+<lastBuildDate>Tue, 09 Sep 2025 22:00:00 GMT</lastBuildDate>
+<item>
+  <title>ICCB 2025</title>
+  <link>https://alexandredabyseesaram.github.io/posts/2025/2025-09-10-ICCB/</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>This week, my co-authors <a href="https://m3disim.saclay.inria.fr/people/katerina-skardova">Kateřina Škardová</a> and <a href="https://mgenet.github.io/">Martin Genet</a>, my collegues Jean-Marc Allain, Felipe Álvarez-Barrientos, Haotian Xiao, and Julien Bonnafé, and I attended the <a href="https://iccb2025.org/">2025 ICCB</a> conference. <a href="https://m3disim.saclay.inria.fr/people/katerina-skardova">Kateřina Škardová</a> and I both presented our work towards getting a real-time digital twin of the lungs <span class="citation" data-cites="daby-seesaramFiniteElementNeural2025 skardovaFiniteElementNeural2025">(Daby-Seesaram, Škardová, and Genet 2025; Škardová, Daby-Seesaram, and Genet 2025)</span>.</p>
+<p>Meanwhile, <a href="https://mgenet.github.io/">Martin Genet</a> chaired the mini-symposium “<strong>MS08 - 1: Modeling the respiratory system: current trends and clinical opportunities</strong>” he co-organised.</p>
+<p><img src="https://alexandredabyseesaram.github.io/posts/2025/2025-09-10-ICCB/ICCB_2.jpg" class="img-fluid quarto-figure quarto-figure-center" style="width:75.0%"> <img src="https://alexandredabyseesaram.github.io/posts/2025/2025-09-10-ICCB/ICCB_3.jpeg" class="img-fluid quarto-figure quarto-figure-center" style="width:75.0%"></p>
+
+
+
+
+<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0">
+<div id="ref-daby-seesaramFiniteElementNeural2025" class="csl-entry">
+Daby-Seesaram, Alexandre, Kateřina Škardová, and Martin Genet. 2025. <span>“Finite Element Neural Network Interpolation: <span>Part II</span>—Hybridisation with the Proper Generalised Decomposition for Non-Linear Surrogate Modelling.”</span> <em>Computational Mechanics</em>, August. <a href="https://doi.org/10.1007/s00466-025-02676-4">https://doi.org/10.1007/s00466-025-02676-4</a>.
+</div>
+<div id="ref-skardovaFiniteElementNeural2025" class="csl-entry">
+Škardová, Kateřina, Alexandre Daby-Seesaram, and Martin Genet. 2025. <span>“Finite Element Neural Network Interpolation: <span>Part I</span>—Interpretable and Adaptive Discretization for Solving <span>PDEs</span>.”</span> <em>Computational Mechanics</em>, August. <a href="https://doi.org/10.1007/s00466-025-02677-3">https://doi.org/10.1007/s00466-025-02677-3</a>.
+</div>
+</div></section></div> ]]></description>
+  <category>News</category>
+  <guid>https://alexandredabyseesaram.github.io/posts/2025/2025-09-10-ICCB/</guid>
+  <pubDate>Tue, 09 Sep 2025 22:00:00 GMT</pubDate>
+  <media:content url="https://alexandredabyseesaram.github.io/posts/2025/2025-09-10-ICCB/ICCB_1.jpg" medium="image" type="image/jpeg"/>
+</item>
 <item>
   <title>Two new papers in Computational Mechanics</title>
   <link>https://alexandredabyseesaram.github.io/posts/2025/2025-08-30-Papers_CM/</link>
@@ -264,7 +292,7 @@ Daby-Seesaram, Alexandre, Kateřina Škardová, and Martin Genet. 2024. <span>�
 <ul>
 <li><em>TU München</em></li>
 </ul></li>
-<li>Professor Francisco Chinest (Reviewer),
+<li>Professor Francisco Chinesta (Reviewer),
 <ul>
 <li><em>ENSAM Paris</em></li>
 </ul></li>
