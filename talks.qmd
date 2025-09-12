@@ -17,67 +17,7 @@ format:
 
 ## {{< iconify fa6-solid:clock-rotate-left >}} &nbsp; Past talks
 
-### &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Invited Speaker
 
-:::: {style='margin-top: 2em;'}
-::::
-
-<!-- +-----------------------------------------------------------------------+-------------------------------------------------------------------------------------+
-| Austrian Academy of Sciences,                                         |  Linz, Austria, 21st-28th of October 2024                                           |                                
-|[RICAM](https://www.oeaw.ac.at/de/ricam/research/groups/group-egger)   |                                                                                     |
-+=======================================================================+=====================================================================================+
-| Authors                                                               | <a href="index.qmd">A. Daby-seesaram<a>,                                            |
-|                                                                       | <a href="https://m3disim.saclay.inria.fr/people/katerina-skardova/">K. Škardová<a>, |
-|                                                                       | <a href="https://mgenet.github.io/">M. Genet<a>                                     |
-+-----------------------------------------------------------------------+-------------------------------------------------------------------------------------+
-+-----------------------------------------------------------------------+-------------------------------------------------------------------------------------+
-| Link                                                                  | [Slides](Resources/Documents/Presentations/RICAM/TODO.html),                        |
-|                                                                       |                                [Code](https://pypi.org/project/NeuROM-Py/)          |
-+-----------------------------------------------------------------------+-------------------------------------------------------------------------------------+
- -->
-
-::: {.talk-card}
-### RICAM - Austrian Academy of Sciences Seminar ([website](https://www.oeaw.ac.at/ricam/))
-*Linz, Austria, 21st-28th of October*
-
-**Authors:** [A. Daby-Seesaram](index.qmd), [K. Škardová](https://m3disim.saclay.inria.fr/people/katerina-skardova), [M. Genet](https://mgenet.github.io/)
-
-:::: {.columns}
-
-::: {.column width="80pt"}
-
-::: {.button}
-
-[<iconify-icon icon="fa-solid:chalkboard" aria-label="Slides"></iconify-icon> Slides](Resources/Documents/Presentations/RICAM/main.html){.button target="_blank"}
-
-:::
-
-:::
-
-::: {.column width="80pt"}
-
-::: {.button}
-
-[<iconify-icon icon="fa-solid:code" aria-label="Code"></iconify-icon> Code](https://pypi.org/project/NeuROM-Py/){.button target="_blank"}
-
-:::
-
-:::
-
-
-::: {.column width="85pt"}
-
-::: {.button}
-
-[<iconify-icon icon="fa-regular:file" aria-label="Code"></iconify-icon> Abstract](https://www.oeaw.ac.at/ricam/detail/event/group-seminar-computational-methods-for-pdes-11){.button target="_blank"}
-
-:::
-
-:::
-
-::::
-
-:::
 
 
 ### &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Conferences
@@ -200,6 +140,56 @@ format:
 ::: {.button}
 
 [<iconify-icon icon="fa-solid:code" aria-label="Code"></iconify-icon> Code](https://pypi.org/project/NeuROM-Py/){.button target="_blank"}
+
+:::
+
+:::
+
+::::
+
+:::
+
+
+### &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Invited Speaker
+
+:::: {style='margin-top: 2em;'}
+::::
+
+
+::: {.talk-card}
+### RICAM - Austrian Academy of Sciences Seminar ([website](https://www.oeaw.ac.at/ricam/))
+*Linz, Austria, 21st-28th of October*
+
+**Authors:** [A. Daby-Seesaram](index.qmd), [K. Škardová](https://m3disim.saclay.inria.fr/people/katerina-skardova), [M. Genet](https://mgenet.github.io/)
+
+:::: {.columns}
+
+::: {.column width="80pt"}
+
+::: {.button}
+
+[<iconify-icon icon="fa-solid:chalkboard" aria-label="Slides"></iconify-icon> Slides](Resources/Documents/Presentations/RICAM/main.html){.button target="_blank"}
+
+:::
+
+:::
+
+::: {.column width="80pt"}
+
+::: {.button}
+
+[<iconify-icon icon="fa-solid:code" aria-label="Code"></iconify-icon> Code](https://pypi.org/project/NeuROM-Py/){.button target="_blank"}
+
+:::
+
+:::
+
+
+::: {.column width="85pt"}
+
+::: {.button}
+
+[<iconify-icon icon="fa-regular:file" aria-label="Code"></iconify-icon> Abstract](https://www.oeaw.ac.at/ricam/detail/event/group-seminar-computational-methods-for-pdes-11){.button target="_blank"}
 
 :::
 
