@@ -13,22 +13,6 @@ format:
 :::: {style='margin-top: 3em;'}
 ::::
 
-## {{< iconify fa-solid:chalkboard >}}  &nbsp; Courses
-A few short courses relevant to model reduction are available on my github
-
-* [**Course 1**](https://alexandredabyseesaram.github.io/Non-linear_ROM/kPCA_v_SVD.html) Non-linear manifold learning: SVD and kernel PCA
-* [**Course 2**](https://alexandredabyseesaram.github.io/SVD_Investigations/Autoencoder.html) Non-linear manifold learning: Autoencoders
-* [**Course 3**](https://alexandredabyseesaram.github.io/Simplified_NeuROM_demos/) NN-FEM, simplified implementation of NeuROM [@daby-seesaramNeuROM2024a] in 1D to get started with solving PDEs in the HiDeNN framweork [@zhangHierarchicalDeeplearningNeural2021]
-
-## {{< iconify fa6-regular:folder-open >}} &nbsp; Documents
-### PhD dissertation
-My PhD dissertation is available <a href="Resources/Documents/PhD_Thesis.pdf">here.</a>
-
-### PhD dissertation template
-In collaboration with <a href="https://floiseau.github.io/">Flavien Loiseau</a>, we made our Ph.D. thesis template openly available <a href="https://github.com/floiseau/PhD_Thesis_Template">on Github</a>.
-
-### CV
-A more detailed version of my background can be found in my <a href="Resources/Documents/CV.pdf">[CV]</a>.
 
 ## {{< iconify fa-solid:code >}} &nbsp; Code
 
@@ -71,6 +55,13 @@ The reduced-order modelling code used to create surrogate models based on an hyb
 
 ::::
 
+## {{< iconify fa-solid:chalkboard >}}  &nbsp; Courses
+A few short courses relevant to model reduction are available on my github
+
+* [**Course 1**](https://alexandredabyseesaram.github.io/Non-linear_ROM/kPCA_v_SVD.html) Non-linear manifold learning: SVD and kernel PCA
+* [**Course 2**](https://alexandredabyseesaram.github.io/SVD_Investigations/Autoencoder.html) Non-linear manifold learning: Autoencoders
+* [**Course 3**](https://alexandredabyseesaram.github.io/Simplified_NeuROM_demos/) NN-FEM, simplified implementation of NeuROM [@daby-seesaramNeuROM2024a] in 1D to get started with solving PDEs in the HiDeNN framweork [@zhangHierarchicalDeeplearningNeural2021]
+
 
 ## Illustrations
 
@@ -79,14 +70,3 @@ The reduced-order modelling code used to create surrogate models based on an hyb
 <video width="100%" controls>
   <source src="Resources/Videos/HiDeNN.mp4" type="video/mp4">
 </video>
-
-### Parametric interactive results
-Feel free to interact with it.
-
-<!-- <iframe width="100%" height="550" src="Resources/Results/Parametric_E_Theta.html"></IFRAME> -->
-<iframe width="100%" height="550" src="Resources/Results/Bi_parametric_static.html"></IFRAME>
-
-### 3D lung registration interactive results
-Feel free to interact with it.
-
-<iframe width="100%" height="550" src="Resources/AR/3D_lung_AR.html"></IFRAME>
