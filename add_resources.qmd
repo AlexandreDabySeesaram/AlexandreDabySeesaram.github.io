@@ -71,6 +71,8 @@ In collaboration with <a href="https://floiseau.github.io/">Flavien Loiseau</a>,
 
 ### Hybrid sparse neural network and Proper Generalised Decomposition (PGD)
 
+The concept of the NN-PGD derived in [@daby-seesaramFiniteElementNeural2025] is illustrated in the following short clip.
+
 <video width="100%" controls>
   <source src="Resources/Videos/HiDeNN.mp4" type="video/mp4">
 </video>
