@@ -116,14 +116,14 @@
     "href": "add_resources.html#code",
     "title": "Additional resources",
     "section": "   Code",
-    "text": "Code\n\nNeuROM (Daby-Seesaram, Škardová, and Genet 2025)\n  \n\n\n\n\n\n\n\n\n\n\n\nThe reduced-order modelling code used to create surrogate models based on an hybridisation of standard reduced-order modelling methods such as the PGD and Deep learning methods is public and notebooks with tutorials are also available.\n\n\n\n\n\n\nVideo\n\n\n\n\n\nVideo"
+    "text": "Code\n\nNeuROM (Daby-Seesaram, Škardová, and Genet 2025b)\n  \n\n\n\n\n\n\n\n\n\n\n\nThe reduced-order modelling code used to create surrogate models based on an hybridisation of standard reduced-order modelling methods such as the PGD and Deep learning methods is public and notebooks with tutorials are also available.\n\n\n\n\n\n\nVideo\n\n\n\n\n\nVideo"
   },
   {
     "objectID": "add_resources.html#courses",
     "href": "add_resources.html#courses",
     "title": "Additional resources",
     "section": "   Courses",
-    "text": "Courses\nA few short courses relevant to model reduction are available on my github\n\nCourse 1 Non-linear manifold learning: SVD and kernel PCA\nCourse 2 Non-linear manifold learning: Autoencoders\nCourse 3 NN-FEM, simplified implementation of NeuROM (Daby-Seesaram, Škardová, and Genet 2025) in 1D to get started with solving PDEs in the HiDeNN framweork (Zhang et al. 2021)"
+    "text": "Courses\nA few short courses relevant to model reduction are available on my github\n\nCourse 1 Non-linear manifold learning: SVD and kernel PCA\nCourse 2 Non-linear manifold learning: Autoencoders\nCourse 3 NN-FEM, simplified implementation of NeuROM (Daby-Seesaram, Škardová, and Genet 2025b) in 1D to get started with solving PDEs in the HiDeNN framweork (Zhang et al. 2021)"
   },
   {
     "objectID": "add_resources.html#documents",
@@ -137,7 +137,7 @@
     "href": "add_resources.html#illustrations",
     "title": "Additional resources",
     "section": "Illustrations",
-    "text": "Illustrations\n\nHybrid sparse neural network and Proper Generalised Decomposition (PGD)"
+    "text": "Illustrations\n\nHybrid sparse neural network and Proper Generalised Decomposition (PGD)\nThe concept of the NN-PGD derived in (Daby-Seesaram, Škardová, and Genet 2025a) is illustrated in the following short clip."
   },
   {
     "objectID": "posts/2022/2022-07-31-IRTG/index.html",
