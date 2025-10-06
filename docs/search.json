@@ -126,6 +126,13 @@
     "text": "Courses\nA few short courses relevant to model reduction are available on my github\n\nCourse 1 Non-linear manifold learning: SVD and kernel PCA\nCourse 2 Non-linear manifold learning: Autoencoders\nCourse 3 NN-FEM, simplified implementation of NeuROM (Daby-Seesaram, Škardová, and Genet 2025) in 1D to get started with solving PDEs in the HiDeNN framweork (Zhang et al. 2021)"
   },
   {
+    "objectID": "add_resources.html#documents",
+    "href": "add_resources.html#documents",
+    "title": "Additional resources",
+    "section": "   Documents",
+    "text": "Documents\n\nPhD dissertation template\nIn collaboration with Flavien Loiseau, we made our Ph.D. thesis template openly available on Github."
+  },
+  {
     "objectID": "add_resources.html#illustrations",
     "href": "add_resources.html#illustrations",
     "title": "Additional resources",
