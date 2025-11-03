@@ -6,15 +6,16 @@ $body-color: #f3f3f3;
 $link-color: rgb(58, 70, 245);
 $navbar-bg: rgb(23, 15, 57);
 $warning_color: #ffb700;
+$pink : rgb(230,136,248);
 
 /*-- scss:rules --*/
 
 h2 {
-    color: rgb(58, 70, 245);
+    color: $link-color;
   }
 
   h1 {
-    color: rgb(58, 70, 245);
+    color: $link-color;
   }
 
   .mark-orange {

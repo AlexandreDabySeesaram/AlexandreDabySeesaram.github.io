@@ -1,0 +1,354 @@
+---
+title: Continuum mechanics
+filters:
+    - marimo-team/marimo
+    # marimo-version: 0.14.17
+toc: false
+format:
+  html:
+    page-layout: full
+---
+
+<!-- # Continuum mechanics -->
+This static webpage shows the tangible meaning of kinematics quantities usually used in continuum mechanics.
+
+## Gradient of the transformation
+
+Let $\mathcal{F}$ be the transformation such that $\forall \underline{X} \in \Omega_0$ we can define its counter part 
+$\underline{x} = \mathcal{F}\left\{\underline{X}\right\} \in \Omega_t$
+
+Most kinematic quantities that describe the transformation of an elementary volume in the bulk are defined based on 
+$$\underline{\underline{F}} = \underline{\underline{\nabla}}\mathcal{F},$$
+the gradient of the transformation.
+
+Let's try to grasp the physical meaning of the component of $\underline{\underline{F}}$ in a Cartesian framework.
+
+:::: {.columns}
+
+::: {.column width="30%"}
+
+```python {.marimo}
+
+import marimo as mo
+from wigglystuff import Matrix
+import numpy as np
+
+F = mo.ui.anywidget(Matrix(np.eye(3), step=0.01))
+mo.hstack([mo.md(r"$\underline{\underline{F}}=$"), F])
+
+```
+
+:::
+
+::: {.column width="50%"}
+
+:::
+
+::::
+
+
+You can play with its components (`hover` and then `click + drag` directly on the matrix's components) and observe the impact it has on the deformation of a unit cube. In the following figure we can observe a unit cube initially undeformed (balck) that gets deformed by the action of $\underline{\underline{F}}$ (red).
+
+
+
+```python {.marimo}
+import plotly.graph_objects as go
+
+
+
+nodes_0 = np.array([
+    [0, 1, 1, 0, 0, 1, 1, 0],  # X-coordinates
+    [0, 0, 1, 1, 0, 0, 1, 1],  # Y-coordinates
+    [0, 0, 0, 0, 1, 1, 1, 1]   # Z-coordinates
+])
+
+nodes_t = F.matrix@nodes_0
+
+# Define edges by vertex index pairs
+edges = np.array([
+    [0, 1], [1, 2], [2, 3], [3, 0],  # bottom face
+    [4, 5], [5, 6], [6, 7], [7, 4],  # top face
+    [0, 4], [1, 5], [2, 6], [3, 7]   # vertical edges
+])
+
+
+```
+
+:::: {.columns}
+
+::: {.column width="70%"}
+
+```python {.marimo}
+
+# Create figure
+fig = go.Figure()
+
+# Add cube edges
+for edge in edges:
+    x = nodes_0[0, edge]
+    y = nodes_0[1, edge]
+    z = nodes_0[2, edge]
+    fig.add_trace(go.Scatter3d(
+        x=x, y=y, z=z,
+        mode='lines',
+        line=dict(color='black', width=3)
+    ))
+for edge in edges:
+    x = nodes_t[0, edge]
+    y = nodes_t[1, edge]
+    z = nodes_t[2, edge]
+    fig.add_trace(go.Scatter3d(
+        x=x, y=y, z=z,
+        mode='lines',
+        line=dict(color='red', width=6)
+    ))
+
+# Configure layout with turntable mode
+fig.update_layout(
+    scene=dict(
+        aspectmode='cube',
+        xaxis=dict(range=[-1, 2]),  # x-axis fixed from 0 to 6
+        yaxis=dict(range=[-1, 2]),  # x-axis fixed from 0 to 6
+        zaxis=dict(range=[-1, 2]),  # x-axis fixed from 0 to 6
+    ),
+    # scene_camera=dict(
+    #     eye=dict(x=1.5, y=1.5, z=1),
+    #     projection=dict(type='perspective')
+    # ),
+    dragmode='turntable',  # ✅ Turntable rotation
+    title="Initial and deformed unit cubes", 
+    showlegend = False
+)
+
+mo.ui.plotly(fig)
+
+```
+
+:::
+
+::: {.column width="30%"}
+
+From this second order tensor, we can also compute the associated right Cauchy–Green deformation tensor 
+
+```python {.marimo}
+
+F_mat = np.array(F.matrix)
+
+C = mo.ui.anywidget(Matrix(F_mat.T@F_mat, step=0.0))
+mo.hstack([mo.md(r"$\underline{\underline{C}}=$"), C])
+
+```
+that is not impacted by rigid body motions (translations or rotations).
+
+:::
+
+::::
+
+
+
+
+
+The variation of the volume is given by the jacobian $$J=\text{det}\left(\underline{\underline{F}}\right).$$ The current volume $V_t$ is computed as $$V_t = J~V_0$$ with $V_0$ being the volume of the initial cube.
+
+```python {.marimo}
+
+jacobian = np.linalg.det(F.matrix)
+```
+
+
+```python {.marimo}
+
+mo.md(rf"See the new volume $V_t$ ={jacobian:.1f}$\times V_0$")
+
+```
+
+
+## Stress tensor
+
+The Cauchy strain tensor $\underline{\underline{\sigma}}$ describe internal traction forces. To get an idea of the physical interpretation of each of its component let's manipulate this tensor and look at the impact it has on the corresponding traction forces on an elementary volume element.
+
+
+
+```python {.marimo}
+
+normal_axis_dropdown = mo.ui.dropdown(options=["e_1", "e_2", "e_3","-e_1", "-e_2", "-e_3"], label="Select the normal vector you want here: ", value = "e_1")
+
+normal_axis_dropdown
+
+```
+
+And see how the components of 
+
+:::: {.columns}
+
+::: {.column width="30%"}
+
+```python {.marimo}
+
+
+sigma = mo.ui.anywidget(Matrix(np.eye(3), step=0.01,mirror=True))
+
+mo.hstack([mo.md(r"$\underline{\underline{\sigma}}=$"), sigma])
+
+```
+
+:::
+
+::: {.column width="50%"}
+
+:::
+
+::::
+
+
+sigma affect the traction vector $\underline{T} = \underline{\underline{\sigma}} \underline{n}$
+
+```python {.marimo}
+
+
+normal_axis = normal_axis_dropdown.value
+
+
+match normal_axis:
+    case "e_1":
+        n_axis = np.array([[1,0,0]]).T
+        T_0 = np.array([[1,0.5,0.5]]).T
+    case "-e_1":
+        n_axis = np.array([[-1,0,0]]).T
+        T_0 = np.array([[0,0.5,0.5]]).T
+    case "e_2":
+        n_axis = np.array([[0,1,0]]).T
+        T_0 = np.array([[0.5,1,0.5]]).T
+    case "-e_2":
+        n_axis = np.array([[0,-1,0]]).T
+        T_0 = np.array([[0.5,0,0.5]]).T
+    case "e_3":
+        n_axis = np.array([[0,0,1]]).T
+        T_0 = np.array([[0.5,0.5,1]]).T
+    case "-e_3":
+        n_axis = np.array([[0,0,-1]]).T
+        T_0 = np.array([[0.5,0.5,0]]).T
+
+T_sigma = sigma.matrix@n_axis/2
+
+x_T_sigma = np.hstack([T_0,T_0+T_sigma])
+
+```
+
+
+```python {.marimo}
+
+fig_sigma = go.Figure()
+
+
+match normal_axis:
+    case "-e_3":
+        fig_sigma.add_trace(go.Surface(
+            # x=x_n,
+            # y=x_n,
+            # z=z_n,  # z = 0 plane
+            x=[[0,1],[0,1]],
+            y=[[0,0],[1,1]],
+            z=[[0,0],[0,0]],  # z = 0 plane
+            showscale=False,
+            opacity=0.5,
+            colorscale=[[0, 'blue'], [1, 'blue']]
+        ))
+    case "e_3":
+        fig_sigma.add_trace(go.Surface(
+            # x=x_n,
+            # y=x_n,
+            # z=z_n,  # z = 0 plane
+            x=[[0,1],[0,1]],
+            y=[[0,0],[1,1]],
+            z=[[1,1],[1,1]],  # z = 0 plane
+            showscale=False,
+            opacity=0.5,
+            colorscale=[[0, 'blue'], [1, 'blue']]
+        ))
+    case "e_1":
+        fig_sigma.add_trace(go.Surface(
+            # x=x_n,
+            # y=x_n,
+            # z=z_n,  # z = 0 plane
+            x=[[1,1],[1,1]],
+            y=[[0,1],[0,1]],
+            z=[[0,0],[1,1]],  # z = 0 plane
+            showscale=False,
+            opacity=0.5,
+            colorscale=[[0, 'blue'], [1, 'blue']]
+        ))
+    case "-e_1":
+        fig_sigma.add_trace(go.Surface(
+            # x=x_n,
+            # y=x_n,
+            # z=z_n,  # z = 0 plane
+            x=[[0,0],[0,0]],
+            y=[[0,1],[0,1]],
+            z=[[0,0],[1,1]],  # z = 0 plane
+            showscale=False,
+            opacity=0.5,
+            colorscale=[[0, 'blue'], [1, 'blue']]
+        ))
+    case "-e_2":
+        fig_sigma.add_trace(go.Surface(
+            # x=x_n,
+            # y=x_n,
+            # z=z_n,  # z = 0 plane
+            x=[[0,0],[1,1]],
+            y=[[0,0],[0,0]],
+            z=[[0,1],[0,1]],  # z = 0 plane
+            showscale=False,
+            opacity=0.5,
+            colorscale=[[0, 'blue'], [1, 'blue']]
+        ))
+    case "e_2":
+        fig_sigma.add_trace(go.Surface(
+            # x=x_n,
+            # y=x_n,
+            # z=z_n,  # z = 0 plane
+            x=[[0,0],[1,1]],
+            y=[[1,1],[1,1]],
+            z=[[0,1],[0,1]],  # z = 0 plane
+            showscale=False,
+            opacity=0.5,
+            colorscale=[[0, 'blue'], [1, 'blue']]
+        ))
+
+fig_sigma.add_trace(go.Scatter3d(
+    x=x_T_sigma[0,:], y=x_T_sigma[1,:], z=x_T_sigma[2,:],
+    mode='lines',
+    name='Traction vector',
+    line=dict(color='red', width=5)
+))
+
+for edge_sigma in edges:
+    x_sigma = nodes_0[0, edge_sigma]
+    y_sigma = nodes_0[1, edge_sigma]
+    z_sigma = nodes_0[2, edge_sigma]
+    fig_sigma.add_trace(go.Scatter3d(
+        x=x_sigma, y=y_sigma, z=z_sigma,
+        mode='lines',
+        showlegend=False,
+        line=dict(color='black', width=3)
+    ))
+
+fig_sigma.update_layout(
+    scene=dict(
+        aspectmode='cube',
+        xaxis=dict(range=[-1, 2]),  # x-axis fixed from 0 to 6
+        yaxis=dict(range=[-1, 2]),  # x-axis fixed from 0 to 6
+        zaxis=dict(range=[-1, 2]),  # x-axis fixed from 0 to 6
+    ),
+    # scene_camera=dict(
+    #     eye=dict(x=1.5, y=1.5, z=1),
+    #     projection=dict(type='perspective')
+    # ),
+    dragmode='turntable',  # ✅ Turntable rotation
+    title="Infinitesimal volume and traction vector", 
+    showlegend = True
+)
+
+mo.ui.plotly(fig_sigma)
+
+```

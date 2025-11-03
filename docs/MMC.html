@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Additional resources – Alexandre Daby-Seesaram</title>
+<title>Continuum mechanics – Alexandre Daby-Seesaram</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,27 +20,7 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for citations */
-div.csl-bib-body { }
-div.csl-entry {
-  clear: both;
-  margin-bottom: 0em;
-}
-.hanging-indent div.csl-entry {
-  margin-left:2em;
-  text-indent:-2em;
-}
-div.csl-left-margin {
-  min-width:2em;
-  float:left;
-}
-div.csl-right-inline {
-  margin-left:2em;
-  padding-left:1em;
-}
-div.csl-indent {
-  margin-left: 2em;
-}</style>
+</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -66,7 +46,6 @@ div.csl-indent {
 <link href="site_libs/bootstrap/bootstrap-cd6bffedb39ef5c5cf36670d64ee8c24.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
 <link href="site_libs/bootstrap/bootstrap-dark-1fc5238e7ed1be7aac769702ecf03061.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <link href="site_libs/bootstrap/bootstrap-cd6bffedb39ef5c5cf36670d64ee8c24.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
-<script src="site_libs/quarto-contrib/iconify-2.1.0/iconify-icon.min.js"></script>
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -94,16 +73,17 @@ div.csl-indent {
     "search-label": "Search"
   }
 }</script>
-
-
-<link rel="stylesheet" href="styles.css">
-<meta property="og:title" content="Additional resources – Alexandre Daby-Seesaram">
+<script type="module" src="https://cdn.jsdelivr.net/npm/@marimo-team/islands@0.14.11/dist/main.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/@marimo-team/islands@0.14.11/dist/style.css" rel="stylesheet" crossorigin="anonymous">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;500;700&amp;family=Lora&amp;family=PT+Sans:wght@400;700&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.css" integrity="sha384-wcIxkf4k558AjM3Yz3BBFQUbk/zgIYC2R0QpeeYb+TwlBVMrlgLqwRjRtGZiK7ww" crossorigin="anonymous">
+<meta property="og:title" content="Continuum mechanics – Alexandre Daby-Seesaram">
 <meta property="og:description" content="Alexandre Daby-Seesaram, PHD, personal webpage">
-<meta property="og:image" content="https://alexandredabyseesaram.github.io/Resources/Images/NeuROM_ter.svg">
+<meta property="og:image" content="https://alexandredabyseesaram.github.io/avatar.jpg">
 <meta property="og:site_name" content="Alexandre Daby-Seesaram">
-</head>
-
-<body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+</head><body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
     const toggleBodyColorMode = (bsSheetEl) => {
       const mode = bsSheetEl.getAttribute("data-mode");
       const bodyEl = window.document.querySelector("body");
@@ -265,7 +245,42 @@ div.csl-indent {
     } else {
       toggleColorMode(false);
     }
-  </script>
+  </script><marimo-filename hidden=""></marimo-filename>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="styles.css">
+
+
+
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -301,7 +316,7 @@ div.csl-indent {
 <span class="menu-text">News</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./add_resources.html" aria-current="page"> 
+    <a class="nav-link" href="./add_resources.html"> 
 <span class="menu-text">Resources</span></a>
   </li>  
   <li class="nav-item">
@@ -328,39 +343,19 @@ div.csl-indent {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#code" id="toc-code" class="nav-link active" data-scroll-target="#code"><iconify-icon role="img" inline="" icon="fa-solid:code" aria-label="Icon code from fa-solid Iconify.design set." title="Icon code from fa-solid Iconify.design set."></iconify-icon> &nbsp; Code</a>
-  <ul class="collapse">
-  <li><a href="#neurom-daby-seesaramneurom2024a" id="toc-neurom-daby-seesaramneurom2024a" class="nav-link" data-scroll-target="#neurom-daby-seesaramneurom2024a">NeuROM <span class="citation" data-cites="daby-seesaramNeuROM2024a">(Daby-Seesaram, Škardová, and Genet 2025b)</span></a></li>
-  </ul></li>
-  <li><a href="#courses" id="toc-courses" class="nav-link" data-scroll-target="#courses"><iconify-icon role="img" inline="" icon="fa-solid:chalkboard" aria-label="Icon chalkboard from fa-solid Iconify.design set." title="Icon chalkboard from fa-solid Iconify.design set."></iconify-icon> &nbsp; Courses</a></li>
-  <li><a href="#documents" id="toc-documents" class="nav-link" data-scroll-target="#documents"><iconify-icon role="img" inline="" icon="fa6-regular:folder-open" aria-label="Icon folder-open from fa6-regular Iconify.design set." title="Icon folder-open from fa6-regular Iconify.design set."></iconify-icon> &nbsp; Documents</a>
-  <ul class="collapse">
-  <li><a href="#phd-dissertation-template" id="toc-phd-dissertation-template" class="nav-link" data-scroll-target="#phd-dissertation-template">PhD dissertation template</a></li>
-  </ul></li>
-  <li><a href="#illustrations" id="toc-illustrations" class="nav-link" data-scroll-target="#illustrations">Illustrations</a>
-  <ul class="collapse">
-  <li><a href="#hybrid-sparse-neural-network-and-proper-generalised-decomposition-pgd" id="toc-hybrid-sparse-neural-network-and-proper-generalised-decomposition-pgd" class="nav-link" data-scroll-target="#hybrid-sparse-neural-network-and-proper-generalised-decomposition-pgd">Hybrid sparse neural network and Proper Generalised Decomposition (PGD)</a></li>
-  </ul></li>
-  </ul>
-</nav>
-    </div>
+    
 <!-- main -->
-<main class="content column-page-left" id="quarto-document-content">
+<main class="content column-page" id="quarto-document-content">
 
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Additional resources</h1>
+<h1 class="title">Continuum mechanics</h1>
 </div>
 
 
 
-<div class="quarto-title-meta column-page-left">
+<div class="quarto-title-meta column-page">
 
     
   
@@ -372,87 +367,105 @@ div.csl-indent {
 </header>
 
 
-<div style="margin-top: 3em;">
-
-</div>
-<section id="code" class="level2">
-<h2 class="anchored" data-anchor-id="code"><iconify-icon role="img" inline="" icon="fa-solid:code" aria-label="Icon code from fa-solid Iconify.design set." title="Icon code from fa-solid Iconify.design set."></iconify-icon> &nbsp; Code</h2>
-<section id="neurom-daby-seesaramneurom2024a" class="level3">
-<h3 class="anchored" data-anchor-id="neurom-daby-seesaramneurom2024a">NeuROM <span class="citation" data-cites="daby-seesaramNeuROM2024a">(<a href="#ref-daby-seesaramNeuROM2024a" role="doc-biblioref">Daby-Seesaram, Škardová, and Genet 2025b</a>)</span></h3>
-<p><a href="https://pypi.org/project/NeuROM-Py/"><img src="https://img.shields.io/pypi/dm/NeuROM-Py.svg?label=PyPI%20downloads" class="img-fluid" alt="PyPI Downloads"></a> <a href="https://github.com/alexandredabyseesaram/neurom"><img src="https://img.shields.io/github/license/alexandredabyseesaram/neurom.png" class="img-fluid" alt="GitHub license"></a> <a href="https://doi.org/10.5281/zenodo.13772741"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.13772741.svg" class="img-fluid" alt="DOI"></a></p>
+<!-- # Continuum mechanics -->
+<p>This static webpage shows the tangible meaning of kinematics quantities usually used in continuum mechanics.</p>
+<section id="gradient-of-the-transformation" class="level2">
+<h2 class="anchored" data-anchor-id="gradient-of-the-transformation">Gradient of the transformation</h2>
+<p>Let <span class="math inline">\(\mathcal{F}\)</span> be the transformation such that <span class="math inline">\(\forall \underline{X} \in \Omega_0\)</span> we can define its counter part <span class="math inline">\(\underline{x} = \mathcal{F}\left\{\underline{X}\right\} \in \Omega_t\)</span></p>
+<p>Most kinematic quantities that describe the transformation of an elementary volume in the bulk are defined based on <span class="math display">\[\underline{\underline{F}} = \underline{\underline{\nabla}}\mathcal{F},\]</span> the gradient of the transformation.</p>
+<p>Let’s try to grasp the physical meaning of the component of <span class="math inline">\(\underline{\underline{F}}\)</span> in a Cartesian framework.</p>
 <div class="columns">
-<div class="column" style="width:25%;">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="Resources/Images/NeuROM_ter.svg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></p>
-</figure>
-</div>
-</div><div class="column" style="width:75%;">
-<div style="margin-top: 2.5em;">
-
-</div>
-<p>The reduced-order modelling code used to create surrogate models based on an hybridisation of standard reduced-order modelling methods such as the PGD and Deep learning methods is <a href="https://github.com/AlexandreDabySeesaram/NeuROM">public</a> and <a href="https://fenni-pgd-aldabyse-d62c0089e00d70057d8fae6bbaedf6cf1d181c44edf5.gitlabpages.inria.fr/">notebooks with tutorials are also available</a>.</p>
-</div>
-</div>
-<div class="columns">
-<div class="column" style="width:50%;">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><video src="Resources/Videos/NeuROM_3D.mp4" class="img-fluid quarto-figure quarto-figure-center" style="width:70.0%" loop="true" autoplay="true" controls=""><a href="Resources/Videos/NeuROM_3D.mp4">Video</a></video></p>
-</figure>
-</div>
+<div class="column" style="width:30%;">
+<marimo-island data-app-id="main" data-cell-id="Hbol" data-reactive="true">
+    <marimo-cell-output>
+    <marimo-mime-renderer data-mime="&quot;application/vnd.marimo+error&quot;" data-data="[{&quot;msg&quot;: &quot;No module named 'wigglystuff'&quot;, &quot;exception_type&quot;: &quot;ModuleNotFoundError&quot;, &quot;raising_cell&quot;: null, &quot;type&quot;: &quot;exception&quot;}]"></marimo-mime-renderer>
+    </marimo-cell-output>
+    <marimo-cell-code hidden="">import%20marimo%20as%20mo%0Afrom%20wigglystuff%20import%20Matrix%0Aimport%20numpy%20as%20np%0A%0AF%20%3D%20mo.ui.anywidget(Matrix(np.eye(3)%2C%20step%3D0.01))%0Amo.hstack(%5Bmo.md(r%22%24%5Cunderline%7B%5Cunderline%7BF%7D%7D%3D%24%22)%2C%20F%5D)%0A</marimo-cell-code>
+</marimo-island>
 </div><div class="column" style="width:50%;">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><video src="Resources/Videos/NeuROM_3D_gravity_ter.mov" class="img-fluid quarto-figure quarto-figure-center" style="width:100.0%" loop="true" autoplay="true" controls=""><a href="Resources/Videos/NeuROM_3D_gravity_ter.mov">Video</a></video></p>
-</figure>
+
 </div>
 </div>
+<p>You can play with its components (<code>hover</code> and then <code>click + drag</code> directly on the matrix’s components) and observe the impact it has on the deformation of a unit cube. In the following figure we can observe a unit cube initially undeformed (balck) that gets deformed by the action of <span class="math inline">\(\underline{\underline{F}}\)</span> (red).</p>
+<marimo-island data-app-id="main" data-cell-id="MJUe" data-reactive="true">
+    <marimo-cell-output>
+    <marimo-mime-renderer data-mime="&quot;application/vnd.marimo+error&quot;" data-data="[{&quot;msg&quot;: &quot;An ancestor raised an exception (ModuleNotFoundError): &quot;, &quot;exception_type&quot;: &quot;ModuleNotFoundError&quot;, &quot;raising_cell&quot;: &quot;Hbol&quot;, &quot;type&quot;: &quot;exception&quot;}]"></marimo-mime-renderer>
+    </marimo-cell-output>
+    <marimo-cell-code hidden="">import%20plotly.graph_objects%20as%20go%0A%0A%0A%0Anodes_0%20%3D%20np.array(%5B%0A%20%20%20%20%5B0%2C%201%2C%201%2C%200%2C%200%2C%201%2C%201%2C%200%5D%2C%20%20%23%20X-coordinates%0A%20%20%20%20%5B0%2C%200%2C%201%2C%201%2C%200%2C%200%2C%201%2C%201%5D%2C%20%20%23%20Y-coordinates%0A%20%20%20%20%5B0%2C%200%2C%200%2C%200%2C%201%2C%201%2C%201%2C%201%5D%20%20%20%23%20Z-coordinates%0A%5D)%0A%0Anodes_t%20%3D%20F.matrix%40nodes_0%0A%0A%23%20Define%20edges%20by%20vertex%20index%20pairs%0Aedges%20%3D%20np.array(%5B%0A%20%20%20%20%5B0%2C%201%5D%2C%20%5B1%2C%202%5D%2C%20%5B2%2C%203%5D%2C%20%5B3%2C%200%5D%2C%20%20%23%20bottom%20face%0A%20%20%20%20%5B4%2C%205%5D%2C%20%5B5%2C%206%5D%2C%20%5B6%2C%207%5D%2C%20%5B7%2C%204%5D%2C%20%20%23%20top%20face%0A%20%20%20%20%5B0%2C%204%5D%2C%20%5B1%2C%205%5D%2C%20%5B2%2C%206%5D%2C%20%5B3%2C%207%5D%20%20%20%23%20vertical%20edges%0A%5D)%0A%0A</marimo-cell-code>
+</marimo-island>
+<div class="columns">
+<div class="column" style="width:70%;">
+<marimo-island data-app-id="main" data-cell-id="vblA" data-reactive="true">
+    <marimo-cell-output>
+    <marimo-mime-renderer data-mime="&quot;application/vnd.marimo+error&quot;" data-data="[{&quot;msg&quot;: &quot;An ancestor raised an exception (ModuleNotFoundError): &quot;, &quot;exception_type&quot;: &quot;ModuleNotFoundError&quot;, &quot;raising_cell&quot;: &quot;Hbol&quot;, &quot;type&quot;: &quot;exception&quot;}]"></marimo-mime-renderer>
+    </marimo-cell-output>
+    <marimo-cell-code hidden="">%23%20Create%20figure%0Afig%20%3D%20go.Figure()%0A%0A%23%20Add%20cube%20edges%0Afor%20edge%20in%20edges%3A%0A%20%20%20%20x%20%3D%20nodes_0%5B0%2C%20edge%5D%0A%20%20%20%20y%20%3D%20nodes_0%5B1%2C%20edge%5D%0A%20%20%20%20z%20%3D%20nodes_0%5B2%2C%20edge%5D%0A%20%20%20%20fig.add_trace(go.Scatter3d(%0A%20%20%20%20%20%20%20%20x%3Dx%2C%20y%3Dy%2C%20z%3Dz%2C%0A%20%20%20%20%20%20%20%20mode%3D'lines'%2C%0A%20%20%20%20%20%20%20%20line%3Ddict(color%3D'black'%2C%20width%3D3)%0A%20%20%20%20))%0Afor%20edge%20in%20edges%3A%0A%20%20%20%20x%20%3D%20nodes_t%5B0%2C%20edge%5D%0A%20%20%20%20y%20%3D%20nodes_t%5B1%2C%20edge%5D%0A%20%20%20%20z%20%3D%20nodes_t%5B2%2C%20edge%5D%0A%20%20%20%20fig.add_trace(go.Scatter3d(%0A%20%20%20%20%20%20%20%20x%3Dx%2C%20y%3Dy%2C%20z%3Dz%2C%0A%20%20%20%20%20%20%20%20mode%3D'lines'%2C%0A%20%20%20%20%20%20%20%20line%3Ddict(color%3D'red'%2C%20width%3D6)%0A%20%20%20%20))%0A%0A%23%20Configure%20layout%20with%20turntable%20mode%0Afig.update_layout(%0A%20%20%20%20scene%3Ddict(%0A%20%20%20%20%20%20%20%20aspectmode%3D'cube'%2C%0A%20%20%20%20%20%20%20%20xaxis%3Ddict(range%3D%5B-1%2C%202%5D)%2C%20%20%23%20x-axis%20fixed%20from%200%20to%206%0A%20%20%20%20%20%20%20%20yaxis%3Ddict(range%3D%5B-1%2C%202%5D)%2C%20%20%23%20x-axis%20fixed%20from%200%20to%206%0A%20%20%20%20%20%20%20%20zaxis%3Ddict(range%3D%5B-1%2C%202%5D)%2C%20%20%23%20x-axis%20fixed%20from%200%20to%206%0A%20%20%20%20)%2C%0A%20%20%20%20%23%20scene_camera%3Ddict(%0A%20%20%20%20%23%20%20%20%20%20eye%3Ddict(x%3D1.5%2C%20y%3D1.5%2C%20z%3D1)%2C%0A%20%20%20%20%23%20%20%20%20%20projection%3Ddict(type%3D'perspective')%0A%20%20%20%20%23%20)%2C%0A%20%20%20%20dragmode%3D'turntable'%2C%20%20%23%20%E2%9C%85%20Turntable%20rotation%0A%20%20%20%20title%3D%22Initial%20and%20deformed%20unit%20cubes%22%2C%20%0A%20%20%20%20showlegend%20%3D%20False%0A)%0A%0Amo.ui.plotly(fig)%0A</marimo-cell-code>
+</marimo-island>
+</div><div class="column" style="width:30%;">
+<p>From this second order tensor, we can also compute the associated right Cauchy–Green deformation tensor</p>
+<marimo-island data-app-id="main" data-cell-id="bkHC" data-reactive="true">
+    <marimo-cell-output>
+    <marimo-mime-renderer data-mime="&quot;application/vnd.marimo+error&quot;" data-data="[{&quot;msg&quot;: &quot;An ancestor raised an exception (ModuleNotFoundError): &quot;, &quot;exception_type&quot;: &quot;ModuleNotFoundError&quot;, &quot;raising_cell&quot;: &quot;Hbol&quot;, &quot;type&quot;: &quot;exception&quot;}]"></marimo-mime-renderer>
+    </marimo-cell-output>
+    <marimo-cell-code hidden="">F_mat%20%3D%20np.array(F.matrix)%0A%0AC%20%3D%20mo.ui.anywidget(Matrix(F_mat.T%40F_mat%2C%20step%3D0.0))%0Amo.hstack(%5Bmo.md(r%22%24%5Cunderline%7B%5Cunderline%7BC%7D%7D%3D%24%22)%2C%20C%5D)%0A</marimo-cell-code>
+</marimo-island>
+<p>that is not impacted by rigid body motions (translations or rotations).</p>
 </div>
+</div>
+<p>The variation of the volume is given by the jacobian <span class="math display">\[J=\text{det}\left(\underline{\underline{F}}\right).\]</span> The current volume <span class="math inline">\(V_t\)</span> is computed as <span class="math display">\[V_t = J~V_0\]</span> with <span class="math inline">\(V_0\)</span> being the volume of the initial cube.</p>
+<marimo-island data-app-id="main" data-cell-id="lEQa" data-reactive="true">
+    <marimo-cell-output>
+    <marimo-mime-renderer data-mime="&quot;application/vnd.marimo+error&quot;" data-data="[{&quot;msg&quot;: &quot;An ancestor raised an exception (ModuleNotFoundError): &quot;, &quot;exception_type&quot;: &quot;ModuleNotFoundError&quot;, &quot;raising_cell&quot;: &quot;Hbol&quot;, &quot;type&quot;: &quot;exception&quot;}]"></marimo-mime-renderer>
+    </marimo-cell-output>
+    <marimo-cell-code hidden="">jacobian%20%3D%20np.linalg.det(F.matrix)</marimo-cell-code>
+</marimo-island>
+<marimo-island data-app-id="main" data-cell-id="PKri" data-reactive="true">
+    <marimo-cell-output>
+    <marimo-mime-renderer data-mime="&quot;application/vnd.marimo+error&quot;" data-data="[{&quot;msg&quot;: &quot;An ancestor raised an exception (ModuleNotFoundError): &quot;, &quot;exception_type&quot;: &quot;ModuleNotFoundError&quot;, &quot;raising_cell&quot;: &quot;Hbol&quot;, &quot;type&quot;: &quot;exception&quot;}]"></marimo-mime-renderer>
+    </marimo-cell-output>
+    <marimo-cell-code hidden="">mo.md(rf%22See%20the%20new%20volume%20%24V_t%24%20%3D%7Bjacobian%3A.1f%7D%24%5Ctimes%20V_0%24%22)%0A</marimo-cell-code>
+</marimo-island>
 </section>
-</section>
-<section id="courses" class="level2">
-<h2 class="anchored" data-anchor-id="courses"><iconify-icon role="img" inline="" icon="fa-solid:chalkboard" aria-label="Icon chalkboard from fa-solid Iconify.design set." title="Icon chalkboard from fa-solid Iconify.design set."></iconify-icon> &nbsp; Courses</h2>
-<p>A few short courses relevant to model reduction are available on my github</p>
-<ul>
-<li><a href="https://alexandredabyseesaram.github.io/Non-linear_ROM/kPCA_v_SVD.html"><strong>Course 1</strong></a> Non-linear manifold learning: SVD and kernel PCA</li>
-<li><a href="https://alexandredabyseesaram.github.io/SVD_Investigations/Autoencoder.html"><strong>Course 2</strong></a> Non-linear manifold learning: Autoencoders</li>
-<li><a href="https://alexandredabyseesaram.github.io/Simplified_NeuROM_demos/"><strong>Course 3</strong></a> NN-FEM, simplified implementation of NeuROM <span class="citation" data-cites="daby-seesaramNeuROM2024a">(<a href="#ref-daby-seesaramNeuROM2024a" role="doc-biblioref">Daby-Seesaram, Škardová, and Genet 2025b</a>)</span> in 1D to get started with solving PDEs in the HiDeNN framweork <span class="citation" data-cites="zhangHierarchicalDeeplearningNeural2021">(<a href="#ref-zhangHierarchicalDeeplearningNeural2021" role="doc-biblioref">Zhang et al. 2021</a>)</span></li>
-<li><a href="./MMC.html"><strong>Course 4</strong></a> Continuum mechanics illustrations</li>
-</ul>
-</section>
-<section id="documents" class="level2">
-<h2 class="anchored" data-anchor-id="documents"><iconify-icon role="img" inline="" icon="fa6-regular:folder-open" aria-label="Icon folder-open from fa6-regular Iconify.design set." title="Icon folder-open from fa6-regular Iconify.design set."></iconify-icon> &nbsp; Documents</h2>
-<section id="phd-dissertation-template" class="level3">
-<h3 class="anchored" data-anchor-id="phd-dissertation-template">PhD dissertation template</h3>
-<p>In collaboration with <a href="https://floiseau.github.io/">Flavien Loiseau</a>, we made our Ph.D.&nbsp;thesis template openly available <a href="https://github.com/floiseau/PhD_Thesis_Template">on Github</a>.</p>
-</section>
-</section>
-<section id="illustrations" class="level2">
-<h2 class="anchored" data-anchor-id="illustrations">Illustrations</h2>
-<section id="hybrid-sparse-neural-network-and-proper-generalised-decomposition-pgd" class="level3">
-<h3 class="anchored" data-anchor-id="hybrid-sparse-neural-network-and-proper-generalised-decomposition-pgd">Hybrid sparse neural network and Proper Generalised Decomposition (PGD)</h3>
-<p>The concept of the NN-PGD derived in <span class="citation" data-cites="daby-seesaramFiniteElementNeural2025">(<a href="#ref-daby-seesaramFiniteElementNeural2025" role="doc-biblioref">Daby-Seesaram, Škardová, and Genet 2025a</a>)</span> is illustrated in the following short clip.</p>
-<video width="100%" controls="">
-<source src="Resources/Videos/HiDeNN.mp4" type="video/mp4">
-</video>
+<section id="stress-tensor" class="level2">
+<h2 class="anchored" data-anchor-id="stress-tensor">Stress tensor</h2>
+<p>The Cauchy strain tensor <span class="math inline">\(\underline{\underline{\sigma}}\)</span> describe internal traction forces. To get an idea of the physical interpretation of each of its component let’s manipulate this tensor and look at the impact it has on the corresponding traction forces on an elementary volume element.</p>
+<marimo-island data-app-id="main" data-cell-id="Xref" data-reactive="true">
+    <marimo-cell-output>
+    <marimo-mime-renderer data-mime="&quot;application/vnd.marimo+error&quot;" data-data="[{&quot;msg&quot;: &quot;An ancestor raised an exception (ModuleNotFoundError): &quot;, &quot;exception_type&quot;: &quot;ModuleNotFoundError&quot;, &quot;raising_cell&quot;: &quot;Hbol&quot;, &quot;type&quot;: &quot;exception&quot;}]"></marimo-mime-renderer>
+    </marimo-cell-output>
+    <marimo-cell-code hidden="">normal_axis_dropdown%20%3D%20mo.ui.dropdown(options%3D%5B%22e_1%22%2C%20%22e_2%22%2C%20%22e_3%22%2C%22-e_1%22%2C%20%22-e_2%22%2C%20%22-e_3%22%5D%2C%20label%3D%22Select%20the%20normal%20vector%20you%20want%20here%3A%20%22%2C%20value%20%3D%20%22e_1%22)%0A%0Anormal_axis_dropdown%0A</marimo-cell-code>
+</marimo-island>
+<p>And see how the components of</p>
+<div class="columns">
+<div class="column" style="width:30%;">
+<marimo-island data-app-id="main" data-cell-id="SFPL" data-reactive="true">
+    <marimo-cell-output>
+    <marimo-mime-renderer data-mime="&quot;application/vnd.marimo+error&quot;" data-data="[{&quot;msg&quot;: &quot;An ancestor raised an exception (ModuleNotFoundError): &quot;, &quot;exception_type&quot;: &quot;ModuleNotFoundError&quot;, &quot;raising_cell&quot;: &quot;Hbol&quot;, &quot;type&quot;: &quot;exception&quot;}]"></marimo-mime-renderer>
+    </marimo-cell-output>
+    <marimo-cell-code hidden="">sigma%20%3D%20mo.ui.anywidget(Matrix(np.eye(3)%2C%20step%3D0.01%2Cmirror%3DTrue))%0A%0Amo.hstack(%5Bmo.md(r%22%24%5Cunderline%7B%5Cunderline%7B%5Csigma%7D%7D%3D%24%22)%2C%20sigma%5D)%0A</marimo-cell-code>
+</marimo-island>
+</div><div class="column" style="width:50%;">
+
+</div>
+</div>
+<p>sigma affect the traction vector <span class="math inline">\(\underline{T} = \underline{\underline{\sigma}} \underline{n}\)</span></p>
+<marimo-island data-app-id="main" data-cell-id="BYtC" data-reactive="true">
+    <marimo-cell-output>
+    <marimo-mime-renderer data-mime="&quot;application/vnd.marimo+error&quot;" data-data="[{&quot;msg&quot;: &quot;An ancestor raised an exception (ModuleNotFoundError): &quot;, &quot;exception_type&quot;: &quot;ModuleNotFoundError&quot;, &quot;raising_cell&quot;: &quot;Hbol&quot;, &quot;type&quot;: &quot;exception&quot;}]"></marimo-mime-renderer>
+    </marimo-cell-output>
+    <marimo-cell-code hidden="">normal_axis%20%3D%20normal_axis_dropdown.value%0A%0A%0Amatch%20normal_axis%3A%0A%20%20%20%20case%20%22e_1%22%3A%0A%20%20%20%20%20%20%20%20n_axis%20%3D%20np.array(%5B%5B1%2C0%2C0%5D%5D).T%0A%20%20%20%20%20%20%20%20T_0%20%3D%20np.array(%5B%5B1%2C0.5%2C0.5%5D%5D).T%0A%20%20%20%20case%20%22-e_1%22%3A%0A%20%20%20%20%20%20%20%20n_axis%20%3D%20np.array(%5B%5B-1%2C0%2C0%5D%5D).T%0A%20%20%20%20%20%20%20%20T_0%20%3D%20np.array(%5B%5B0%2C0.5%2C0.5%5D%5D).T%0A%20%20%20%20case%20%22e_2%22%3A%0A%20%20%20%20%20%20%20%20n_axis%20%3D%20np.array(%5B%5B0%2C1%2C0%5D%5D).T%0A%20%20%20%20%20%20%20%20T_0%20%3D%20np.array(%5B%5B0.5%2C1%2C0.5%5D%5D).T%0A%20%20%20%20case%20%22-e_2%22%3A%0A%20%20%20%20%20%20%20%20n_axis%20%3D%20np.array(%5B%5B0%2C-1%2C0%5D%5D).T%0A%20%20%20%20%20%20%20%20T_0%20%3D%20np.array(%5B%5B0.5%2C0%2C0.5%5D%5D).T%0A%20%20%20%20case%20%22e_3%22%3A%0A%20%20%20%20%20%20%20%20n_axis%20%3D%20np.array(%5B%5B0%2C0%2C1%5D%5D).T%0A%20%20%20%20%20%20%20%20T_0%20%3D%20np.array(%5B%5B0.5%2C0.5%2C1%5D%5D).T%0A%20%20%20%20case%20%22-e_3%22%3A%0A%20%20%20%20%20%20%20%20n_axis%20%3D%20np.array(%5B%5B0%2C0%2C-1%5D%5D).T%0A%20%20%20%20%20%20%20%20T_0%20%3D%20np.array(%5B%5B0.5%2C0.5%2C0%5D%5D).T%0A%0AT_sigma%20%3D%20sigma.matrix%40n_axis%2F2%0A%0Ax_T_sigma%20%3D%20np.hstack(%5BT_0%2CT_0%2BT_sigma%5D)%0A</marimo-cell-code>
+</marimo-island>
+<marimo-island data-app-id="main" data-cell-id="RGSE" data-reactive="true">
+    <marimo-cell-output>
+    <marimo-mime-renderer data-mime="&quot;application/vnd.marimo+error&quot;" data-data="[{&quot;msg&quot;: &quot;An ancestor raised an exception (ModuleNotFoundError): &quot;, &quot;exception_type&quot;: &quot;ModuleNotFoundError&quot;, &quot;raising_cell&quot;: &quot;Hbol&quot;, &quot;type&quot;: &quot;exception&quot;}]"></marimo-mime-renderer>
+    </marimo-cell-output>
+    <marimo-cell-code hidden="">fig_sigma%20%3D%20go.Figure()%0A%0A%0Amatch%20normal_axis%3A%0A%20%20%20%20case%20%22-e_3%22%3A%0A%20%20%20%20%20%20%20%20fig_sigma.add_trace(go.Surface(%0A%20%20%20%20%20%20%20%20%20%20%20%20%23%20x%3Dx_n%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%23%20y%3Dx_n%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%23%20z%3Dz_n%2C%20%20%23%20z%20%3D%200%20plane%0A%20%20%20%20%20%20%20%20%20%20%20%20x%3D%5B%5B0%2C1%5D%2C%5B0%2C1%5D%5D%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20y%3D%5B%5B0%2C0%5D%2C%5B1%2C1%5D%5D%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20z%3D%5B%5B0%2C0%5D%2C%5B0%2C0%5D%5D%2C%20%20%23%20z%20%3D%200%20plane%0A%20%20%20%20%20%20%20%20%20%20%20%20showscale%3DFalse%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20opacity%3D0.5%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20colorscale%3D%5B%5B0%2C%20'blue'%5D%2C%20%5B1%2C%20'blue'%5D%5D%0A%20%20%20%20%20%20%20%20))%0A%20%20%20%20case%20%22e_3%22%3A%0A%20%20%20%20%20%20%20%20fig_sigma.add_trace(go.Surface(%0A%20%20%20%20%20%20%20%20%20%20%20%20%23%20x%3Dx_n%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%23%20y%3Dx_n%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%23%20z%3Dz_n%2C%20%20%23%20z%20%3D%200%20plane%0A%20%20%20%20%20%20%20%20%20%20%20%20x%3D%5B%5B0%2C1%5D%2C%5B0%2C1%5D%5D%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20y%3D%5B%5B0%2C0%5D%2C%5B1%2C1%5D%5D%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20z%3D%5B%5B1%2C1%5D%2C%5B1%2C1%5D%5D%2C%20%20%23%20z%20%3D%200%20plane%0A%20%20%20%20%20%20%20%20%20%20%20%20showscale%3DFalse%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20opacity%3D0.5%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20colorscale%3D%5B%5B0%2C%20'blue'%5D%2C%20%5B1%2C%20'blue'%5D%5D%0A%20%20%20%20%20%20%20%20))%0A%20%20%20%20case%20%22e_1%22%3A%0A%20%20%20%20%20%20%20%20fig_sigma.add_trace(go.Surface(%0A%20%20%20%20%20%20%20%20%20%20%20%20%23%20x%3Dx_n%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%23%20y%3Dx_n%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%23%20z%3Dz_n%2C%20%20%23%20z%20%3D%200%20plane%0A%20%20%20%20%20%20%20%20%20%20%20%20x%3D%5B%5B1%2C1%5D%2C%5B1%2C1%5D%5D%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20y%3D%5B%5B0%2C1%5D%2C%5B0%2C1%5D%5D%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20z%3D%5B%5B0%2C0%5D%2C%5B1%2C1%5D%5D%2C%20%20%23%20z%20%3D%200%20plane%0A%20%20%20%20%20%20%20%20%20%20%20%20showscale%3DFalse%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20opacity%3D0.5%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20colorscale%3D%5B%5B0%2C%20'blue'%5D%2C%20%5B1%2C%20'blue'%5D%5D%0A%20%20%20%20%20%20%20%20))%0A%20%20%20%20case%20%22-e_1%22%3A%0A%20%20%20%20%20%20%20%20fig_sigma.add_trace(go.Surface(%0A%20%20%20%20%20%20%20%20%20%20%20%20%23%20x%3Dx_n%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%23%20y%3Dx_n%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%23%20z%3Dz_n%2C%20%20%23%20z%20%3D%200%20plane%0A%20%20%20%20%20%20%20%20%20%20%20%20x%3D%5B%5B0%2C0%5D%2C%5B0%2C0%5D%5D%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20y%3D%5B%5B0%2C1%5D%2C%5B0%2C1%5D%5D%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20z%3D%5B%5B0%2C0%5D%2C%5B1%2C1%5D%5D%2C%20%20%23%20z%20%3D%200%20plane%0A%20%20%20%20%20%20%20%20%20%20%20%20showscale%3DFalse%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20opacity%3D0.5%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20colorscale%3D%5B%5B0%2C%20'blue'%5D%2C%20%5B1%2C%20'blue'%5D%5D%0A%20%20%20%20%20%20%20%20))%0A%20%20%20%20case%20%22-e_2%22%3A%0A%20%20%20%20%20%20%20%20fig_sigma.add_trace(go.Surface(%0A%20%20%20%20%20%20%20%20%20%20%20%20%23%20x%3Dx_n%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%23%20y%3Dx_n%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%23%20z%3Dz_n%2C%20%20%23%20z%20%3D%200%20plane%0A%20%20%20%20%20%20%20%20%20%20%20%20x%3D%5B%5B0%2C0%5D%2C%5B1%2C1%5D%5D%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20y%3D%5B%5B0%2C0%5D%2C%5B0%2C0%5D%5D%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20z%3D%5B%5B0%2C1%5D%2C%5B0%2C1%5D%5D%2C%20%20%23%20z%20%3D%200%20plane%0A%20%20%20%20%20%20%20%20%20%20%20%20showscale%3DFalse%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20opacity%3D0.5%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20colorscale%3D%5B%5B0%2C%20'blue'%5D%2C%20%5B1%2C%20'blue'%5D%5D%0A%20%20%20%20%20%20%20%20))%0A%20%20%20%20case%20%22e_2%22%3A%0A%20%20%20%20%20%20%20%20fig_sigma.add_trace(go.Surface(%0A%20%20%20%20%20%20%20%20%20%20%20%20%23%20x%3Dx_n%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%23%20y%3Dx_n%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%23%20z%3Dz_n%2C%20%20%23%20z%20%3D%200%20plane%0A%20%20%20%20%20%20%20%20%20%20%20%20x%3D%5B%5B0%2C0%5D%2C%5B1%2C1%5D%5D%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20y%3D%5B%5B1%2C1%5D%2C%5B1%2C1%5D%5D%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20z%3D%5B%5B0%2C1%5D%2C%5B0%2C1%5D%5D%2C%20%20%23%20z%20%3D%200%20plane%0A%20%20%20%20%20%20%20%20%20%20%20%20showscale%3DFalse%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20opacity%3D0.5%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20colorscale%3D%5B%5B0%2C%20'blue'%5D%2C%20%5B1%2C%20'blue'%5D%5D%0A%20%20%20%20%20%20%20%20))%0A%0Afig_sigma.add_trace(go.Scatter3d(%0A%20%20%20%20x%3Dx_T_sigma%5B0%2C%3A%5D%2C%20y%3Dx_T_sigma%5B1%2C%3A%5D%2C%20z%3Dx_T_sigma%5B2%2C%3A%5D%2C%0A%20%20%20%20mode%3D'lines'%2C%0A%20%20%20%20name%3D'Traction%20vector'%2C%0A%20%20%20%20line%3Ddict(color%3D'red'%2C%20width%3D5)%0A))%0A%0Afor%20edge_sigma%20in%20edges%3A%0A%20%20%20%20x_sigma%20%3D%20nodes_0%5B0%2C%20edge_sigma%5D%0A%20%20%20%20y_sigma%20%3D%20nodes_0%5B1%2C%20edge_sigma%5D%0A%20%20%20%20z_sigma%20%3D%20nodes_0%5B2%2C%20edge_sigma%5D%0A%20%20%20%20fig_sigma.add_trace(go.Scatter3d(%0A%20%20%20%20%20%20%20%20x%3Dx_sigma%2C%20y%3Dy_sigma%2C%20z%3Dz_sigma%2C%0A%20%20%20%20%20%20%20%20mode%3D'lines'%2C%0A%20%20%20%20%20%20%20%20showlegend%3DFalse%2C%0A%20%20%20%20%20%20%20%20line%3Ddict(color%3D'black'%2C%20width%3D3)%0A%20%20%20%20))%0A%0Afig_sigma.update_layout(%0A%20%20%20%20scene%3Ddict(%0A%20%20%20%20%20%20%20%20aspectmode%3D'cube'%2C%0A%20%20%20%20%20%20%20%20xaxis%3Ddict(range%3D%5B-1%2C%202%5D)%2C%20%20%23%20x-axis%20fixed%20from%200%20to%206%0A%20%20%20%20%20%20%20%20yaxis%3Ddict(range%3D%5B-1%2C%202%5D)%2C%20%20%23%20x-axis%20fixed%20from%200%20to%206%0A%20%20%20%20%20%20%20%20zaxis%3Ddict(range%3D%5B-1%2C%202%5D)%2C%20%20%23%20x-axis%20fixed%20from%200%20to%206%0A%20%20%20%20)%2C%0A%20%20%20%20%23%20scene_camera%3Ddict(%0A%20%20%20%20%23%20%20%20%20%20eye%3Ddict(x%3D1.5%2C%20y%3D1.5%2C%20z%3D1)%2C%0A%20%20%20%20%23%20%20%20%20%20projection%3Ddict(type%3D'perspective')%0A%20%20%20%20%23%20)%2C%0A%20%20%20%20dragmode%3D'turntable'%2C%20%20%23%20%E2%9C%85%20Turntable%20rotation%0A%20%20%20%20title%3D%22Infinitesimal%20volume%20and%20traction%20vector%22%2C%20%0A%20%20%20%20showlegend%20%3D%20True%0A)%0A%0Amo.ui.plotly(fig_sigma)%0A</marimo-cell-code>
+</marimo-island>
 
 
-
-</section>
 </section>
 
-<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
-<div id="ref-daby-seesaramFiniteElementNeural2025" class="csl-entry" role="listitem">
-Daby-Seesaram, Alexandre, Kateřina Škardová, and Martin Genet. 2025a. <span>“Finite Element Neural Network Interpolation: <span>Part II</span>—Hybridisation with the Proper Generalised Decomposition for Non-Linear Surrogate Modelling.”</span> <em>Computational Mechanics</em>, August. <a href="https://doi.org/10.1007/s00466-025-02676-4">https://doi.org/10.1007/s00466-025-02676-4</a>.
-</div>
-<div id="ref-daby-seesaramNeuROM2024a" class="csl-entry" role="listitem">
-———. 2025b. <span>“<span>NeuROM</span>.”</span> Zenodo. <a href="https://doi.org/10.5281/zenodo.13772740">https://doi.org/10.5281/zenodo.13772740</a>.
-</div>
-<div id="ref-zhangHierarchicalDeeplearningNeural2021" class="csl-entry" role="listitem">
-Zhang, Lei, Lin Cheng, Hengyang Li, Jiaying Gao, Cheng Yu, Reno Domel, Yang Yang, Shaoqiang Tang, and Wing Kam Liu. 2021. <span>“Hierarchical Deep-Learning Neural Networks: Finite Elements and Beyond.”</span> <em>Computational Mechanics</em> 67 (1): 207–30. <a href="https://doi.org/10.1007/s00466-020-01928-9">https://doi.org/10.1007/s00466-020-01928-9</a>.
-</div>
-</div></section></div></main> <!-- /main -->
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right
