@@ -20,7 +20,8 @@ format:
 
 ::: {.column width="50%"}
 
-* [**Continuum mechanics**](MMC.qmd)
+- **2025 - ** [**Continuum mechanics**](MMC.qmd)
+- **2025 - ** Elasticity
 
 :::
 
