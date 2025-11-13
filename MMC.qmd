@@ -57,14 +57,13 @@ import plotly.graph_objects as go
 
 
 nodes_0 = np.array([
-    [0, 1, 1, 0, 0, 1, 1, 0],  # X-coordinates
-    [0, 0, 1, 1, 0, 0, 1, 1],  # Y-coordinates
-    [0, 0, 0, 0, 1, 1, 1, 1]   # Z-coordinates
+    [0, 1, 1, 0, 0, 1, 1, 0],  # X
+    [0, 0, 1, 1, 0, 0, 1, 1],  # Y
+    [0, 0, 0, 0, 1, 1, 1, 1]   # Z
 ])
 
 nodes_t = F.matrix@nodes_0
 
-# Define edges by vertex index pairs
 edges = np.array([
     [0, 1], [1, 2], [2, 3], [3, 0],  # bottom face
     [4, 5], [5, 6], [6, 7], [7, 4],  # top face
@@ -107,9 +106,7 @@ for edge in edges:
 fig.update_layout(
     scene=dict(
         aspectmode='cube',
-        # xaxis=dict(range=[-1, 2]),  # x-axis fixed from 0 to 6
-        # yaxis=dict(range=[-1, 2]),  # x-axis fixed from 0 to 6
-        # zaxis=dict(range=[-1, 2]),  # x-axis fixed from 0 to 6
+
         xaxis=dict(range=x_range.value),
         yaxis=dict(range=y_range.value),
         zaxis=dict(range=z_range.value),
@@ -118,7 +115,7 @@ fig.update_layout(
     #     eye=dict(x=1.5, y=1.5, z=1),
     #     projection=dict(type='perspective')
     # ),
-    dragmode='turntable',  # ✅ Turntable rotation
+    dragmode='turntable',  
     title="Initial and deformed unit cubes", 
     showlegend = False
 )
@@ -153,33 +150,21 @@ You can change the limits of the boundary box to **zoom in** and **out** on the 
 
 ```python {.marimo}
 
-# x_min = mo.ui.number(-1, label="X min")
-# x_max = mo.ui.number(2, label="X max")
-# y_min = mo.ui.number(-1, label="Y min")
-# y_max = mo.ui.number(2, label="Y max")
-# z_min = mo.ui.number(-1, label="Z min")
-# z_max = mo.ui.number(2, label="Z max")
 
-# mo.vstack([
-#     mo.hstack([x_min, x_max]),
-#     mo.hstack([y_min, y_max]),
-#     mo.hstack([z_min, z_max])
-# ])
 
 x_range = mo.ui.range_slider(
-    start=-10, stop=10, value=[-1,2],
+    start=-5, stop=5, value=[-1,2],
     label="X range", step=0.1,full_width=True
 )
 y_range = mo.ui.range_slider(
-    start=-10, stop=10, value=[-1,2],
+    start=-5, stop=5, value=[-1,2],
     label="Y range", step=0.1,full_width=True
 )
 z_range = mo.ui.range_slider(
-    start=-10, stop=10, value=[-1,2],
+    start=-5, stop=5, value=[-1,2],
     label="Z range", step=0.1,full_width=True
 )
 
-# Display sliders
 mo.vstack([x_range, y_range, z_range])
 
 ```
@@ -382,18 +367,16 @@ fig_sigma.update_layout(
     scene=dict(
         aspectmode='cube',
 
-        # xaxis=dict(range=[x_min.value, x_max.value]),  # x-axis fixed from 0 to 6
-        # yaxis=dict(range=[y_min.value, y_max.value]),  # x-axis fixed from 0 to 6
-        # zaxis=dict(range=[z_min.value, z_max.value]),  # x-axis fixed from 0 to 6
-        # xaxis=dict(range=[-1, 2]),  # x-axis fixed from 0 to 6
-        # yaxis=dict(range=[-1, 2]),  # x-axis fixed from 0 to 6
-        # zaxis=dict(range=[-1, 2]),  # x-axis fixed from 0 to 6
+
+        # xaxis=dict(range=[-1, 2]),  
+        # yaxis=dict(range=[-1, 2]),  
+        # zaxis=dict(range=[-1, 2]),  
     ),
     # scene_camera=dict(
     #     eye=dict(x=1.5, y=1.5, z=1),
     #     projection=dict(type='perspective')
     # ),
-    dragmode='turntable',  # ✅ Turntable rotation
+    dragmode='turntable',  
     title="Infinitesimal volume and traction vector", 
     showlegend = True
 )
