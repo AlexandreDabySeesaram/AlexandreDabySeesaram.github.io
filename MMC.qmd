@@ -107,9 +107,12 @@ for edge in edges:
 fig.update_layout(
     scene=dict(
         aspectmode='cube',
-        xaxis=dict(range=[-1, 2]),  # x-axis fixed from 0 to 6
-        yaxis=dict(range=[-1, 2]),  # x-axis fixed from 0 to 6
-        zaxis=dict(range=[-1, 2]),  # x-axis fixed from 0 to 6
+        # xaxis=dict(range=[-1, 2]),  # x-axis fixed from 0 to 6
+        # yaxis=dict(range=[-1, 2]),  # x-axis fixed from 0 to 6
+        # zaxis=dict(range=[-1, 2]),  # x-axis fixed from 0 to 6
+        xaxis=dict(range=x_range.value),
+        yaxis=dict(range=y_range.value),
+        zaxis=dict(range=z_range.value),
     ),
     # scene_camera=dict(
     #     eye=dict(x=1.5, y=1.5, z=1),
@@ -139,6 +142,48 @@ mo.hstack([mo.md(r"$\underline{\underline{C}}=$"), C])
 
 ```
 that is not impacted by rigid body motions (translations or rotations).
+
+::: {.line}
+
+<div style="border-top: 1px solid #00436d; width: 45%; margin: 0 auto;"></div>
+
+:::
+
+You can change the limits of the boundary box to **zoom in** and **out** on the cubes with the following sliders. 
+
+```python {.marimo}
+
+# x_min = mo.ui.number(-1, label="X min")
+# x_max = mo.ui.number(2, label="X max")
+# y_min = mo.ui.number(-1, label="Y min")
+# y_max = mo.ui.number(2, label="Y max")
+# z_min = mo.ui.number(-1, label="Z min")
+# z_max = mo.ui.number(2, label="Z max")
+
+# mo.vstack([
+#     mo.hstack([x_min, x_max]),
+#     mo.hstack([y_min, y_max]),
+#     mo.hstack([z_min, z_max])
+# ])
+
+x_range = mo.ui.range_slider(
+    start=-10, stop=10, value=[-1,2],
+    label="X range", step=0.1,full_width=True
+)
+y_range = mo.ui.range_slider(
+    start=-10, stop=10, value=[-1,2],
+    label="Y range", step=0.1,full_width=True
+)
+z_range = mo.ui.range_slider(
+    start=-10, stop=10, value=[-1,2],
+    label="Z range", step=0.1,full_width=True
+)
+
+# Display sliders
+mo.vstack([x_range, y_range, z_range])
+
+```
+
 
 :::
 
@@ -336,9 +381,13 @@ for edge_sigma in edges:
 fig_sigma.update_layout(
     scene=dict(
         aspectmode='cube',
-        xaxis=dict(range=[-1, 2]),  # x-axis fixed from 0 to 6
-        yaxis=dict(range=[-1, 2]),  # x-axis fixed from 0 to 6
-        zaxis=dict(range=[-1, 2]),  # x-axis fixed from 0 to 6
+
+        # xaxis=dict(range=[x_min.value, x_max.value]),  # x-axis fixed from 0 to 6
+        # yaxis=dict(range=[y_min.value, y_max.value]),  # x-axis fixed from 0 to 6
+        # zaxis=dict(range=[z_min.value, z_max.value]),  # x-axis fixed from 0 to 6
+        # xaxis=dict(range=[-1, 2]),  # x-axis fixed from 0 to 6
+        # yaxis=dict(range=[-1, 2]),  # x-axis fixed from 0 to 6
+        # zaxis=dict(range=[-1, 2]),  # x-axis fixed from 0 to 6
     ),
     # scene_camera=dict(
     #     eye=dict(x=1.5, y=1.5, z=1),
