@@ -47,7 +47,7 @@ mo.hstack([mo.md(r"$\underline{\underline{F}}=$"), F])
 ::::
 
 
-You can play with its components (`hover` and then `click + drag` directly on the matrix's components) and observe the impact it has on the deformation of a unit cube. In the following figure we can observe a unit cube initially undeformed (balck) that gets deformed by the action of $\underline{\underline{F}}$ (red).
+You can play with its components (`hover` and then `click + drag` directly on the matrix's components) and observe the impact it has on the deformation of a unit cube. In the following figure we can observe a unit cube initially undeformed (black) that gets deformed by the action of $\underline{\underline{F}}$ (red).
 
 
 
