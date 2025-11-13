@@ -210,7 +210,7 @@ mo.md(rf"See the new volume $V_t$ ={jacobian:.1f}$\times V_0$")
 
 ## Stress tensor
 
-The Cauchy strain tensor $\underline{\underline{\sigma}}$ describe internal traction forces. To get an idea of the physical interpretation of each of its component let's manipulate this tensor and look at the impact it has on the corresponding traction forces on an elementary volume element.
+The Cauchy stress tensor $\underline{\underline{\sigma}}$ describes internal traction forces. To get an idea of the physical interpretation of each of its component let's manipulate this tensor and look at the impact it has on the corresponding traction forces on an elementary volume element.
 
 
 
@@ -246,7 +246,7 @@ mo.hstack([mo.md(r"$\underline{\underline{\sigma}}=$"), sigma])
 ::::
 
 
-sigma affect the traction vector $\underline{T} = \underline{\underline{\sigma}} \underline{n}$
+affect the traction vector $\underline{T} = \underline{\underline{\sigma}} \underline{n}$
 
 ```python {.marimo}
 
