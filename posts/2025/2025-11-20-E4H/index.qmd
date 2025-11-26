@@ -10,6 +10,7 @@ image: "img2.jpeg"
 
 Today I had the pleasure to present my (collaborative) work on building a digital twin of the human lungs through interpretable NN-PGD [@daby-seesaramFiniteElementNeural2025] and shape registration from CT-scans.
 
+The slides accessible [here](https://alexandredabyseesaram.github.io/E4H_2025/#/title-slide).
 
 
 ![](img2.jpeg){width="75%" fig-align="center"}
