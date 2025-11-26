@@ -15,7 +15,37 @@
 <link>https://alexandredabyseesaram.github.io/news.html</link>
 </image>
 <generator>quarto-1.8.25</generator>
-<lastBuildDate>Tue, 09 Sep 2025 22:00:00 GMT</lastBuildDate>
+<lastBuildDate>Wed, 19 Nov 2025 23:00:00 GMT</lastBuildDate>
+<item>
+  <title>E4H Annual forum</title>
+  <link>https://alexandredabyseesaram.github.io/posts/2025/2025-11-20-E4H/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p>Today I had the pleasure to present my (collaborative) work on building a digital twin of the human lungs through interpretable NN-PGD <span class="citation" data-cites="daby-seesaramFiniteElementNeural2025">(Daby-Seesaram, Škardová, and Genet 2025)</span> and shape registration from CT-scans.</p>
+<p>The slides accessible <a href="https://alexandredabyseesaram.github.io/E4H_2025/#/title-slide">here</a>.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://alexandredabyseesaram.github.io/posts/2025/2025-11-20-E4H/img2.jpeg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:75.0%"></p>
+</figure>
+</div>
+
+
+
+
+<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0">
+<div id="ref-daby-seesaramFiniteElementNeural2025" class="csl-entry">
+Daby-Seesaram, Alexandre, Kateřina Škardová, and Martin Genet. 2025. <span>“Finite Element Neural Network Interpolation: <span>Part II</span>—Hybridisation with the Proper Generalised Decomposition for Non-Linear Surrogate Modelling.”</span> <em>Computational Mechanics</em>, August. <a href="https://doi.org/10.1007/s00466-025-02676-4">https://doi.org/10.1007/s00466-025-02676-4</a>.
+</div>
+</div></section></div> ]]></description>
+  <category>News</category>
+  <guid>https://alexandredabyseesaram.github.io/posts/2025/2025-11-20-E4H/</guid>
+  <pubDate>Wed, 19 Nov 2025 23:00:00 GMT</pubDate>
+  <media:content url="https://alexandredabyseesaram.github.io/posts/2025/2025-11-20-E4H/img2.jpeg" medium="image" type="image/jpeg"/>
+</item>
 <item>
   <title>ICCB 2025</title>
   <link>https://alexandredabyseesaram.github.io/posts/2025/2025-09-10-ICCB/</link>
