@@ -24,12 +24,7 @@
 
 
 
-<<<<<<< HEAD
-<p>Today I had the pleasure to present my (collaborative) work on building a digital twin of the human lungs through interpretable NN-PGD <span class="citation" data-cites="daby-seesaramFiniteElementNeural2025">(Daby-Seesaram, Škardová, and Genet 2025)</span> and shape registration from CT-scans at the annual E4H forum @ IP Paris.</p>
-=======
-
 <p>Today I had the pleasure to present my (collaborative) work on building a digital twin of the human lungs through interpretable NN-PGD <span class="citation" data-cites="daby-seesaramFiniteElementNeural2025">(Daby-Seesaram, Škardová, and Genet 2025)</span> and shape registration from CT-scans.</p>
->>>>>>> parent of 43580ab (Update E4H html)
 <p>The slides accessible <a href="https://alexandredabyseesaram.github.io/E4H_2025/#/title-slide">here</a>.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
