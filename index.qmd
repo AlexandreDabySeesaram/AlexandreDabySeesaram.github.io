@@ -68,7 +68,7 @@ format:
 
 I'm Alexandre Daby-Seesaram, an Assitant Professor at **[ENSTA](https://www.ensta.fr/chercheur)** within the *[Institut Polytechnique de Paris](https://www.ip-paris.fr/en)*. 
 
-I hold a Ph.D. in <b>computational mechanics</b> from the **University Paris-Saclay** ([ENS Paris-Saclay](https://ens-paris-saclay.fr/en)), where I worked at the LMPS (Laboratory of Mechanics Paris-Saclay). After my PhD, I moved to **[École polytechnique](https://www.polytechnique.edu/en)** for a two-year postdoc where I started applying reduced-order modelling methods to bio-mechanics to build patient-specific digital twin. 
+I hold a Ph.D. in <b>computational mechanics</b> from the **University Paris-Saclay** ([ENS Paris-Saclay](https://ens-paris-saclay.fr/en)), where I worked at the LMPS (Laboratory of Mechanics Paris-Saclay). After my PhD, I moved to **[École polytechnique](https://www.polytechnique.edu/en)** for a two-year postdoc where I started applying reduced-order modelling methods to bio-mechanics to build patient-specific digital twins. 
 
 My main research interest consists of solving highly non-linear problems using <b>model-order reduction</b> techniques such as the Proper Generalised Decomposition (PGD). I've recently become interested in hybridising classical model-order reduction methods with machine learning approaches. Combining tensor decomposition and interpretable neural networks enables efficient and robust solving of large non-linear problems. 
 
