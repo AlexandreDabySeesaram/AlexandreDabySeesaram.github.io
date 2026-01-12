@@ -17,6 +17,19 @@ format:
 
 ::: {.column width="30%"}
 
+![](Resources/Images/Logos/Logo_ENSTA-2025.png){width="80%" fig-align="left"}
+
+:::
+
+::: {.column width="69%"}
+
+* **2026 -** Assistant Professor at **[ENSTA](https://www.ensta.fr/chercheur)** within the *[Institut Polytechnique de Paris](https://www.ip-paris.fr/en)*.
+
+:::
+::::
+
+::: {.column width="30%"}
+
 ![](Resources/Images/Logos/Logo_X.png){width="80%" fig-align="left"}
 
 :::
