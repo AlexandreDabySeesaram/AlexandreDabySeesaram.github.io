@@ -33,7 +33,7 @@ website:
       - href: TA.qmd
         text: Teaching
       - href: education.qmd
-        text: Education
+        text: Academic background
       - text: CV
         href: Resources/Documents/CV.pdf
         target: _blank
