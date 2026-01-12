@@ -50,7 +50,7 @@ format:
 :::: {style='margin-top: 1em;'}
 ::::
 
-* **2024 - 2025** Postdoctoral fellow at **[École polytechnique](https://www.polytechnique.edu/en)** within the LMS & **[MΞDISIM](https://m3disim.saclay.inria.fr/)** teams.
+* **2024 - 2025** Postdoctoral fellow at **[École polytechnique](https://www.polytechnique.edu/en)** in the LMS & **[MΞDISIM](https://m3disim.saclay.inria.fr/)** teams.
   * In collaboration with [Pr. Martin Genet](https://mgenet.github.io/)
 
 :::
