@@ -17,24 +17,38 @@ format:
 
 ::: {.column width="30%"}
 
+
+:::: {style='margin-top: -2em;'}
+::::
+
 ![](Resources/Images/Logos/Logo_ENSTA-2025.png){width="80%" fig-align="left"}
 
 :::
 
 ::: {.column width="69%"}
 
-* **2026 -** Assistant Professor at **[ENSTA](https://www.ensta.fr/chercheur)** within the *[Institut Polytechnique de Paris](https://www.ip-paris.fr/en)*.
+:::: {style='margin-top: 4em;'}
+::::
+
+* **2026 - present** Assistant Professor at **[ENSTA](https://www.ensta.fr/chercheur)** within the *[Institut Polytechnique de Paris](https://www.ip-paris.fr/en)*.
 
 :::
 ::::
 
+
+:::: {.columns}
+
 ::: {.column width="30%"}
+
 
 ![](Resources/Images/Logos/Logo_X.png){width="80%" fig-align="left"}
 
 :::
 
 ::: {.column width="69%"}
+
+:::: {style='margin-top: 1em;'}
+::::
 
 * **2024 - 2025** Postdoctoral fellow at **[École polytechnique](https://www.polytechnique.edu/en)** within the LMS & **[MΞDISIM](https://m3disim.saclay.inria.fr/)** teams.
   * In collaboration with [Pr. Martin Genet](https://mgenet.github.io/)
