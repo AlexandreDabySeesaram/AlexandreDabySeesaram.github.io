@@ -66,7 +66,7 @@ format:
 # Welcome, 
 
 
-I'm Alexandre Daby-Seesaram, an Assitant Professor at **[ENSTA](https://www.ensta.fr/chercheur)** within the *[Institut Polytechnique de Paris](https://www.ip-paris.fr/en)*. 
+I'm Alexandre Daby-Seesaram, an Assistant Professor at **[ENSTA](https://www.ensta.fr/chercheur)** within the *[Institut Polytechnique de Paris](https://www.ip-paris.fr/en)*. 
 
 I hold a Ph.D. in <b>computational mechanics</b> from the **University Paris-Saclay** ([ENS Paris-Saclay](https://ens-paris-saclay.fr/en)), where I worked at the LMPS (Laboratory of Mechanics Paris-Saclay). After my PhD, I moved to **[École polytechnique](https://www.polytechnique.edu/en)** for a two-year postdoc where I started applying reduced-order modelling methods to bio-mechanics to build patient-specific digital twins. 
 
