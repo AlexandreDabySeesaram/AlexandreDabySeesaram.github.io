@@ -1,0 +1,9 @@
+---
+title: "New position"
+date: "2026-01-01"
+categories: 
+  - "News"
+image: "Logo_ENSTA-2025.png"
+---
+
+I got a new position as an Assistant professor ar [ENSTA](https://www.ensta.fr/chercheur) where I will continue my research on reduced order modelling applied to building digital twin of human organs. 
