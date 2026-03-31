@@ -1,0 +1,21 @@
+---
+title: "Matinale de France Culture"
+date: "2026-03-31"
+categories: 
+  - "News"
+image: "FranceCulture.png"
+---
+
+J'ai eu le plaisir d'intervenir brièvement dans la matinale de France Culture pour présenter les travaux de recherche que nous menons sur les jumeaux numériques en santé, à l'Institut Polytechnique de Paris (notamment à l'ENSTA et au LMS).
+
+Un exercice de vulgarisation pas toujours évident (surtout en direct !), mais une expérience intéressante pour partager les enjeux de nos recherches au plus grand nombre.
+
+Merci à l'équipe de la matinale pour l'accueil.
+
+
+![Replay video](ChantiersDeLaRecherche.mp4){ height="300" loop="true" autoplay=true}
+
+
+Le replay est disponible [au lien suivant.](https://www.radiofrance.fr/franceculture/podcasts/les-chantiers-de-la-recherche/a-quoi-servent-les-jumeaux-numeriques-dans-la-sante-4006852) 
+
+
