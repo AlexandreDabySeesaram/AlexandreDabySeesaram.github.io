@@ -15,7 +15,34 @@
 <link>https://alexandredabyseesaram.github.io/news.html</link>
 </image>
 <generator>quarto-1.4.557</generator>
-<lastBuildDate>Wed, 31 Dec 2025 23:00:00 GMT</lastBuildDate>
+<lastBuildDate>Mon, 30 Mar 2026 22:00:00 GMT</lastBuildDate>
+<item>
+  <title>Matinale de France Culture</title>
+  <link>https://alexandredabyseesaram.github.io/posts/2026/2026-03-31-FranceCulture/</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>J’ai eu le plaisir d’intervenir brièvement dans la matinale de France Culture pour présenter les travaux de recherche que nous menons sur les jumeaux numériques en santé, à l’Institut Polytechnique de Paris (notamment à l’ENSTA et au LMS).</p>
+<p>Un exercice de vulgarisation pas toujours évident (surtout en direct !), mais une expérience intéressante pour partager les enjeux de nos recherches au plus grand nombre.</p>
+<p>Merci à l’équipe de la matinale pour l’accueil.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><video src="ChantiersDeLaRecherche.mp4" loop="true" autoplay="true" height="300" controls=""><a href="ChantiersDeLaRecherche.mp4">Video</a></video></p>
+<figcaption>Replay video</figcaption>
+</figure>
+</div>
+<p>Le replay est disponible <a href="https://www.radiofrance.fr/franceculture/podcasts/les-chantiers-de-la-recherche/a-quoi-servent-les-jumeaux-numeriques-dans-la-sante-4006852">au lien suivant.</a></p>
+
+
+
+<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
+  <category>News</category>
+  <guid>https://alexandredabyseesaram.github.io/posts/2026/2026-03-31-FranceCulture/</guid>
+  <pubDate>Mon, 30 Mar 2026 22:00:00 GMT</pubDate>
+  <media:content url="https://alexandredabyseesaram.github.io/posts/2026/2026-03-31-FranceCulture/FranceCulture.png" medium="image" type="image/png" height="81" width="144"/>
+</item>
 <item>
   <title>New position</title>
   <link>https://alexandredabyseesaram.github.io/posts/2026/2026-01-01-NewPosition-ENSTA/</link>
@@ -497,23 +524,6 @@ Daby-Seesaram, Alexandre, Kateřina Škardová, and Martin Genet. 2024. <span>�
   <guid>https://alexandredabyseesaram.github.io/posts/2022/2022-05-18-CSMA/</guid>
   <pubDate>Tue, 17 May 2022 22:00:00 GMT</pubDate>
   <media:content url="https://alexandredabyseesaram.github.io/posts/2022/2022-05-18-CSMA/CSMA_2022.jpeg" medium="image" type="image/jpeg"/>
-</item>
-<item>
-  <title>YIC 2021 congress</title>
-  <link>https://alexandredabyseesaram.github.io/posts/2021/2021-07-09-YIC/</link>
-  <description><![CDATA[ 
-
-
-
-
-<p>I presented my <a href="https://dx.doi.org/10.4995/YIC2021.2021.13255">PhD work</a> at <a href="https://gdocu.upv.es/alfresco/service/api/node/content/workspace/SpacesStore/1fc120c1-6a63-4995-8e27-ccbe47d5ceb0/6651.pdf?guest=true">YIC 2021 congress</a>, held online from Valence, Spain.</p>
-
-
-
-<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
-  <category>News</category>
-  <guid>https://alexandredabyseesaram.github.io/posts/2021/2021-07-09-YIC/</guid>
-  <pubDate>Thu, 08 Jul 2021 22:00:00 GMT</pubDate>
 </item>
 </channel>
 </rss>
