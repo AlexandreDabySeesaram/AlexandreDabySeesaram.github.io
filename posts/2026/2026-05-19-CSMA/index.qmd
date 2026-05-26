@@ -1,0 +1,15 @@
+---
+title: "CSMA 2026"
+date: "2026-05-19"
+categories: 
+  - "News"
+image: "group.jpeg"
+---
+
+This week, my colleagues and I had the pleasure of attending what might just be the best conference in the world: the CSMA conference in Giens! As always, it was an incredible experience.
+
+I am also happy to share that I have been elected to the CSMA Junior Board (representing researchers under 40). I’m looking forward to contributing to the community, stay tuned for updates on what we have planned next!
+
+![](../../../Resources/Videos/Lung_gravity_qua.mov){ height="300" loop="true" autoplay=true}
+
+

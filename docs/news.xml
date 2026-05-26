@@ -15,7 +15,28 @@
 <link>https://alexandredabyseesaram.github.io/news.html</link>
 </image>
 <generator>quarto-1.9.36</generator>
-<lastBuildDate>Mon, 30 Mar 2026 22:00:00 GMT</lastBuildDate>
+<lastBuildDate>Mon, 18 May 2026 22:00:00 GMT</lastBuildDate>
+<item>
+  <title>CSMA 2026</title>
+  <link>https://alexandredabyseesaram.github.io/posts/2026/2026-05-19-CSMA/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p>This week, my colleagues and I had the pleasure of attending what might just be the best conference in the world: the CSMA conference in Giens! As always, it was an incredible experience.</p>
+<p>I am also happy to share that I have been elected to the CSMA Junior Board (representing researchers under 40). I’m looking forward to contributing to the community, stay tuned for updates on what we have planned next!</p>
+<p><video src="../../../Resources/Videos/Lung_gravity_qua.mov" loop="true" autoplay="true" height="300" controls=""><a href="../../../Resources/Videos/Lung_gravity_qua.mov">Video</a></video></p>
+
+
+
+<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
+  <category>News</category>
+  <guid>https://alexandredabyseesaram.github.io/posts/2026/2026-05-19-CSMA/</guid>
+  <pubDate>Mon, 18 May 2026 22:00:00 GMT</pubDate>
+  <media:content url="https://alexandredabyseesaram.github.io/posts/2026/2026-05-19-CSMA/group.jpeg" medium="image" type="image/jpeg"/>
+</item>
 <item>
   <title>Matinale de France Culture</title>
   <link>https://alexandredabyseesaram.github.io/posts/2026/2026-03-31-FranceCulture/</link>
@@ -520,30 +541,6 @@ Daby-Seesaram, Alexandre, Kateřina Škardová, and Martin Genet. 2024. <span>�
   <guid>https://alexandredabyseesaram.github.io/posts/2022/2022-06-09-ECCOMAS/</guid>
   <pubDate>Wed, 08 Jun 2022 22:00:00 GMT</pubDate>
   <media:content url="https://alexandredabyseesaram.github.io/posts/2022/2022-06-09-ECCOMAS/ECCOMAS.png" medium="image" type="image/png" height="72" width="144"/>
-</item>
-<item>
-  <title>CSMA 2022</title>
-  <link>https://alexandredabyseesaram.github.io/posts/2022/2022-05-18-CSMA/</link>
-  <description><![CDATA[ 
-
-
-
-
-
-<p>I presented <a href="https://hal.science/hal-03717959">my PhD work</a> at <a href="https://csma2022.sciencesconf.org/">CSMA 2022</a> in Giens.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="https://alexandredabyseesaram.github.io/posts/2022/2022-05-18-CSMA/CSMA_2022.jpeg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:50.0%"></p>
-</figure>
-</div>
-
-
-
-<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
-  <category>News</category>
-  <guid>https://alexandredabyseesaram.github.io/posts/2022/2022-05-18-CSMA/</guid>
-  <pubDate>Tue, 17 May 2022 22:00:00 GMT</pubDate>
-  <media:content url="https://alexandredabyseesaram.github.io/posts/2022/2022-05-18-CSMA/CSMA_2022.jpeg" medium="image" type="image/jpeg"/>
 </item>
 </channel>
 </rss>
