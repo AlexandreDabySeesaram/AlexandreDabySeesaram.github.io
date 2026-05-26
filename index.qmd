@@ -29,6 +29,17 @@ format:
     page-layout: custom
     include-in-header:
       - text: |
+            <style>
+              body {
+                background-image: url("Resources/Images/lungs_website.svg");
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                margin: 0;
+              }
+            </style>
+      - text: |
           <meta name="google-site-verification" content="lyL1XECA_aIiJN9ihH1tHYGqzCDubMyGXCILlJTVjZw" />
 ---
 

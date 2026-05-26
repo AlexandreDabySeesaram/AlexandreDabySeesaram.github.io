@@ -74,7 +74,7 @@ This work proposes hybridising classical model-order reduction methods with mach
 
 ::: {.column width="50%"}
 
-![](Resources/Videos/NeuROM_3D_gravity_ter.mov){ width="70%" loop="true" autoplay=true fig-align="center"}
+![](Resources/Videos/Lung_gravity_qua.mov){ width="70%" loop="true" autoplay=true fig-align="center"}
 
 :::
 

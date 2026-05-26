@@ -14,12 +14,13 @@
 <title>Alexandre Daby-Seesaram</title>
 <link>https://alexandredabyseesaram.github.io/news.html</link>
 </image>
-<generator>quarto-1.4.557</generator>
+<generator>quarto-1.9.36</generator>
 <lastBuildDate>Mon, 30 Mar 2026 22:00:00 GMT</lastBuildDate>
 <item>
   <title>Matinale de France Culture</title>
   <link>https://alexandredabyseesaram.github.io/posts/2026/2026-03-31-FranceCulture/</link>
   <description><![CDATA[ 
+
 
 
 
@@ -51,6 +52,7 @@
 
 
 
+
 <p>I got a new position as an Assistant professor at <a href="https://www.ensta.fr/chercheur">ENSTA</a>, where I will continue my research on reduced-order modelling applied to building digital twins of human organs.</p>
 
 
@@ -69,7 +71,8 @@
 
 
 
-<p>Today I had the pleasure to present my (collaborative) work on building a digital twin of the human lungs through interpretable NN-PGD <span class="citation" data-cites="daby-seesaramFiniteElementNeural2025">(Daby-Seesaram, Škardová, and Genet 2025)</span> and shape registration from CT-scans.</p>
+
+<p>Today I had the pleasure to present my (collaborative) work on building a digital twin of the human lungs through interpretable NN-PGD <span class="citation" data-cites="daby-seesaramFiniteElementNeural2025">(Daby-Seesaram et al. 2025)</span> and shape registration from CT-scans.</p>
 <p>The slides accessible <a href="https://alexandredabyseesaram.github.io/E4H_2025/#/title-slide">here</a>.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -80,9 +83,9 @@
 
 
 
-<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0">
+<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent">
 <div id="ref-daby-seesaramFiniteElementNeural2025" class="csl-entry">
-Daby-Seesaram, Alexandre, Kateřina Škardová, and Martin Genet. 2025. <span>“Finite Element Neural Network Interpolation: <span>Part II</span>—Hybridisation with the Proper Generalised Decomposition for Non-Linear Surrogate Modelling.”</span> <em>Computational Mechanics</em>, August. <a href="https://doi.org/10.1007/s00466-025-02676-4">https://doi.org/10.1007/s00466-025-02676-4</a>.
+Daby-Seesaram, Alexandre, Kateřina Škardová, and Martin Genet. 2025. <span>“Finite Element Neural Network Interpolation: <span>Part II</span>—Hybridisation with the Proper Generalised Decomposition for Non-Linear Surrogate Modelling.”</span> <em>Computational Mechanics</em>, ahead of print, August 30. <a href="https://doi.org/10.1007/s00466-025-02676-4">https://doi.org/10.1007/s00466-025-02676-4</a>.
 </div>
 </div></section></div> ]]></description>
   <category>News</category>
@@ -98,19 +101,20 @@ Daby-Seesaram, Alexandre, Kateřina Škardová, and Martin Genet. 2025. <span>�
 
 
 
-<p>This week, my co-authors <a href="https://m3disim.saclay.inria.fr/people/katerina-skardova">Kateřina Škardová</a> and <a href="https://mgenet.github.io/">Martin Genet</a>, my collegues Jean-Marc Allain, Felipe Álvarez-Barrientos, Haotian Xiao, and Julien Bonnafé, and I attended the <a href="https://iccb2025.org/">2025 ICCB</a> conference. <a href="https://m3disim.saclay.inria.fr/people/katerina-skardova">Kateřina Škardová</a> and I both presented our work towards getting a real-time digital twin of the lungs <span class="citation" data-cites="daby-seesaramFiniteElementNeural2025 skardovaFiniteElementNeural2025">(Daby-Seesaram, Škardová, and Genet 2025; Škardová, Daby-Seesaram, and Genet 2025)</span>.</p>
+
+<p>This week, my co-authors <a href="https://m3disim.saclay.inria.fr/people/katerina-skardova">Kateřina Škardová</a> and <a href="https://mgenet.github.io/">Martin Genet</a>, my collegues Jean-Marc Allain, Felipe Álvarez-Barrientos, Haotian Xiao, and Julien Bonnafé, and I attended the <a href="https://iccb2025.org/">2025 ICCB</a> conference. <a href="https://m3disim.saclay.inria.fr/people/katerina-skardova">Kateřina Škardová</a> and I both presented our work towards getting a real-time digital twin of the lungs <span class="citation" data-cites="daby-seesaramFiniteElementNeural2025 skardovaFiniteElementNeural2025">(Daby-Seesaram et al. 2025; Škardová et al. 2025)</span>.</p>
 <p>Meanwhile, <a href="https://mgenet.github.io/">Martin Genet</a> chaired the mini-symposium “<strong>MS08 - 1: Modeling the respiratory system: current trends and clinical opportunities</strong>” he co-organised.</p>
 <p><img src="https://alexandredabyseesaram.github.io/posts/2025/2025-09-10-ICCB/ICCB_2.jpg" class="img-fluid quarto-figure quarto-figure-center" style="width:75.0%"> <img src="https://alexandredabyseesaram.github.io/posts/2025/2025-09-10-ICCB/ICCB_3.jpeg" class="img-fluid quarto-figure quarto-figure-center" style="width:75.0%"></p>
 
 
 
 
-<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0">
+<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent">
 <div id="ref-daby-seesaramFiniteElementNeural2025" class="csl-entry">
-Daby-Seesaram, Alexandre, Kateřina Škardová, and Martin Genet. 2025. <span>“Finite Element Neural Network Interpolation: <span>Part II</span>—Hybridisation with the Proper Generalised Decomposition for Non-Linear Surrogate Modelling.”</span> <em>Computational Mechanics</em>, August. <a href="https://doi.org/10.1007/s00466-025-02676-4">https://doi.org/10.1007/s00466-025-02676-4</a>.
+Daby-Seesaram, Alexandre, Kateřina Škardová, and Martin Genet. 2025. <span>“Finite Element Neural Network Interpolation: <span>Part II</span>—Hybridisation with the Proper Generalised Decomposition for Non-Linear Surrogate Modelling.”</span> <em>Computational Mechanics</em>, ahead of print, August 30. <a href="https://doi.org/10.1007/s00466-025-02676-4">https://doi.org/10.1007/s00466-025-02676-4</a>.
 </div>
 <div id="ref-skardovaFiniteElementNeural2025" class="csl-entry">
-Škardová, Kateřina, Alexandre Daby-Seesaram, and Martin Genet. 2025. <span>“Finite Element Neural Network Interpolation: <span>Part I</span>—Interpretable and Adaptive Discretization for Solving <span>PDEs</span>.”</span> <em>Computational Mechanics</em>, August. <a href="https://doi.org/10.1007/s00466-025-02677-3">https://doi.org/10.1007/s00466-025-02677-3</a>.
+Škardová, Kateřina, Alexandre Daby-Seesaram, and Martin Genet. 2025. <span>“Finite Element Neural Network Interpolation: <span>Part I</span>—Interpretable and Adaptive Discretization for Solving <span>PDEs</span>.”</span> <em>Computational Mechanics</em>, ahead of print, August 28. <a href="https://doi.org/10.1007/s00466-025-02677-3">https://doi.org/10.1007/s00466-025-02677-3</a>.
 </div>
 </div></section></div> ]]></description>
   <category>News</category>
@@ -126,12 +130,13 @@ Daby-Seesaram, Alexandre, Kateřina Škardová, and Martin Genet. 2025. <span>�
 
 
 
+
 <p><a href="https://mgenet.github.io/">Martin Genet</a>, <a href="https://m3disim.saclay.inria.fr/people/katerina-skardova/">Katerina Skardova</a> and I just published two papers in <a href="https://link.springer.com/journal/466"><em>Computational Mechanics</em></a>, entitled</p>
 <ul>
 <li><a href="https://link.springer.com/article/10.1007/s00466-025-02677-3">Finite element neural network interpolation: Part I—interpretable and adaptive discretization for solving PDEs</a>, and</li>
 <li><a href="https://link.springer.com/article/10.1007/s00466-025-02676-4">Finite element neural network interpolation: Part II—hybridisation with the proper generalised decomposition for non-linear surrogate modelling</a>.</li>
 </ul>
-<p>All computations from the paper (which rely on NeuROM <span class="citation" data-cites="daby-seesaramNeuROM2024a">(Daby-Seesaram, Škardová, and Genet 2025)</span>) are easily reproducible at</p>
+<p>All computations from the paper (which rely on NeuROM <span class="citation" data-cites="daby-seesaramNeuROM2024a">(Daby-Seesaram et al. 2025)</span>) are easily reproducible at</p>
 <ul>
 <li><a href="https://alexandredabyseesaram.github.io/FENNI-I-paper-demo/">https://alexandredabyseesaram.github.io/FENNI-I-paper-demo</a>, and</li>
 <li><a href="https://alexandredabyseesaram.github.io/FENNI-II-PGD-paper-demo">https://alexandredabyseesaram.github.io/FENNI-II-PGD-paper-demo</a>,</li>
@@ -146,9 +151,9 @@ Daby-Seesaram, Alexandre, Kateřina Škardová, and Martin Genet. 2025. <span>�
 
 
 
-<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0">
+<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent">
 <div id="ref-daby-seesaramNeuROM2024a" class="csl-entry">
-Daby-Seesaram, Alexandre, Kateřina Škardová, and Martin Genet. 2025. <span>“<span>NeuROM</span>.”</span> Zenodo. <a href="https://doi.org/10.5281/zenodo.13772740">https://doi.org/10.5281/zenodo.13772740</a>.
+Daby-Seesaram, Alexandre, Kateřina Škardová, and Martin Genet. 2025. <em><span>NeuROM</span></em>. Zenodo. <a href="https://doi.org/10.5281/zenodo.13772740">https://doi.org/10.5281/zenodo.13772740</a>.
 </div>
 </div></section></div> ]]></description>
   <category>News</category>
@@ -160,6 +165,7 @@ Daby-Seesaram, Alexandre, Kateřina Škardová, and Martin Genet. 2025. <span>�
   <title>New version is out</title>
   <link>https://alexandredabyseesaram.github.io/posts/2025/2025-03-02-NeuROM/</link>
   <description><![CDATA[ 
+
 
 
 
@@ -187,7 +193,8 @@ Daby-Seesaram, Alexandre, Kateřina Škardová, and Martin Genet. 2025. <span>�
 
 
 
-<p>This week, my colleagues <a href="https://m3disim.saclay.inria.fr/people/katerina-skardova">Kateřina Škardová</a> and <a href="https://mgenet.github.io/">Martin Genet</a>, and I attended the <a href="https://dte_aicomas_2025.iacm.info/">2025 DTE-AICOMAS</a> conference. <a href="https://m3disim.saclay.inria.fr/people/katerina-skardova">Kateřina Škardová</a> and I both presented our towards getting a real-time digital twin of the lungs <span class="citation" data-cites="daby-seesaramFiniteElementNeural2024a skardovaFiniteElementNeural2024a">(Daby-Seesaram, Škardová, and Genet 2024; Škardová, Daby-Seesaram, and Genet 2024)</span>.</p>
+
+<p>This week, my colleagues <a href="https://m3disim.saclay.inria.fr/people/katerina-skardova">Kateřina Škardová</a> and <a href="https://mgenet.github.io/">Martin Genet</a>, and I attended the <a href="https://dte_aicomas_2025.iacm.info/">2025 DTE-AICOMAS</a> conference. <a href="https://m3disim.saclay.inria.fr/people/katerina-skardova">Kateřina Škardová</a> and I both presented our towards getting a real-time digital twin of the lungs <span class="citation" data-cites="daby-seesaramFiniteElementNeural2024a skardovaFiniteElementNeural2024a">(Daby-Seesaram et al. 2024; Škardová et al. 2024)</span>.</p>
 <p>Meanwhile, <a href="https://mgenet.github.io/">Martin Genet</a> chaired the mini-symposium <a href="https://dte_aicomas_2025.iacm.info/event/area/8d4fc12b-710a-11ef-a6b7-000c29ddfc0c">MS020 Digital twins of living systems: theoretical, implementation &amp; application challenges</a> he co-organised.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -198,12 +205,12 @@ Daby-Seesaram, Alexandre, Kateřina Škardová, and Martin Genet. 2025. <span>�
 
 
 
-<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0">
+<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent">
 <div id="ref-daby-seesaramFiniteElementNeural2024a" class="csl-entry">
-Daby-Seesaram, Alexandre, Kateřina Škardová, and Martin Genet. 2024. <span>“Finite <span>Element Neural Network Interpolation</span>. <span>Part II</span>: <span>Hybridisation</span> with the <span>Proper Generalised Decomposition</span> for Non-Linear Surrogate Modelling.”</span> December 7, 2024. <a href="https://doi.org/10.48550/arXiv.2412.05714">https://doi.org/10.48550/arXiv.2412.05714</a>.
+Daby-Seesaram, Alexandre, Kateřina Škardová, and Martin Genet. 2024. <span>“Finite <span>Element Neural Network Interpolation</span>. <span>Part II</span>: <span>Hybridisation</span> with the <span>Proper Generalised Decomposition</span> for Non-Linear Surrogate Modelling.”</span> Pre-published December 7. <a href="https://doi.org/10.48550/arXiv.2412.05714">https://doi.org/10.48550/arXiv.2412.05714</a>.
 </div>
 <div id="ref-skardovaFiniteElementNeural2024a" class="csl-entry">
-Škardová, Kateřina, Alexandre Daby-Seesaram, and Martin Genet. 2024. <span>“Finite <span>Element Neural Network Interpolation</span>. <span>Part I</span>: <span>Interpretable</span> and <span>Adaptive Discretization</span> for <span>Solving PDEs</span>.”</span> December 7, 2024. <a href="https://doi.org/10.48550/arXiv.2412.05719">https://doi.org/10.48550/arXiv.2412.05719</a>.
+Škardová, Kateřina, Alexandre Daby-Seesaram, and Martin Genet. 2024. <span>“Finite <span>Element Neural Network Interpolation</span>. <span>Part I</span>: <span>Interpretable</span> and <span>Adaptive Discretization</span> for <span>Solving PDEs</span>.”</span> Pre-published December 7. <a href="https://doi.org/10.48550/arXiv.2412.05719">https://doi.org/10.48550/arXiv.2412.05719</a>.
 </div>
 </div></section></div> ]]></description>
   <category>News</category>
@@ -215,6 +222,7 @@ Daby-Seesaram, Alexandre, Kateřina Škardová, and Martin Genet. 2024. <span>�
   <title>Invitation to talk about my PhD experience</title>
   <link>https://alexandredabyseesaram.github.io/posts/2025/2025-02-04-SPI/</link>
   <description><![CDATA[ 
+
 
 
 
@@ -238,7 +246,8 @@ Daby-Seesaram, Alexandre, Kateřina Škardová, and Martin Genet. 2024. <span>�
 
 
 
-<p>Today I was invited to give a seminar at the Johann Radon Institute for Computational and Applied Mathematics (<a href="https://www.oeaw.ac.at/ricam/">RICAM</a>) of the Austrian Academy of Sciences, in the Computational Methods for PDEs group. I had the opportunity to present our work on reduced-order modelling and recent hybridisation of the PGD with the Finite Element Neural Network Interpolation (FENNI) framework <span class="citation" data-cites="daby-seesaramFiniteElementNeural2024 skardovaFiniteElementNeural2024">(Daby-Seesaram, Škardová, and Genet 2024; Škardová, Daby-Seesaram, and Genet 2024)</span>.</p>
+
+<p>Today I was invited to give a seminar at the Johann Radon Institute for Computational and Applied Mathematics (<a href="https://www.oeaw.ac.at/ricam/">RICAM</a>) of the Austrian Academy of Sciences, in the Computational Methods for PDEs group. I had the opportunity to present our work on reduced-order modelling and recent hybridisation of the PGD with the Finite Element Neural Network Interpolation (FENNI) framework <span class="citation" data-cites="daby-seesaramFiniteElementNeural2024 skardovaFiniteElementNeural2024">(Daby-Seesaram et al. 2024; Škardová et al. 2024)</span>.</p>
 <p>The shown exemples used our open-source code, <a href="https://pypi.org/project/NeuROM-Py/">NeuROM</a></p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -249,7 +258,7 @@ Daby-Seesaram, Alexandre, Kateřina Škardová, and Martin Genet. 2024. <span>�
 
 
 
-<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0">
+<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent">
 <div id="ref-daby-seesaramFiniteElementNeural2024" class="csl-entry">
 Daby-Seesaram, Alexandre, Kateřina Škardová, and Martin Genet. 2024. <span>“Finite <span>Element Neural Network Interpolation</span>: <span>Hybridisation</span> with the <span>Proper Generalised Decomposition</span> for Surrogate Modelling.”</span> <em>In Preparation</em>.
 </div>
@@ -266,6 +275,7 @@ Daby-Seesaram, Alexandre, Kateřina Škardová, and Martin Genet. 2024. <span>�
   <title>VPH 2024</title>
   <link>https://alexandredabyseesaram.github.io/posts/2024/2024-09-06-VPH/</link>
   <description><![CDATA[ 
+
 
 
 
@@ -294,6 +304,7 @@ Daby-Seesaram, Alexandre, Kateřina Škardová, and Martin Genet. 2024. <span>�
 
 
 
+
 <p>I presented <a href="https://hal.science/hal-03717959">my PhD work</a> at <a href="https://csma2024.sciencesconf.org/">CSMA 2024</a> in Giens.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -317,6 +328,7 @@ Daby-Seesaram, Alexandre, Kateřina Škardová, and Martin Genet. 2024. <span>�
 
 
 
+
 <p>I got a new position as Postdoctoral researcher at École Polytechnique and INRIA in the <a href="https://m3disim.saclay.inria.fr/">MΞDISIM team</a>.</p>
 
 
@@ -331,6 +343,7 @@ Daby-Seesaram, Alexandre, Kateřina Škardová, and Martin Genet. 2024. <span>�
   <title>IRTG 2657 2nd Annual Meeting</title>
   <link>https://alexandredabyseesaram.github.io/posts/2023/2023-12-06-IRTG/</link>
   <description><![CDATA[ 
+
 
 
 
@@ -354,6 +367,7 @@ Daby-Seesaram, Alexandre, Kateřina Škardová, and Martin Genet. 2024. <span>�
   <title>PhD Defence</title>
   <link>https://alexandredabyseesaram.github.io/posts/2023/2023-12-01-PhD-Defence/</link>
   <description><![CDATA[ 
+
 
 
 
@@ -410,6 +424,7 @@ Daby-Seesaram, Alexandre, Kateřina Škardová, and Martin Genet. 2024. <span>�
 
 
 
+
 <p>I presented my PhD work at <a href="https://mortech2023.sciencesconf.org/">MORTech 2023 (6th International Workshop on Model Reduction Techniques)</a> at Laboratoire de Mécanique de Paris-Saclay (LMPS), École Normale Supérieure de Paris-Saclay where I met my future colleagues <a href="https://mgenet.github.io/">Martin Genet</a> and <a href="https://m3disim.saclay.inria.fr/people/katerina-skardova">Kateřina Škardová</a>.</p>
 
 
@@ -428,6 +443,7 @@ Daby-Seesaram, Alexandre, Kateřina Škardová, and Martin Genet. 2024. <span>�
 
 
 
+
 <p>As part of the <a href="https://www.irtg2657.uni-hannover.de/en/">IRTG 2657</a>, I have been invited to join Prof.&nbsp;Dr.-Ing. Michael Beer’s team at the <a href="https://www.irz.uni-hannover.de/en/">Institute for Risk and Reliability</a> and Prof.&nbsp;Dr.-Ing. Udo Nackenhorst’s team at the <a href="https://www.ibnm.uni-hannover.de/en/">Institute of Mechanics and Computational Mechanics</a>.</p>
 
 
@@ -442,6 +458,7 @@ Daby-Seesaram, Alexandre, Kateřina Škardová, and Martin Genet. 2024. <span>�
   <title>COMPDYN 2023 congress</title>
   <link>https://alexandredabyseesaram.github.io/posts/2023/2023-06-14-COMPDYN/</link>
   <description><![CDATA[ 
+
 
 
 
@@ -469,6 +486,7 @@ Daby-Seesaram, Alexandre, Kateřina Škardová, and Martin Genet. 2024. <span>�
 
 
 
+
 <p>Our new paper on reduced-order modelling using the PGD in the frequency domain for non-linear dynamics is out in <a href="https://link.springer.com/journal/11071">Nonlinear dynamics</a>.</p>
 
 
@@ -483,6 +501,7 @@ Daby-Seesaram, Alexandre, Kateřina Škardová, and Martin Genet. 2024. <span>�
   <title>ECCOMAS 2022 congress</title>
   <link>https://alexandredabyseesaram.github.io/posts/2022/2022-06-09-ECCOMAS/</link>
   <description><![CDATA[ 
+
 
 
 
@@ -506,6 +525,7 @@ Daby-Seesaram, Alexandre, Kateřina Škardová, and Martin Genet. 2024. <span>�
   <title>CSMA 2022</title>
   <link>https://alexandredabyseesaram.github.io/posts/2022/2022-05-18-CSMA/</link>
   <description><![CDATA[ 
+
 
 
 
