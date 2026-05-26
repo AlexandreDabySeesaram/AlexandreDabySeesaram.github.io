@@ -50,10 +50,13 @@ The reduced-order modelling code used to create surrogate models based on an hyb
 :::
 
 ::: {.column width="50%"}
-![](Resources/Videos/NeuROM_3D_gravity_ter.mov){ width="100%" loop="true" autoplay=true fig-align="center"}
+<!-- ![](Resources/Videos/NeuROM_3D_gravity_ter.mov){ width="100%" loop="true" autoplay=true fig-align="center"} -->
+![](Resources/Videos/Lung_gravity_qua.mov){ width="100%" loop="true" autoplay=true fig-align="center"}
 :::
 
 ::::
+
+<!-- ![](Resources/Videos/Lung_gravity_qua.mov){ width="75%" loop="true" autoplay=true fig-align="center"} -->
 
 ## {{< iconify fa-solid:chalkboard >}}  &nbsp; Courses
 A few short courses relevant to model reduction are available on my github
