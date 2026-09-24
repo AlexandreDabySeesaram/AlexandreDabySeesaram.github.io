@@ -1,8 +1,14 @@
 ---
 title: Continuum mechanics
-filters:
-    - marimo-team/marimo
-    # marimo-version: 0.14.17
+engine: marimo
+pyproject: |
+  requires-python = ">=3.11"
+  dependencies = [
+    "marimo",
+    "numpy",
+    "plotly",
+    "wigglystuff",
+  ]
 toc: false
 format:
   html:
@@ -30,6 +36,10 @@ Let's try to grasp the physical meaning of the component of $\underline{\underli
 ```python {.marimo}
 
 import marimo as mo
+import sys
+if "pyodide" in sys.modules:  # WASM: islands no longer auto-install packages
+    import micropip
+    await micropip.install(["wigglystuff", "plotly"])
 from wigglystuff import Matrix
 import numpy as np
 
