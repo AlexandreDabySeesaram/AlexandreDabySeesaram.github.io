@@ -9,7 +9,7 @@
   The separated representation u(x, p) = sum_m prod_q F_mq(p_q) U_m(x) is evaluated in the browser at every frame.
   data.js is produced by export_web_data.py, which also writes Breathing_ROM_SVK.html (this page with data.js inlined).
   Upload that single file and embed with:
-      <iframe src="Breathing_ROM_SVK.html" style="width:100%; height:600px; border:0" loading="lazy"></iframe>
+      <iframe src="Breathing_ROM_SVK.html" style="width:100%; height:600px; border:0" loading="lazy" allow="fullscreen" allowfullscreen></iframe>
 -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -70,6 +70,11 @@ input[type="range"]:focus-visible::-moz-range-thumb { box-shadow: 0 0 0 4px rgba
 .phase-label span { font-family: var(--font-num); color: var(--fg); }
 .phase-bar { width: 160px; height: 4px; border-radius: 4px; background: var(--track); overflow: hidden; }
 .phase-bar > div { height: 100%; width: 0; background: var(--accent); }
+.fullscreen { position: absolute; right: max(10px, env(safe-area-inset-right, 0px)); top: 10px; width: 34px; height: 34px;
+  display: grid; place-items: center; border: 1px solid var(--track); background: var(--bg); border-radius: 8px; cursor: pointer; color: var(--fg); }
+.fullscreen:hover { border-color: var(--accent); color: var(--accent); }
+.fullscreen:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.fullscreen svg { width: 16px; height: 16px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
 .stage { position: relative; min-width: 0; overflow: hidden; }
 .stage canvas { display: block; width: 100%; height: 100%; touch-action: none; }
 .colorbar { position: absolute; right: max(14px, env(safe-area-inset-right, 0px)); top: 50%; transform: translateY(-50%);
@@ -111,6 +116,7 @@ input[type="range"]:focus-visible::-moz-range-thumb { box-shadow: 0 0 0 4px rgba
       <div class="phase-label">Inspiration <span id="phase-pct">0 %</span></div>
       <div class="phase-bar"><div id="phase-fill"></div></div>
     </div>
+    <button type="button" class="fullscreen" id="b-fullscreen" aria-label="Full screen" title="Full screen"></button>
     <div class="legend"><svg viewBox="0 0 22 10" aria-hidden="true"><line x1="0" y1="5" x2="15" y2="5" stroke="#190f3c" stroke-opacity="0.75" stroke-width="1.5"/><path d="M14 1 L22 5 L14 9 Z" fill="#190f3c" fill-opacity="0.75"/></svg>Gravity direction</div>
     <div class="colorbar" aria-hidden="true">
       <div class="cb-title" id="cb-title"></div>
@@ -352,6 +358,31 @@ window.ROM_DATA = "AKQxQ3R7PUNIEm1DP64wQ1mxQ0NEBGpDlxEyQwvNQEMD0GRDYqY1Q6fQOEOCR
     controls.handleResize();
   }
   new ResizeObserver(resize).observe(stage); resize();
+
+  /* ---------- Full screen: Fullscreen API (the embedding iframe needs allow="fullscreen"), else open the page in a new tab ---------- */
+  const bFull = document.getElementById("b-fullscreen");
+  const fsIcons = { enter: '<svg viewBox="0 0 16 16"><path d="M2 6V2h4M10 2h4v4M14 10v4h-4M6 14H2v-4"/></svg>',
+                    exit:  '<svg viewBox="0 0 16 16"><path d="M6 2v4H2M14 6h-4V2M10 14v-4h4M2 10h4v4"/></svg>' };
+  const root = document.documentElement;
+  const fsElement = () => document.fullscreenElement || document.webkitFullscreenElement;
+  const fsEnabled = document.fullscreenEnabled || document.webkitFullscreenEnabled;
+  function syncFull() {
+    const on = !!fsElement();
+    bFull.innerHTML = on ? fsIcons.exit : fsIcons.enter;
+    bFull.title = on ? "Exit full screen" : (fsEnabled ? "Full screen" : "Open in a new tab");
+    bFull.setAttribute("aria-label", bFull.title);
+  }
+  bFull.onclick = () => {
+    if (fsElement()) { (document.exitFullscreen || document.webkitExitFullscreen).call(document); return; }
+    if (fsEnabled) {
+      const req = root.requestFullscreen || root.webkitRequestFullscreen;
+      Promise.resolve(req.call(root)).catch(() => window.open(location.href, "_blank"));
+    } else {
+      window.open(location.href, "_blank");
+    }
+  };
+  document.addEventListener("fullscreenchange", syncFull); document.addEventListener("webkitfullscreenchange", syncFull);
+  syncFull();
 
   /* ---------- Frame loop (when paused, time stops and only the sliders move the lung) ---------- */
   const phaseFill = document.getElementById("phase-fill"), phasePct = document.getElementById("phase-pct");
