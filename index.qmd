@@ -101,7 +101,7 @@ reduction techniques, thus going from theoretical tools to clinical applications
 <!-- <iframe width="100%" height="550" src="Resources/AR/Breathing_ROM_SVK.html"></IFRAME> -->
 <iframe width="100%" height="550" src="Resources/AR/Breathing_ROM_SVK.html" style="border:0" allow="fullscreen" allowfullscreen></iframe>
 
-Interactive lung digital twin based on NN-PGD 
+Interactive lung digital twin based on FENNI-PGD [@daby-seesaramFiniteElementNeural2025] 
 
 :::: {.columns}
 
