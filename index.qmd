@@ -98,6 +98,10 @@ reduction techniques, thus going from theoretical tools to clinical applications
 :::: {style='margin-top: 0em;'}
 ::::
 
+<iframe width="100%" height="550" src="Resources/AR/Breathing_ROM_SVK.html"></IFRAME>
+
+Interactive lung digital twin based on NN-PGD 
+
 :::: {.columns}
 
 ::: {.column width="15%"}
@@ -107,6 +111,9 @@ reduction techniques, thus going from theoretical tools to clinical applications
 ::: {.column width="80%"}
 
 <!-- ![](Resources/Images/Background_Lungs_mesh_2.png){width="80%" style="display: block; margin: 0 auto;"}
+
+
+
 
 :::: {style='margin-top: 3em;'}
 :::: -->
