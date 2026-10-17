@@ -103,6 +103,11 @@ reduction techniques, thus going from theoretical tools to clinical applications
 
 Interactive lung digital twin based on FENNI-PGD [@daby-seesaramFiniteElementNeural2025] 
 
+
+<iframe width="100%" height="550" src="Resources/AR/Breathing_ROM_SVK_AR.html" style="border:0" allow="fullscreen" allowfullscreen></iframe>
+
+Augmented reality interactive lung digital twin based on FENNI-PGD [@daby-seesaramFiniteElementNeural2025] 
+
 :::: {.columns}
 
 ::: {.column width="15%"}
