@@ -94,7 +94,7 @@ input[type="range"]:focus-visible::-moz-range-thumb { box-shadow: 0 0 0 4px rgba
 .ar-btn svg { width: 16px; height: 16px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linejoin: round; }
 .ar-btn:focus-visible { outline: 2px solid var(--fg); outline-offset: 2px; }
 .ar-note { position: absolute; right: max(52px, calc(env(safe-area-inset-right, 0px) + 42px)); top: 18px; font-size: 12.5px; color: var(--muted); }
-#ar-overlay { display: none; position: fixed; inset: 0; font: 15px/1.35 var(--font-ui); color: var(--fg); }
+#ar-overlay { display: none; position: fixed; inset: 0; touch-action: none; font: 15px/1.35 var(--font-ui); color: var(--fg); }
 body.ar #ar-overlay { display: block; }
 .ar-card { background: rgba(255, 255, 255, 0.9); border-radius: 14px; box-shadow: 0 2px 12px rgba(25, 15, 60, 0.18); }
 .ar-top { position: absolute; left: 10px; right: 10px; top: max(10px, env(safe-area-inset-top, 0px)); display: flex; gap: 10px;
@@ -178,6 +178,7 @@ body.ar #ar-overlay { display: block; }
   <div class="ar-panel ar-card" id="ar-panel">
     <div class="ar-panel-head">
       <div class="ar-size" id="ar-size" role="group" aria-label="Size"></div>
+      <button type="button" class="ar-toggle" id="ar-flip">Flip</button>
       <button type="button" class="ar-toggle" id="ar-toggle">Hide controls</button>
     </div>
     <div id="ar-slot"></div>
@@ -455,13 +456,13 @@ window.ROM_DATA = "AKQxQ3R7PUNIEm1DP64wQ1mxQ0NEBGpDlxEyQwvNQEMD0GRDYqY1Q6fQOEOCR
   syncFull();
 
   /* ---------- AR (WebXR immersive-ar with hit test and DOM overlay) ----------
-     Model units are mm: in AR the lung is shown at real size (x 0.001 m/mm), z (cranio-caudal) pointing up,
+     Model units are mm: in AR the lung is shown at real size (x 0.001 m/mm), upright as in the desktop view (model y up),
      standing on the surface tapped by the user and turned to face them. */
   const bAR = document.getElementById("b-ar"), arNote = document.getElementById("ar-note");
   const overlay = document.getElementById("ar-overlay"), arSlot = document.getElementById("ar-slot");
   const arHint = document.getElementById("ar-hint"), arPanel = document.getElementById("ar-panel");
   const appEl = document.querySelector(".app");
-  const ar = { session: null, hitSource: null, placed: false, scale: 1 };
+  const ar = { session: null, hitSource: null, dragSource: null, drag: null, placed: false, scale: 1, yaw: 0, flip: false };
   const reticle = new THREE.Mesh(new THREE.RingGeometry(0.05, 0.065, 40).rotateX(-Math.PI / 2),
                                  new THREE.MeshBasicMaterial({ color: 0x3746ff }));
   reticle.matrixAutoUpdate = false; reticle.visible = false; scene.add(reticle);
@@ -476,16 +477,20 @@ window.ROM_DATA = "AKQxQ3R7PUNIEm1DP64wQ1mxQ0NEBGpDlxEyQwvNQEMD0GRDYqY1Q6fQOEOCR
     if (!ar.session) return;
     const s = 0.001 * ar.scale, base = model.userData.base;
     model.scale.setScalar(s);
-    if (base) model.position.set(base.x, base.y - (bbox.min.z - center.z) * s + 0.005, base.z);   // keep the lung standing on the surface
+    const lift = ar.flip ? (bbox.max.y - center.y) : (center.y - bbox.min.y);           // keep the lung standing on the surface
+    if (base) model.position.set(base.x, base.y + lift * s + 0.005, base.z);
+    model.rotation.set(ar.flip ? Math.PI : 0, ar.yaw, 0, "YXZ");  // model y up (or flipped), turned about the vertical
   }
   applyScale();
 
   // Taps on the overlay's controls must not place the lung
   ["ar-top", "ar-panel"].forEach(id => document.getElementById(id).addEventListener("beforexrselect", e => e.preventDefault()));
+  document.getElementById("ar-flip").onclick = () => { ar.flip = !ar.flip; applyScale(); };
   document.getElementById("ar-toggle").onclick = e => {
     const c = arPanel.classList.toggle("collapsed"); e.target.textContent = c ? "Show controls" : "Hide controls";
   };
-  document.getElementById("ar-move").onclick = () => { ar.placed = false; model.visible = false; arHint.hidden = false; };
+  document.getElementById("ar-move").onclick = () => { ar.placed = false; model.visible = false;
+    showHint("Point the phone at the floor or a table, then tap the screen to place the lung."); };
   document.getElementById("ar-exit").onclick = () => { if (ar.session) ar.session.end(); };
 
   function onSelect() {
@@ -493,10 +498,51 @@ window.ROM_DATA = "AKQxQ3R7PUNIEm1DP64wQ1mxQ0NEBGpDlxEyQwvNQEMD0GRDYqY1Q6fQOEOCR
     const p = new THREE.Vector3().setFromMatrixPosition(reticle.matrix);
     const cam = renderer.xr.getCamera().position;
     model.userData.base = p;
-    model.rotation.set(-Math.PI / 2, Math.atan2(cam.x - p.x, cam.z - p.z), 0, "YXZ");
-    model.visible = true; ar.placed = true; reticle.visible = false; arHint.hidden = true;
+    ar.yaw = Math.atan2(cam.x - p.x, cam.z - p.z);
+    model.visible = true; ar.placed = true; reticle.visible = false;
+    showHint("Drag to move, pinch to resize, twist with two fingers to rotate.", 4000);
     applyScale();
   }
+  let hintTimer = null;
+  function showHint(text, ms) {
+    arHint.textContent = text; arHint.hidden = false; clearTimeout(hintTimer);
+    if (ms) hintTimer = setTimeout(() => { arHint.hidden = true; }, ms);
+  }
+
+  // Touch gestures on the camera view (not on the panels): 1 finger moves the lung on the ground plane,
+  // 2 fingers pinch to resize (x0.25 to x8 real size) and twist to turn it
+  const touch = {};
+  const tdist = (a, b) => Math.hypot(a.clientX - b.clientX, a.clientY - b.clientY);
+  const tang = (a, b) => Math.atan2(b.clientY - a.clientY, b.clientX - a.clientX);
+  function touchStart(e) {
+    if (!ar.placed || e.target.closest("#ar-top, #ar-panel")) { touch.active = false; return; }
+    const t = e.touches;
+    touch.active = true; touch.n = t.length;
+    touch.x = t[0].clientX; touch.y = t[0].clientY;
+    if (t.length >= 2) { touch.d0 = tdist(t[0], t[1]); touch.a0 = tang(t[0], t[1]); touch.s0 = ar.scale; touch.yaw0 = ar.yaw; }
+  }
+  overlay.addEventListener("touchstart", touchStart, { passive: true });
+  overlay.addEventListener("touchend", e => { if (e.touches.length) touchStart(e); else touch.active = false; }, { passive: true });
+  overlay.addEventListener("touchmove", e => {
+    if (!touch.active || !model.userData.base) return;
+    const t = e.touches;
+    if (t.length === 1 && touch.n === 1 && !ar.dragSource) {
+      const cam = renderer.xr.getCamera(), base = model.userData.base;
+      const fwd = new THREE.Vector3(); cam.getWorldDirection(fwd); fwd.y = 0;
+      if (fwd.lengthSq() < 1e-6) return;
+      fwd.normalize();
+      const right = new THREE.Vector3(-fwd.z, 0, fwd.x);
+      const k = 1.2 * cam.position.distanceTo(base) / window.innerHeight;    // metres per pixel at the lung's distance
+      const dx = t[0].clientX - touch.x, dy = t[0].clientY - touch.y;
+      base.addScaledVector(right, dx * k).addScaledVector(fwd, -dy * k);
+      touch.x = t[0].clientX; touch.y = t[0].clientY;
+      applyScale();
+    } else if (t.length >= 2 && touch.n >= 2) {
+      ar.scale = Math.min(8, Math.max(0.25, touch.s0 * tdist(t[0], t[1]) / touch.d0));
+      ar.yaw = touch.yaw0 - (tang(t[0], t[1]) - touch.a0);
+      applyScale();
+    }
+  }, { passive: true });
 
   async function startAR() {
     try {
@@ -506,12 +552,19 @@ window.ROM_DATA = "AKQxQ3R7PUNIEm1DP64wQ1mxQ0NEBGpDlxEyQwvNQEMD0GRDYqY1Q6fQOEOCR
       document.body.classList.add("ar");
       arSlot.appendChild(controlsEl);                           // the same sliders, now in the overlay
       renderer.setClearColor(0x000000, 0);
-      model.visible = false; arHint.hidden = false;
+      model.visible = false; showHint("Point the phone at the floor or a table, then tap the screen to place the lung.");
       session.addEventListener("select", onSelect);
+      // One-finger drag: ARCore hit test under the finger (transient screen input), the lung follows it on the surface
+      session.addEventListener("selectstart", () => { if (ar.placed) ar.drag = { offset: null }; });
+      session.addEventListener("selectend", () => { ar.drag = null; });
       session.addEventListener("end", endAR);
       await renderer.xr.setSession(session);
       const viewer = await session.requestReferenceSpace("viewer");
       ar.hitSource = await session.requestHitTestSource({ space: viewer });
+      if (session.requestHitTestSourceForTransientInput) {
+        try { ar.dragSource = await session.requestHitTestSourceForTransientInput({ profile: "generic-touchscreen" }); }
+        catch (err) { ar.dragSource = null; }
+      }
     } catch (err) {
       console.error(err);
       if (window.top !== window) window.open(location.href, "_blank");   // AR is often blocked inside iframes
@@ -520,6 +573,8 @@ window.ROM_DATA = "AKQxQ3R7PUNIEm1DP64wQ1mxQ0NEBGpDlxEyQwvNQEMD0GRDYqY1Q6fQOEOCR
   }
   function endAR() {
     if (ar.hitSource) ar.hitSource.cancel();
+    if (ar.dragSource) ar.dragSource.cancel();
+    ar.dragSource = null; ar.drag = null;
     ar.session = null; ar.hitSource = null; ar.placed = false;
     document.body.classList.remove("ar");
     appEl.insertBefore(controlsEl, stage);
@@ -559,6 +614,18 @@ window.ROM_DATA = "AKQxQ3R7PUNIEm1DP64wQ1mxQ0NEBGpDlxEyQwvNQEMD0GRDYqY1Q6fQOEOCR
     phaseFill.style.width = (100 * sNow) + "%"; phasePct.textContent = Math.round(100 * sNow) + " %";
     if (ar.session) {
       arPhaseFill.style.width = phaseFill.style.width; arPhasePct.textContent = phasePct.textContent;
+      if (xrFrame && ar.dragSource && ar.drag && ar.placed && model.userData.base) {
+        const results = xrFrame.getHitTestResultsForTransientInput(ar.dragSource);
+        if (results.length === 1 && results[0].results.length) {          // one finger only (two = pinch / twist)
+          const p = results[0].results[0].getPose(renderer.xr.getReferenceSpace()).transform.position;
+          const hit = new THREE.Vector3(p.x, p.y, p.z), base = model.userData.base;
+          if (!ar.drag.offset) ar.drag.offset = base.clone().sub(hit).setY(0);
+          base.copy(hit).add(ar.drag.offset);
+          applyScale();
+        } else if (results.length > 1) {
+          ar.drag.offset = null;
+        }
+      }
       if (xrFrame && ar.hitSource && !ar.placed) {
         const hits = xrFrame.getHitTestResults(ar.hitSource);
         const pose = hits.length ? hits[0].getPose(renderer.xr.getReferenceSpace()) : null;
