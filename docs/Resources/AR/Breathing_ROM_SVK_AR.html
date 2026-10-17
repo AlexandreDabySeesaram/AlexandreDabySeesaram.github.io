@@ -178,7 +178,6 @@ body.ar #ar-overlay { display: block; }
   <div class="ar-panel ar-card" id="ar-panel">
     <div class="ar-panel-head">
       <div class="ar-size" id="ar-size" role="group" aria-label="Size"></div>
-      <button type="button" class="ar-toggle" id="ar-flip">Flip</button>
       <button type="button" class="ar-toggle" id="ar-toggle">Hide controls</button>
     </div>
     <div id="ar-slot"></div>
@@ -456,13 +455,13 @@ window.ROM_DATA = "AKQxQ3R7PUNIEm1DP64wQ1mxQ0NEBGpDlxEyQwvNQEMD0GRDYqY1Q6fQOEOCR
   syncFull();
 
   /* ---------- AR (WebXR immersive-ar with hit test and DOM overlay) ----------
-     Model units are mm: in AR the lung is shown at real size (x 0.001 m/mm), upright as in the desktop view (model y up),
+     Model units are mm: in AR the lung is shown at real size (x 0.001 m/mm), with the apex up (model -z up) and the y axis to the viewer's right,
      standing on the surface tapped by the user and turned to face them. */
   const bAR = document.getElementById("b-ar"), arNote = document.getElementById("ar-note");
   const overlay = document.getElementById("ar-overlay"), arSlot = document.getElementById("ar-slot");
   const arHint = document.getElementById("ar-hint"), arPanel = document.getElementById("ar-panel");
   const appEl = document.querySelector(".app");
-  const ar = { session: null, hitSource: null, dragSource: null, drag: null, placed: false, scale: 1, yaw: 0, flip: false };
+  const ar = { session: null, hitSource: null, dragSource: null, drag: null, placed: false, scale: 1, yaw: 0 };
   const reticle = new THREE.Mesh(new THREE.RingGeometry(0.05, 0.065, 40).rotateX(-Math.PI / 2),
                                  new THREE.MeshBasicMaterial({ color: 0x3746ff }));
   reticle.matrixAutoUpdate = false; reticle.visible = false; scene.add(reticle);
@@ -477,15 +476,13 @@ window.ROM_DATA = "AKQxQ3R7PUNIEm1DP64wQ1mxQ0NEBGpDlxEyQwvNQEMD0GRDYqY1Q6fQOEOCR
     if (!ar.session) return;
     const s = 0.001 * ar.scale, base = model.userData.base;
     model.scale.setScalar(s);
-    const lift = ar.flip ? (bbox.max.y - center.y) : (center.y - bbox.min.y);           // keep the lung standing on the surface
-    if (base) model.position.set(base.x, base.y + lift * s + 0.005, base.z);
-    model.rotation.set(ar.flip ? Math.PI : 0, ar.yaw, 0, "YXZ");  // model y up (or flipped), turned about the vertical
+    if (base) model.position.set(base.x, base.y + (bbox.max.z - center.z) * s + 0.005, base.z);   // keep the lung standing on the surface
+    model.rotation.set(Math.PI / 2, ar.yaw, 0, "YXZ");          // model -z (apex) up, then turned about the vertical
   }
   applyScale();
 
   // Taps on the overlay's controls must not place the lung
   ["ar-top", "ar-panel"].forEach(id => document.getElementById(id).addEventListener("beforexrselect", e => e.preventDefault()));
-  document.getElementById("ar-flip").onclick = () => { ar.flip = !ar.flip; applyScale(); };
   document.getElementById("ar-toggle").onclick = e => {
     const c = arPanel.classList.toggle("collapsed"); e.target.textContent = c ? "Show controls" : "Hide controls";
   };
@@ -498,7 +495,7 @@ window.ROM_DATA = "AKQxQ3R7PUNIEm1DP64wQ1mxQ0NEBGpDlxEyQwvNQEMD0GRDYqY1Q6fQOEOCR
     const p = new THREE.Vector3().setFromMatrixPosition(reticle.matrix);
     const cam = renderer.xr.getCamera().position;
     model.userData.base = p;
-    ar.yaw = Math.atan2(cam.x - p.x, cam.z - p.z);
+    ar.yaw = Math.atan2(cam.x - p.x, cam.z - p.z) + Math.PI / 2;   // facing the user, model y to their right
     model.visible = true; ar.placed = true; reticle.visible = false;
     showHint("Drag to move, pinch to resize, twist with two fingers to rotate.", 4000);
     applyScale();
