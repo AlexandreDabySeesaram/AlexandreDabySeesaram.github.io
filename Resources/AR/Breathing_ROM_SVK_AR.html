@@ -455,13 +455,13 @@ window.ROM_DATA = "AKQxQ3R7PUNIEm1DP64wQ1mxQ0NEBGpDlxEyQwvNQEMD0GRDYqY1Q6fQOEOCR
   syncFull();
 
   /* ---------- AR (WebXR immersive-ar with hit test and DOM overlay) ----------
-     Model units are mm: in AR the lung is shown at real size (x 0.001 m/mm), with the apex up (model -z up) and the y axis to the viewer's right,
+     Model units are mm: in AR the lung is shown at real size (x 0.001 m/mm), with the apex up (model -z up) and the y axis towards the viewer (twice real size by default),
      standing on the surface tapped by the user and turned to face them. */
   const bAR = document.getElementById("b-ar"), arNote = document.getElementById("ar-note");
   const overlay = document.getElementById("ar-overlay"), arSlot = document.getElementById("ar-slot");
   const arHint = document.getElementById("ar-hint"), arPanel = document.getElementById("ar-panel");
   const appEl = document.querySelector(".app");
-  const ar = { session: null, hitSource: null, dragSource: null, drag: null, placed: false, scale: 1, yaw: 0 };
+  const ar = { session: null, hitSource: null, dragSource: null, drag: null, placed: false, scale: 2, yaw: 0 };       // default: twice real size
   const reticle = new THREE.Mesh(new THREE.RingGeometry(0.05, 0.065, 40).rotateX(-Math.PI / 2),
                                  new THREE.MeshBasicMaterial({ color: 0x3746ff }));
   reticle.matrixAutoUpdate = false; reticle.visible = false; scene.add(reticle);
@@ -495,7 +495,7 @@ window.ROM_DATA = "AKQxQ3R7PUNIEm1DP64wQ1mxQ0NEBGpDlxEyQwvNQEMD0GRDYqY1Q6fQOEOCR
     const p = new THREE.Vector3().setFromMatrixPosition(reticle.matrix);
     const cam = renderer.xr.getCamera().position;
     model.userData.base = p;
-    ar.yaw = Math.atan2(cam.x - p.x, cam.z - p.z) + Math.PI / 2;   // facing the user, model y to their right
+    ar.yaw = Math.atan2(cam.x - p.x, cam.z - p.z);   // turned so that the user faces the model y axis (front / inner side)
     model.visible = true; ar.placed = true; reticle.visible = false;
     showHint("Drag to move, pinch to resize, twist with two fingers to rotate.", 4000);
     applyScale();
@@ -549,6 +549,7 @@ window.ROM_DATA = "AKQxQ3R7PUNIEm1DP64wQ1mxQ0NEBGpDlxEyQwvNQEMD0GRDYqY1Q6fQOEOCR
       document.body.classList.add("ar");
       arSlot.appendChild(controlsEl);                           // the same sliders, now in the overlay
       renderer.setClearColor(0x000000, 0);
+      camera.near = 0.01; camera.far = 50; camera.updateProjectionMatrix();   // metres in AR: clip only within 1 cm of the phone
       model.visible = false; showHint("Point the phone at the floor or a table, then tap the screen to place the lung.");
       session.addEventListener("select", onSelect);
       // One-finger drag: ARCore hit test under the finger (transient screen input), the lung follows it on the surface
@@ -576,6 +577,7 @@ window.ROM_DATA = "AKQxQ3R7PUNIEm1DP64wQ1mxQ0NEBGpDlxEyQwvNQEMD0GRDYqY1Q6fQOEOCR
     document.body.classList.remove("ar");
     appEl.insertBefore(controlsEl, stage);
     renderer.setClearColor(0xffffff, 1);
+    camera.near = 1; camera.far = 10 * size; camera.updateProjectionMatrix();
     reticle.visible = false; model.visible = true;
     model.position.set(0, 0, 0); model.rotation.set(0, 0, 0); model.scale.setScalar(1);
     camera.position.set(0, 0, 1.45 * size); camera.up.set(0, 1, 0); controls.reset();
