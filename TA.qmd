@@ -20,10 +20,10 @@ format:
 
 ::: {.column width="50%"}
 
-- **2025 - ** [**Continuum mechanics**](MMC.qmd)
-- **2025 - ** [**Elasticity**](https://alexandredabyseesaram.github.io/Teaching_Elasticity/)
-- **2026 - ** Slender structures
-- **2026 - ** Digital twins in medicine
+- **2025 - Now** [**Continuum mechanics**](MMC.qmd)
+- **2025 - Now** [**Elasticity**](https://alexandredabyseesaram.github.io/Teaching_Elasticity/)
+- **2026 - Now** Slender structures
+- **2026 - Now** Digital twins in medicine
 
 :::
 
